@@ -62,6 +62,8 @@ Idea originated from my familys experience with this products and my wife`s jour
 
 ##  User Experience
 
+## The 4 Planes strategy
+
 #### Overview
 
 #### The 4 Planes Incorporated
