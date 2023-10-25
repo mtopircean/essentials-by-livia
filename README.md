@@ -12,9 +12,9 @@ Idea originated from my familys experience with this products and my wife`s jour
 ## CONTENT
 * [Scope](#scope)
 * [User Experience](#user-experience)
-* The 4 Planes strategy(#planes-strategy)
-    * Overview(#overview)
-    * The 4 Planes Incorporated(#planes-incorporated)
+* [The 4 Planes strategy](#planes-strategy)
+    * [Overview](#overview)
+    * [The 4 Planes Incorporated](#planes-incorporated)
 * [Deployment](#deployment-and-local-development)
     * [How do Deploy](#how-to-deploy)
     * [How to Fork](#how-to-fork)
