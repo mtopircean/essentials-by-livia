@@ -1,5 +1,5 @@
 from import_export import resources
-from .models import AddProduct, AddPromotion
+from .models import AddProduct, AddPromotion, AppUser
 
 
 class AddProductResource(resources.ModelResource):
@@ -10,3 +10,8 @@ class AddProductResource(resources.ModelResource):
 class AddPromotionResource(resources.ModelResource):
     class Meta:
         model = AddPromotion
+
+
+class AppUserResource(resources.ModelResource):
+    class Meta:
+        model = AppUser

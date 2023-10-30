@@ -1,8 +1,9 @@
 from django.contrib import admin
-from .models import Ailment, AddProduct, AddPromotion
+from .models import Ailment, AddProduct, AddPromotion, AppUser
 from django_summernote.admin import SummernoteModelAdmin
 from import_export.admin import ImportExportModelAdmin
 from .resources import AddProductResource, AddPromotionResource
+from .resources import AppUserResource
 
 
 @admin.register(AddProduct)
@@ -26,3 +27,12 @@ class AddPromotionAdmin(SummernoteModelAdmin, ImportExportModelAdmin):
 class Ailment(ImportExportModelAdmin):
     resource_class = AddPromotionResource
     search_fields = ('name',)
+
+
+@admin.register(AppUser)
+class AppUser(ImportExportModelAdmin):
+    resource_class = AppUserResource
+    list_filter = ('first_name', 'last_name',)
+    search_fields = ('first_name', 'last_name', 'email',)
+    list_display = ('first_name', 'last_name', 'email',
+                    'phone_number', 'request_date',)
