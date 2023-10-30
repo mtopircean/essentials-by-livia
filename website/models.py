@@ -14,7 +14,7 @@ class AddProduct(models.Model):
     description = models.TextField()
     ailments = models.ManyToManyField(Ailment)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    created_on = models.DateTimeField(auto_now_add=True)
+    expires_on = models.DateTimeField(auto_now_add=True)
     image_url = models.CharField(max_length=255)
 
     class Meta:
