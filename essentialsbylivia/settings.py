@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'django.contrib.staticfiles',
     'django_summernote',
+    'import_export',
     'website',
 ]
 
