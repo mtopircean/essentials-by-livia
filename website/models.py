@@ -14,7 +14,7 @@ class AddProduct(models.Model):
     description = models.TextField()
     ailments = models.ManyToManyField(Ailment)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    expires_on = models.DateTimeField(auto_now_add=True)
+    added_on = models.DateTimeField(auto_now_add=True)
     image_url = models.CharField(max_length=255)
 
     class Meta:
@@ -28,10 +28,10 @@ class AddPromotion(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     image_url = models.CharField(max_length=255)
-    created_on = models.DateTimeField(auto_now_add=True)
+    expires_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['-expires_on']
 
     def __str__(self):
         return self.name
