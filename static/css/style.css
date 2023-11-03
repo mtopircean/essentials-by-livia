@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&family=Crimson+Text:wght@600&family=EB+Garamond&family=Lato:wght@300&family=Oswald&display=swap');
+
+body {
+    font-family: 'Libre Bodoni', sans-serif;
+}
+
 #nav-button {
     border: none;
     font-size: 1.5rem;
