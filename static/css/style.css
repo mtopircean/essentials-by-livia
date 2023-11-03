@@ -23,6 +23,12 @@ body {
     padding: 10px 0;
 }
 
+#footer-content-container {
+    margin-top: 20px;
+    position: relative;
+    z-index: 0;
+}
+
 #data-protection p, #social-media p {
     margin: 0;
     color: #ffff;
@@ -39,4 +45,37 @@ body {
 
 p {
     margin-bottom: 0;
+}
+
+#main-section {
+    position: absolute;
+}
+
+.image-container {
+    width: 100%;
+}
+
+.explore-button {
+    margin-top: 20px;
+}
+
+.text-promo {
+    position: absolute;
+    width: 50%;
+    background-color: #eb3752c7;
+    height: 25%;
+    margin-top: 50%;
+    margin-left: 6px;
+    padding: 25px;
+    font-size: 1.7rem;
+    color: white;
+    text-align: center;
+}
+
+.explore-button {
+    margin-top: 0px;
+    position: absolute;
+    background-color: #40B93C;
+    z-index: 1;
+    color: #ffff;
 }

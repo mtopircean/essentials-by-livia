@@ -16,7 +16,7 @@
         {% block content %}
         {% endblock %}
     </div>
-
+    <div></div>
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
@@ -27,19 +27,24 @@
             </div>
         </div>
     </div>
-
     <div class="container">
         <div class="row">
             <div class="col-12 col-md-6">
                 <h2>Join My Team</h2>
             </div>
             <div class="col-12 col-md-6">
-                <img src="../static/images/promotion.png" alt="essential oil bottle with discount logo" width="90%">
+                <div class="image-container">
+                    <img src="../static/images/promotion.png" alt="essential oil bottle with discount logo" width="90%">
+                    <div class="explore-button">
+                        <button class="btn btn-primary">Explore</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-    {% include 'footer.html' %}
+    <div id="footer-content-container">
+        {% include 'footer.html' %}
+    </div>
 
     {% block scripts %}
     {% endblock %}
