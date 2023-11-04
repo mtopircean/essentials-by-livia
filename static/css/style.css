@@ -25,12 +25,12 @@ body {
 .navbar {
     margin-bottom: 10px;
     background-color: #64497049;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
 }
 
 .footer {
     background-color: #644970;
     padding: 20px;
-    position: fixed;
     bottom: 0;
     width: 100%;
     height: auto;
