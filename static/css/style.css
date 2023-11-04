@@ -89,12 +89,12 @@ p {
 }
 
 #find-more-tool {
-    color: #ffff;
-    background-color: #2a8027;
+    color: #644970;
     width: 100%;
     padding-top: 8px;
     padding-bottom: 5px;
     font-weight: bold;
+
 }
 
 .learn-more {
@@ -104,9 +104,8 @@ p {
     margin-bottom: 1px;
     font-weight: bold;
     font-size: 1.3rem;
-    border-top: 5px solid;
-    border-color: #2a8027;
-    color: #2a8027;
+    border-top: 2px solid;
+    border-color: #644970;
 }
 
 #join-team-text {
@@ -140,16 +139,24 @@ h6 {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 1;
     border: none;
-    width: 30%;
-    margin-top: 70%;
+    width: 100%;
+    margin-top: 60%;
     font-size: 1.3rem;
     padding: 10px;
-    color: #ffff;
-    background-color: #EB3752;
+    color: #EB3752;
+    background-color: rgba(255, 255, 255, 0.815);
 }
 
 .image-container {
     position: relative;
+}
+
+#button-tool {
+    color: #ffff;
+    padding: 10px;
+    background-color: #644970;
+    border: none;
+    width: 100%;
+    font-size: 1.3rem;
 }
