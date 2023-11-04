@@ -24,10 +24,11 @@ body {
 
 .navbar {
     margin-bottom: 10px;
+    background-color: #64497049;
 }
 
 .footer {
-    background-color: #0097B2;
+    background-color: #644970;
     padding: 20px;
     position: fixed;
     bottom: 0;
@@ -69,6 +70,7 @@ p {
 
 .image-container {
     width: 100%;
+    margin-top: 40px;
 }
 
 .explore-button {
@@ -180,4 +182,29 @@ h6 {
 
 #quote-section h5 {
     line-height: 1.5;
+}
+
+#button-about {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border: none;
+    width: 100%;
+    margin-top: 60%;
+    font-size: 1.3rem;
+    padding: 10px;
+    color: #EB3752;
+    background-color: rgba(255, 255, 255, 0.815);
+    font-weight: bold;
+}
+
+#button-about {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #644970;
+}
+
+#about-section {
+    position: relative;
 }
