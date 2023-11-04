@@ -8,6 +8,7 @@ body {
     border: none;
     font-size: 1.5rem;
 }
+
 .navbar {
     margin-bottom: 10px;
 }
@@ -29,7 +30,8 @@ body {
     z-index: 0;
 }
 
-#data-protection p, #social-media p {
+#data-protection p,
+#social-media p {
     margin: 0;
     color: #ffff;
 }
@@ -39,7 +41,8 @@ body {
     text-decoration: none;
 }
 
-#social-media, .fa-brands {
+#social-media,
+.fa-brands {
     color: #ffff;
 }
 
@@ -82,4 +85,25 @@ p {
 
 #second-main-section {
     position: absolute;
+}
+
+#find-more-tool {
+    color: #ffff;
+    background-color: #EB3752;
+    width: 100%;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    font-weight:bold ;
+}
+
+.learn-more {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 1px;
+    font-weight:bold ;
+    font-size: 1.3rem;
+    border-top: 5px solid;
+    border-color: #EB3752;
+    color: #EB3752;
 }
