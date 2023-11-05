@@ -1,94 +1,74 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <title>Essentials by Livia</title>
-</head>
-
 <body>
-    {% include 'navbar.html' %}
+    {% include 'base.html' %}
     <div class="container">
-        {% block content %}
-        {% endblock %}
-    </div>
 
-    <div id="recommendation-what" class="container custom-container">
-        <div class="row">
-            <div id="about-section" class="col-12 col-md-6">
-                <img src="../static/images/about-oils.png" alt="multitude of essential oil bottles" class="img-fluid">
-                <button id="button-about" class="btn btn-primary">Learn
-                    more....</button>
-            </div>
-            <div class="col-12 col-md-6">
-                <div>
-                    <img src="../static/images/oil-selection.png" alt="multitude of essential oil bottles"
+
+
+        <div id="recommendation-what" class="container custom-container">
+            <div class="row">
+                <div id="about-section" class="col-12 col-md-6">
+                    <img src="../static/images/about-oils.png" alt="multitude of essential oil bottles"
                         class="img-fluid">
-                    <div id="learn-more">
-                        <h3 class="text-center learn-more">Do you want to learn more about which Essential oil is the
-                            right one for
-                            you?</h3>
-                    </div>
-                    <div id="find-more-tool text-center">
-                        <button id="button-tool" class="btn btn-primary"><i class="fa-solid fa-droplet"></i> <i
-                                class="fa-solid fa-droplet">
-                            </i> <i class="fa-solid fa-droplet"> </i> Use our tool.... <i
-                                class="fa-solid fa-computer-mouse"></i></button>
+                    <button id="button-about" class="btn btn-primary">Learn
+                        more....</button>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div>
+                        <img src="../static/images/oil-selection.png" alt="multitude of essential oil bottles"
+                            class="img-fluid">
+                        <div id="learn-more">
+                            <h3 class="text-center learn-more">Do you want to learn more about which Essential oil is
+                                the
+                                right one for
+                                you?</h3>
+                        </div>
+                        <div id="find-more-tool text-center">
+                            <button id="button-tool" class="btn btn-primary"><i class="fa-solid fa-droplet"></i> <i
+                                    class="fa-solid fa-droplet">
+                                </i> <i class="fa-solid fa-droplet"> </i> Use our tool.... <i
+                                    class="fa-solid fa-computer-mouse"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div id="quote-section" class="col-12 text-center container custom-container">
-        <hr>
-        <h5>“When you look past yourself and focus on serving others, then your life will change. Taking the time to
-            individually coach others had the single biggest impact on my doTERRA® business. You have to know your
-            leaders so you know how to inspire them.”
-            <br>
-            <br>
-            <span class="quote-author">Natalie Goddard, Double Diamond</span></h5>
-        <hr>
-    </div>
-
-    <div id="join-promo" class="container custom-container">
-        <div class="row">
-            <div class="col-12 col-md-6 text-center">
-                <img id="join-team-image" src="../static/images/join-team.png"
-                    alt="image with hands around a heard showing team spirit" class="img-fluid">
-                <h3 id="join-team-text">Join My Team!</h3>
-                <h4>Become a Dottera representative and enjoy great benefits!</h4>
+        <div id="quote-section" class="col-12 text-center container custom-container">
+            <hr>
+            <h5>“When you look past yourself and focus on serving others, then your life will change. Taking the time to
+                individually coach others had the single biggest impact on my doTERRA® business. You have to know your
+                leaders so you know how to inspire them.”
                 <br>
-                <h6>We have a great team, extremly helpfull and welcoming!
+                <br>
+                <span class="quote-author">Natalie Goddard, Double Diamond</span></h5>
+            <hr>
+        </div>
+
+        <div id="join-promo" class="container custom-container">
+            <div class="row">
+                <div class="col-12 col-md-6 text-center">
+                    <img id="join-team-image" src="../static/images/join-team.png"
+                        alt="image with hands around a heard showing team spirit" class="img-fluid">
+                    <h3 id="join-team-text">Join My Team!</h3>
+                    <h4>Become a Dottera representative and enjoy great benefits!</h4>
                     <br>
-                    <br>
-                    There are some great benefits by joining our team, like free products or the opportunity to turn
-                    your passion for a healthy lifestyle into an actual source of income.
-                </h6>
-                <button id="btn-join" class="btn btn-primary">Contact me...</button>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="image-container">
-                    <img src="../static/images/promotion.png" alt="essential oil bottle with discount logo"
-                        class="img-fluid">
-                    <button id="button-promo" class="btn btn-primary">Learn more....</button>
+                    <h6>We have a great team, extremly helpfull and welcoming!
+                        <br>
+                        <br>
+                        There are some great benefits by joining our team, like free products or the opportunity to turn
+                        your passion for a healthy lifestyle into an actual source of income.
+                    </h6>
+                    <button id="btn-join" class="btn btn-primary">Contact me...</button>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="image-container">
+                        <img src="../static/images/promotion.png" alt="essential oil bottle with discount logo"
+                            class="img-fluid">
+                        <button id="button-promo" class="btn btn-primary">Learn more....</button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="footer-content-container">
-        {% include 'footer.html' %}
-    </div>
-
-    {% block scripts %}
+    {% block content %}
     {% endblock %}
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
-
-</html>
