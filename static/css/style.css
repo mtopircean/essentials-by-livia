@@ -5,12 +5,14 @@ body {
     color: black;
 }
 
+/* base, index, header and footer */
 #recommendation-what{
     margin-top: 10px;
 }
 
 #join-promo {
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 #quote-section {
@@ -36,12 +38,13 @@ body {
     height: auto;
     margin: 0;
     padding: 5px 0;
+    position: fixed;
+    z-index: 1;
 }
 
 #footer-content-container {
     margin-top: 20px;
     position: relative;
-    z-index: 0;
 }
 
 #data-protection p,
@@ -94,7 +97,6 @@ p {
     margin-top: 0px;
     position: absolute;
     background-color: #40B93C;
-    z-index: 1;
     color: #ffff;
 }
 
@@ -129,7 +131,6 @@ p {
 
 #join-team-image {
     position: relative;
-    z-index: 0;
     width: 30%;
     padding: 10px;
 }
@@ -201,7 +202,6 @@ h6 {
 #button-about {
     position: absolute;
     transform: translate(-50%, -50%);
-    z-index: 1;
     color: #644970;
 }
 
