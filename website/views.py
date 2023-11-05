@@ -5,3 +5,6 @@ from .models import AddProduct, AddPromotion
 
 def index_page(request):
     return render(request, 'index.html')
+
+def about_oils(request):
+    return render(request, 'about-oils.html')
