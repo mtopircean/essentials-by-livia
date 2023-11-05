@@ -21,7 +21,7 @@ body {
 
 #nav-button {
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .navbar {
@@ -30,6 +30,19 @@ body {
     background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
     border-top: 5px solid #644970;
     border-bottom: 1px solid #64497017;
+}
+
+#login-area {
+    color: #000000;
+    font-size: 1.3rem;
+}
+
+.navbar-toggler, .menu-title {
+    color: #000000;
+}
+
+.navbar-toggler {
+    border: none !important;
 }
 
 .footer {
