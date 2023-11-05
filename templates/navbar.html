@@ -1,14 +1,19 @@
-<nav class="navbar navbar-light">
+<nav class="navbar navbar-light bg-light">
     <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="../static/images/logo-4.png" alt="" width="" height="80">
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="../static/images/logo-4.png" alt="Logo" height="80">
         </a>
-        <button id="nav-button" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        <div class="d-flex justify-content-end align-items-center flex-grow-1 " style="margin-right: 30px;">
+            <span class="login-title">Login/Account</span>
+            <i class="fa-solid fa-user" style="margin-left: 10px;"></i>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            Menu <span class="navbar-toggler-icon"></span>
+            <span class="menu-title">Menu </span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">About Me</a>
                 </li>

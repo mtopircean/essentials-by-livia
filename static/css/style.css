@@ -28,6 +28,8 @@ body {
     margin-bottom: 10px;
     background-color: #64497049;
     background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 100%);
+    border-top: 5px solid #644970;
+    border-bottom: 1px solid #64497017;
 }
 
 .footer {
@@ -203,4 +205,11 @@ h6 {
 
 #about-section {
     position: relative;
+}
+
+/* Screen size optimization */
+@media (max-width: 767px) {
+    .menu-title, .login-title {
+        display: none;
+    }
 }
