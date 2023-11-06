@@ -301,6 +301,27 @@ h6 {
     font-size: small;
 }
 
+/* About me */
+
+#about-me-text h5 {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+
+#about-me-text p {
+    line-height: 1.5;
+    padding-bottom: 50px;
+
+}
+
+#about-me-text img {
+    
+    margin-top: 30px;
+
+}
+
 /* Screen size optimization */
 @media (max-width: 767px) {
 
