@@ -320,6 +320,27 @@ h6 {
 
 }
 
+/* Data protection sections */
+
+#gdpr-text h4{
+    font-weight: bold;
+    text-align: center;
+}
+
+#gdpr-text h4, h5, h6 {
+    font-weight: bold;
+}
+
+#gdpr-text h5 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#gdpr-text p {
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
 /* Screen size optimization */
 @media (max-width: 767px) {
 
