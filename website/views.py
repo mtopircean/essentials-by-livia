@@ -8,3 +8,6 @@ def index_page(request):
 
 def about_oils(request):
     return render(request, 'about-oils.html')
+
+def about_me(request):
+    return render(request, 'about-me.html')
