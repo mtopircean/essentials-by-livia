@@ -12,11 +12,14 @@ def about_oils(request):
 def about_me(request):
     return render(request, 'about-me.html')
 
-def page_404(request):
-    return render(request, '404.html')
+def data_protection(request):
+    return render(request, 'data-protection.html')
 
-def page_403(request):
-    return render(request, '403.html')
+def handler403(request, exception):
+    return render(request, '403.html', status=403)
 
-def page_500(request):
-    return render(request, '500.html')
+def handler404(request, exception):
+    return render(request, '404.html', status=404)
+
+def handler500(request):
+    return render(request, '500.html', status=500)
