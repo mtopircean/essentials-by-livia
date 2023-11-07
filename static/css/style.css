@@ -409,7 +409,8 @@ h6 {
 @media (max-width: 767px) {
 
     .menu-title,
-    .login-title {
+    .login-title,
+    .social-section {
         display: none;
     }
 }
