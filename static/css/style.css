@@ -350,6 +350,12 @@ h6 {
 
 }
 
+#about-me-text img {
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 /* Data protection sections */
 
 #gdpr-text h4 {
