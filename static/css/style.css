@@ -102,13 +102,16 @@ p {
     position: absolute;
 }
 
-.image-container {
-    width: 100%;
-    margin-top: 40px;
-}
-
 .explore-button {
     margin-top: 20px;
+}
+
+#hero-banner {
+    background-image: url('../images/hero-banner-3.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
 }
 
 .text-promo {

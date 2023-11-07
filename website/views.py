@@ -15,6 +15,9 @@ def about_me(request):
 def data_protection(request):
     return render(request, 'data-protection.html')
 
+def promotions(request):
+    return render(request, 'promotions.html')
+
 def handler403(request, exception):
     return render(request, '403.html', status=403)
 

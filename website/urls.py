@@ -6,6 +6,7 @@ urlpatterns = [
     path('about-oils.html', views.about_oils, name='about_oils'),
     path('about-me.html', views.about_me, name='about_me'),
     path('data-protection.html', views.data_protection, name='data_protection'),
+    path('promotions.html', views.promotions, name='promotions'),
 ]
 
 handler404 = views.handler404
