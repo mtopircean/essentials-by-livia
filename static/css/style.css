@@ -368,6 +368,16 @@ h6 {
     font-weight: bold;
 }
 
+#text-500 {
+    text-decoration: none;
+}
+
+#text-500 i {
+    font-size: large;
+    font-weight: bold;
+}
+
+
 /* Screen size optimization */
 @media (max-width: 767px) {
 
