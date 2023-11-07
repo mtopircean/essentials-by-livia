@@ -107,11 +107,38 @@ p {
 }
 
 #hero-banner {
-    background-image: url('../images/hero-banner-3.png');
+    background-image: url('../images/hero-banner-4.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70vh;
+    margin-bottom: 30px;
+}
+
+.banner {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.banner h5 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffff;
+}
+
+#button-about {
+    width: 100%;
+    font-size: 1.3rem;
+    background-color: #6449707a;
+    color: #ffff;
+    border: none ;
+    margin: 0;
 }
 
 .text-promo {
@@ -213,26 +240,6 @@ h6 {
 
 #quote-section h5 {
     line-height: 1.5;
-}
-
-#button-about {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    border: none;
-    width: 100%;
-    margin-top: 60%;
-    font-size: 1.3rem;
-    padding: 10px;
-    color: #EB3752;
-    background-color: rgba(255, 255, 255, 0.815);
-    font-weight: bold;
-}
-
-#button-about {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    color: #644970;
 }
 
 #about-section {
