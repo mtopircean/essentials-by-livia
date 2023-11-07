@@ -83,6 +83,17 @@ body {
     color: #ffff;
 }
 
+#footer-join i {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+#footer-join a {
+    text-decoration: none;
+    color: #ffff;
+
+}
+
 p {
     margin-bottom: 0;
 }
