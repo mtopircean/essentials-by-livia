@@ -243,7 +243,7 @@ h6 {
 #where-card h5,
 #how-card h5,
 #use-card h5,
-#contact-card h5{
+#contact-card h5 {
     border: none;
     text-transform: uppercase;
 }
@@ -251,7 +251,7 @@ h6 {
 #where-card p,
 #how-card p,
 #use-card p,
-#contact-card p{
+#contact-card p {
     color: #000000;
 }
 
@@ -282,19 +282,20 @@ h6 {
 
 }
 
-#contact-card  h6 {
+#contact-card h6 {
     margin-left: 10px;
     font-size: 1.2rem;
     line-height: 1.5;
     margin-left: 10px;
 }
-#contact-card  i {
+
+#contact-card i {
     margin-left: 10px;
     font-size: 1.3rem;
     color: #0097B2;
 }
 
-#contact-card  a {
+#contact-card a {
 
     text-decoration: none;
 
@@ -322,12 +323,14 @@ h6 {
 
 /* Data protection sections */
 
-#gdpr-text h4{
+#gdpr-text h4 {
     font-weight: bold;
     text-align: center;
 }
 
-#gdpr-text h4, h5, h6 {
+#gdpr-text h4,
+h5,
+h6 {
     font-weight: bold;
 }
 
@@ -343,6 +346,26 @@ h6 {
 
 #gdpr-text {
     margin-bottom: 70px;
+}
+
+/* Error pages */
+
+#text-404 a {
+    text-decoration: none;
+}
+
+#text-404 i {
+    font-size: large;
+    font-weight: bold;
+}
+
+#text-403 {
+    text-decoration: none;
+}
+
+#text-403 i {
+    font-size: large;
+    font-weight: bold;
 }
 
 /* Screen size optimization */
