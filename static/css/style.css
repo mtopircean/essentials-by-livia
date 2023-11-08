@@ -137,7 +137,7 @@ p {
     font-size: 1.3rem;
     background-color: #6449707a;
     color: #ffff;
-    border: none ;
+    border: none;
     margin: 0;
 }
 
@@ -410,6 +410,35 @@ h6 {
     font-weight: bold;
 }
 
+/*Promo page */
+
+#promotion-container {
+    margin-bottom: 100px;
+}
+
+.validity {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.details-dropdown button {
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #644970;
+    margin-left: 10px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.details-dropdown button:hover {
+    color: #EB3752;
+}
+
+.details-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /* Screen size optimization */
 @media (max-width: 767px) {
