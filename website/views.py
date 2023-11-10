@@ -21,6 +21,9 @@ def promotions(request):
 def index(request):
     return render(request, 'index.html')
 
+def user_account(request):
+    return render(request, 'user-account.html')
+
 def handler403(request, exception):
     return render(request, '403.html', status=403)
 

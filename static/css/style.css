@@ -37,6 +37,11 @@ body {
     font-size: 1.3rem;
 }
 
+.login-link {
+    text-decoration: none;
+    color: #644970;
+}
+
 .navbar-toggler,
 .menu-title {
     color: #000000;
