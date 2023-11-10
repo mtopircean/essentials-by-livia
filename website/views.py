@@ -18,6 +18,9 @@ def data_protection(request):
 def promotions(request):
     return render(request, 'promotions.html')
 
+def index(request):
+    return render(request, 'index.html')
+
 def handler403(request, exception):
     return render(request, '403.html', status=403)
 
