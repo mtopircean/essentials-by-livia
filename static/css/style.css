@@ -445,6 +445,36 @@ h6 {
     align-items: center;
 }
 
+/* Account section */
+
+.account-section {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.account-section  h5{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.account-section  h6{
+    line-height: 2;
+}
+
+.account-section  i	{
+    margin-left: 10px;
+}
+
+.edit-account {
+    color: #EB3752;
+    font-size: medium;
+}
+
+.save-changes {
+    color: #1a7917;
+}
+
 /* Screen size optimization */
 @media (max-width: 767px) {
 
