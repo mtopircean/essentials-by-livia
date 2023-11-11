@@ -512,7 +512,7 @@ h6 {
 
 #active-filters .row {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -530,6 +530,17 @@ li {
     margin-left: 10px;
     display: inline-block;
     font-size: small;
+}
+
+#search input {
+    border: none;
+    border-bottom: 1px solid #644970;
+    outline: none;
+    border-radius: 0;
+}
+
+#search input::placeholder {
+    color: #644970b1;
 }
 
 /* Screen size optimization */
