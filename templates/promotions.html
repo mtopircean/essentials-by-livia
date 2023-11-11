@@ -13,8 +13,7 @@
                 <div class="details-dropdown text-center">
                     <span class="validity">Valid until 01.12.2023</span>
                     <span class="ml-auto"> <button class="btn btn-link" type="button" data-toggle="collapse"
-                            data-target="#detailsArea">Find out more <i
-                                class="fa-solid fa-circle-chevron-down"></i></button>
+                            data-target="#detailsArea">Find out more <span class="toggle-icon">&#11167;</span></button>
                     </span>
                     <div id="detailsArea" class="collapse details-container">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque metus nec libero
@@ -35,3 +34,19 @@
 
 {% block content %}
 {% endblock %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        var isDetailsVisible = false;
+        $("#detailsArea").hide()
+
+        $(".btn-link").click(function () {
+            $("#detailsArea").slideToggle();
+            isDetailsVisible = !isDetailsVisible;
+
+            $(".toggle-icon").html(isDetailsVisible ? '&#11165;' : '&#11167;');
+        });
+    })
+</script>
