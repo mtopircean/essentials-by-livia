@@ -582,6 +582,7 @@ li {
     padding-top: 5px;
     color: #eb37525c;
     font-size: small;
+    transition: color 0.3s ease;
 }
 
 .add-to-favorites-btn:hover {
