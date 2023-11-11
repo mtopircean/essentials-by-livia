@@ -454,10 +454,10 @@ h6 {
 }
 
 #detailsArea i {
-color: #0097B2;
-font-size: 1.3rem;
-padding: 0px 5px;
-text-decoration: none;
+    color: #0097B2;
+    font-size: 1.3rem;
+    padding: 0px 5px;
+    text-decoration: none;
 }
 
 .contact-text {
@@ -467,7 +467,7 @@ text-decoration: none;
 
 #detailsArea a {
     text-decoration: none;
-    }
+}
 
 /* Account section */
 
@@ -476,17 +476,17 @@ text-decoration: none;
     margin-bottom: 50px;
 }
 
-.account-section  h5{
+.account-section h5 {
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: bold;
 }
 
-.account-section  h6{
+.account-section h6 {
     line-height: 2;
 }
 
-.account-section  i	{
+.account-section i {
     margin-left: 10px;
 }
 
@@ -502,7 +502,7 @@ text-decoration: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-} 
+}
 
 .form-labels {
     font-weight: 500;
@@ -510,9 +510,26 @@ text-decoration: none;
 
 /*Recommandation section*/
 
-#search {
-    width: 80%;
-    border: green;
+#active-filters .row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+#active-filters nav.row {
+    display: inline-block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-left: 10px;
+    display: inline-block;
+    font-size: small;
 }
 
 /* Screen size optimization */
