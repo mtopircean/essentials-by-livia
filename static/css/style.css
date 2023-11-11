@@ -543,6 +543,51 @@ li {
     color: #644970b1;
 }
 
+.product-name {
+    color: #644970;
+    font-size: 1.3rem;
+}
+
+.product-section h6 {
+    color: #644970;
+    margin-top: 30px;
+}
+
+.product-section p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-text-product {
+    color: #0097B2;
+    text-decoration: none;
+}
+
+.contact-text-product i {
+    color: #0097B2;
+    font-size: large;
+}
+
+.contact-text-product a {
+    text-decoration: none;
+}
+
+.product-separator {
+    color: #64497086;
+}
+
+.add-to-favorites-btn {
+    background-color: #ffff;
+    border: none;
+    padding-top: 5px;
+    color: #eb37525c;
+    font-size: small;
+}
+
+.add-to-favorites-btn:hover {
+    color: #EB3752;
+}
+
 /* Screen size optimization */
 @media (max-width: 767px) {
 
