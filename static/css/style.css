@@ -443,7 +443,31 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
 }
+
+.promo-text {
+    padding-top: 20px;
+    padding-right: 40px;
+    padding-bottom: 0;
+    padding-left: 40px;
+}
+
+#detailsArea i {
+color: #0097B2;
+font-size: 1.3rem;
+padding: 0px 5px;
+text-decoration: none;
+}
+
+.contact-text {
+    color: #0097B2;
+    padding-bottom: 10px;
+}
+
+#detailsArea a {
+    text-decoration: none;
+    }
 
 /* Account section */
 
