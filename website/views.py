@@ -21,6 +21,9 @@ def promotions(request):
 def index(request):
     return render(request, 'index.html')
 
+def recommended(request):
+    return render(request, 'recommended.html')
+
 def user_account(request):
     return render(request, 'user-account.html')
 

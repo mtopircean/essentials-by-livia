@@ -9,6 +9,7 @@ urlpatterns = [
     path('promotions.html', views.promotions, name='promotions'),
     path('index.html', views.index, name='index'),
     path('user-account.html', views.user_account, name='user_account'),
+    path('recommended.html', views.user_account, name='recommended'),
 ]
 
 handler404 = views.handler404
