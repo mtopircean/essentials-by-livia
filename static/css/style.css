@@ -468,12 +468,16 @@ h6 {
 
 .edit-account {
     color: #EB3752;
-    font-size: medium;
 }
 
 .save-changes {
     color: #1a7917;
 }
+
+.user-contact-input {
+    display: flex;
+    justify-content: end;
+} 
 
 /* Screen size optimization */
 @media (max-width: 767px) {
