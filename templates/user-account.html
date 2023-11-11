@@ -4,7 +4,9 @@
     <div class="col-12 account-section">
         <div>
             <div class="text-center">
-                <h5> ACCOUNT DETAILS: </h5>
+                <h5 class="toggle-details"> ACCOUNT DETAILS: <span class="toggle-icon">&#11167;</span></h5></span></h5>
+            </div>
+            <div id="user-details" class="container">
                 <div class="row col-12 edit-account">
                     <div class="row col-6 text-center">
                         <h5>Edit: <span><i class="fa-solid fa-user-pen"></i></span></h5>
@@ -13,8 +15,6 @@
                         <h5>Save: <span><i class="fa-solid fa-floppy-disk"></i></span></h5>
                     </div>
                 </div>
-            </div>
-            <div id="user-details" class="container">
                 <div class="row">
                     <div class="col-6 text-left">
                         <h6 class="form-labels"> First name:</h6>
@@ -81,7 +81,7 @@
         </div>
     </div>
 </div>
-</div>
+
 <div>
     <hr>
 </div>
@@ -97,3 +97,19 @@
 
 {% block content %}
 {% endblock %}
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        var isDetailsVisible = false;
+        $("#user-details").hide()
+
+        $(".toggle-details").click(function () {
+            $("#user-details").slideToggle();
+            isDetailsVisible = !isDetailsVisible;
+
+            $(".toggle-icon").html(isDetailsVisible ? '&#11165;' : '&#11167;');
+        });
+    })
+</script>
