@@ -476,8 +476,13 @@ h6 {
 
 .user-contact-input {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    align-items: center;
 } 
+
+.form-labels {
+    font-weight: 500;
+}
 
 /* Screen size optimization */
 @media (max-width: 767px) {
