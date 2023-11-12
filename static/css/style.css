@@ -589,6 +589,27 @@ li {
     color: #EB3752;
 }
 
+.filter-section input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+#apply-button, #clear-all-button{
+    text-decoration: none;
+    background-color: #ffff;
+    border: none;
+    color: #644970;
+    font-size: small;
+}
+
+#apply-button {
+    color: #644970;
+    margin-top: 10px;
+}
+
+#clear-all-button {
+    color: darkred;
+}
+
 /* Screen size optimization */
 @media (max-width: 767px) {
 
