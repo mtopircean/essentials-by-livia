@@ -1,0 +1,31 @@
+{% include 'base.html' %}
+
+<div class="container-fluid p-0 d-flex justify-content-center align-items-center">
+    <img id="contact-image" src="../static/images/contact-image.png" alt="dice with contact methods printed on them" class="img-fluid text-center" width="50%">
+</div>
+
+<div class="container"></div>
+    <div id="contact-card" class="card">
+        <div class="card-body text-center">
+            <h5>Can I help you with more information?</h5>
+            <div class="text-left">
+                <h6 class="d-inline">Find me on social:</h6>
+                <a href="https://www.facebook.com/gherasim.cosmina" target="_blank" class="d-inline">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://tinyurl.com/yc2knt2p" target="_blank" class="d-inline">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <h6 id="about-other-contact" class="text-left">
+                <span>Email: </span><br>
+                <span>Phone number: </span><br>
+                <span>WhatsApp: </span>
+                
+            </h6>
+        </div>
+    </div>
+</div>
+
+{% block content %}
+{% endblock %}
