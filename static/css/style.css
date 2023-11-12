@@ -610,6 +610,12 @@ li {
     color: darkred;
 }
 
+.filter-section p {
+margin-top: 5px;
+margin-bottom:  5px;
+color: #644970;
+}
+
 /* Screen size optimization */
 @media (max-width: 767px) {
 
