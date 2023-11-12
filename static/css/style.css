@@ -624,4 +624,8 @@ color: #644970;
     .social-section {
         display: none;
     }
+
+    #toggle-ailment-list {
+        text-align: center;
+    }
 }
