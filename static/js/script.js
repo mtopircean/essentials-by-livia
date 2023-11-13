@@ -38,3 +38,9 @@ $(document).ready(function () {
             '&#11167;'));
     });
 });
+
+/** Modal link to Register **/
+
+document.getElementById('register-button').addEventListener('click', function() {
+    window.location.href = 'register.html';
+});

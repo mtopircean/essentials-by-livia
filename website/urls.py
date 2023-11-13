@@ -11,6 +11,7 @@ urlpatterns = [
     path('user-account.html', views.user_account, name='user_account'),
     path('recommended.html', views.recommended, name='recommended'),
     path('contact.html', views.contact, name='contact'),
+    path('register.html', views.register, name='register'),
 ]
 
 handler404 = views.handler404

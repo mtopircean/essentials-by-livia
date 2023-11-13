@@ -30,6 +30,9 @@ def contact(request):
 def user_account(request):
     return render(request, 'user-account.html')
 
+def register(request):
+    return render(request, 'register.html')
+
 def handler403(request, exception):
     return render(request, '403.html', status=403)
 
