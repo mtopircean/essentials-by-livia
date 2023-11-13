@@ -593,7 +593,8 @@ li {
     margin-right: 5px;
 }
 
-#apply-button, #clear-all-button{
+#apply-button,
+#clear-all-button {
     text-decoration: none;
     background-color: #ffff;
     border: none;
@@ -611,9 +612,9 @@ li {
 }
 
 .filter-section p {
-margin-top: 5px;
-margin-bottom:  5px;
-color: #644970;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #644970;
 }
 
 /* Contact */
@@ -622,6 +623,48 @@ color: #644970;
 
     margin-top: 30px;
 }
+
+
+/* Login Modal */
+#loginModal {
+    background-color: #64497035;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.modal-header h5 {
+    text-align: center;
+}
+
+.modal-header .btn-close {
+
+    margin-bottom: 20px;
+}
+
+.modal-body {
+    background-image: url('../images/modal-background-2.jpg');
+    background-size: cover;
+    font-size: large;
+    color: #ffff;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.modal-header {
+    background-image: url('../images/modal-background-2-header.jpg');
+    background-size: cover;
+    color: #ffff;
+}
+
+.modal-footer {
+    background-image: url('../images/modal-background-2-footer.jpg');
+    background-size: cover;
+    color: #000000;
+}
+
 
 /* Screen size optimization */
 @media (max-width: 767px) {
