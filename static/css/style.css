@@ -659,7 +659,7 @@ li {
 }
 
 .modal-footer {
-    background-image: url('../images/modal-background-2-footer.jpg');
+    background-image: url('../images/modal-background-2-header.jpg');
     background-size: cover;
     color: #000000;
     display: flex;
