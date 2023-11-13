@@ -635,36 +635,66 @@ li {
 
 .modal-header h5 {
     text-align: center;
-}
-
-.modal-header .btn-close {
-
-    margin-bottom: 20px;
+    color: #ffff;
+    font-weight: bold;
 }
 
 .modal-body {
     background-image: url('../images/modal-background-2.jpg');
     background-size: cover;
     font-size: large;
-    color: #ffff;
+    color: #000000;
     padding-bottom: 40px;
     padding-top: 40px;
     padding-left: 25px;
     padding-right: 25px;
+    color: #ffff;
 }
 
 .modal-header {
     background-image: url('../images/modal-background-2-header.jpg');
     background-size: cover;
-    color: #ffff;
+    color: #000000;
+    font-weight: bold;
 }
 
 .modal-footer {
     background-image: url('../images/modal-background-2-footer.jpg');
     background-size: cover;
     color: #000000;
+    display: flex;
+    justify-content: space-between;
 }
 
+#login-button {
+    background-color: #0097B2;
+    width: 40%;
+    font-size: large;
+    border: none;
+}
+
+#login-button:hover {
+    background-color: #ffff;
+    color: #0097B2;
+}
+
+#register-button {
+    background-color: #644970;
+    width: 40%;
+    font-size: large;
+    margin-left: 10px;
+    border: none;
+    
+}
+
+#register-button:hover {
+    background-color: #ffff;
+    color: #644970;
+}
+
+label#label-password {
+    margin-top: 8px;
+}
 
 /* Screen size optimization */
 @media (max-width: 767px) {
