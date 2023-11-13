@@ -23,8 +23,8 @@ $(document).ready(function () {
         $(".filter-content").slideToggle();
         isAilmentListVisible = !isAilmentListVisible;
 
-        $("#toggle-ailment-list").html("Ailment list " + (isAilmentListVisible ? '&#9650;' :
-            '&#9660;'));
+        $("#toggle-ailment-list").html("Ailment list " + (isAilmentListVisible ? '&#11165;' :
+            '&#11167;'));
     });
 
     $(window).resize(function () {
@@ -34,7 +34,7 @@ $(document).ready(function () {
             $(".filter-content").hide();
         }
 
-        $("#toggle-ailment-list").html("Ailment list " + (isAilmentListVisible ? '&#9660;' :
-            '&#9650'));
+        $("#toggle-ailment-list").html("Ailment list " + (isAilmentListVisible ? '&#11165;' :
+            '&#11167;'));
     });
 });
