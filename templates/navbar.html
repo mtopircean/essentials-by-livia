@@ -3,7 +3,7 @@
         <a class="navbar-brand mx-auto" href="index.html">
             <img src="../static/images/logo-5.png" alt="Logo" height="80">
         </a>
-        <a class="login-link" href="user-account.html">
+        <a class="login-link" href="modal-login.html" data-bs-toggle="modal" data-bs-target="#loginModal">
             <div id="login-area" class="d-flex justify-content-end align-items-center flex-grow-1 "
                 style="margin-right: 30px;">
                 <span class="login-title">Login/Account</span>
@@ -36,3 +36,13 @@
     </div>
     </div>
 </nav>
+
+<div class="modal" id="loginModal" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div>
+            <div>
+                {% include 'modal-login.html' %}
+            </div>
+        </div>
+    </div>
+</div>
