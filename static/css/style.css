@@ -728,6 +728,7 @@ label#label-password {
 
 #why-register i{
     color: #EB3752;
+    
 }
 
 .tool-access-register {
@@ -737,6 +738,29 @@ label#label-password {
 .tool-access-register {
     margin-bottom: 5px;
 }
+
+#register-section {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#register-section input{
+margin-bottom: 20px;
+}
+
+#register-section label[for="first-name"] {
+    margin-top: 40px;
+}
+
+#why-register {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+    
 
 
 /* Screen size optimization */
