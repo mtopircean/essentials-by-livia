@@ -684,7 +684,7 @@ li {
     font-size: large;
     margin-left: 10px;
     border: none;
-    
+
 }
 
 #register-button:hover {
@@ -698,37 +698,37 @@ label#label-password {
 
 /* Register page */
 
-#why-register img{
-    margin-top:30px;
+#why-register img {
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
-#why-register h5{
-    margin-top:15px;
+#why-register h5 {
+    margin-top: 15px;
     margin-bottom: 15px;
     color: #644970;
     font-weight: bold;
 }
 
-#why-register h6{
-    margin-top:15px;
+#why-register h6 {
+    margin-top: 15px;
     margin-bottom: 15px;
     color: #644970;
     font-weight: bold;
     text-decoration: underline;
 }
 
-#why-register a{
-    margin-top:5px;
+#why-register a {
+    margin-top: 5px;
     color: #EB3752;
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-#why-register i{
+#why-register i {
     color: #EB3752;
-    
+
 }
 
 .tool-access-register {
@@ -748,8 +748,18 @@ label#label-password {
     padding-right: 20px;
 }
 
-#register-section input{
-margin-bottom: 20px;
+#register-section input {
+    margin-bottom: 20px;
+}
+
+#register-section button:hover {
+    border: #644970 solid;
+}
+
+#register-section button {
+
+    margin-bottom: 100px;
+
 }
 
 #register-section label[for="first-name"] {
@@ -760,7 +770,7 @@ margin-bottom: 20px;
     padding-left: 20px;
     padding-right: 20px;
 }
-    
+
 
 
 /* Screen size optimization */
