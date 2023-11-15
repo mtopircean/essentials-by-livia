@@ -28,7 +28,7 @@ class AddPromotion(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     image_url = models.CharField(max_length=255)
-    expires_on = models.DateTimeField(auto_now_add=True)
+    expires_on = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         ordering = ['-expires_on']
