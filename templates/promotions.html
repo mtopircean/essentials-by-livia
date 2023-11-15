@@ -1,5 +1,6 @@
 {% include 'base.html' %}
 
+{% block content %}
 <div class="container-fluid p-0">
     <img id="promotions" src="../static/images/promotions.jpg" alt="gift wrapped with red tape" class="img-fluid"
         width="100%;">
@@ -7,17 +8,17 @@
 
 <div id="promotion-container" class="container-fluid">
     <div class="row">
+        {%for promotion in promotions %}
         <div class="col-12 col-md-4 text-center">
-            <img src="../static/images/casia-promo.jpg" alt="Casia Promotion" width="80%">
+            <img src="{{ promotion.image_url }}" alt="{{ promotion.name }}" width="80%">
             <div class="mt-3">
                 <div class="details-dropdown text-center">
-                    <span class="validity">Valid until 01.12.2023</span>
+                    <span class="validity">Valid until {{ promotion.expires_on|date:"d.m.Y" }}</span>
                     <span class="ml-auto"> <button class="btn btn-link" type="button" data-bs-toggle="collapse"
                             data-bs-target="#detailsArea">Find out more <span class="toggle-icon">&#11167;</span></button>
                     </span>
-                    <div id="detailsArea" class="collapse details-container">
-                        <p class="promo-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque metus nec libero
-                            varius, vitae suscipit velit venenatis.</p>
+                    <div id="detailsArea{{ forloop.counter }}" class="collapse details-container">
+                        <p class="promo-text">{{promotion.description}}</p>
                             <br>
                             <p class="contact-text">Contact me for details: 
                                 <br>
@@ -39,15 +40,9 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-4 text-center">
-            <img src="../static/images/casia-promo.jpg" alt="Casia Promotion" width="80%">
-        </div>
-
-        <div class="col-12 col-md-4 text-center">
-            <img src="../static/images/casia-promo.jpg" alt="Casia Promotion" width="80%">
-        </div>
+        {% endfor %}
     </div>
 </div>
 
-{% block content %}
+
 {% endblock %}
