@@ -23,7 +23,7 @@
                     <i class="fa-solid fa-user" style="margin-left: 10px;"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="loginDropdown">
-                    <li><a class="dropdown-item" href="#">Login</a></li>
+                    <li><a class="dropdown-item" href="modal-login.html" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
                     <li><a class="dropdown-item" href="register.html">Register</a></li>
                 </ul>
             </div>
@@ -55,3 +55,13 @@
         </div>
     </div>
 </nav>
+
+<div class="modal" id="loginModal" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div>
+            <div>
+                {% include 'modal-login.html' %}
+            </div>
+        </div>
+    </div>
+</div>
