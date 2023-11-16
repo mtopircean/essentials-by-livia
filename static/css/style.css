@@ -32,14 +32,32 @@ body {
     border-bottom: 1px solid #64497017;
 }
 
-#login-area {
-    color: #000000;
+#dropdown-logged-in .btn {
+    color: #644970;
+    background-color: #ffff;
+    border: none;
     font-size: 1.3rem;
 }
 
-.login-link {
-    text-decoration: none;
+#dropdown-logged-in .dropdown-menu .dropdown-item {
     color: #644970;
+    font-size: 1.3rem;
+}
+
+#dropdown-logged-out .btn {
+    color: #644970;
+    background-color: #ffff;
+    border: none;
+    font-size: 1.3rem;
+}
+
+#dropdown-logged-out .dropdown-menu .dropdown-item {
+    color: #644970;
+    font-size: 1.3rem;
+}
+
+.custom-dropdown .dropdown-menu {
+    box-shadow: none;
 }
 
 .navbar-toggler,
