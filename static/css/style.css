@@ -42,9 +42,13 @@ body {
 }
 
 .nav-item:hover {
-    color:#644970;
+    color: #644970;
 }
 
+.dropdown-menu[data-bs-popper] {
+    text-align: left;
+    border: none;
+}
 
 #dropdown-logged-in .btn {
     color: #644970;
@@ -821,8 +825,8 @@ label#label-password {
     }
 
     .navbar-brand {
-       width: 100%;
-       text-align: center;
+        width: 100%;
+        text-align: center;
     }
 
     #login-area {
