@@ -1,22 +1,26 @@
 <div class="modal-content">
-    <div class="modal-header">
-        <div>
-            <h5>Login or Register</h5>
+    <form method="post" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        <div class="modal-header">
+            <div>
+                <h5>Login or Register</h5>
+            </div>
+            <div id="modal-close">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close X Symbol"></button>
+            </div>
         </div>
-        <div id="modal-close">
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close X Symbol"></button>
+
+        <div class="modal-body">
+            <label for="id_login" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="id_login" name="login" placeholder="Please provide your email address" required>
+            <label for="id_password" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="id_password" name="password" placeholder="Please provide your password" required>
         </div>
-    </div>
 
-    <div class="modal-body">
-        <label for="email" class="form-label">Email: </label>
-        <input type="email" class="form-control" id="email" placeholder="Please provide your email address">
-        <label id="label-password" for="password" class="form-label">Password: </label>
-        <input type="password" class="form-control" id="password" placeholder="Please provide your password">
-    </div>
-
-    <div class="modal-footer">
-        <button id="login-button" type="button" class="btn btn-primary">Login</button>
-        <button id="register-button" type="button" class="btn btn-secondary">Register</button>
-    </div>
+        <div class="modal-footer">
+            <button id="login-button" type="submit" class="btn btn-primary"
+                href="{% url 'account_login' %}">Login</button>
+            <button id="register-button" type="button" class="btn btn-secondary" href="register.html">Register</button>
+        </div>
+    </form>
 </div>
