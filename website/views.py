@@ -16,7 +16,14 @@ def data_protection(request):
     return render(request, 'data-protection.html')
 
 def promotions(request):
-    return render(request, 'promotions.html')
+    
+    promotions = AddPromotion.objects.all()
+    
+    template_promotion = {
+        'promotions' : promotions
+    }
+    
+    return render(request, 'promotions.html', template_promotion)
 
 def index(request):
     return render(request, 'index.html')
