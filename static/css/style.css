@@ -36,23 +36,27 @@ body {
     color: #644970;
     background-color: #ffff;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 #dropdown-logged-in .dropdown-menu .dropdown-item {
     color: #644970;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 #dropdown-logged-out .btn {
     color: #644970;
     background-color: #ffff;
     border: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 #dropdown-logged-out .dropdown-menu .dropdown-item {
     color: #644970;
+    font-size: 1.3rem;
+}
+
+#login-area i {
     font-size: 1.3rem;
 }
 
