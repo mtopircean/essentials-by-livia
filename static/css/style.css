@@ -32,6 +32,16 @@ body {
     border-bottom: 1px solid #64497017;
 }
 
+#navbarNav {
+    text-align: right;
+}
+
+.nav-link {
+    font-size: larger;
+    margin-right: 14px;
+}
+
+
 #dropdown-logged-in .btn {
     color: #644970;
     background-color: #ffff;
@@ -40,6 +50,7 @@ body {
 
 #dropdown-logged-in .dropdown-menu .dropdown-item {
     color: #644970;
+    font-size: larger;
 }
 
 #dropdown-logged-out .btn {
@@ -50,6 +61,7 @@ body {
 
 #dropdown-logged-out .dropdown-menu .dropdown-item {
     color: #644970;
+    font-size: larger;
 }
 
 #login-area i {
@@ -813,5 +825,11 @@ label#label-password {
         flex-direction: row-reverse;
     }
 
-    
+    div#navbarNav {
+        text-align: right;
+    }
+
+    .nav-link {
+        font-size: larger;
+    }
 }
