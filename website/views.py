@@ -55,14 +55,18 @@ def register(request):
             user.join_team = signup_form.cleaned_data['join_team']
             user.know_more_products = signup_form.cleaned_data['know_more_products']
             user.save()
-            return HttpResponseRedirect(reverse('login_success'))
-        ##need to define the url##
+            
+            return HttpResponseRedirect(reverse('register-success'))
+        
         else:
             return render(request, 'register.html', {'signup_form': signup_form})
     else:
         signup_form = CustomSignupForm()
 
     return render(request, 'register.html', {'signup_form': signup_form})
+
+def register_success(request):
+    return render(request, 'register-success.html')
 
 def handler403(request, exception):
     return render(request, '403.html', status=403)
