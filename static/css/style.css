@@ -89,6 +89,20 @@ body {
     border: none !important;
 }
 
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-icon i {
+    width: 60px;
+    height: auto;
+    font-size: 48px;
+    margin-bottom: 80px;
+}
+
 .footer {
     background-color: #644970;
     padding: 20px;
