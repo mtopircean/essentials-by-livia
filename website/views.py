@@ -45,7 +45,7 @@ def register(request):
     if request.method == 'POST':
         signup_form = CustomSignupForm(request.POST)
         if signup_form.is_valid():
-            user = signup_form.save(commit=False)
+            user = signup_form.save
             user.request_date = timezone.now()
             user.first_name = signup_form.cleaned_data['first_name']
             user.last_name = signup_form.cleaned_data['last_name']
