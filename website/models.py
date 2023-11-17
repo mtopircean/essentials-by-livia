@@ -38,6 +38,7 @@ class AddPromotion(models.Model):
 
 
 class AppUser(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField(max_length=300)
@@ -46,6 +47,7 @@ class AppUser(models.Model):
     username = models.CharField(max_length=100)
     join_team = models.BooleanField(default=False)
     know_more_products = models.BooleanField(default=False)
+    approved = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"

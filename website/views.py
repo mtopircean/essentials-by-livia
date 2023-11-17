@@ -4,7 +4,6 @@ from django.http import HttpResponseRedirect
 from django.views import generic
 from .models import AddProduct, AddPromotion, AppUser
 from .forms import CustomSignupForm
-from django.utils import timezone
 from django.urls import reverse
 
 def index_page(request):
@@ -45,21 +44,25 @@ def register(request):
     if request.method == 'POST':
         signup_form = CustomSignupForm(request.POST)
         if signup_form.is_valid():
-            user = signup_form.save
-            user.request_date = timezone.now()
-            user.first_name = signup_form.cleaned_data['first_name']
-            user.last_name = signup_form.cleaned_data['last_name']
-            user.email = signup_form.cleaned_data['email']
-            user.phone_number = signup_form.cleaned_data['phone']
-            user.username = signup_form.cleaned_data['username']
-            user.join_team = signup_form.cleaned_data['join_team']
-            user.know_more_products = signup_form.cleaned_data['know_more_products']
-            user.save()
             
+            user = User.objects.create_user(
+                username=signup_form.cleaned_data['username'],
+                password=signup_form.cleaned_data['password1'], 
+                first_name=signup_form.cleaned_data['first_name'],
+                last_name=signup_form.cleaned_data['last_name'],
+                email=signup_form.cleaned_data['email']
+            )
+            
+            
+            app_user = AppUser.objects.create(
+                user=user, 
+                phone_number=signup_form.cleaned_data['phone_number'],
+                join_team=signup_form.cleaned_data['join_team'],
+                know_more_products=signup_form.cleaned_data['know_more_products']
+            )
+
             return HttpResponseRedirect(reverse('register-success'))
         
-        else:
-            return render(request, 'register.html', {'signup_form': signup_form})
     else:
         signup_form = CustomSignupForm()
 
