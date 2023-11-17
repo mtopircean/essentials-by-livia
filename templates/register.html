@@ -3,31 +3,13 @@
 <div class="container">
     <div class="row">
         <div id="register-section" class="col-md-6 order-md-1 order-2">
-            <label for="first-name" class="form-label">First Name: </label>
-            <input type="text" class="form-control" id="first-name" placeholder="e.g. John">
-            <label for="last-name" class="form-label">Last Name: </label>
-            <input type="text" class="form-control" id="last-name" placeholder="e.g. Doe">
-            <label for="username" class="form-label">Username:</label>
-            <input type="text" class="form-control" id="username" placeholder="Enter your username">
-            <label for="email" class="form-label">Email: </label>
-            <input type="email" class="form-control" id="email" placeholder="e.g. email@email.com">
-            <label for="phone" class="form-label">Phone Number: </label>
-            <input type="text" class="form-control" id="phone" placeholder="e.g. 0000-000-000">
-            <label for="password" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="password" placeholder="Enter your password">
-            <label for="retype-password" class="form-label">Retype Password:</label>
-            <input type="password" class="form-control" id="retype-password" placeholder="Retype your password">
-            <label>
-                <input type="checkbox" name="join_team" value="yes">
-                I am interested to join the team. Please contact me.
-            </label>
-            <label>
-                <input type="checkbox" name="know_more_products" value="yes">
-                I'm interested to know more about the products. Please contact me.
-            </label>
-            <div class="d-flex justify-content-center mt-4">
-                <button id="register-button" type="button" class="btn btn-secondary">Register</button>
-            </div>
+            <form method="post">
+                {% csrf_token %}
+                {{ signup_form.as_p }}
+                <div class="d-flex justify-content-center mt-4">
+                    <button id="register-button" class="btn btn-secondary" type="submit">Register</button>
+                </div>
+            </form>
         </div>
 
         <div id="why-register" class="col-md-6 order-md-2 order-1 text-center">
