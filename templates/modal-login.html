@@ -17,11 +17,19 @@
             <label for="id_password">Password:</label>
             <input type="password" class="form-control" id="id_password" name="password"
                 placeholder="Please provide your password" required>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="remember-me" name="remember">
+                <label class="form-check-label" for="remember-me">
+                    Remember Me
+                </label>
+            </div>
             <button type="submit" class="btn btn-primary">Login</button>
+            <a href="{% url 'account_signup' %}" class="btn btn-secondary">Register</a>
+            <div>
+                <a href="{% url 'account_reset_password' %}">Forgot Password?</a>
+            </div>
         </form>
     </div>
 
-    <div class="modal-footer">
-        <a href="{% url 'account_signup' %}" class="btn btn-secondary">Register</a>
-    </div>
+
 </div>
