@@ -57,6 +57,17 @@ def index(request):
 def recommended(request):
     return render(request, 'recommended.html')
 
+def filter_ailments(request):
+    ailments = Ailment.objects.all()
+    products = AddProduct.objects.all()
+    
+    if request.method == "POST":
+        selected_filters = request.POST.getlist('filter_checkbox')
+        if selected_filters:
+            products = AddProduct.objects.filter(ailments__name__in=selected_filters)
+    return render(request, 'recommended.html', {'ailments': ailments, 'products': products})
+
+
 def contact(request):
     return render(request, 'contact.html')
 
