@@ -21,7 +21,11 @@
                     <div class="row">
                         <div class="col">
                             {% if is_admin %}
-                            <i class="fa-solid fa-pen-to-square" style="color: #1a9900;"></i>
+                            <form action="{% url 'update_description' promotion.id %}" method="post">
+                                {% csrf_token %}
+                                <textarea name="new_description">{{ promotion.description }}</textarea>
+                                <button type="submit">Save</button>
+                            </form>
                             {% endif %}
                         </div>
                        

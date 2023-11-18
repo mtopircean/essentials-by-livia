@@ -6,6 +6,8 @@ from django.views import generic
 from .models import AddProduct, AddPromotion, AppUser
 from .forms import CustomSignupForm
 from django.urls import reverse
+from django.shortcuts import get_object_or_404
+from django.shortcuts import redirect
 
 def index_page(request):
     return render(request, 'index.html')
@@ -34,6 +36,15 @@ def promotions(request):
 def edit_promotion(request, promotion_id):
     promotion = get_object_or_404(AddPromotion, pk=promotion_id)
     return render(request, 'edit_promotion.html', {'promotion': promotion})
+
+def update_description(request, promotion_id):
+    if request.method == 'POST':
+        promotion = get_object_or_404(AddPromotion, pk=promotion_id)
+        new_description = request.POST.get('new_description')
+        promotion.description = new_description
+        promotion.save()
+        return redirect('promotions')
+    return redirect('promotions')
     
 
 def index(request):
