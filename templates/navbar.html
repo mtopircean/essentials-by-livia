@@ -9,6 +9,11 @@
             <div id="dropdown-logged-in" class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="profileDropdown"
                     data-bs-toggle="dropdown" aria-expanded="false">
+                    {% if user.first_name %}
+                    {{ user.first_name }}
+                    {% else %}
+                    {{ user.username }}
+                    {% endif %}
                     <i class="fa-solid fa-user" style="margin-left: 10px;"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="profileDropdown">
@@ -23,7 +28,8 @@
                     <i class="fa-solid fa-user" style="margin-left: 10px;"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="loginDropdown">
-                    <li><a class="dropdown-item" href="modal-login.html" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
+                    <li><a class="dropdown-item" href="modal-login.html" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Login</a></li>
                     <li><a class="dropdown-item" href="register.html">Register</a></li>
                 </ul>
             </div>
