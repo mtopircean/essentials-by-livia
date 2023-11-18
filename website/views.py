@@ -52,10 +52,7 @@ def delete_promotion(request, promotion_id):
         promotion.delete()
         return redirect('promotions')
     return redirect('promotions')
-    
-   
-    
-    
+        
 
 def index(request):
     return render(request, 'index.html')
