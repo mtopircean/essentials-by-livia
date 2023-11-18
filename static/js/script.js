@@ -67,7 +67,7 @@ function updateDescription() {
 /*Apply automatic filtering in recommended page */
 
 $(document).ready(function () {
-    $('input[name="filter_checkbox"]').on('change', function () {
+    $('input[name="filter-checkbox"]').on('change', function () {
         $(this).closest('form').submit();
     });
 });

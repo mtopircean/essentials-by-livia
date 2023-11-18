@@ -63,8 +63,8 @@ def filter_ailments(request):
     ailments = Ailment.objects.all()
     products = AddProduct.objects.all()
     
-    if request.method == "POST":
-        selected_filters = request.POST.getlist('filter_checkbox')
+    if request.method == "GET":
+        selected_filters = request.GET.getlist('filter_checkbox')
         if selected_filters:
             products = AddProduct.objects.filter(ailments__name__in=selected_filters)
         
@@ -72,7 +72,7 @@ def filter_ailments(request):
         'ailments' : ailments,
         'products' : products,
     }
-    return render(request, 'recommended.html', {'ailments': ailments, 'products': products})
+    return render(request, 'recommended.html', context)
 
 
 def contact(request):
