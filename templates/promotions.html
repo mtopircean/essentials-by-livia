@@ -15,13 +15,23 @@
                 <div class="details-dropdown text-center">
                     <span class="validity">Valid until {{ promotion.expires_on|date:"d.m.Y" }}</span>
                     <span class="ml-auto"> <button class="btn btn-link" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#detailsArea{{ forloop.counter }}">Find out more <span class="toggle-icon">&#11167;</span></button>
+                            data-bs-target="#detailsArea{{ forloop.counter }}">Find out more <span
+                                class="toggle-icon">&#11167;</span></button>
                     </span>
+                    <div class="row">
+                        <div class="col">
+                            <i class="fa-solid fa-pen-to-square" style="color: #1a9900;"></i>
+                        </div>
+                        <div class="col">
+                            <i class="fa-solid fa-trash" style="color: #c20000;"></i>
+                        </div>
+                    </div>
                     <div id="detailsArea{{ forloop.counter }}" class="collapse details-container">
                         <p class="promo-text">{{ promotion.description|safe }}</p>
+                        <br>
+                        <p class="contact-text">Contact me for details:
                             <br>
-                            <p class="contact-text">Contact me for details: 
-                                <br>
+                            <div id="promo-social">
                                 <a href="" target="_blank">
                                     <i class="fa-brands fa-whatsapp"></i>
                                 </a>
@@ -34,14 +44,14 @@
                                 <a href="https://tinyurl.com/yc2knt2p" target="_blank">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
-                                <i class=""></i>
-                            </p>
                     </div>
+                    </p>
                 </div>
             </div>
         </div>
-        {% endfor %}
     </div>
+    {% endfor %}
+</div>
 </div>
 
 

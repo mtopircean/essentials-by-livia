@@ -53,7 +53,6 @@ def register(request):
                 email=signup_form.cleaned_data['email']
             )
             
-            
             app_user = AppUser.objects.create(
                 user=user, 
                 phone_number=signup_form.cleaned_data['phone_number'],
