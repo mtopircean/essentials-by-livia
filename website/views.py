@@ -31,6 +31,11 @@ def promotions(request):
     
     return render(request, 'promotions.html', template_promotion)
 
+def edit_promotion(request, promotion_id):
+    promotion = get_object_or_404(AddPromotion, pk=promotion_id)
+    return render(request, 'edit_promotion.html', {'promotion': promotion})
+    
+
 def index(request):
     return render(request, 'index.html')
 
