@@ -50,7 +50,7 @@
                                 <i class="fas fa-heart"></i> Add to Favorites
                             </button>
                             <h6>Description:</h6>
-                            <span class="product-description">{{ product.description }}</span>
+                            <span class="product-description">{{ product.description | safe }}</span>
                             <br>
                             <h6>Ailments:</h6>
                             {% for ailment in product.ailments.all %}
