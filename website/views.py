@@ -67,6 +67,11 @@ def filter_ailments(request):
         selected_filters = request.POST.getlist('filter_checkbox')
         if selected_filters:
             products = AddProduct.objects.filter(ailments__name__in=selected_filters)
+        
+    context = {
+        'ailments' : ailments,
+        'products' : products,
+    }
     return render(request, 'recommended.html', {'ailments': ailments, 'products': products})
 
 
