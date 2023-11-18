@@ -9,6 +9,7 @@ urlpatterns = [
     path('promotions.html', views.promotions, name='promotions'),
     path('edit-promotion/<int:promotion_id>/', views.edit_promotion, name='edit_promotion'),
     path('update-description/<int:promotion_id>/', views.update_description, name='update_description'),
+    path('delete-promotion/<int:promotion_id>/', views.delete_promotion, name='delete_promotion'),
     path('index.html', views.index, name='index'),
     path('user-account.html', views.user_account, name='user_account'),
     path('recommended.html', views.recommended, name='recommended'),

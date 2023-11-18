@@ -45,3 +45,21 @@ document.getElementById('register-button').addEventListener('click', function() 
     window.location.href = 'register.html';
 });
 
+/* Delete Promotions */
+function confirmDelete() {
+    if (confirm("Are you sure you want to delete this promotion?")) {
+        document.getElementById('delete-form').submit();
+    } else {
+        event.preventDefault();
+    }
+}
+
+/* updateDescription */
+
+function updateDescription() {
+    if (confirm("Are you sure you want to update promotions description?")) {
+        document.getElementById('update-promo-description').submit();
+    } else {
+        event.preventDefault();
+    }
+}

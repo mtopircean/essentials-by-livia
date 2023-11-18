@@ -45,6 +45,16 @@ def update_description(request, promotion_id):
         promotion.save()
         return redirect('promotions')
     return redirect('promotions')
+
+def delete_promotion(request, promotion_id):
+    if request.method == 'POST':
+        promotion = get_object_or_404(AddPromotion, pk=promotion_id)
+        promotion.delete()
+        return redirect('promotions')
+    return redirect('promotions')
+    
+   
+    
     
 
 def index(request):

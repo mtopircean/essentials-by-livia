@@ -21,17 +21,15 @@
                     <div class="row">
                         <div class="col">
                             {% if is_admin %}
-                            <form action="{% url 'update_description' promotion.id %}" method="post">
+                            <form  id="update-promo-description" action="{% url 'update_description' promotion.id %}" method="post" onclick="return updateDescription()">
                                 {% csrf_token %}
                                 <textarea name="new_description">{{ promotion.description }}</textarea>
                                 <button type="submit">Save</button>
                             </form>
-                            {% endif %}
-                        </div>
-                       
-                        <div class="col">
-                            {% if is_admin %}
-                            <i class="fa-solid fa-trash" style="color: #c20000;"></i>
+                            <form id="delete-form" action="{% url 'delete_promotion' promotion.id %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit" onclick="return confirmDelete()">Delete</button>
+                            </form>
                             {% endif %}
                         </div>
                     </div>
