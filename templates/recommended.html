@@ -50,7 +50,7 @@
                                 <i class="fas fa-heart"></i> Add to Favorites
                             </button>
                             <h6>Description:</h6>
-                            <p class="product-description">{{ product.description }}</p>
+                            <span class="product-description">{{ product.description }}</span>
                             <br>
                             <h6>Ailments:</h6>
                             {% for ailment in product.ailments.all %}
@@ -74,8 +74,8 @@
                             </p>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
             <div class="product-separator">
                 <hr>
