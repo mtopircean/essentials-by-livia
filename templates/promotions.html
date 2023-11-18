@@ -20,10 +20,15 @@
                     </span>
                     <div class="row">
                         <div class="col">
+                            {% if is_admin %}
                             <i class="fa-solid fa-pen-to-square" style="color: #1a9900;"></i>
+                            {% endif %}
                         </div>
+                       
                         <div class="col">
+                            {% if is_admin %}
                             <i class="fa-solid fa-trash" style="color: #c20000;"></i>
+                            {% endif %}
                         </div>
                     </div>
                     <div id="detailsArea{{ forloop.counter }}" class="collapse details-container">
@@ -44,14 +49,14 @@
                                 <a href="https://tinyurl.com/yc2knt2p" target="_blank">
                                     <i class="fa-brands fa-instagram"></i>
                                 </a>
+                            </div>
+                        </p>
                     </div>
-                    </p>
                 </div>
             </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
 </div>
 
 

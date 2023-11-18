@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.views import generic
@@ -21,9 +22,11 @@ def data_protection(request):
 def promotions(request):
     
     promotions = AddPromotion.objects.all()
+    is_admin = request.user.is_superuser
     
     template_promotion = {
-        'promotions' : promotions
+        'is_admin': is_admin,
+        'promotions': promotions
     }
     
     return render(request, 'promotions.html', template_promotion)
