@@ -713,6 +713,15 @@ li {
     margin-bottom: 10px;
 }
 
+.remove-filter {
+    text-decoration: none;
+    background-color: #ffff;
+    border: none;
+    color: darkred;
+    font-size: small;
+    font-weight: 600;
+}
+
 .filter-section p {
     margin-top: 5px;
     margin-bottom: 5px;

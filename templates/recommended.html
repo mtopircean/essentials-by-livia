@@ -5,7 +5,9 @@
         <h6>Your active searches:</h6>
         <ul>
             {% for filter_value in selected_filters %}
-            <li>{{ filter_value }}</li>
+            <li>{{ filter_value }}
+                <button class="remove-filter" data-filter="{{ filter_value }}"> &#x2716</button>
+            </li>
             {% endfor %}
         </ul>
     </nav>
