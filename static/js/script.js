@@ -41,7 +41,7 @@ $(document).ready(function () {
 
 /** Modal link to Register **/
 
-document.getElementById('register-button').addEventListener('click', function() {
+document.getElementById('register-button-modal').addEventListener('click', function () {
     window.location.href = 'register.html';
 });
 
@@ -69,5 +69,21 @@ function updateDescription() {
 $(document).ready(function () {
     $('input[name="filter-checkbox"]').on('change', function () {
         $(this).closest('form').submit();
+    });
+});
+
+/*Implement search functionality in recommended page*/
+$(document).ready(function () {
+    $('#searhailment').on('input', function () {
+        var searchText = $(this).val().toLowerCase();
+        $('.filter-checkbox').each(function () {
+            var ailmentName = $(this).next('label').text().toLowerCase();
+            var parentDiv = $(this).closest('div');
+            if (ailmentName.includes(searchText)) {
+                parentDiv.show();
+            } else {
+                parentDiv.hide();
+            }
+        });
     });
 });
