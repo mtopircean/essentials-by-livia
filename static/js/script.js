@@ -87,3 +87,5 @@ $(document).ready(function () {
         });
     });
 });
+
+/*Implement clear active search functionality and clear all in recommended page */
