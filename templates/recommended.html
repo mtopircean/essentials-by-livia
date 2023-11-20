@@ -1,17 +1,18 @@
 {% include 'base.html' %}
 
-
-
 <div id="active-filters" class="row container-fluid">
     <nav aria-label="breadcrumb" class="d-flex">
         <h6>Your active searches:</h6>
         <ul>
-            <li>First result</li>
-            <li>Second result</li>
+            {% for filter_value in selected_filters %}
+            <li>{{ filter_value }}</li>
+            {% endfor %}
         </ul>
     </nav>
 </div>
 <hr>
+
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2">
@@ -23,16 +24,22 @@
                     <p id="toggle-ailment-list">Ailment list &#11165;</p>
                     <form method="GET" action="{% url 'filter_ailments' %}">
                         <div class="filter-content">
+                            <div>
+                                <button type="submit" id="apply-button">Apply selection &#x2714;</button>
+                            </div>
+                            <div>
+                                <button id="clear-all-button">Clear all &#x2716;</button>
+                            </div>
                             {% for ailment in ailments %}
                             <div>
-                                <input type="checkbox" name="filter-checkbox" value="{{ ailment.name}}"
+                                <input type="checkbox" name="filter_checkbox" value="{{ ailment.name }}"
                                     class="filter-checkbox">
                                 <label>{{ ailment.name }}</label>
                             </div>
                             {% endfor %}
                         </div>
                     </form>
-                    <div><button id="clear-all-button">Clear all <i class="fa-solid fa-xmark"></i></button></div>
+
                 </div>
             </div>
         </div>
