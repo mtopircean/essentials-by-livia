@@ -88,4 +88,23 @@ $(document).ready(function () {
     });
 });
 
-/*Implement clear active search functionality and clear all in recommended page */
+/*Add checkbox remain checked in recommended*/
+
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('ailment-filter-form');
+    const checkboxes = form.querySelectorAll('.filter-checkbox');
+
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+            localStorage.setItem(checkbox.value, checkbox.checked);
+        });
+
+        const savedValue = localStorage.getItem(checkbox.value);
+
+        if (savedValue === 'true') {
+            checkbox.checked = true;
+        }
+    });
+});
+
+/*Implement clear active search functionality */
