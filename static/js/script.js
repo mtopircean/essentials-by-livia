@@ -89,6 +89,22 @@ $(document).ready(function () {
 });
 
 /*Add checkbox remain checked in recommended*/
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById('ailment-filter-form');
+    const checkboxes = form.querySelectorAll('.filter-checkbox');
+
+    checkboxes.forEach(function(checkbox) {
+        const updateCheckbox = () => {
+            localStorage.setItem(checkbox.value, checkbox.checked ? 'true' : 'false');
+        };
+
+        const savedValue = localStorage.getItem(checkbox.value) || 'false';
+        
+        checkbox.checked = savedValue === 'true';
+
+        checkbox.addEventListener('change', updateCheckbox);
+    });
+});
 
 
 /*Implement clear active search functionality */
