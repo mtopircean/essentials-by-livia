@@ -89,22 +89,36 @@ $(document).ready(function () {
 });
 
 /*Add checkbox remain checked in recommended*/
+
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('ailment-filter-form');
     const checkboxes = form.querySelectorAll('.filter-checkbox');
-
+  
     checkboxes.forEach(function(checkbox) {
-        const updateCheckbox = () => {
-            localStorage.setItem(checkbox.value, checkbox.checked ? 'true' : 'false');
-        };
-
-        const savedValue = localStorage.getItem(checkbox.value) || 'false';
-        
-        checkbox.checked = savedValue === 'true';
-
-        checkbox.addEventListener('change', updateCheckbox);
+      const savedValue = localStorage.getItem(checkbox.value) || 'false';
+      checkbox.checked = savedValue === 'true';
+  
+      checkbox.addEventListener('change', function() {
+        updateCheckboxState();
+      });
     });
-});
+  
+    const updateCheckboxState = () => {
+      const checkboxes = form.querySelectorAll('.filter-checkbox');
+      checkboxes.forEach(checkbox => {
+        localStorage.setItem(checkbox.value, checkbox.checked ? 'true' : 'false');
+      });
+    };
+  
+    const clearAllButton = document.getElementById('clear-all-button');
+    clearAllButton.addEventListener('click', () => {
+      checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+        updateCheckboxState();
+      });
 
+      form.submit();
+    });
+  });
 
-/*Implement clear active search functionality */
+            /*Implement clear active search functionality */
