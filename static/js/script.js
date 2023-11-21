@@ -89,10 +89,16 @@ $(document).ready(function () {
 });
 
 /*Add checkbox remain checked in recommended*/
-
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('ailment-filter-form');
     const checkboxes = form.querySelectorAll('.filter-checkbox');
+  
+    const updateCheckboxState = () => {
+      const checkboxes = form.querySelectorAll('.filter-checkbox');
+      checkboxes.forEach(checkbox => {
+        localStorage.setItem(checkbox.value, checkbox.checked ? 'true' : 'false');
+      });
+    };
   
     checkboxes.forEach(function(checkbox) {
       const savedValue = localStorage.getItem(checkbox.value) || 'false';
@@ -102,13 +108,6 @@ document.addEventListener("DOMContentLoaded", function() {
         updateCheckboxState();
       });
     });
-  
-    const updateCheckboxState = () => {
-      const checkboxes = form.querySelectorAll('.filter-checkbox');
-      checkboxes.forEach(checkbox => {
-        localStorage.setItem(checkbox.value, checkbox.checked ? 'true' : 'false');
-      });
-    };
   
     const clearAllButton = document.getElementById('clear-all-button');
     clearAllButton.addEventListener('click', () => {
@@ -121,4 +120,8 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-            /*Implement clear active search functionality */
+
+
+
+
+/*Implement clear active search functionality */
