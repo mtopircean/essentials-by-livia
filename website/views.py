@@ -5,6 +5,7 @@ from django.views import generic
 from .models import AddProduct, AddPromotion, AppUser, Ailment
 from .forms import CustomSignupForm
 from django.urls import reverse
+from django.db.models import Q
 
 def index_page(request):
     return render(request, 'index.html')
@@ -62,13 +63,16 @@ def recommended(request):
 def filter_ailments(request):
     ailments = Ailment.objects.all()
     products = AddProduct.objects.all()
-    
     selected_filters = []
     
     if request.method == "GET":
         selected_filters = request.GET.getlist('filter_checkbox')
         if selected_filters:
-            products = AddProduct.objects.filter(ailments__name__in=selected_filters)
+            queries = [Q(ailments__name=filter_val) for filter_val in selected_filters]
+            combined_query = queries.pop()
+            for query in queries:
+                combined_query |= query
+            products = AddProduct.objects.filter(combined_query).distinct()
         
     context = {
         'ailments' : ailments,
