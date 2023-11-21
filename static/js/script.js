@@ -89,6 +89,7 @@ $(document).ready(function () {
 });
 
 /*Add checkbox remain checked in recommended*/
+
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('ailment-filter-form');
     const checkboxes = form.querySelectorAll('.filter-checkbox');
@@ -119,9 +120,3 @@ document.addEventListener("DOMContentLoaded", function() {
       form.submit();
     });
   });
-
-
-
-
-
-/*Implement clear active search functionality */

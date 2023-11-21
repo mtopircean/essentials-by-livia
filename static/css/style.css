@@ -610,6 +610,10 @@ button#delete-promo {
 
 /*Recommandation section*/
 
+#filter-product-section {
+    margin-top: 30px;
+}
+
 #active-filters .row {
     display: flex;
     justify-content: space-between;
