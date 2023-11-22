@@ -20,7 +20,7 @@
                         <h6 class="form-labels"> First name:</h6>
                     </div>
                     <div class="col-6  user-contact-input">
-                        <h6>John</h6>
+                        <h6>{{ user_data.first_name }}</h6>
                     </div>
                 </div>
                 <div class="row">
@@ -28,23 +28,23 @@
                         <h6 class="form-labels"> Last name:</h6>
                     </div>
                     <div class="col-6 user-contact-input">
-                        <h6>Doe</h6>
+                        <h6>{{ user_data.last_name }}</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6 text-left">
                         <h6 class="form-labels"> Email:</h6>
                     </div>
-                    <div class="col-6  user-contact-input">
-                        <h6>email@email.com</h6>
+                    <div class="col-6 user-contact-input">
+                        <h6>{{ user_data.email }}</h6>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-6 text-left">
                         <h6 class="form-labels"> Phone:</h6>
                     </div>
-                    <div class="col-6  user-contact-input">
-                        <h6>888888888</h6>
+                    <div class="col-6 user-contact-input">
+                        <h6>{{ user_data.phone }}</h6>
                     </div>
                 </div>
                 <div class="row">
@@ -64,7 +64,7 @@
                 </div>
                 <div class="row">
                     <div class="col-6 text-left">
-                        <h6 class="form-labels"> Available for offers:</h6>
+                        <h6 class="form-labels"> Know more about the products:</h6>
                     </div>
                     <div class="col-6  user-contact-input">
                         <div class="form-check form-check-inline">
