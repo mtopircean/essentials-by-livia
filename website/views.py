@@ -115,6 +115,19 @@ def register(request):
 
     return render(request, 'register.html', {'signup_form': signup_form})
 
+
+def logged_user_details(request):
+    
+    logged_in_user = request.user
+    user_data = AppUser.objects.get(user=logged_in_user)
+    
+    context = {
+        'user-data': user_data
+    }
+    
+    return render(request, 'profile.html', context)
+
+
 def register_success(request):
     return render(request, 'register-success.html')
 

@@ -12,6 +12,7 @@ urlpatterns = [
     path('delete-promotion/<int:promotion_id>/', views.delete_promotion, name='delete_promotion'),
     path('index.html', views.index, name='index'),
     path('user-account.html', views.user_account, name='user_account'),
+    path('profile.html', views.logged_user_details, name='logged_user_details'),
     path('recommended.html', views.recommended, name='recommended'),
     path('contact.html', views.contact, name='contact'),
     path('register.html', views.register, name='register'),
