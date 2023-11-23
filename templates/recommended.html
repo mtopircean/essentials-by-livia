@@ -61,6 +61,10 @@
                                 <textarea name="new_description">{{ product.description }}</textarea>
                                 <button id="save-description" type="submit">Save</button>
                             </form>
+                            <form id="delete-product" action="{% url 'delete_product' product.id %}" method="post">
+                                {% csrf_token %}
+                                <button id="delete-product" type="submit">Delete product!</button>
+                            </form>
                             {% endif %}
 
                             <span class="product-name">{{ product.name }}</span>
