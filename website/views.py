@@ -6,6 +6,7 @@ from .models import AddProduct, AddPromotion, AppUser, Ailment
 from .forms import CustomSignupForm
 from django.urls import reverse
 from django.db.models import Q
+from django.http import HttpResponseRedirect
 
 def index_page(request):
     return render(request, 'index.html')
