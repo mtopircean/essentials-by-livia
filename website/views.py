@@ -61,6 +61,19 @@ def recommended(request):
     products = AddProduct.objects.all()
     return render(request, 'recommended.html', {'ailments': ailments, 'products': products})
 
+def edit_product(request, product_id):
+    product = get_object_or_404(AddProduct, pk=product_id)
+    return render(request, 'edit_product.html', {'product': product})
+
+def update_product(request, product_id):
+    if request.method == 'POST':
+        product = get_object_or_404(AddProduct, pk=product_id)
+        new_details = request.POST.get('new_details')
+        product.details = new_details
+        product.save()
+        return redirect('recommended')
+    return redirect('recommended')
+
 def filter_ailments(request):
     ailments = Ailment.objects.all()
     products = AddProduct.objects.all()
