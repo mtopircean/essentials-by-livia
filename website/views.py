@@ -74,6 +74,12 @@ def update_product(request, product_id):
         return redirect('recommended')
     return redirect('recommended')
 
+def delete_product(request, product_id):
+    if request.method == 'POST':
+        product = get_object_or_404(AddProduct, pk=product_id)
+        product.delete()
+        return redirect('recommended')
+    return redirect('recommended')
 
 def filter_ailments(request):
     ailments = Ailment.objects.all()
