@@ -55,6 +55,14 @@
                     </div>
                     <div class="d-flex align-items-center col-12 col-md-8">
                         <div>
+                            {% if is_admin %}
+                            <form id="update-product-details" action="{% url 'update_description' product.id %}" method="post" onsubmit="return updateDescription()">
+                                {% csrf_token %}
+                                <textarea name="new_description">{{ product.description }}</textarea>
+                                <button id="save-description" type="submit">Save</button>
+                            </form>
+                            {% endif %}
+
                             <span class="product-name">{{ product.name }}</span>
                             <br>
                             <button class="add-to-favorites-btn">

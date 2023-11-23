@@ -68,11 +68,12 @@ def edit_product(request, product_id):
 def update_product(request, product_id):
     if request.method == 'POST':
         product = get_object_or_404(AddProduct, pk=product_id)
-        new_details = request.POST.get('new_details')
-        product.details = new_details
+        new_description = request.POST.get('new_description')
+        product.description = new_description
         product.save()
         return redirect('recommended')
     return redirect('recommended')
+
 
 def filter_ailments(request):
     ailments = Ailment.objects.all()
