@@ -915,6 +915,7 @@ label#label-password {
 }
 
 #register-section {
+    margin-top: 30px;
     min-height: 300px;
     display: flex;
     flex-direction: column;
@@ -925,16 +926,25 @@ label#label-password {
 
 #register-section input {
     margin-bottom: 20px;
-}
-
-#register-section button:hover {
-    border: #644970 solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid 1px #0097B2;
 }
 
 #register-section button {
+    background-color: #0097B2;
+    border: #0097B2 solid 2px;
+    color: #ffff;
+    margin-top: 10px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
+}
 
-    margin-bottom: 100px;
-
+#register-section button:hover {
+    color: #0097B2;
+    background-color: #ffff;
 }
 
 #register-section label[for="first-name"] {
