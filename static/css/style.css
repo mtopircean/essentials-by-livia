@@ -542,32 +542,33 @@ textarea {
 
 button#save-promo-change {
     background-color: transparent;
-    border: none;
+    border: #339933 solid 2px;
     color: #339933;
     margin-top: 10px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 button#save-promo-change:hover {
     color: #ffff;
     background-color: #339933;
-    width: 50%;
-    padding: 5px;
-    border-radius: 5px;
 }
 
 button#delete-promo:hover {
     color: #ffff;
     background-color: #993333;
-    width: 50%;
-    padding: 5px;
-    border-radius: 5px;
+    
 }
 
 button#delete-promo {
     background-color: transparent;
-    border: none;
+    border: #993333 solid 2px;
     color: #993333;
     margin-top: 10px;
+    width: 50%;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 /* Account section */
@@ -731,6 +732,45 @@ li {
     margin-top: 5px;
     margin-bottom: 5px;
     color: #644970;
+}
+
+button#save-product-change {
+    background-color: transparent;
+    color: #339933;
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    border: #339933 solid 2px;
+}
+
+button#save-product-change:hover {
+    color: #ffff;
+    background-color: #339933;
+}
+
+button#delete-product:hover {
+    color: #ffff;
+    background-color: #993333;
+}
+
+button#delete-product {
+    background-color: transparent;
+    border: none;
+    color: #993333;
+    margin-top: 10px;
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    border: #993333 solid 2px;
+    margin-bottom: 10px;
+}
+}
+
+#product-new-description {
+    width: 100%;
 }
 
 /* Contact */

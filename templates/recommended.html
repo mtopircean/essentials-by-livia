@@ -59,12 +59,12 @@
                             <form id="update-product-details" action="{% url 'update_product' product.id %}"
                                 method="post" onsubmit="return updateDescription()">
                                 {% csrf_token %}
-                                <textarea name="new_description">{{ product.description }}</textarea>
-                                <button id="save-description" type="submit">Save</button>
+                                <textarea id="product-new-description" name="new_description">{{ product.description }}</textarea>
+                                <button type="submit" id="save-product-change">Save description</button>
                             </form>
                             <form id="delete-product" action="{% url 'delete_product' product.id %}" method="post">
                                 {% csrf_token %}
-                                <button id="delete-product" type="submit">Delete product!</button>
+                                <button id="delete-product" type="submit" id="delete-product">Delete product!</button>
                             </form>
                             {% endif %}
 
