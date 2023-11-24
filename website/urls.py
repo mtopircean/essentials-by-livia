@@ -20,6 +20,7 @@ urlpatterns = [
     path('contact.html', views.contact, name='contact'),
     path('register.html', views.register, name='register'),
     path('register/success/', views.register_success, name='register-success'),
+    path('custom-logout/', views.custom_logout, name='custom_logout'),
     path('filter-ailments/', views.filter_ailments, name='filter_ailments'),
 ]
 

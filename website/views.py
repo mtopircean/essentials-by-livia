@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.contrib.auth import logout
 from django.views import generic
 from .models import AddProduct, AddPromotion, AppUser, Ailment
 from .forms import CustomSignupForm
@@ -168,6 +169,10 @@ def logged_user_details(request):
     }
     
     return render(request, 'profile.html', context)
+
+def custom_logout(request):
+    logout(request)
+    return redirect('index')
 
 
 def register_success(request):
