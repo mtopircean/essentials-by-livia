@@ -734,7 +734,7 @@ li {
     color: #644970;
 }
 
-button#save-product-change {
+button#save-product-description {
     background-color: transparent;
     color: #339933;
     margin-top: 10px;
@@ -745,7 +745,7 @@ button#save-product-change {
     border: #339933 solid 2px;
 }
 
-button#save-product-change:hover {
+button#save-product-description:hover {
     color: #ffff;
     background-color: #339933;
 }

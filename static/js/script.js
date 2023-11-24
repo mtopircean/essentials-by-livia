@@ -54,7 +54,7 @@ function confirmDelete() {
     }
 }
 
-/* updateDescription */
+/* Update Promotion Description */
 
 function updateDescription() {
     if (confirm("Are you sure you want to update promotions description?")) {
@@ -63,6 +63,27 @@ function updateDescription() {
         event.preventDefault();
     }
 }
+
+/* Delete Product */
+function confirmProductDelete() {
+    if (confirm("Are you sure you want to delete this product?")) {
+        document.getElementById('delete-product').submit();
+    } else {
+        event.preventDefault();
+    }
+}
+
+/* Update Product Description */
+
+function updateProductDescription() {
+    if (confirm("Are you sure you want to update the product description?")) {
+        document.getElementById('save-product-description').submit();
+    } else {
+        event.preventDefault();
+    }
+}
+
+
 
 /*Apply automatic filtering in recommended page */
 
