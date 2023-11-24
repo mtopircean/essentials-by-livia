@@ -63,7 +63,16 @@ def recommended(request):
 
 def edit_product(request, product_id):
     product = get_object_or_404(AddProduct, pk=product_id)
-    return render(request, 'edit_product.html', {'product': product})
+
+    if request.method == 'POST':
+        new_description = request.POST.get('new_description')
+        
+        if new_description:
+            product.description = new_description
+            product.save()
+            return redirect('recommended')
+        
+    return render(request, 'recommended.html', {'product': product, 'is_admin': True})
 
 def update_product(request, product_id):
     if request.method == 'POST':
