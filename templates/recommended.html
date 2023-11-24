@@ -56,13 +56,16 @@
                     <div class="d-flex align-items-center col-12 col-md-8">
                         <div>
                             {% if is_admin %}
-                            <form id="update-product-details" action="{% url 'update_product' product.id %}" onclick="return updateProductDescription()"
-                                method="post" onsubmit="return updateDescription()">
+                            <form id="update-product-details" action="{% url 'update_product' product.id %}"
+                                onclick="return updateProductDescription()" method="post"
+                                onsubmit="return updateDescription()">
                                 {% csrf_token %}
-                                <textarea id="product-new-description" name="new_description">{{ product.description }}</textarea>
+                                <textarea id="product-new-description"
+                                    name="new_description">{{ product.description }}</textarea>
                                 <button type="submit" id="save-product-description">Save description</button>
                             </form>
-                            <form id="delete-product" action="{% url 'delete_product' product.id %}" method="post" onclick="return confirmProductDelete()">
+                            <form id="delete-product" action="{% url 'delete_product' product.id %}" method="post"
+                                onclick="return confirmProductDelete()">
                                 {% csrf_token %}
                                 <button id="delete-product" type="submit" id="delete-product">Delete product!</button>
                             </form>
@@ -98,14 +101,13 @@
                             </p>
                         </div>
                     </div>
-                    <hr>
+                    <div class="product-separator">
+                        <hr>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
-            <div class="product-separator">
-                <hr>
-            </div>
-            <hr>
+
         </div>
     </div>
 </div>
