@@ -59,28 +59,40 @@ def index(request):
 def recommended(request):
     ailments = Ailment.objects.all()
     products = AddProduct.objects.all()
-    return render(request, 'recommended.html', {'ailments': ailments, 'products': products})
+    is_admin = request.user.is_superuser
+
+    context = {
+        'is_admin': is_admin,
+        'products': products,
+        'ailments': ailments
+    }
+
+    return render(request, 'recommended.html', context)
 
 def edit_product(request, product_id):
     product = get_object_or_404(AddProduct, pk=product_id)
 
     if request.method == 'POST':
         new_description = request.POST.get('new_description')
-        
         if new_description:
             product.description = new_description
             product.save()
             return redirect('recommended')
-        
+    
     return render(request, 'recommended.html', {'product': product, 'is_admin': True})
 
 def update_product(request, product_id):
     if request.method == 'POST':
         product = get_object_or_404(AddProduct, pk=product_id)
-        new_description = request.POST.get('new_description')
-        product.description = new_description
-        product.save()
+        
+        if request.user.is_superuser:
+            new_description = request.POST.get('new_description')
+            if new_description is not None:
+                product.description = new_description
+                product.save()
+        
         return redirect('recommended')
+
     return redirect('recommended')
 
 def delete_product(request, product_id):
