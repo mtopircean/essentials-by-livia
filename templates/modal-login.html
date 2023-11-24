@@ -19,14 +19,16 @@
                 placeholder="Please provide your password" required>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="remember-me" name="remember">
-                <label class="form-check-label" for="remember-me">
+                <label class="form-check-label" for="remember-me" id="remember-me">
                     Remember Me
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <div class="button-area">
+            <button type="submit" class="btn btn-primary" id="login-button">Login</button>
             <a id="register-button-modal" href="register.html" class="btn btn-secondary">Register</a>
+            </div>
             <div>
-                <a href="register.html">Forgot Password?</a>
+                <a href="register.html" id="forgot-password">Forgot Password?</a>
             </div>
         </form>
     </div>

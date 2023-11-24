@@ -469,7 +469,8 @@ h6 {
 
 /*Promo page */
 
-#social-media, .fa-brands {
+#social-media,
+.fa-brands {
     color: #0097B2;
     text-decoration: none;
     font-size: 1.2rem;
@@ -755,8 +756,6 @@ li {
 }
 
 .modal-body {
-    background-image: url('../images/modal-background-2.jpg');
-    background-size: cover;
     font-size: large;
     color: #000000;
     padding-bottom: 40px;
@@ -767,9 +766,7 @@ li {
 }
 
 .modal-header {
-    background-image: url('../images/modal-background-2-header.jpg');
-    background-size: cover;
-    color: #000000;
+    background-color: #644970;
     font-weight: bold;
 }
 
@@ -786,6 +783,8 @@ li {
     width: 40%;
     font-size: large;
     border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #login-button:hover {
@@ -793,22 +792,42 @@ li {
     color: #0097B2;
 }
 
-#register-button {
+#register-button-modal {
     background-color: #644970;
     width: 40%;
     font-size: large;
     margin-left: 10px;
     border: none;
-
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#register-button:hover {
+#register-button-modal:hover {
     background-color: #ffff;
     color: #644970;
 }
 
 label#label-password {
     margin-top: 8px;
+}
+
+#remember-me {
+    color: #000000;
+    margin-top: 10px;
+}
+
+#forgot-password {
+    color: #000000;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+}
+
+.button-area {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 /* Register page */
