@@ -164,14 +164,19 @@ def register(request):
 
 def logged_user_details(request):
     
-    logged_in_user = request.user
-    user_data = AppUser.objects.get(user=logged_in_user)
+    try:
     
-    context = {
-        'user-data': user_data
-    }
-    
-    return render(request, 'profile.html', context)
+        logged_in_user = request.user
+        user_data = AppUser.objects.get(user=logged_in_user)
+        
+        context = {
+            'user-data': user_data
+        }
+        
+        return render(request, 'profile.html', context)
+
+    except AppUser.DoesNotExist:
+            raise Http404("User does not exist")
 
 def custom_logout(request):
     logout(request)
