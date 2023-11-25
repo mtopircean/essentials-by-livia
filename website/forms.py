@@ -12,14 +12,24 @@ class CustomSignupForm(SignupForm):
     know_more_products = forms.BooleanField(required=False)
 
     def save(self, request):
+        # Save the user with the stadard existing method
         user = super(CustomSignupForm, self).save(request)
+        
+        #Pull the cleaned data
         user_data = self.cleaned_data
+        
+        #Update the users with the input data
         user.first_name = user_data['first_name']
         user.last_name = user_data['last_name']
         user.email = user_data['email']
         user.username = user_data['username']
-
+        
+        #Save the user
+        user.save()
+        
+        #Creates the AppUser object
         app_user = AppUser.objects.create(
+            user=user,
             first_name=user_data['first_name'],
             last_name=user_data['last_name'],
             email=user_data['email'],
@@ -28,6 +38,5 @@ class CustomSignupForm(SignupForm):
             join_team=user_data['join_team'],
             know_more_products=user_data['know_more_products']
         )
-        app_user.save()
 
         return user
