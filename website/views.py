@@ -146,6 +146,9 @@ def register(request):
             
             app_user = AppUser.objects.create(
                 user=user, 
+                first_name=signup_form.cleaned_data['first_name'],
+                last_name=signup_form.cleaned_data['last_name'],
+                email=signup_form.cleaned_data['email'],
                 phone_number=signup_form.cleaned_data['phone_number'],
                 join_team=signup_form.cleaned_data['join_team'],
                 know_more_products=signup_form.cleaned_data['know_more_products']
