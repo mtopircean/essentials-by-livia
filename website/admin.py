@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Ailment, AddProduct, AddPromotion, AppUser
+from .models import Ailment, AddProduct, AddPromotion, AppUser, FavouriteSelection
 from django_summernote.admin import SummernoteModelAdmin
 from import_export.admin import ImportExportModelAdmin
 from .resources import AddProductResource, AddPromotionResource
@@ -43,3 +43,9 @@ class AppUser(ImportExportModelAdmin):
 
     def remove_user(self, request, queryset):
         queryset.update(approved=False)
+        
+
+@admin.register(FavouriteSelection)
+class FavouriteSelectionAdmin(admin.ModelAdmin):
+    list_display = ('user', 'product', 'favourite_date')
+    list_filter = ('user', 'product', 'favourite_date')
