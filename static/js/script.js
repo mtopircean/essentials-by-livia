@@ -1,4 +1,4 @@
-/** Promotions dropdown details section**/
+/* Promotions dropdown details section */
 
 $(document).ready(function () {
 
@@ -13,7 +13,7 @@ $(document).ready(function () {
     });
 })
 
-/** Recommandation tool page drop down filter **/
+/* Recommandation tool page drop down filter */
 
 $(document).ready(function () {
     var isAilmentListVisible = $(window).width() >= 768;
@@ -39,7 +39,22 @@ $(document).ready(function () {
     });
 });
 
-/** Modal link to Register **/
+/* Expandeble section in profile page */
+
+$(document).ready(function () {
+
+    var isDetailsVisible = false;
+    $("#user-details").hide()
+
+    $(".toggle-details").click(function () {
+        $("#user-details").slideToggle();
+        isDetailsVisible = !isDetailsVisible;
+
+        $(".toggle-icon").html(isDetailsVisible ? '&#11165;' : '&#11167;');
+    });
+})
+
+/* Modal link to Register */
 
 document.getElementById('register-button-modal').addEventListener('click', function () {
     window.location.href = 'register.html';

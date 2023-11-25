@@ -97,19 +97,3 @@
 
 {% block content %}
 {% endblock %}
-
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function () {
-
-        var isDetailsVisible = false;
-        $("#user-details").hide()
-
-        $(".toggle-details").click(function () {
-            $("#user-details").slideToggle();
-            isDetailsVisible = !isDetailsVisible;
-
-            $(".toggle-icon").html(isDetailsVisible ? '&#11165;' : '&#11167;');
-        });
-    })
-</script>
