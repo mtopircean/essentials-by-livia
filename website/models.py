@@ -51,3 +51,11 @@ class AppUser(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+    
+class FavouriteSelection(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(AddProduct, on_delete=models.CASCADE)
+    favourite_date = models.DateTimeField(auto_now_add=True)
+    
+    def __str__(self):
+        return f"{self.user.username} favorites {self.product.name}"

@@ -156,3 +156,5 @@ document.addEventListener("DOMContentLoaded", function() {
       form.submit();
     });
   });
+
+  /*Add to favourites*/
