@@ -158,3 +158,23 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   /*Add to favourites*/
+
+  $(document).ready(function() {
+    $('.add-to-favorites-btn').on('click', function(event) {
+        event.preventDefault();
+
+        var button = $(this);
+        var form = button.closest('.favorite-form');
+        var productId = form.find('input[name="product_id"]').val();
+
+        if (button.find('i').hasClass('fas')) {
+            button.html('<i class="far fa-heart"></i> Add to Favorites');
+        } else {
+            button.html('<i class="fas fa-heart"></i> Remove from Favorites');
+        }
+
+        button.toggleClass('favorited');
+
+        form.submit();
+    });
+});
