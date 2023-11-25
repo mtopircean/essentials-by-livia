@@ -165,14 +165,12 @@ def register(request):
 def logged_user_details(request):
     
     try:
-    
         logged_in_user = request.user
         user_data = AppUser.objects.get(user=logged_in_user)
         
         context = {
-            'user-data': user_data
+            'user_data': user_data
         }
-        
         return render(request, 'profile.html', context)
 
     except AppUser.DoesNotExist:
