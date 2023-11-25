@@ -181,6 +181,11 @@ def custom_logout(request):
     return redirect('index')
 
 
+def favourite_selection(request):
+    if request.user.is_authenticated:
+        user_favorites = FavouriteSelection.objects.filter(user=request.user)
+        return render(request, 'profile.html', {'user_favorites': user_favorites})
+
 def register_success(request):
     return render(request, 'register-success.html')
 
