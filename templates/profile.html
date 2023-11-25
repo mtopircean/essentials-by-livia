@@ -7,84 +7,85 @@
             <div class="text-center">
                 <h5 class="toggle-details"> ACCOUNT DETAILS: <span class="toggle-icon">&#11167;</span></h5></span></h5>
             </div>
-            <div id="user-details" class="container">
-                <div class="row col-12 edit-account">
-                    <div class="row col-6 text-center">
-                        <h5>Edit: <span><i class="fa-solid fa-user-pen"></i></span></h5>
-                    </div>
-                    <div class="row col-6 text-center save-changes">
-                        <h5>Save: <span><i class="fa-solid fa-floppy-disk"></i></span></h5>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 text-left">
-                        <h6 class="form-labels"> First name:</h6>
-                    </div>
-                    <div class="col-6  user-contact-input">
-                        <h6>{{ user_data.first_name }}</h6>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 text-left">
-                        <h6 class="form-labels"> Last name:</h6>
-                    </div>
-                    <div class="col-6 user-contact-input">
-                        <h6>{{ user_data.last_name }}</h6>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 text-left">
-                        <h6 class="form-labels"> Email:</h6>
-                    </div>
-                    <div class="col-6 user-contact-input">
-                        <h6>{{ user_data.email }}</h6>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 text-left">
-                        <h6 class="form-labels"> Phone:</h6>
-                    </div>
-                    <div class="col-6 user-contact-input">
-                        <h6>{{ user_data.phone_number }}</h6>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 text-left">
-                        <h6 class="form-labels"> Join Team:</h6>
-                    </div>
-                    <div class="col-6  user-contact-input">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="teamYes" {% if user_data.join_team %}
-                                checked {% endif %}>
-                            <label class="form-check-label" for="teamYes">Yes</label>
+            <form id="user-details-form" method="post">
+                <div id="user-details" class="container">
+                    <div class="row col-12 edit-account">
+                        <div class="row col-6 text-center edit-btn">
+                            <button type="button" id="editProfileButton"><h5>Edit: <span><i class="fa-solid fa-user-pen"></i></span></h5></button>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="teamNo" {% if not user_data.join_team %}
-                                checked {% endif %}>
-                            <label class="form-check-label" for="teamNo">No</label>
+                        <div class="row col-6 text-center save-changes">
+                            <button type="submit" id="saveProfileButton"><h5>Save: <span><i class="fa-solid fa-floppy-disk"></i></span></h5></button>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col-6 text-left">
-                        <h6 class="form-labels"> Know more about the products:</h6>
-                    </div>
-                    <div class="col-6  user-contact-input">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="promotionsYes"
-                                {% if user_data.know_more_products %} checked {% endif %}>
-                            <label class="form-check-label" for="promotionsYes">Yes</label>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h6 class="form-labels"> First name:</h6>
                         </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="promotionsNo"
-                                {% if not user_data.know_more_products %} checked {% endif %}>
-                            <label class="form-check-label" for="promotionsNo">No</label>
+                        <div class="col-6  user-contact-input">
+                            <h6>{{ user_data.first_name }}</h6>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h6 class="form-labels"> Last name:</h6>
+                        </div>
+                        <div class="col-6 user-contact-input">
+                            <h6>{{ user_data.last_name }}</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h6 class="form-labels"> Email:</h6>
+                        </div>
+                        <div class="col-6 user-contact-input">
+                            <h6>{{ user_data.email }}</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h6 class="form-labels"> Phone:</h6>
+                        </div>
+                        <div class="col-6 user-contact-input">
+                            <h6>{{ user_data.phone_number }}</h6>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h6 class="form-labels"> Join Team:</h6>
+                        </div>
+                        <div class="col-6  user-contact-input">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="teamYes"
+                                    {% if user_data.join_team %} checked {% endif %}>
+                                <label class="form-check-label" for="teamYes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="teamNo"
+                                    {% if not user_data.join_team %} checked {% endif %}>
+                                <label class="form-check-label" for="teamNo">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 text-left">
+                            <h6 class="form-labels"> Know more about the products:</h6>
+                        </div>
+                        <div class="col-6  user-contact-input">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="promotionsYes"
+                                    {% if user_data.know_more_products %} checked {% endif %}>
+                                <label class="form-check-label" for="promotionsYes">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="promotionsNo"
+                                    {% if not user_data.know_more_products %} checked {% endif %}>
+                                <label class="form-check-label" for="promotionsNo">No</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
         </div>
+        </form>
     </div>
     {% endif %}
 </div>

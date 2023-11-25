@@ -592,12 +592,16 @@ button#delete-promo {
     margin-left: 10px;
 }
 
-.edit-account {
+#editProfileButton {
     color: #EB3752;
+    border: none;
+    background-color: transparent;
 }
 
-.save-changes {
+#saveProfileButton {
     color: #1a7917;
+    border: none;
+    background-color: transparent;
 }
 
 .user-contact-input {
