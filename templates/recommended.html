@@ -73,9 +73,12 @@
 
                             <span class="product-name">{{ product.name }}</span>
                             <br>
-                            <button class="add-to-favorites-btn">
-                                <i class="fas fa-heart"></i> Add to Favorites
-                            </button>
+                            <form action="{% url 'favourite_selection' %}" method="post">
+                                {% csrf_token %}
+                                <button class="add-to-favorites-btn" name="product_id" value="{{ product.id }}">
+                                    <i class="fas fa-heart"></i> Add to Favorites
+                                </button>
+                            </form>
                             <h6>Description:</h6>
                             <span class="product-description">{{ product.description | safe }}</span>
                             <br>

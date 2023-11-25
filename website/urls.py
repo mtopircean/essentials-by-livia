@@ -21,7 +21,7 @@ urlpatterns = [
     path('register.html', views.register, name='register'),
     path('register/success/', views.register_success, name='register-success'),
     path('custom-logout/', views.custom_logout, name='custom_logout'),
-    path('profile/', views.favourite_selection, name='favourite_selection'),
+    path('recommended/', views.favourite_selection, name='favourite_selection'),
     path('filter-ailments/', views.filter_ailments, name='filter_ailments'),
 ]
 

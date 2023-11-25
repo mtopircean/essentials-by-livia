@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import logout
 from django.views import generic
-from .models import AddProduct, AddPromotion, AppUser, Ailment
+from .models import AddProduct, AddPromotion, AppUser, Ailment, FavouriteSelection
 from .forms import CustomSignupForm
 from django.urls import reverse
 from django.db.models import Q
@@ -184,7 +184,7 @@ def custom_logout(request):
 def favourite_selection(request):
     if request.user.is_authenticated:
         user_favorites = FavouriteSelection.objects.filter(user=request.user)
-        return render(request, 'profile.html', {'user_favorites': user_favorites})
+        return render(request, 'recommended.html', {'user_favorites': user_favorites})
 
 def register_success(request):
     return render(request, 'register-success.html')
