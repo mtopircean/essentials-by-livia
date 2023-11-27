@@ -614,6 +614,12 @@ button#delete-promo {
     font-weight: 500;
 }
 
+.fav-section {
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
 /*Recommandation section*/
 
 #filter-product-section {
