@@ -47,5 +47,5 @@ class AppUser(ImportExportModelAdmin):
 
 @admin.register(FavouriteSelection)
 class FavouriteSelectionAdmin(admin.ModelAdmin):
-    list_display = ('user', 'product', 'favourite_date')
+    list_display = ('user', 'product', 'favourite_date', 'is_favorite')
     list_filter = ('user', 'product', 'favourite_date')

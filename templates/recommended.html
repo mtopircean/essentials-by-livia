@@ -73,14 +73,14 @@
 
                             <span class="product-name">{{ product.name }}</span>
                             <br>
-                            <form action="{% url 'favourite_selection' %}" method="post">
+                            <form action="{% url 'favourite_selection' product.id %}" method="post">
                                 {% csrf_token %}
                                 <input type="hidden" name="product_id" value="{{ product.id }}">
                                 <button type="submit" class="add-to-favorites-btn">
-                                    {% if product_is_favorited_by_user %}
-                                        <i class="fas fa-heart"></i> Remove from Favorites
+                                    {% if product.id in user_favorites %}
+                                    <i class="fas fa-heart"></i> Remove from Favorites
                                     {% else %}
-                                        <i class="far fa-heart"></i> Add to Favorites
+                                    <i class="far fa-heart"></i> Add to Favorites
                                     {% endif %}
                                 </button>
                             </form>

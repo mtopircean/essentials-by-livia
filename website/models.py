@@ -56,6 +56,7 @@ class FavouriteSelection(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(AddProduct, on_delete=models.CASCADE)
     favourite_date = models.DateTimeField(auto_now_add=True)
-    
+    is_favorite = models.BooleanField(default=False)
+
     def __str__(self):
         return f"{self.user.username} favorites {self.product.name}"

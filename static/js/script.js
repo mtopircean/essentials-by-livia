@@ -164,7 +164,7 @@ $(document).ready(function () {
         event.preventDefault();
 
         var button = $(this);
-        var form = button.closest('.favorite-form');
+        var form = button.closest('form');
         var productId = form.find('input[name="product_id"]').val();
 
         if (button.find('i').hasClass('fas')) {
@@ -174,8 +174,6 @@ $(document).ready(function () {
         }
 
         button.toggleClass('favorited');
-
-        console.log('Form submitted');
 
         form.submit();
     });

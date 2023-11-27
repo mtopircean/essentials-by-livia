@@ -61,11 +61,14 @@ def recommended(request):
     ailments = Ailment.objects.all()
     products = AddProduct.objects.all()
     is_admin = request.user.is_superuser
+    
+    user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True).values_list('product_id', flat=True)
 
     context = {
         'is_admin': is_admin,
         'products': products,
-        'ailments': ailments
+        'ailments': ailments,
+        'user_favorites': user_favorites,
     }
 
     return render(request, 'recommended.html', context)
@@ -181,20 +184,16 @@ def custom_logout(request):
     return redirect('index')
 
 @login_required
-def favourite_selection(request):
-    if request.method == 'POST':
-        product_id = request.POST.get('product_id')
-        product = get_object_or_404(AddProduct, id=product_id)
-        
-        try:
-            favorite_selection = FavouriteSelection.objects.get(user=request.user, product=product)
-            favorite_selection.delete()
-        except FavouriteSelection.DoesNotExist:
-            FavouriteSelection.objects.create(user=request.user, product=product)
+def favourite_selection(request, product_id):
+    product = get_object_or_404(AddProduct, id=product_id)
+    try:
+        favorite_selection = FavouriteSelection.objects.get(user=request.user, product=product)
+        favorite_selection.is_favorite = not favorite_selection.is_favorite
+        favorite_selection.save()
+    except FavouriteSelection.DoesNotExist:
+        FavouriteSelection.objects.create(user=request.user, product=product, is_favorite=True)
 
-        return redirect('recommended')
-
-    return HttpResponseBadRequest("Invalid request")
+    return redirect('recommended')
 
 def register_success(request):
     return render(request, 'register-success.html')
