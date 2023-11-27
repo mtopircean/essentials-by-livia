@@ -11,10 +11,14 @@
                 <div id="user-details" class="container">
                     <div class="row col-12 edit-account">
                         <div class="row col-6 text-center edit-btn">
-                            <button type="button" id="editProfileButton"><h5>Edit: <span><i class="fa-solid fa-user-pen"></i></span></h5></button>
+                            <button type="button" id="editProfileButton">
+                                <h5>Edit: <span><i class="fa-solid fa-user-pen"></i></span></h5>
+                            </button>
                         </div>
                         <div class="row col-6 text-center save-changes">
-                            <button type="submit" id="saveProfileButton"><h5>Save: <span><i class="fa-solid fa-floppy-disk"></i></span></h5></button>
+                            <button type="submit" id="saveProfileButton">
+                                <h5>Save: <span><i class="fa-solid fa-floppy-disk"></i></span></h5>
+                            </button>
                         </div>
                     </div>
                     <div class="row">
@@ -93,14 +97,55 @@
 <div>
     <hr>
 </div>
-<div class="col-12 text-center">
-    <div>
-        <div>
-            <h5> Favourite products: </h5>
+<div class="col-md-12">
+    <div class="product-section">
+        {% for favorite in user_favorites %}
+        <div class="row">
+            <div class="col-12 col-md-4 text-center">
+                <img src="{{ favorite.product.image.url }}" alt="{{ favorite.product.name }} image" class="img-fluid">
+            </div>
+            <div class="d-flex align-items-center col-12 col-md-8">
+                <div>
+                    <span class="product-name">{{ favorite.product.name }}</span>
+                    <br>
+                    <form action="{% url 'favourite_selection' %}" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="product_id" value="{{ favorite.product.id }}">
+                        <button type="submit" class="add-to-favorites-btn" data-product-id="{{ favorite.product.id }}">
+                            <i class="fas fa-heart"></i> Remove from Favorites
+                        </button>
+                    </form>
+                    <h6>Description:</h6>
+                    <span class="product-description">{{ favorite.product.description | safe }}</span>
+                    <br>
+                    <h6>Ailments:</h6>
+                    {% for ailment in favorite.product.ailments.all %}
+                    {{ ailment.name }}
+                    {% endfor %}
+                    <p class="contact-text-product">Contact me for details:
+                        <br>
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-facebook-messenger"></i>
+                        </a>
+                        <a href="https://www.facebook.com/gherasim.cosmina" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://tinyurl.com/yc2knt2p" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <i class=""></i>
+                    </p>
+                </div>
+            </div>
+            <div class="product-separator">
+                <hr>
+            </div>
         </div>
+        {% endfor %}
     </div>
-</div>
-</div>
 </div>
 
 {% block content %}
