@@ -62,7 +62,10 @@ def recommended(request):
     products = AddProduct.objects.all()
     is_admin = request.user.is_superuser
     
-    user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True).values_list('product_id', flat=True)
+    if request.user.is_authenticated:
+        user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True).values_list('product_id', flat=True)
+    else:
+        user_favorites = []
 
     context = {
         'is_admin': is_admin,
@@ -194,6 +197,13 @@ def favourite_selection(request, product_id):
         FavouriteSelection.objects.create(user=request.user, product=product, is_favorite=True)
 
     return redirect('recommended')
+
+def display_favorites(request):
+    user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True)
+    context = {
+        'user_favorites': user_favorites,
+    }
+    return render(request, 'display_favorites.html', context)
 
 def register_success(request):
     return render(request, 'register-success.html')

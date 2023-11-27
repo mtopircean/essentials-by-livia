@@ -101,51 +101,15 @@
     <h5 class="fav-section"> FAVOURITE PRODUCTS:</h5>
 </div>
 <div class="col-md-12">
-    <pre>{{ user_favorites }}</pre>
-    <div class="product-section">
+    <div class="row">
         {% for favorite in user_favorites %}
-        <div class="row">
-            <div class="col-12 col-md-4 text-center">
-                <img src="{{ favorite.product.image.url }}" alt="{{ favorite.product.name }} image" class="img-fluid">
-            </div>
-            <div class="d-flex align-items-center col-12 col-md-8">
-                <div>
-                    <span class="product-name">{{ favorite.product.name }}</span>
-                    <br>
-                    <form action="{% url 'favourite_selection' %}" method="post">
-                        {% csrf_token %}
-                        <input type="hidden" name="product_id" value="{{ favorite.product.id }}">
-                        <button type="submit" class="add-to-favorites-btn" data-product-id="{{ favorite.product.id }}">
-                            <i class="fas fa-heart"></i> Remove from Favorites
-                        </button>
-                    </form>
-                    <h6>Description:</h6>
-                    <span class="product-description">{{ favorite.product.description | safe }}</span>
-                    <br>
-                    <h6>Ailments:</h6>
-                    {% for ailment in favorite.product.ailments.all %}
-                    {{ ailment.name }}
-                    {% endfor %}
-                    <p class="contact-text-product">Contact me for details:
-                        <br>
-                        <a href="" target="_blank">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-                        <a href="" target="_blank">
-                            <i class="fa-brands fa-facebook-messenger"></i>
-                        </a>
-                        <a href="https://www.facebook.com/gherasim.cosmina" target="_blank">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                        <a href="https://tinyurl.com/yc2knt2p" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <i class=""></i>
-                    </p>
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="{{ favorite.product.image_url }}" alt="{{ favorite.product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ favorite.product.name }}</h5>
+                    <p class="card-text">{{ favorite.product.description }}</p>
                 </div>
-            </div>
-            <div class="product-separator">
-                <hr>
             </div>
         </div>
         {% endfor %}

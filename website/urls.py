@@ -22,6 +22,7 @@ urlpatterns = [
     path('register/success/', views.register_success, name='register-success'),
     path('custom-logout/', views.custom_logout, name='custom_logout'),
     path('favorites/<int:product_id>/', views.favourite_selection, name='favourite_selection'),
+    path('profile/', views.display_favorites, name='display_favorites'),
     path('filter-ailments/', views.filter_ailments, name='filter_ailments'),
 ]
 
