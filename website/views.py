@@ -180,11 +180,21 @@ def custom_logout(request):
     logout(request)
     return redirect('index')
 
-
+@login_required
 def favourite_selection(request):
-    if request.user.is_authenticated:
-        user_favorites = FavouriteSelection.objects.filter(user=request.user)
-        return render(request, 'recommended.html', {'user_favorites': user_favorites})
+    if request.method == 'POST':
+        product_id = request.POST.get('product_id')
+        product = get_object_or_404(AddProduct, id=product_id)
+        
+        try:
+            favorite_selection = FavouriteSelection.objects.get(user=request.user, product=product)
+            favorite_selection.delete()
+        except FavouriteSelection.DoesNotExist:
+            FavouriteSelection.objects.create(user=request.user, product=product)
+
+        return redirect('recommended')
+
+    return HttpResponseBadRequest("Invalid request")
 
 def register_success(request):
     return render(request, 'register-success.html')

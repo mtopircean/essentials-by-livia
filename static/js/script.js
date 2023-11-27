@@ -126,41 +126,41 @@ $(document).ready(function () {
 
 /*Add checkbox remain checked in recommended*/
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('ailment-filter-form');
     const checkboxes = form.querySelectorAll('.filter-checkbox');
-  
+
     const updateCheckboxState = () => {
-      const checkboxes = form.querySelectorAll('.filter-checkbox');
-      checkboxes.forEach(checkbox => {
-        localStorage.setItem(checkbox.value, checkbox.checked ? 'true' : 'false');
-      });
+        const checkboxes = form.querySelectorAll('.filter-checkbox');
+        checkboxes.forEach(checkbox => {
+            localStorage.setItem(checkbox.value, checkbox.checked ? 'true' : 'false');
+        });
     };
-  
-    checkboxes.forEach(function(checkbox) {
-      const savedValue = localStorage.getItem(checkbox.value) || 'false';
-      checkbox.checked = savedValue === 'true';
-  
-      checkbox.addEventListener('change', function() {
-        updateCheckboxState();
-      });
+
+    checkboxes.forEach(function (checkbox) {
+        const savedValue = localStorage.getItem(checkbox.value) || 'false';
+        checkbox.checked = savedValue === 'true';
+
+        checkbox.addEventListener('change', function () {
+            updateCheckboxState();
+        });
     });
-  
+
     const clearAllButton = document.getElementById('clear-all-button');
     clearAllButton.addEventListener('click', () => {
-      checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
-        updateCheckboxState();
-      });
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+            updateCheckboxState();
+        });
 
-      form.submit();
+        form.submit();
     });
-  });
+});
 
-  /*Add to favourites*/
+/*Add to favourites*/
 
-  $(document).ready(function() {
-    $('.add-to-favorites-btn').on('click', function(event) {
+$(document).ready(function () {
+    $('.add-to-favorites-btn').on('click', function (event) {
         event.preventDefault();
 
         var button = $(this);
@@ -174,6 +174,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         button.toggleClass('favorited');
+
+        console.log('Form submitted');
 
         form.submit();
     });
