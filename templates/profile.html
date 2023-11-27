@@ -103,6 +103,8 @@
 <div class="col-md-12">
     <div class="row">
         {% for favorite in user_favorites %}
+        
+
         <div class="col-md-4">
             <div class="card">
                 <img class="card-img-top" src="{{ favorite.product.image_url }}" alt="{{ favorite.product.name }}">
@@ -112,6 +114,8 @@
                 </div>
             </div>
         </div>
+
+        
         {% endfor %}
     </div>
 </div>

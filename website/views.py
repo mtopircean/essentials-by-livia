@@ -173,9 +173,12 @@ def logged_user_details(request):
     try:
         logged_in_user = request.user
         user_data = AppUser.objects.get(user=logged_in_user)
+        user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True)
+        print(user_favorites)
         
         context = {
-            'user_data': user_data
+            'user_data': user_data,
+            'user_favorites': user_favorites
         }
         return render(request, 'profile.html', context)
 
@@ -199,11 +202,11 @@ def favourite_selection(request, product_id):
     return redirect('recommended')
 
 def display_favorites(request):
-    user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True)
+    user_favorites = FavouriteSelection.objects.all()
     context = {
         'user_favorites': user_favorites,
     }
-    return render(request, 'display_favorites.html', context)
+    return render(request, 'profile.html', context)
 
 def register_success(request):
     return render(request, 'register-success.html')
