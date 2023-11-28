@@ -7,26 +7,14 @@
             <div class="text-center">
                 <h5 class="toggle-details"> ACCOUNT DETAILS: <span class="toggle-icon">&#11167;</span></h5></span></h5>
             </div>
-            <form id="user-details-form" method="post">
+            <form id="edit-profile-form" method="post" action="{% url 'edit_profile' %}">
                 <div id="user-details" class="container">
-                    <div class="row col-12 edit-account">
-                        <div class="row col-6 text-center edit-btn">
-                            <button type="button" id="editProfileButton">
-                                <h5>Edit: <span><i class="fa-solid fa-user-pen"></i></span></h5>
-                            </button>
-                        </div>
-                        <div class="row col-6 text-center save-changes">
-                            <button type="submit" id="saveProfileButton">
-                                <h5>Save: <span><i class="fa-solid fa-floppy-disk"></i></span></h5>
-                            </button>
-                        </div>
-                    </div>
                     <div class="row">
                         <div class="col-6 text-left">
                             <h6 class="form-labels"> First name:</h6>
                         </div>
                         <div class="col-6  user-contact-input">
-                            <h6>{{ user_data.first_name }}</h6>
+                            <input type="text" name="first_name" value="{{ user_data.first_name }}">
                         </div>
                     </div>
                     <div class="row">
@@ -34,7 +22,7 @@
                             <h6 class="form-labels"> Last name:</h6>
                         </div>
                         <div class="col-6 user-contact-input">
-                            <h6>{{ user_data.last_name }}</h6>
+                            <input type="text" name="last_name" value="{{ user_data.last_name }}">
                         </div>
                     </div>
                     <div class="row">
@@ -42,7 +30,7 @@
                             <h6 class="form-labels"> Email:</h6>
                         </div>
                         <div class="col-6 user-contact-input">
-                            <h6>{{ user_data.email }}</h6>
+                            <input type="email" name="email" value="{{ user_data.email }}">
                         </div>
                     </div>
                     <div class="row">
@@ -50,24 +38,18 @@
                             <h6 class="form-labels"> Phone:</h6>
                         </div>
                         <div class="col-6 user-contact-input">
-                            <h6>{{ user_data.phone_number }}</h6>
+                            <input type="tel" name="phone_number" value="{{ user_data.phone_number }}">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6 text-left">
                             <h6 class="form-labels"> Join Team:</h6>
                         </div>
-                        <div class="col-6  user-contact-input">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="teamYes"
-                                    {% if user_data.join_team %} checked {% endif %}>
-                                <label class="form-check-label" for="teamYes">Yes</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="teamNo"
-                                    {% if not user_data.join_team %} checked {% endif %}>
-                                <label class="form-check-label" for="teamNo">No</label>
-                            </div>
+                        <div class="col-6 user-contact-input">
+                            <label><input type="checkbox" name="join_team" {% if user_data.join_team %} checked
+                                    {% endif %}> Yes</label>
+                            <label><input type="checkbox" name="join_team" {% if not user_data.join_team %} checked
+                                    {% endif %}> No</label>
                         </div>
                     </div>
                     <div class="row">
@@ -75,21 +57,22 @@
                             <h6 class="form-labels"> Know more about the products:</h6>
                         </div>
                         <div class="col-6  user-contact-input">
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="promotionsYes"
-                                    {% if user_data.know_more_products %} checked {% endif %}>
-                                <label class="form-check-label" for="promotionsYes">Yes</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="checkbox" id="promotionsNo"
-                                    {% if not user_data.know_more_products %} checked {% endif %}>
-                                <label class="form-check-label" for="promotionsNo">No</label>
+                            <div class="col-6 user-contact-input">
+                                <label><input type="checkbox" name="know_more_products"
+                                        {% if user_data.know_more_products %} checked {% endif %}> Yes</label>
+                                <label><input type="checkbox" name="know_more_products"
+                                        {% if not user_data.know_more_products %} checked {% endif %}> No</label>
                             </div>
                         </div>
                     </div>
+                    <button type="submit">Save Changes</button>
                 </div>
+            </form>
+            <form id="delete-account-form" method="post" action="{% url 'delete_account' %}">
+                <button type="submit" onclick="return confirm('Are you sure you want to delete your account?')">Delete
+                    Account</button>
+            </form>
         </div>
-        </form>
     </div>
     {% endif %}
 </div>
@@ -103,7 +86,7 @@
 <div class="col-md-12">
     <div class="row">
         {% for favorite in user_favorites %}
-        
+
 
         <div class="col-md-4">
             <div class="card">
@@ -115,7 +98,7 @@
             </div>
         </div>
 
-        
+
         {% endfor %}
     </div>
 </div>

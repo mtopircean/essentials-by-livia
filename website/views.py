@@ -167,6 +167,23 @@ def register(request):
 
     return render(request, 'register.html', {'signup_form': signup_form})
 
+def edit_profile(request):
+    user = request.user
+    app_user = AppUser.objects.get(user=user)
+
+    if request.method == 'POST':
+
+        context = {
+            'user_data': app_user,
+        }
+    return render(request, 'profile.html', context)
+
+def delete_account(request):
+    if request.method == 'POST':
+        request.user.delete()
+        return redirect('index')
+
+    return render(request, 'profile.html')
 
 def logged_user_details(request):
     
