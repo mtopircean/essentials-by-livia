@@ -176,8 +176,8 @@ def edit_profile(request):
         app_user.last_name = request.POST.get('last_name')
         app_user.email = request.POST.get('email')
         app_user.phone_number = request.POST.get('phone_number')
-        app_user.join_team = bool(request.POST.get('join_team', False))
-        app_user.know_more_products = bool(request.POST.get('know_more_products', False))
+        app_user.join_team = request.POST.get('join_team') == 'yes'
+        app_user.know_more_products = request.POST.get('know_more_products') == 'yes'
         
         app_user.save()
     
