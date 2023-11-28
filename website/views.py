@@ -157,7 +157,7 @@ def register(request):
                 email=signup_form.cleaned_data['email'],
                 phone_number=signup_form.cleaned_data['phone_number'],
                 join_team=signup_form.cleaned_data['join_team'],
-                know_more_products=signup_form.cleaned_data['know_more_products']
+                 i_want_to_know_more_about_the_products=signup_form.cleaned_data[' i_want_to_know_more_about_the_products']
             )
 
             return HttpResponseRedirect(reverse('register-success'))
@@ -177,7 +177,7 @@ def edit_profile(request):
         app_user.email = request.POST.get('email')
         app_user.phone_number = request.POST.get('phone_number')
         app_user.join_team = request.POST.get('join_team') == 'yes'
-        app_user.know_more_products = request.POST.get('know_more_products') == 'yes'
+        app_user. i_want_to_know_more_about_the_products = request.POST.get(' i_want_to_know_more_about_the_products') == 'yes'
         
         app_user.save()
     

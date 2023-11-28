@@ -9,7 +9,7 @@ class CustomSignupForm(SignupForm):
     phone_number = forms.CharField(max_length=20)
     username = forms.CharField(max_length=100)
     join_team = forms.BooleanField(required=False)
-    know_more_products = forms.BooleanField(required=False)
+    i_want_to_know_more_about_the_products = forms.BooleanField(required=False)
 
     def save(self, request):
         # Save the user with the stadard existing method
@@ -36,7 +36,7 @@ class CustomSignupForm(SignupForm):
             phone_number=user_data['phone_number'],
             username=user_data['username'],
             join_team=user_data['join_team'],
-            know_more_products=user_data['know_more_products']
+            i_want_to_know_more_about_the_products=user_data['i_want_to_know_more_about_the_products']
         )
 
         return user
