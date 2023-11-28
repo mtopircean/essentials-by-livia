@@ -7,7 +7,7 @@ from .models import AddProduct, AddPromotion, AppUser, Ailment, FavouriteSelecti
 from .forms import CustomSignupForm
 from django.urls import reverse
 from django.db.models import Q
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, Http404
 
 def index_page(request):
     return render(request, 'index.html')
