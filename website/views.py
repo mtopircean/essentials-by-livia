@@ -172,11 +172,20 @@ def edit_profile(request):
     app_user = AppUser.objects.get(user=user)
 
     if request.method == 'POST':
-
-        context = {
-            'user_data': app_user,
-        }
+        app_user.first_name = request.POST.get('first_name')
+        app_user.last_name = request.POST.get('last_name')
+        app_user.email = request.POST.get('email')
+        app_user.phone_number = request.POST.get('phone_number')
+        app_user.join_team = bool(request.POST.get('join_team', False))
+        app_user.know_more_products = bool(request.POST.get('know_more_products', False))
+        
+        app_user.save()
+    
+    context = {
+        'user_data': app_user,
+    }
     return render(request, 'profile.html', context)
+        
 
 def delete_account(request):
     if request.method == 'POST':
