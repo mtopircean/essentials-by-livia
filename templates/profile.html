@@ -47,22 +47,20 @@
                             <h6 class="form-labels"> Join Team:</h6>
                         </div>
                         <div class="col-6 user-contact-input">
-                            <label><input type="checkbox" name="join_team" {% if user_data.join_team %} checked
-                                    {% endif %}> Yes</label>
-                            <label><input type="checkbox" name="join_team" {% if not user_data.join_team %} checked
-                                    {% endif %}> No</label>
+                            <label><input type="radio" name="join_team" value="yes" {% if user_data.join_team %} checked {% endif %}> Yes</label>
+                            <label><input type="radio" name="join_team" value="no" {% if not user_data.join_team %} checked {% endif %}> No</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6 text-left">
-                            <h6 class="form-labels"> Know more about the products:</h6>
+                            <h6 class="form-labels"> Want to know more about our products?</h6>
                         </div>
                         <div class="col-6  user-contact-input">
                             <div class="col-6 user-contact-input">
-                                <label><input type="checkbox" name="know_more_products"
-                                        {% if user_data.know_more_products %} checked {% endif %}> Yes</label>
-                                <label><input type="checkbox" name="know_more_products"
-                                        {% if not user_data.know_more_products %} checked {% endif %}> No</label>
+                                <div class="col-6 user-contact-input">
+                                    <label><input type="radio" name="know_more_products" value="yes" {% if user_data.know_more_products %} checked {% endif %}> Yes</label>
+                                    <label><input type="radio" name="know_more_products" value="no" {% if not user_data.know_more_products %} checked {% endif %}> No</label>
+                                </div>
                             </div>
                         </div>
                     </div>
