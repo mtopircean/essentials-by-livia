@@ -47,8 +47,10 @@
                             <h6 class="form-labels"> Join Team:</h6>
                         </div>
                         <div class="col-6 user-contact-input">
-                            <label><input type="radio" name="join_team" value="yes" {% if user_data.join_team %} checked {% endif %}> Yes</label>
-                            <label><input type="radio" name="join_team" value="no" {% if not user_data.join_team %} checked {% endif %}> No</label>
+                            <label><input type="radio" name="join_team" value="yes" {% if user_data.join_team %} checked
+                                    {% endif %}> Yes</label>
+                            <label><input type="radio" name="join_team" value="no" {% if not user_data.join_team %}
+                                    checked {% endif %}> No</label>
                         </div>
                     </div>
                     <div class="row">
@@ -58,20 +60,30 @@
                         <div class="col-6  user-contact-input">
                             <div class="col-6 user-contact-input">
                                 <div class="col-6 user-contact-input">
-                                    <label><input type="radio" name="i_want_to_know_more_about_the_products" value="yes" {% if user_data.i_want_to_know_more_about_the_products %} checked {% endif %}> Yes</label>
-                                    <label><input type="radio" name="i_want_to_know_more_about_the_products" value="no" {% if not user_data.i_want_to_know_more_about_the_products %} checked {% endif %}> No</label>
+                                    <label><input type="radio" name="i_want_to_know_more_about_the_products" value="yes"
+                                            {% if user_data.i_want_to_know_more_about_the_products %} checked
+                                            {% endif %}> Yes</label>
+                                    <label><input type="radio" name="i_want_to_know_more_about_the_products" value="no"
+                                            {% if not user_data.i_want_to_know_more_about_the_products %} checked
+                                            {% endif %}> No</label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button id="save-profile" type="submit" onclick="return confirm('Are you sure you want to update your account?')">Save Changes</button>
+                    <div id="account-actions" class="text-center">
+                        <button id="save-profile" type="submit"
+                            onclick="return confirm('Are you sure you want to update your account?')">Save
+                            Changes</button>
+                        <form id="delete-account-form" method="post" action="{% url 'delete_account' %}">
+                            {% csrf_token %}
+                            <button id="delete-account" type="submit"
+                                onclick="return confirm('Are you sure you want to delete your account?')">Delete
+                                Account</button>
+                        </form>
+                    </div>
                 </div>
             </form>
-            <form id="delete-account-form" method="post" action="{% url 'delete_account' %}">
-                {% csrf_token %}
-                <button id="delete-account" type="submit" onclick="return confirm('Are you sure you want to delete your account?')">Delete
-                    Account</button>
-            </form>
+
         </div>
     </div>
     {% endif %}

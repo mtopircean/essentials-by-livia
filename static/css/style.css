@@ -604,6 +604,21 @@ button#delete-promo {
     border: none;
     background-color: transparent;
     font-weight: 600;
+    margin-left: 40px;
+}
+
+#delete-account:hover {
+    color: #ffff;
+    border: none;
+    background-color: #993333;
+    border-radius: 3px;
+}
+
+#save-profile:hover {
+    color: #ffff;
+    border: none;
+    background-color: #1a7917;
+    border-radius: 3px;
 }
 
 .user-contact-input {
