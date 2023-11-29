@@ -627,6 +627,10 @@ button#delete-promo {
     align-items: center;
 }
 
+.user-contact-input input[type="radio"] {
+    margin-left: 10px;
+}
+
 .form-labels {
     font-weight: 500;
 }
@@ -635,6 +639,10 @@ button#delete-promo {
     font-weight: 600;
     margin-top: 30px;
     margin-bottom: 20px;
+}
+
+#account-actions {
+    margin-top: 20px;
 }
 
 /*Recommandation section*/

@@ -46,7 +46,7 @@
                         <div class="col-6 text-left">
                             <h6 class="form-labels"> Join Team:</h6>
                         </div>
-                        <div class="col-6 user-contact-input">
+                        <div class="col-6 user-contact-input  text-center">
                             <label><input type="radio" name="join_team" value="yes" {% if user_data.join_team %} checked
                                     {% endif %}> Yes</label>
                             <label><input type="radio" name="join_team" value="no" {% if not user_data.join_team %}
@@ -55,10 +55,9 @@
                     </div>
                     <div class="row">
                         <div class="col-6 text-left">
-                            <h6 class="form-labels"> Want to know more about our products?</h6>
+                            <h6 class="form-labels"> Contact me: </h6>
                         </div>
-                        <div class="col-6  user-contact-input">
-                            <div class="col-6 user-contact-input">
+                        <div class="col-6  user-contact-input text-center">
                                 <div class="col-6 user-contact-input">
                                     <label><input type="radio" name="i_want_to_know_more_about_the_products" value="yes"
                                             {% if user_data.i_want_to_know_more_about_the_products %} checked
@@ -67,7 +66,6 @@
                                             {% if not user_data.i_want_to_know_more_about_the_products %} checked
                                             {% endif %}> No</label>
                                 </div>
-                            </div>
                         </div>
                     </div>
                     <div id="account-actions" class="text-center">
