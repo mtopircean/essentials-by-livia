@@ -592,16 +592,18 @@ button#delete-promo {
     margin-left: 10px;
 }
 
-#editProfileButton {
-    color: #EB3752;
-    border: none;
-    background-color: transparent;
-}
-
-#saveProfileButton {
+#save-profile {
     color: #1a7917;
     border: none;
     background-color: transparent;
+    font-weight: 600;
+}
+
+#delete-account {
+    color: #993333;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
 }
 
 .user-contact-input {
