@@ -125,19 +125,25 @@ body {
 }
 
 #data-protection p,
-#social-media p {
+#social-media-footer p {
     margin: 0;
     color: #ffff;
 }
 
-#social-media a {
+#social-media-footer a {
     margin-right: 3px;
     text-decoration: none;
 }
 
-#social-media,
+#social-media-footer,
 .fa-brands {
     color: #ffff;
+}
+
+#social-media-footer, .fa-brands {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 #footer-join i {
@@ -469,8 +475,7 @@ h6 {
 
 /*Promo page */
 
-#social-media,
-.fa-brands {
+#promo-social .fa-brands{
     color: #0097B2;
     text-decoration: none;
     font-size: 1.2rem;
