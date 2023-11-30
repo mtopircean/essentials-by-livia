@@ -24,11 +24,11 @@
                 </label>
             </div>
             <div class="button-area">
-            <button type="submit" class="btn btn-primary" id="login-button">Login</button>
-            <a id="register-button-modal" href="register.html" class="btn btn-secondary">Register</a>
+                <button type="submit" class="btn btn-primary" id="login-button">Login</button>
+                <a id="register-button-modal" href="register.html" class="btn btn-secondary">Register</a>
             </div>
             <div>
-                <a href="password-reset.html" id="forgot-password" data-bs-toggle="modal" data-bs-target="#resetPasswordModal">Forgot Password?</a>
+                <a href="{% url 'reset_password' %}" id="forgot-password">Forgot Password?</a>
             </div>
         </form>
     </div>
