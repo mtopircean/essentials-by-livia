@@ -8,6 +8,7 @@ from .forms import CustomSignupForm
 from django.urls import reverse
 from django.db.models import Q
 from django.http import HttpResponseRedirect, Http404
+from allauth.account.views import PasswordResetView
 
 def index_page(request):
     return render(request, 'index.html')
