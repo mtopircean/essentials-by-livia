@@ -237,7 +237,8 @@ def display_favorites(request):
     return render(request, 'profile.html', context)
 
 class PasswordResetView(PasswordResetView):
-    form_class = PasswordResetForm
+    form_class = ResetForm
+    template_name = 'password-reset.html'
 
 def register_success(request):
     return render(request, 'register-success.html')

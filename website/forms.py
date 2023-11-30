@@ -1,7 +1,7 @@
 from allauth.account.forms import SignupForm
 from django import forms
 from .models import AppUser
-from allauth.account.forms import PasswordResetForm
+from allauth.account.forms import ResetPasswordForm
 
 class CustomSignupForm(SignupForm):
     first_name = forms.CharField(max_length=100)
@@ -43,7 +43,7 @@ class CustomSignupForm(SignupForm):
         return user
     
 
-class ResetForm(PasswordResetForm):
+class ResetForm(ResetPasswordForm):
     
     email = forms.EmailField(label='Email', max_length=254)
     email_confirm = forms.EmailField(label='Please confirm your email')
