@@ -4,6 +4,12 @@ import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+    
+
+#Emails output to the console
+    
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'mtopircean@yahoo.com'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent

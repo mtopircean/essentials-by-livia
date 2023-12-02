@@ -234,9 +234,6 @@ def display_favorites(request):
     }
     return render(request, 'profile.html', context)
 
-def custom_password_reset(request):
-    return render(request, 'password-reset.html')
-
 def register_success(request):
     return render(request, 'register-success.html')
 
