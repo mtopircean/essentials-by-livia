@@ -997,7 +997,38 @@ label#label-password {
     padding-right: 20px;
 }
 
+/* Password reset page */
 
+.container.recover-header {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.container.recover-body {
+    margin-bottom: 40px;
+}
+
+button.reset-password-button {
+    background-color: #0097B2;
+    border: #0097B2 solid 2px;
+    color: #ffff;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 251px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+button.reset-password-button:hover {
+    color: #0097B2;
+    background-color: #ffff;
+}
+
+.contact-us-link {
+    color: #0097B2;
+    text-decoration: none;
+    font-weight: 600;
+  }
 
 /* Screen size optimization */
 @media (max-width: 767px) {
