@@ -656,6 +656,10 @@ button#delete-promo {
     margin-top: 20px;
 }
 
+.favourite-product {
+    margin-bottom: 30px;
+}
+
 /*Recommandation section*/
 
 #filter-product-section {
