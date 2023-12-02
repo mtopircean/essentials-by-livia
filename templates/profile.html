@@ -108,6 +108,16 @@
                         <li>{{ ailment.name }}</li>
                         {% endfor %}
                     </ul>
+                    <form action="{% url 'favourite_selection' favorite.product.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="add-to-favorites-btn">
+                            {% if product.id in user_favorites %}
+                            <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
+                            {% else %}
+                            <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
+                            {% endif %}
+                        </button>
+                    </form>
                     <p class="contact-text-product">Contact me for details:
                         <br>
                         <a href="" target="_blank">

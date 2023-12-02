@@ -234,6 +234,7 @@ def display_favorites(request):
     }
     return render(request, 'profile.html', context)
 
+
 def register_success(request):
     return render(request, 'register-success.html')
 
