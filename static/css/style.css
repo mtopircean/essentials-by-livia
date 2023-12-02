@@ -6,6 +6,12 @@ body {
 }
 
 /* base, index, header and footer */
+
+.col-md-2,
+.col-md-10 {
+    max-width: 100%;
+}
+
 #recommendation-what {
     margin-top: 10px;
 }
@@ -707,6 +713,7 @@ li {
 .contact-text-product {
     color: #0097B2;
     text-decoration: none;
+    margin-bottom: 20px;
 }
 
 .contact-text-product i {
