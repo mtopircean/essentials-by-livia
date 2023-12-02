@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
-from django.contrib.auth import logout
+from django.contrib.auth import logout, authenticate, login
 from django.views import generic
 from .models import AddProduct, AddPromotion, AppUser, Ailment, FavouriteSelection
 from .forms import CustomSignupForm
