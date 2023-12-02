@@ -58,14 +58,14 @@
                             <h6 class="form-labels"> Contact me: </h6>
                         </div>
                         <div class="col-6  user-contact-input text-center">
-                                <div class="col-6 user-contact-input">
-                                    <label><input type="radio" name="i_want_to_know_more_about_the_products" value="yes"
-                                            {% if user_data.i_want_to_know_more_about_the_products %} checked
-                                            {% endif %}> Yes</label>
-                                    <label><input type="radio" name="i_want_to_know_more_about_the_products" value="no"
-                                            {% if not user_data.i_want_to_know_more_about_the_products %} checked
-                                            {% endif %}> No</label>
-                                </div>
+                            <div class="col-6 user-contact-input">
+                                <label><input type="radio" name="i_want_to_know_more_about_the_products" value="yes"
+                                        {% if user_data.i_want_to_know_more_about_the_products %} checked {% endif %}>
+                                    Yes</label>
+                                <label><input type="radio" name="i_want_to_know_more_about_the_products" value="no"
+                                        {% if not user_data.i_want_to_know_more_about_the_products %} checked
+                                        {% endif %}> No</label>
+                            </div>
                         </div>
                     </div>
                     <div id="account-actions" class="text-center">
@@ -96,14 +96,34 @@
 <div class="col-md-12">
     <div class="row">
         {% for favorite in user_favorites %}
-
-
-        <div class="col-md-4">
-            <div class="card">
-                <img class="card-img-top" src="{{ favorite.product.image_url }}" alt="{{ favorite.product.name }}">
-                <div class="card-body">
+        <div class="col-md-12">
+            <div class="container">
+                <img src="{{ favorite.product.image_url }}" alt="{{ favorite.product.name }}">
+                <div>
                     <h5 class="card-title">{{ favorite.product.name }}</h5>
                     <p class="card-text">{{ favorite.product.description }}</p>
+                    <p class="card-text">Ailments:</p>
+                    <ul>
+                        {% for ailment in favorite.product.ailments.all %}
+                        <li>{{ ailment.name }}</li>
+                        {% endfor %}
+                    </ul>
+                    <p class="contact-text-product">Contact me for details:
+                        <br>
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="" target="_blank">
+                            <i class="fa-brands fa-facebook-messenger"></i>
+                        </a>
+                        <a href="https://www.facebook.com/gherasim.cosmina" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://tinyurl.com/yc2knt2p" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <i class=""></i>
+                    </p>
                 </div>
             </div>
         </div>
