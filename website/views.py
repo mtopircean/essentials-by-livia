@@ -8,8 +8,6 @@ from .forms import CustomSignupForm
 from django.urls import reverse
 from django.db.models import Q
 from django.http import HttpResponseRedirect, Http404
-from allauth.account.views import PasswordResetView
-from .forms import ResetForm
 
 def index_page(request):
     return render(request, 'index.html')
@@ -236,9 +234,8 @@ def display_favorites(request):
     }
     return render(request, 'profile.html', context)
 
-class PasswordResetView(PasswordResetView):
-    form_class = ResetForm
-    template_name = 'password-reset.html'
+def password_reset(request):
+    return render(request, 'password-reset.html')
 
 def register_success(request):
     return render(request, 'register-success.html')

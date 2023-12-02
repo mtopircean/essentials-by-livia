@@ -1,7 +1,6 @@
 from . import views
 from django.urls import path
 from allauth.account.views import PasswordResetView
-from .forms import ResetForm
 
 urlpatterns = [
     path('', views.index_page, name='index'),
@@ -23,7 +22,7 @@ urlpatterns = [
     path('register.html', views.register, name='register'),
     path('register/success/', views.register_success, name='register-success'),
     path('custom-logout/', views.custom_logout, name='custom_logout'),
-    path('accounts/password/reset/', PasswordResetView.as_view(form_class=ResetForm), name='reset_password'),
+    path('password-reset.html', views.password_reset, name='password_reset'),
     path('favorites/<int:product_id>/', views.favourite_selection, name='favourite_selection'),
     path('profile/', views.display_favorites, name='display_favorites'),
     path('edit-profile/', views.edit_profile, name='edit_profile'),

@@ -42,18 +42,3 @@ class CustomSignupForm(SignupForm):
 
         return user
     
-
-class ResetForm(ResetPasswordForm):
-    
-    email = forms.EmailField(label='Email', max_length=254)
-    email_confirm = forms.EmailField(label='Please confirm your email')
-    
-    def clean(self):
-        cleaned_data = super().clean()
-        email = cleaned_data.get('email')
-        email_confirm = cleaned_data.get('email_confirm')
-
-        if email and email_confirm and email != email_confirm:
-            raise forms.ValidationError("Email addresses must match in order to submit your request.")
-        
-        return cleaned_data
