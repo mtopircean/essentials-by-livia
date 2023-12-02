@@ -99,25 +99,29 @@
         <div class="col-md-12">
             <div class="container">
                 <img src="{{ favorite.product.image_url }}" alt="{{ favorite.product.name }}">
+                <form action="{% url 'favourite_selection' favorite.product.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="add-to-favorites-btn">
+                        {% if product.id in user_favorites %}
+                        <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
+                        {% else %}
+                        <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
+                        {% endif %}
+                    </button>
+                </form>
                 <div>
-                    <h5 class="card-title">{{ favorite.product.name }}</h5>
-                    <p class="card-text">{{ favorite.product.description }}</p>
-                    <p class="card-text">Ailments:</p>
+                    <span class="product-name">{{ favorite.product.name }}</span>
+                    <h6>Description:</h6>
+                    <span class="product-description">{{ favorite.product.description }}</span>
+                    <br>
+                    <h6>Ailments:</h6>
                     <ul>
                         {% for ailment in favorite.product.ailments.all %}
                         <li>{{ ailment.name }}</li>
                         {% endfor %}
                     </ul>
-                    <form action="{% url 'favourite_selection' favorite.product.id %}" method="post">
-                        {% csrf_token %}
-                        <button type="submit" class="add-to-favorites-btn">
-                            {% if product.id in user_favorites %}
-                            <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
-                            {% else %}
-                            <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
-                            {% endif %}
-                        </button>
-                    </form>
+                    <br>
+                    
                     <p class="contact-text-product">Contact me for details:
                         <br>
                         <a href="" target="_blank">
@@ -136,6 +140,9 @@
                     </p>
                 </div>
             </div>
+        </div>
+        <div class="product-separator">
+            <hr>
         </div>
 
 
