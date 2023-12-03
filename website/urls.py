@@ -1,9 +1,10 @@
 from . import views
-from django.urls import path
+from django.urls import path, include
 from allauth.account.views import PasswordResetView
 
 urlpatterns = [
     path('', views.index_page, name='index'),
+    path('accounts/', include('allauth.urls')),
     path('about-oils.html', views.about_oils, name='about_oils'),
     path('about-me.html', views.about_me, name='about_me'),
     path('data-protection.html', views.data_protection, name='data_protection'),
