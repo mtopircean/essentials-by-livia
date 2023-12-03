@@ -660,6 +660,51 @@ button#delete-promo {
     margin-bottom: 30px;
 }
 
+#favourite-img {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#favorite-btn {
+    margin-bottom: 5px;
+}
+
+#favorite-description-title {
+    color: #644970;
+}
+
+#favorite-ailments {
+    color: #644970;
+    margin-top: 10px;
+    font-size: small;
+} 
+
+#favorite-ailments-area {
+    margin-top: -5px;
+    margin-bottom: -5px;
+    font-size: small;
+}
+
+#favorite-details-area {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#favorite-description-text {
+    font-size: small;
+}
+
+#favorite-description-title {
+    font-size: small;
+    margin-bottom: auto;
+    margin-top: 5px;
+}
+
+#contact-favorite {
+    margin-top: -5px;
+}
+
+
 /*Recommandation section*/
 
 #filter-product-section {

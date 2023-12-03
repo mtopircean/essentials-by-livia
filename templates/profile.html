@@ -98,15 +98,15 @@
     <div class="col-md-12">
         <div class="row">
             {% for favorite in user_favorites %}
-            <div class="col-md-4 favourite-product">
+            <div class="col-md-3 favourite-product">
                 <div class="container">
-                    <img src="{{ favorite.product.image_url }}" alt="{{ favorite.product.name }}" class="img-fluid"
-                        style="display: block;">
-                    <div>
+                    <img id="favourite-img" src="{{ favorite.product.image_url }}" alt="{{ favorite.product.name }}"
+                        class="img-fluid" style="display: block;">
+                    <div id="favorite-details-area">
                         <span class="product-name">{{ favorite.product.name }}</span>
                         <form action="{% url 'favourite_selection' favorite.product.id %}" method="post">
                             {% csrf_token %}
-                            <button type="submit" class="add-to-favorites-btn">
+                            <button id="favorite-btn" type="submit" class="add-to-favorites-btn">
                                 {% if product.id in user_favorites %}
                                 <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
                                 {% else %}
@@ -114,18 +114,18 @@
                                 {% endif %}
                             </button>
                         </form>
-                        <h6>Description:</h6>
-                        <span class="product-description">{{ favorite.product.description }}</span>
+                        <h6 id="favorite-description-title">Description:</h6>
+                        <span id="favorite-description-text" class="product-description">{{ favorite.product.description }}</span>
                         <br>
-                        <h6>Ailments:</h6>
-                        <ul>
+                        <h6 id="favorite-ailments">Ailments:</h6>
+                        <div id="favorite-ailments-area">
                             {% for ailment in favorite.product.ailments.all %}
-                            <li>{{ ailment.name }}</li>
+                            {{ ailment.name }}
                             {% endfor %}
-                        </ul>
+                        </div>
                         <br>
 
-                        <p class="contact-text-product">Contact me for details:
+                        <p id="contact-favorite" class="contact-text-product">Contact me for details:
                             <br>
                             <a href="" target="_blank">
                                 <i class="fa-brands fa-whatsapp"></i>
