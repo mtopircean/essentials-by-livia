@@ -50,6 +50,32 @@ body {
 .nav-item:hover {
     color: #644970;
 }
+.password-change-forgot {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: medium;
+}
+
+.password-change-forgot a {
+    text-decoration: none;
+}
+
+.password-change-forgot a:hover {
+    text-decoration:underline;
+}
+
+
+.forgot-link {
+    margin-right: auto;
+    color: #644970;
+}
+
+.change-link {
+    margin-left: auto;
+    color: #644970
+}
 
 .dropdown-menu[data-bs-popper] {
     text-align: left;
