@@ -62,7 +62,7 @@
                                     onsubmit="return updateDescription()">
                                     {% csrf_token %}
                                     <textarea id="product-new-description"
-                                        name="new_description">{{ product.description }}</textarea>
+                                        name="new_description">{{ product.description| striptags }}</textarea>
                                     <button type="submit" id="save-product-description">Save description</button>
                                 </form>
                                 <form id="delete-product" action="{% url 'delete_product' product.id %}" method="post"
