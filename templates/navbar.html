@@ -17,8 +17,13 @@
                     <i class="fa-solid fa-user" style="margin-left: 10px;"></i>
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                    {% if user.is_staff %}
+                    <li><a class="dropdown-item" href="{% url 'admin:index' %}">Admin Panel</a></li>
+                    <li><a class="dropdown-item" href="{% url 'custom_logout' %}">Logout</a></li>
+                    {% else %}
                     <li><a class="dropdown-item" href="profile.html">Profile</a></li>
                     <li><a class="dropdown-item" href="{% url 'custom_logout' %}">Logout</a></li>
+                    {% endif %}
                 </ul>
             </div>
             {% else %}
