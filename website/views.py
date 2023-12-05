@@ -157,9 +157,13 @@ def filter_ailments(request):
     }
     return render(request, 'recommended.html', context)
 
-#Renders the User Account page
+#Renders the Contact page
 def contact(request):
     return render(request, 'contact.html')
+
+#Renders the User Account page
+def user_account(request):
+    return render(request, 'user-account.html')
 
 #Renders the account registration form using the customized allauth form
 def register(request):
@@ -244,6 +248,11 @@ def logged_user_details(request):
 
     except AppUser.DoesNotExist:
             raise Http404("User does not exist")
+
+#Displays custom logout        
+def custom_logout(request):
+    logout(request)
+    return redirect('index')
 
 #Adds and removes product to and from favorites
 #Applicable only for logged in users
