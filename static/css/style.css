@@ -994,6 +994,14 @@ label#label-password {
     margin-top: 10px;
 }
 
+#login-error-message {
+    padding: 10px;
+    margin-bottom: -30px;
+    color: #EB3752;
+    text-align: center;
+    font-size: medium;
+}
+
 /* Register page */
 
 #why-register img {
