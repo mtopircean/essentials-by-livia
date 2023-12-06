@@ -1,4 +1,5 @@
-/* Promotions dropdown details section */
+/* Promotions dropdown details section 
+Reads, toggles visibility and changes the toggle icon*/
 
 $(document).ready(function () {
 
@@ -13,7 +14,10 @@ $(document).ready(function () {
     });
 })
 
-/* Recommandation tool page drop down filter */
+/* Recommandation tool page drop down filter 
+Initialize, set initial status, toggle visibility, 
+change toggle icon, change toggle icon based on screensize
+*/
 
 $(document).ready(function () {
     var isAilmentListVisible = $(window).width() >= 768;
@@ -39,7 +43,9 @@ $(document).ready(function () {
     });
 });
 
-/* Expandeble section in profile page */
+/* Expandeble section in profile page 
+Initialize, set status as hidden, toggle icon and visibility
+*/
 
 $(document).ready(function () {
 
@@ -54,13 +60,17 @@ $(document).ready(function () {
     });
 })
 
-/* Modal link to Register */
+/* Modal link to Register
+Redirect user to register page
+*/
 
 document.getElementById('register-button-modal').addEventListener('click', function () {
     window.location.href = 'register.html';
 });
 
-/* Delete Promotions */
+/* Delete Promotions 
+Confirms user deletion action and acts as a safety measure
+*/
 function confirmDelete() {
     if (confirm("Are you sure you want to delete this promotion?")) {
         document.getElementById('delete-form').submit();
@@ -69,7 +79,9 @@ function confirmDelete() {
     }
 }
 
-/* Update Promotion Description */
+/* Update Promotion Description 
+Confirms user update action and acts as a safety measure
+*/
 
 function updateDescription() {
     if (confirm("Are you sure you want to update promotions description?")) {
@@ -79,7 +91,9 @@ function updateDescription() {
     }
 }
 
-/* Delete Product */
+/* Delete Product 
+Confirms user deletion action and acts as a safety measure
+*/
 function confirmProductDelete() {
     if (confirm("Are you sure you want to delete this product?")) {
         document.getElementById('delete-product').submit();
@@ -88,7 +102,9 @@ function confirmProductDelete() {
     }
 }
 
-/* Update Product Description */
+/* Update Product Description 
+Confirms user update action and acts as a safety measure
+*/
 
 function updateProductDescription() {
     if (confirm("Are you sure you want to update the product description?")) {
@@ -100,7 +116,9 @@ function updateProductDescription() {
 
 
 
-/*Apply automatic filtering in recommended page */
+/*Apply automatic filtering in recommended page 
+Submits the form if a checkbox is changed
+*/
 
 $(document).ready(function () {
     $('input[name="filter-checkbox"]').on('change', function () {
@@ -108,7 +126,11 @@ $(document).ready(function () {
     });
 });
 
-/*Implement search functionality in recommended page*/
+/*Implement search functionality in recommended page
+Collects the input text
+Collects the ailment name
+Shows and hides the checkboxes based on search matching filter element
+*/
 $(document).ready(function () {
     $('#searhailment').on('input', function () {
         var searchText = $(this).val().toLowerCase();
@@ -124,7 +146,11 @@ $(document).ready(function () {
     });
 });
 
-/*Add checkbox remain checked in recommended*/
+/*Add checkbox remain checked in recommended
+Retrieves form and checkboxes
+Updates local storage status, submits the form
+Incorporates also the clear all button and functionality
+*/
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('ailment-filter-form');
@@ -157,7 +183,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/*Add to favourites*/
+/*Add to favourites
+Prevents default action on click
+Toggles favourite button and the favorite class/status
+Finalizes by submitting the form
+Used local storage to maintain status of favorited item on reload
+*/
 
 $(document).ready(function () {
     $('.add-to-favorites-btn').on('click', function (event) {
