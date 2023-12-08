@@ -10,14 +10,14 @@
 
     <div class="modal-body">
         <form id="" method="post" action="">
-            <label for="add_product_name">Product name:</label>
+            <label for="add_product_name" class="label-add-product-modal">Product name:</label>
             <input type="text" class="form-control" id="add_product_name" name="add_product_name"
                 placeholder="Please add the product name" required>
-            <label for="add_product_description">Product description:</label>
+            <label for="add_product_description" class="label-add-product-modal">Product description:</label>
             <textarea class="form-control" id="add_product_description" name="add_product_description"
                 placeholder="Please provide your product description" required></textarea>
             <div id="add-ailments-modal">
-                <label for="add_product_ailments">Product ailments:</label>
+                <label for="add_product_ailments" class="label-add-product-modal">Product ailments:</label>
                 <div id="modal-ailments-list">
                     <input type="checkbox" id="ailment1" name="add_product_ailments[]" value="ailment1">
                     <label for="ailment1">Ailment 1</label><br>
@@ -28,12 +28,12 @@
                 </div>
             </div>
 
-            <label for="add_product_photo_url">Photo url:</label>
+            <label for="add_product_photo_url" class="label-add-product-modal">Photo url:</label>
             <input type="text" class="form-control" id="add_product_photo_url" name="add_product_photo_url"
                 placeholder="Please input photo url" required>
             <div id="add-product-modal-buttons">
-                <button type="submit" class="btn btn-primary">Add Product</button>
-                <button type="reset" class="btn btn-primary">Clear form</button>
+                <button type="submit" class="btn btn-primary" id="save-product-button">Save Product</button>
+                <button type="reset" class="btn btn-primary" id="clear-product-form">Clear form</button>
             </div>
         </form>
     </div>

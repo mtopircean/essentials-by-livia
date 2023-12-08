@@ -901,17 +901,69 @@ button.add-product-button {
     color: #ffff;
     border-radius: 5px;
     font-weight: 600;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #644970 solid 2px;
 }
 
 button.add-product-button:hover {
     background-color: #ffff;
-    border-color: #644970;
     color: #644970;
+    border: #644970 solid 2px;
 }
 
 #add-product-section {
     text-align: right;
 }
+
+#modal-ailments-list label {
+    color: #000000;
+    font-size: small;
+}
+
+.label-add-product-modal {
+    color: #000000;
+    font-size: medium;
+    color: #644970;
+    margin-bottom: 5px;
+}
+
+#add-product-modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: -18px;
+}
+
+#add-product-modal-buttons button {
+    width: 40%;
+}
+
+#save-product-button {
+    color: #ffff;
+    background-color: #339933;
+    border: #339933 solid 2px;
+}
+
+#save-product-button:hover {
+    color: #339933;
+    background-color: #ffff;
+    border: #339933 solid 2px;
+}
+
+#clear-product-form {
+    color: #ffff;
+    background-color: #993333;
+    border: #993333 solid 2px;
+}
+
+#clear-product-form:hover {
+    color: #993333;
+    background-color: #ffff;
+    border: #993333 solid 2px;
+}
+
 
 /* Contact */
 
@@ -919,7 +971,6 @@ button.add-product-button:hover {
 
     margin-top: 30px;
 }
-
 
 /* Login Modal */
 #loginModal {
