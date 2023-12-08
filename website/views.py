@@ -279,6 +279,30 @@ def display_favorites(request):
     }
     return render(request, 'profile.html', context)
 
+def create_product(request):
+    if request.method == 'POST':
+        # Retrieve form data
+        product_name = request.POST.get('add_product_name')
+        product_description = request.POST.get('add_product_description')
+        product_ailments = request.POST.getlist('add_product_ailments')
+        product_photo_url = request.POST.get('add_product_photo_url')
+
+        # Create and save new product to the database
+        new_product = AddProduct.objects.create(
+            name=product_name,
+            description=product_description,
+            price=0.0, #no price used at this moment in development
+            image_url=product_photo_url,
+        )
+        # Save ailments to the product
+        new_product.ailments.add(*product_ailments)
+
+        # Redirect to recommended page
+        return redirect('recommended.html')
+    else:
+        return redirect('recommended.html')
+    
+
 #Renders confirmation of successfull registration page
 def register_success(request):
     return render(request, 'register-success.html')
