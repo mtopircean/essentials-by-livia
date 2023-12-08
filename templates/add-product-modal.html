@@ -9,7 +9,8 @@
     </div>
 
     <div class="modal-body">
-        <form id="" method="post" action="">
+        <form method="post" action="{% url 'create_product' %}">
+            {% csrf_token %}
             <label for="add_product_name" class="label-add-product-modal">Product name:</label>
             <input type="text" class="form-control" id="add_product_name" name="add_product_name"
                 placeholder="Please add the product name" required>
