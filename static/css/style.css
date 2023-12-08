@@ -894,19 +894,23 @@ button#delete-product {
     width: 100%;
 }
 
-#add-product-button {
+button.add-product-button {
     margin-bottom: 15px;
-    background-color: #ffff;
+    background-color: #644970;
     border-color: #644970;
-    color: #644970;
+    color: #ffff;
     border-radius: 5px;
     font-weight: 600;
 }
 
-#add-product-button:hover {
-    background-color: #644970;
+button.add-product-button:hover {
+    background-color: #ffff;
     border-color: #644970;
-    color: #ffff;
+    color: #644970;
+}
+
+#add-product-section {
+    text-align: right;
 }
 
 /* Contact */
