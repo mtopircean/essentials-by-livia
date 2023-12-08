@@ -1,0 +1,42 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <div>
+            <h5>Add your new product</h5>
+        </div>
+        <div id="modal-close">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close X Symbol"></button>
+        </div>
+    </div>
+
+    <div class="modal-body">
+        <form id="" method="post" action="">
+            <label for="add_product_name">Product name:</label>
+            <input type="text" class="form-control" id="add_product_name" name="add_product_name"
+                placeholder="Please add the product name" required>
+            <label for="add_product_description">Product description:</label>
+            <textarea class="form-control" id="add_product_description" name="add_product_description"
+                placeholder="Please provide your product description" required></textarea>
+            <div id="add-ailments-modal">
+                <label for="add_product_ailments">Product ailments:</label>
+                <div id="modal-ailments-list">
+                    <input type="checkbox" id="ailment1" name="add_product_ailments[]" value="ailment1">
+                    <label for="ailment1">Ailment 1</label><br>
+                    <input type="checkbox" id="ailment2" name="add_product_ailments[]" value="ailment2">
+                    <label for="ailment2">Ailment 2</label><br>
+                    <input type="checkbox" id="ailment3" name="add_product_ailments[]" value="ailment3">
+                    <label for="ailment3">Ailment 3</label><br>
+                </div>
+            </div>
+
+            <label for="add_product_photo_url">Photo url:</label>
+            <input type="text" class="form-control" id="add_product_photo_url" name="add_product_photo_url"
+                placeholder="Please input photo url" required>
+            <div id="add-product-modal-buttons">
+                <button type="submit" class="btn btn-primary">Add Product</button>
+                <button type="reset" class="btn btn-primary">Clear form</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
