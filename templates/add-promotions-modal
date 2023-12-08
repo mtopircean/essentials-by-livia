@@ -1,0 +1,30 @@
+<div class="modal-content">
+    <div class="modal-header">
+        <div>
+            <h5>Add your new promotion/h5>
+        </div>
+        <div id="modal-close">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close X Symbol"></button>
+        </div>
+    </div>
+
+    <div class="modal-body">
+        <form method="post" action="{% url 'create_promotion' %}">
+            {% csrf_token %}
+            <label for="add_promotion_date" class="label-add-promotion-date-modal">Promotion expiry date</label>
+            <input type="date" class="form-control" id="add_promotion_date" name="add_promotion_date"
+                placeholder="Please select the promotion expiry date" required>
+            <label for="add_promotion_description" class="label-add-promotion-modal">Product description:</label>
+            <textarea class="form-control" id="add_promotion_description" name="add_promotion_description"
+                placeholder="Please provide your promotion description" required></textarea>
+            <div id="add-product-modal-buttons">
+                <button type="submit" class="btn btn-primary" id="save-product-button"
+                    onclick="return confirm('Are you sure you want to create the product?')">Save Product</button>
+                <button type="reset" class="btn btn-primary" id="clear-product-form"
+                    onclick="return confirm('Are you sure you want to clear the creation form?')">Clear form</button>
+            </div>
+        </form>
+    </div>
+
+
+</div>
