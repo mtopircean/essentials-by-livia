@@ -7,6 +7,16 @@
 </div>
 
 <div id="promotion-container" class="container-fluid">
+    <div>
+        {% if user.is_staff %}
+                <div id="add-promotion-section">
+                    <button type="button" class="add-promotion-button" data-bs-toggle="modal" data-bs-target="#addPromotionModal">
+                        Add product
+                    </button>
+                </div>
+                {% else %}
+                {% endif %}
+    </div>
     <div class="row">
         {%for promotion in promotions %}
         <div class="col-12 col-md-4 text-center">
@@ -58,6 +68,17 @@
             </div>
         </div>
         {% endfor %}
+    </div>
+</div>
+
+<!--Add Promotion Modal-->
+<div class="modal" id="addPromotionModal" aria-labelledby="addPromotionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div>
+            <div>
+                {% include 'add-promotions-modal.html' %}
+            </div>
+        </div>
     </div>
 </div>
 
