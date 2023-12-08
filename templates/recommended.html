@@ -47,6 +47,14 @@
                 </div>
             </div>
             <div class="col-md-10">
+                {% if user.is_staff %}
+                <div id="add-product-section">
+                    <button type="submit" class="add-product-button">
+                        Add product
+                    </button>
+                </div>
+                {% else %}
+                {% endif %}
                 <div class="product-section">
                     {% for product in products %}
                     <div class="row">
