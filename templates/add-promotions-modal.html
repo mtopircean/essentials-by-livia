@@ -1,7 +1,7 @@
 <div class="modal-content">
     <div class="modal-header">
         <div>
-            <h5>Add your new promotion/h5>
+            <h5>Add your new promotion</h5>
         </div>
         <div id="modal-close">
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close X Symbol"></button>
@@ -11,16 +11,22 @@
     <div class="modal-body">
         <form method="post" action="{% url 'create_promotion' %}">
             {% csrf_token %}
-            <label for="add_promotion_date" class="label-add-promotion-date-modal">Promotion expiry date</label>
+            <label for="add_promotion_name" class="label-add-promotion-modal">Promotion name:</label>
+            <input type="text" class="form-control" id="add_promotion_name" name="add_promotion_name"
+                placeholder="Please add the promotion name" required>
+            <label for="add_promotion_date" class="label-add-promotion-modal">Promotion expiry date</label>
             <input type="date" class="form-control" id="add_promotion_date" name="add_promotion_date"
                 placeholder="Please select the promotion expiry date" required>
-            <label for="add_promotion_description" class="label-add-promotion-modal">Product description:</label>
+            <label for="add_promotion_description" class="label-add-promotion-modal">Promotion description:</label>
             <textarea class="form-control" id="add_promotion_description" name="add_promotion_description"
                 placeholder="Please provide your promotion description" required></textarea>
-            <div id="add-product-modal-buttons">
-                <button type="submit" class="btn btn-primary" id="save-product-button"
-                    onclick="return confirm('Are you sure you want to create the product?')">Save Product</button>
-                <button type="reset" class="btn btn-primary" id="clear-product-form"
+                <label for="add_product_photo_url" class="label-add-product-modal">Photo url:</label>
+            <input type="text" class="form-control" id="add_promotion_photo_url" name="add_promotion_photo_url"
+                placeholder="Please input promotion photo url" required>
+            <div id="add-promotion-modal-buttons">
+                <button type="submit" class="btn btn-primary" id="save-promotion-button"
+                    onclick="return confirm('Are you sure you want to create the promotion?')">Save Promotion</button>
+                <button type="reset" class="btn btn-primary" id="clear-promotion-form"
                     onclick="return confirm('Are you sure you want to clear the creation form?')">Clear form</button>
             </div>
         </form>

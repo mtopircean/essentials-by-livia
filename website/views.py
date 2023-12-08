@@ -279,6 +279,7 @@ def display_favorites(request):
     }
     return render(request, 'profile.html', context)
 
+#Creates a product from the front end view when logged as an admin
 def create_product(request):
     if request.method == 'POST':
         # Retrieve form data
@@ -306,6 +307,28 @@ def create_product(request):
     else:
         return redirect('recommended')
     
+#Creates a promotion from the front end view when logged as an admin   
+def create_promotion(request):
+    if request.method == 'POST':
+        # Retrieve form data
+        promotion_name = request.POST.get('add_promotion_name')
+        promotion_description = request.POST.get('add_promotion_description')
+        promotion_date = request.POST.get('add_promotion_date')
+        promotion_url = request.POST.get('add_promotion_photo_url')
+        
+        # Create and save new promotion to the database
+        new_promotion = AddPromotion.objects.create(
+            name = promotion_name,
+            description = promotion_description,
+            image_url = promotion_url,
+            expires_on = promotion_date,
+            
+        )
+        return redirect('promotions')
+    else:
+        return redirect('promotions')
+    
+
 
 #Renders confirmation of successfull registration page
 def register_success(request):

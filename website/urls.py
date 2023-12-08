@@ -30,6 +30,7 @@ urlpatterns = [
     path('delete-account/', views.delete_account, name='delete_account'),
     path('filter-ailments/', views.filter_ailments, name='filter_ailments'),
     path('create_product/', views.create_product, name='create_product'),
+    path('create_promotion/', views.create_promotion, name='create_promotion'),
 ]
 
 handler404 = views.handler404

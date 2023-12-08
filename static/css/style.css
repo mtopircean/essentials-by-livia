@@ -608,6 +608,74 @@ button#delete-promo {
     border-radius: 5px;
 }
 
+button.add-promotion-button {
+    margin-bottom: 15px;
+    background-color: #644970;
+    border-color: #644970;
+    color: #ffff;
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: #644970 solid 2px;
+    margin-top: 20px;
+    margin-right: 40px;
+}
+
+button.add-promotion-button:hover {
+    background-color: #ffff;
+    color: #644970;
+    border: #644970 solid 2px;
+}
+
+#add-promotion-section {
+    text-align: right;
+}
+
+.label-add-promotion-modal {
+    color: #000000;
+    font-size: medium;
+    color: #644970;
+    margin-bottom: 5px;
+}
+
+#add-promotion-modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: -18px;
+}
+
+#add-promotion-modal-buttons button {
+    width: 40%;
+}
+
+#save-promotion-button {
+    color: #ffff;
+    background-color: #339933;
+    border: #339933 solid 2px;
+}
+
+#save-promotion-button:hover {
+    color: #339933;
+    background-color: #ffff;
+    border: #339933 solid 2px;
+}
+
+#clear-promotion-form {
+    color: #ffff;
+    background-color: #993333;
+    border: #993333 solid 2px;
+}
+
+#clear-promotion-form:hover {
+    color: #993333;
+    background-color: #ffff;
+    border: #993333 solid 2px;
+}
+
+
 /* Account section */
 
 .account-section {
