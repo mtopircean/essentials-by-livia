@@ -284,9 +284,11 @@ def create_product(request):
         # Retrieve form data
         product_name = request.POST.get('add_product_name')
         product_description = request.POST.get('add_product_description')
-        product_ailments = request.POST.getlist('add_product_ailments')
         product_photo_url = request.POST.get('add_product_photo_url')
 
+        #Retrieve and store selected id`s
+        selected_ailment_ids = request.POST.getlist('add_product_ailments[]')
+        
         # Create and save new product to the database
         new_product = AddProduct.objects.create(
             name=product_name,
@@ -294,8 +296,10 @@ def create_product(request):
             price=0.0, #no price used at this moment in development
             image_url=product_photo_url,
         )
-        # Save ailments to the product
-        new_product.ailments.add(*product_ailments)
+        # Save selected ailments to the product
+        for ailment_id in selected_ailment_ids:
+            ailment = get_object_or_404(Ailment, id=ailment_id)
+            new_product.ailments.add(ailment)
 
         # Redirect to recommended page
         return redirect('recommended')
