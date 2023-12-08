@@ -964,6 +964,10 @@ button.add-product-button:hover {
     border: #993333 solid 2px;
 }
 
+.ailments-container {
+    max-height: 80px;
+    overflow-y: auto;
+}
 
 /* Contact */
 
