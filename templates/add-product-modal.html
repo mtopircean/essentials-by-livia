@@ -19,14 +19,10 @@
             <div id="add-ailments-modal">
                 <label for="add_product_ailments" class="label-add-product-modal">Product ailments:</label>
                 <div id="modal-ailments-list" class="ailments-container">
-                    <input type="checkbox" id="ailment1" name="add_product_ailments[]" value="ailment1">
-                    <label for="ailment1">Ailment 1</label><br>
-                    <input type="checkbox" id="ailment2" name="add_product_ailments[]" value="ailment2">
-                    <label for="ailment2">Ailment 2</label><br>
-                    <input type="checkbox" id="ailment3" name="add_product_ailments[]" value="ailment3">
-                    <label for="ailment3">Ailment 3</label><br>
-                    <input type="checkbox" id="ailment4" name="add_product_ailments[]" value="ailment4">
-                    <label for="ailment3">Ailment 4</label><br>
+                    {% for ailment in ailments %}
+                    <input type="checkbox" id="{{ ailment.id }}" name="add_product_ailments[]" value="{{ ailment.id }}">
+                    <label for="{{ ailment.id }}">{{ ailment.name }}</label><br>
+                    {% endfor %}
                 </div>
             </div>
 
@@ -34,8 +30,10 @@
             <input type="text" class="form-control" id="add_product_photo_url" name="add_product_photo_url"
                 placeholder="Please input photo url" required>
             <div id="add-product-modal-buttons">
-                <button type="submit" class="btn btn-primary" id="save-product-button" onclick="return confirm('Are you sure you want to create the product?')">Save Product</button>
-                <button type="reset" class="btn btn-primary" id="clear-product-form" onclick="return confirm('Are you sure you want to clear the creation form?')">Clear form</button>
+                <button type="submit" class="btn btn-primary" id="save-product-button"
+                    onclick="return confirm('Are you sure you want to create the product?')">Save Product</button>
+                <button type="reset" class="btn btn-primary" id="clear-product-form"
+                    onclick="return confirm('Are you sure you want to clear the creation form?')">Clear form</button>
             </div>
         </form>
     </div>
