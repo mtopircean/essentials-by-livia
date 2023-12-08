@@ -34,8 +34,8 @@
             <input type="text" class="form-control" id="add_product_photo_url" name="add_product_photo_url"
                 placeholder="Please input photo url" required>
             <div id="add-product-modal-buttons">
-                <button type="submit" class="btn btn-primary" id="save-product-button">Save Product</button>
-                <button type="reset" class="btn btn-primary" id="clear-product-form">Clear form</button>
+                <button type="submit" class="btn btn-primary" id="save-product-button" onclick="return confirm('Are you sure you want to create the product?')">Save Product</button>
+                <button type="reset" class="btn btn-primary" id="clear-product-form" onclick="return confirm('Are you sure you want to clear the creation form?')">Clear form</button>
             </div>
         </form>
     </div>
