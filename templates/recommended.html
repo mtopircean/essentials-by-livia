@@ -49,7 +49,7 @@
             <div class="col-md-10">
                 {% if user.is_staff %}
                 <div id="add-product-section">
-                    <button type="submit" class="add-product-button">
+                    <button type="button" class="add-product-button" data-bs-toggle="modal" data-bs-target="#addProductModal">
                         Add product
                     </button>
                 </div>
@@ -126,6 +126,17 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Add Product Modal-->
+<div class="modal" id="addProductModal" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div>
+            <div>
+                {% include 'add-product-modal.html' %}
             </div>
         </div>
     </div>
