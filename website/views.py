@@ -298,9 +298,9 @@ def create_product(request):
         new_product.ailments.add(*product_ailments)
 
         # Redirect to recommended page
-        return redirect('recommended.html')
+        return redirect('recommended')
     else:
-        return redirect('recommended.html')
+        return redirect('recommended')
     
 
 #Renders confirmation of successfull registration page
