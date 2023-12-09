@@ -52,11 +52,12 @@ body {
 }
 
 .password-change-forgot {
-    display: flex;
-    justify-content: space-between;
+    text-align: left;
     text-decoration: none;
     margin-top: 10px;
+    margin-bottom: 10px;
     font-size: medium;
+    font-weight: 600;
 }
 
 .password-change-forgot a {

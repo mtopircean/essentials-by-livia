@@ -10,7 +10,14 @@
                 </div>
                 <form id="edit-profile-form" method="post" action="{% url 'edit_profile' %}">
                     {% csrf_token %}
+                    
                     <div id="user-details" class="container">
+                        <div class="row">
+                            <div class="password-change-forgot">
+                                <a href="{% url 'account_change_password' %}" class="change-link"><i class="fa-solid fa-key"></i> Click here to change
+                                    your password</a>
+                            </div>
+                        </div>
                         <div class="row">
                             <div class="col-6 text-left">
                                 <h6 class="form-labels"> First name:</h6>
@@ -115,7 +122,8 @@
                             </button>
                         </form>
                         <h6 id="favorite-description-title">Description:</h6>
-                        <span id="favorite-description-text" class="product-description">{{ favorite.product.description| striptags }}</span>
+                        <span id="favorite-description-text"
+                            class="product-description">{{ favorite.product.description| striptags }}</span>
                         <br>
                         <h6 id="favorite-ailments">Ailments:</h6>
                         <div id="favorite-ailments-area">
