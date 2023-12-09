@@ -1057,6 +1057,10 @@ button.add-product-button:hover {
     font-weight: 600;
 }
 
+label#ailment-filter-name {
+    font-size: smaller;
+}
+
 /* Contact */
 
 #contact-image {

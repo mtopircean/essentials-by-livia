@@ -3,7 +3,7 @@
 <div class="container">
     <div id="filter-product-section" class="container-fluid">
         <div class="row">
-            <div class="col-md-2">
+            <div class="col-md-3">
                 <div id="search" class="search-bar mb-3">
                     <input type="text" id="searhailment" class="form-control" placeholder="Type ailment">
                 </div>
@@ -22,7 +22,7 @@
                                 <div>
                                     <input type="checkbox" name="filter_checkbox" value="{{ ailment.name }}"
                                         class="filter-checkbox">
-                                    <label>{{ ailment.name }}</label>
+                                    <label id="ailment-filter-name">{{ ailment.name }}</label>
                                 </div>
                                 {% endfor %}
                             </div>
@@ -31,7 +31,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-10">
+            <div class="col-md-9">
                 {% if user.is_staff %}
                 <div id="add-product-section">
                     <button type="button" class="add-product-button" data-bs-toggle="modal"

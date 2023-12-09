@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Ailment, AddProduct, AddPromotion, AppUser, FavouriteSelection
 from django_summernote.admin import SummernoteModelAdmin
 from import_export.admin import ImportExportModelAdmin
-from .resources import AddProductResource, AddPromotionResource
+from .resources import AddProductResource, AddPromotionResource, AddAilmentResource
 from .resources import AppUserResource
 
 
@@ -25,7 +25,7 @@ class AddPromotionAdmin(SummernoteModelAdmin, ImportExportModelAdmin):
 
 @admin.register(Ailment)
 class Ailment(ImportExportModelAdmin):
-    resource_class = AddPromotionResource
+    resource_class = AddAilmentResource
     search_fields = ('name',)
 
 

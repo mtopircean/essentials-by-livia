@@ -1,5 +1,5 @@
 from import_export import resources
-from .models import AddProduct, AddPromotion, AppUser
+from .models import AddProduct, AddPromotion, AppUser, Ailment
 
 
 class AddProductResource(resources.ModelResource):
@@ -15,3 +15,7 @@ class AddPromotionResource(resources.ModelResource):
 class AppUserResource(resources.ModelResource):
     class Meta:
         model = AppUser
+        
+class AddAilmentResource(resources.ModelResource):
+    class Meta:
+        model = Ailment
