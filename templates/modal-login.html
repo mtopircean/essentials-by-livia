@@ -25,10 +25,11 @@
                 <a href="{% url 'account_reset_password' %}" target="_blank" class="forgot-link">Forgot Password</a>
                 <a href="{% url 'account_change_password' %}" target="_blank" class="change-link">Change Password</a>
             </div>
-            <!--
-            <div id="login-error-message" class="error-message" style="display: none;">
-                User is not registered or password is incorrect. Please check again or register for an account.
-            </div>-->    
+            <div id="login-error-message" class="error-message">
+                {% if error_message %}
+                    {{ error_message }}
+                {% endif %}
+            </div> 
         </form>
     </div>
 

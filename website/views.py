@@ -187,6 +187,18 @@ def contact(request):
 def user_account(request):
     return render(request, 'user-account.html')
 
+#Checking username existance
+def existing_user(request):
+    username = request.POST.get('username')
+    
+    try:
+        user = User.objects.get(username=username)
+        return render(request, 'profile.html')
+    
+    except User.DoesNotExist:
+        error_message = "User is not registered or password is incorrect. Please check again or register for an account."
+        return render(request, 'modal-login.html', {'error_message': error_message})
+
 #Renders the account registration form using the customized allauth form
 def register(request):
     if request.method == 'POST':

@@ -21,6 +21,7 @@ urlpatterns = [
     path('recommended.html', views.recommended, name='recommended'),
     path('contact.html', views.contact, name='contact'),
     path('register.html', views.register, name='register'),
+    path('existing_user/', views.existing_user, name='existing_user'),
     path('register/success/', views.register_success, name='register-success'),
     path('custom-logout/', views.custom_logout, name='custom_logout'),
     path('password_reset/', PasswordResetView.as_view(), name='password_reset'),
