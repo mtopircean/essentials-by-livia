@@ -1057,6 +1057,10 @@ button.add-product-button:hover {
     font-weight: 600;
 }
 
+#text-pending-approval {
+    padding: 40px;
+}
+
 label#ailment-filter-name {
     font-size: smaller;
 }
