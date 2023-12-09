@@ -32,10 +32,10 @@ class Ailment(ImportExportModelAdmin):
 @admin.register(AppUser)
 class AppUser(ImportExportModelAdmin):
     resource_class = AppUserResource
-    list_filter = ('first_name', 'last_name', 'email')
-    search_fields = ('first_name', 'last_name', 'email',)
+    list_filter = ('first_name', 'last_name', 'email', 'approved')
+    search_fields = ('first_name', 'last_name', 'email', 'approved')
     list_display = ('first_name', 'last_name', 'email',
-                    'phone_number', 'request_date',)
+                    'phone_number', 'request_date', 'approved')
     actions = ['approve_user', 'remove_user',]
 
     def approve_user(self, request, queryset):
