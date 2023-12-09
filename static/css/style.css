@@ -1288,6 +1288,11 @@ button.reset-password-button:hover {
     font-weight: 600;
   }
 
+  /*Password reset*/
+  #submit-reset {
+    color: #0097B2;
+  }
+
 /* Screen size optimization */
 @media (max-width: 767px) {
 
