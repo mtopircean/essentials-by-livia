@@ -22,8 +22,7 @@
                 <a id="register-button-modal" href="register.html" class="btn btn-secondary">Register</a>
             </div>
             <div class="password-change-forgot">
-                <a href="{% url 'account_reset_password' %}" target="_blank" class="forgot-link">Forgot Password</a>
-                <a href="{% url 'account_change_password' %}" target="_blank" class="change-link">Change Password</a>
+                <a href="{% url 'account_reset_password' %}" class="forgot-link">Forgot Password</a>
             </div>
             <div id="login-error-message" class="error-message">
                 {% if error_message %}
