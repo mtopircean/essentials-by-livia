@@ -1,20 +1,5 @@
 {% include 'base.html' %}
-
-<!--
-<div id="active-filters" class="row container-fluid">
-    <nav aria-label="breadcrumb" class="d-flex">
-        <h6>Your active searches:</h6>
-        <ul>
-            {% for filter_value in selected_filters %}
-            <li>{{ filter_value }}
-                <button class="remove-filter" data-filter="{{ filter_value }}"> &#x2716</button>
-            </li>
-            {% endfor %}
-        </ul>
-    </nav>
-</div>
-<hr>
--->
+{% if user.is_authenticated %}
 <div class="container">
     <div id="filter-product-section" class="container-fluid">
         <div class="row">
@@ -49,7 +34,8 @@
             <div class="col-md-10">
                 {% if user.is_staff %}
                 <div id="add-product-section">
-                    <button type="button" class="add-product-button" data-bs-toggle="modal" data-bs-target="#addProductModal">
+                    <button type="button" class="add-product-button" data-bs-toggle="modal"
+                        data-bs-target="#addProductModal">
                         Add product
                     </button>
                 </div>
@@ -141,6 +127,31 @@
         </div>
     </div>
 </div>
+
+{% else %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6" id="register-recommended-login">
+            <div class="d-flex align-items-center justify-content-center text-center">
+                <p>In order to access our fantastic tool, you either have to be logged into your account or registered.
+                    <br><span class="miss-recommended">Don`t miss out!</span></p>
+            </div>
+            <div class="text-center" id="button-recommended-login">
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" id="login-button">Login</button>
+                <a href="{% url 'register' %}" class="btn btn-primary" id="register-button-modal">Register</a>
+                
+            </div>
+        </div>
+
+        <div class="col-md-6 d-none d-md-block">
+            <div class="d-flex justify-content-center align-items-center" style="height: 70vh;">
+                <img src="../static/images/register-recommended-image.png"
+                    alt="Essential Oil Bottle with rose petals around it" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
 
 {% block content %}
 {% endblock %}

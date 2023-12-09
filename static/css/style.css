@@ -1037,6 +1037,26 @@ button.add-product-button:hover {
     overflow-y: auto;
 }
 
+#register-recommended-login {
+    display: flex;
+    align-content: flex-start;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#register-recommended-login p {
+    margin-bottom: 20px;
+}
+
+#button-recommended-login {
+    margin-bottom: 40px;
+}
+
+.miss-recommended {
+    color: #644970;
+    font-weight: 600;
+}
+
 /* Contact */
 
 #contact-image {
