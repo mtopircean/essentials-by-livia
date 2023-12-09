@@ -9,6 +9,7 @@ from .forms import CustomSignupForm
 from django.urls import reverse
 from django.db.models import Q
 from django.http import HttpResponseRedirect, Http404
+from django.contrib.admin.views.decorators import staff_member_required
 
 #Renders the index page
 def index_page(request):
@@ -27,6 +28,17 @@ def about_me(request):
 #Renders the GDPR page
 def data_protection(request):
     return render(request, 'data-protection.html')
+
+#Approve user view:
+@staff_member_required
+def user_approval(request):
+    users_pending_approval = AppUser.objects.filter(approved=False)
+    
+    context = {
+        'users_pending_approval': users_pending_approval,
+    }
+
+    return render(request, 'profile.html', context)
 
 #Renders the Promotions page
 def promotions(request):
@@ -200,11 +212,25 @@ def register(request):
 
     return render(request, 'register.html', {'signup_form': signup_form})
 
+#Approve user view:
+@staff_member_required
+def user_approval(request):
+    users_pending_approval = AppUser.objects.filter(approved=False)
+    
+    context = {
+        'users_pending_approval': users_pending_approval,
+    }
+
+    return render(request, 'pending_account_approval.html', context)
+
 #Allows to edit the user profile: retrieves user data
 #updates the data
 def edit_profile(request):
     user = request.user
     app_user = AppUser.objects.get(user=user)
+    
+    if not app_user.approved:
+        return render(request, 'pending_account_approval.html')
 
     if request.method == 'POST':
         app_user.first_name = request.POST.get('first_name')
@@ -216,10 +242,10 @@ def edit_profile(request):
         
         app_user.save()
     
-    context = {
+    user_context = {
         'user_data': app_user,
     }
-    return render(request, 'profile.html', context)
+    return render(request, 'profile.html', user_context)
         
 #Deletes a user account and returns to index
 def delete_account(request):

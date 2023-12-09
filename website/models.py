@@ -47,7 +47,7 @@ class AppUser(models.Model):
     username = models.CharField(max_length=100)
     join_team = models.BooleanField(default=False)
     i_want_to_know_more_about_the_products = models.BooleanField(default=False)
-    approved = models.BooleanField(default=False) # Not in use at the moment
+    approved = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
