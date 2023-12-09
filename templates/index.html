@@ -25,12 +25,19 @@
                                 you?</h6>
                         </div>
                         <div id="find-more-tool text-center">
+                            {% if user.is_authenticated %}
                             <a href="recommended.html">
-                            <button id="button-tool" class="btn btn-primary"><i class="fa-solid fa-droplet"></i> <i
-                                    class="fa-solid fa-droplet">
-                                </i> <i class="fa-solid fa-droplet"> </i> Use our tool.... <i
-                                    class="fa-solid fa-computer-mouse"></i></button>
-                                </a>
+                                <button id="button-tool" class="btn btn-primary"><i class="fa-solid fa-droplet"></i> <i
+                                        class="fa-solid fa-droplet">
+                                    </i> <i class="fa-solid fa-droplet"> </i> Use our tool.... <i
+                                        class="fa-solid fa-computer-mouse"></i></button>
+                            </a>
+                            {% else %}
+                            <a href="modal-login.html" data-bs-toggle="modal" data-bs-target="#loginModal">
+                                <button id="button-tool" class="btn btn-primary"><i
+                                        class="fa-solid fa-droplet"></i> Register/Login to use our tool!</button>
+                            </a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -64,16 +71,16 @@
                         your passion for a healthy lifestyle into an actual source of income.
                     </h6>
                     <a href="contact.html">
-                    <button id="btn-join" class="btn btn-primary">I want to join the team!</button>
-                </a>
+                        <button id="btn-join" class="btn btn-primary">I want to join the team!</button>
+                    </a>
                 </div>
                 <div class="col-12 col-md-6">
                     <div id="promo-section" class="image-container">
                         <img src="../static/images/promotion.png" alt="essential oil bottle with discount logo"
                             class="img-fluid">
-                            <a href="promotions.html">
-                        <button id="button-promo" class="btn btn-primary">Learn more....</button>
-                    </a>
+                        <a href="promotions.html">
+                            <button id="button-promo" class="btn btn-primary">Learn more....</button>
+                        </a>
                     </div>
                 </div>
             </div>
