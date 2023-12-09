@@ -1,5 +1,5 @@
 {% include 'base.html' %}
-{% if user.is_authenticated %}
+{% if is_user_approved %}
 <div class="container">
     <div id="filter-product-section" class="container-fluid">
         <div class="row">
@@ -137,9 +137,10 @@
                     <br><span class="miss-recommended">Don`t miss out!</span></p>
             </div>
             <div class="text-center" id="button-recommended-login">
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal" id="login-button">Login</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal"
+                    id="login-button">Login</button>
                 <a href="{% url 'register' %}" class="btn btn-primary" id="register-button-modal">Register</a>
-                
+
             </div>
         </div>
 

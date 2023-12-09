@@ -87,15 +87,25 @@ def recommended(request):
     products = AddProduct.objects.all()
     is_admin = request.user.is_superuser
     
-    #Checks favorite status if user is logged in
+    #Checks favorite status if user is logged in and approved
     if request.user.is_authenticated:
-        user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True).values_list('product_id', flat=True)
+        try:
+            app_user = AppUser.objects.get(user=request.user)
+            is_user_approved = app_user.approved
+            if is_user_approved:
+                user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True).values_list('product_id', flat=True)
+            else:
+                user_favorites = []
+        except AppUser.DoesNotExist:
+            is_user_approved = False
     else:
+        is_user_approved = False
         user_favorites = []
 
-    #Prepare contest to display the template data and renders it
+    #Prepare context to display the template data and renders it
     context = {
         'is_admin': is_admin,
+        'is_user_approved': is_user_approved,
         'products': products,
         'ailments': ailments,
         'user_favorites': user_favorites,
@@ -251,6 +261,8 @@ def logged_user_details(request):
         user_data = AppUser.objects.get(user=logged_in_user)
         user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True)
         print(user_favorites)
+        
+        is_user_approved = user_data.approved
         
         context = {
             'user_data': user_data,
