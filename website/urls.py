@@ -31,7 +31,6 @@ urlpatterns = [
     path('filter-ailments/', views.filter_ailments, name='filter_ailments'),
     path('create_product/', views.create_product, name='create_product'),
     path('create_promotion/', views.create_promotion, name='create_promotion'),
-    path('user-approval/', views.user_approval, name='user_approval'),
 ]
 
 handler404 = views.handler404
