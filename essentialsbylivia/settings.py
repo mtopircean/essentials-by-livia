@@ -22,9 +22,8 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['8000-mtopircean-essentialsby-d45xfzluakj.ws-eu105.gitpod.io', 'essentials-by-livia-efe89c429260.herokuapp.com', 'django-blog-tmf-e46d0a2b5195.herokuapp.com', 'localhost']
+DEBUG = 'DEBUG'
+ALLOWED_HOSTS = ['8000-mtopircean-essentialsby-d45xfzluakj.ws-eu106.gitpod.io','8000-mtopircean-essentialsby-d45xfzluakj.ws-eu105.gitpod.io', 'essentials-by-livia-efe89c429260.herokuapp.com', 'django-blog-tmf-e46d0a2b5195.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -40,8 +39,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'cloudinary_storage',
-    'cloudinary',
     'django.contrib.staticfiles',
+    'cloudinary',
     'django_summernote',
     'import_export',
     'website',
@@ -154,6 +153,3 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-import django_heroku
-django_heroku.settings(locals())
