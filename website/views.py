@@ -159,6 +159,20 @@ def filter_ailments(request):
     products = AddProduct.objects.all()
     selected_filters = []
     
+    if request.user.is_authenticated:
+        try:
+            app_user = AppUser.objects.get(user=request.user)
+            is_user_approved = app_user.approved
+            if is_user_approved:
+                user_favorites = FavouriteSelection.objects.filter(user=request.user, is_favorite=True).values_list('product_id', flat=True)
+            else:
+                user_favorites=[]
+        except AppUser.DoesNotExist:
+            is_user_approved = False
+    else:
+        is_user_approved = False
+        user_favorites = []
+    
     if request.method == "GET":
         selected_filters = request.GET.getlist('filter_checkbox')
         if selected_filters:
@@ -176,6 +190,8 @@ def filter_ailments(request):
         'ailments' : ailments,
         'products' : products,
         'selected_filters': selected_filters,
+        'is_user_approved':is_user_approved,
+        'user_favorites':user_favorites,
     }
     return render(request, 'recommended.html', context)
 

@@ -11,6 +11,7 @@
                     <div class="filter-section">
                         <p id="toggle-ailment-list">Ailment list &#11165;</p>
                         <form method="GET" action="{% url 'filter_ailments' %}" id="ailment-filter-form">
+                            {% csrf_token %}
                             <div class="filter-content">
                                 <div>
                                     <button type="submit" id="apply-button">Apply selection &#x2714;</button>
