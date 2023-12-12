@@ -1326,6 +1326,27 @@ button.reset-password-button:hover {
     margin-bottom: 10px;
 }
 
+/*Success registration page */
+
+#registration-succcess {
+    margin-top: 40px;
+}
+
+#registration-succcess img{
+    margin-bottom: 40px;
+}
+
+#registration-succcess h4{
+    margin-bottom: 40px;
+    color:#644970;
+    font-weight: 600;
+}
+
+#registration-succcess h5{
+    margin-bottom: 40px;
+    color:#644970;
+}
+
 /* Screen size optimization */
 @media (max-width: 767px) {
 
