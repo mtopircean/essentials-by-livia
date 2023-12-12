@@ -24,11 +24,6 @@
             <div class="password-change-forgot">
                 <a href="{% url 'account_reset_password' %}" class="forgot-link">Forgot Password</a>
             </div>
-            <div id="login-error-message" class="error-message">
-                {% if error_message %}
-                    {{ error_message }}
-                {% endif %}
-            </div> 
         </form>
     </div>
 
