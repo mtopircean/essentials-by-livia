@@ -35,7 +35,7 @@ class AppUser(ImportExportModelAdmin):
     list_filter = ('first_name', 'last_name', 'email', 'approved')
     search_fields = ('first_name', 'last_name', 'email', 'approved')
     list_display = ('first_name', 'last_name', 'email',
-                    'phone_number', 'request_date', 'approved')
+                    'phone_number', 'request_date', 'approved', 'username')
     actions = ['approve_user', 'remove_user',]
 
     def approve_user(self, request, queryset):
