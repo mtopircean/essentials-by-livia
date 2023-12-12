@@ -483,11 +483,16 @@ h6 {
 
 #text-404 a {
     text-decoration: none;
+    color: #644970;
 }
 
 #text-404 i {
     font-size: large;
     font-weight: bold;
+    margin-left: 5px;
+}
+#img-404 {
+    width: 50%;
 }
 
 #text-403 {
