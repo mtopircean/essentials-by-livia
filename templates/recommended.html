@@ -70,7 +70,7 @@
 
                                 <span class="product-name">{{ product.name }}</span>
                                 <br>
-                                <form action="{% url 'favourite_selection' product.id %}" method="post">
+                                <form action="{% url 'favourite_selection' product.id %}?source=recommended" method="post">
                                     {% csrf_token %}
                                     <input type="hidden" name="product_id" value="{{ product.id }}">
                                     <button type="submit" class="add-to-favorites-btn">

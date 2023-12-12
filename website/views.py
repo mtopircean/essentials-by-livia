@@ -298,10 +298,12 @@ def custom_logout(request):
 #Applicable only for logged in users
 #Retrieves the product and checks is favorite status
 #If not favorite creates a new Favourite selection
-#Redirects to recommended
+#Redirects to recommended or to profile when a favourite selection is removed
+#this is done by passing additional info in the url at form submission
 @login_required
 def favourite_selection(request, product_id):
     product = get_object_or_404(AddProduct, id=product_id)
+    redirect_to = request.GET.get('source', 'recommended')
     try:
         favorite_selection = FavouriteSelection.objects.get(user=request.user, product=product)
         favorite_selection.is_favorite = not favorite_selection.is_favorite
@@ -309,7 +311,10 @@ def favourite_selection(request, product_id):
     except FavouriteSelection.DoesNotExist:
         FavouriteSelection.objects.create(user=request.user, product=product, is_favorite=True)
 
-    return redirect('recommended')
+    if redirect_to == 'logged_user_details':
+        return redirect('logged_user_details')
+    else:
+        return redirect('recommended')
 
 #Displays user favorites:collects, creates context, renders
 def display_favorites(request):
