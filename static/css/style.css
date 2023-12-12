@@ -481,37 +481,19 @@ h6 {
 
 /* Error pages */
 
-#text-404 a {
-    text-decoration: none;
+#text-404,
+#text-403,
+#text-500 {
     color: #644970;
 }
 
-#text-404 i {
-    font-size: large;
-    font-weight: bold;
-    margin-left: 5px;
-}
-#img-404 {
+
+#img-404,
+#img-403,
+#img-500 {
     width: 50%;
 }
 
-#text-403 {
-    text-decoration: none;
-}
-
-#text-403 i {
-    font-size: large;
-    font-weight: bold;
-}
-
-#text-500 {
-    text-decoration: none;
-}
-
-#text-500 i {
-    font-size: large;
-    font-weight: bold;
-}
 
 /*Promo page */
 
