@@ -88,6 +88,10 @@ def recommended(request):
     products = AddProduct.objects.all()
     is_admin = request.user.is_superuser
     
+    # Initializes variables for user favorites and approval status
+    is_user_approved = False
+    user_favorites = []
+    
     #Checks favorite status if user is logged in and approved
     if request.user.is_authenticated:
         try:
