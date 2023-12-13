@@ -270,6 +270,7 @@ def edit_profile(request):
 def delete_account(request):
     if request.method == 'POST':
         request.user.delete()
+        logout(request)
         return redirect('index')
 
     return render(request, 'profile.html')

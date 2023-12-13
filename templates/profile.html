@@ -77,15 +77,14 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="account-actions" class="text-center">
-                            <button id="save-profile" type="submit"
-                                onclick="return confirm('Are you sure you want to update your account?')">Save
-                                Changes</button>
+                        <div id="account-actions" class="text-center" id="profile-button-container">
+                            <form id="edit-profile-form" method="post" action="{% url 'edit_profile' %}">
+                                {% csrf_token %}
+                                <button id="save-profile" type="submit" onclick="return confirm('Are you sure you want to update your account?')">Save Changes</button>
+                            </form>
                             <form id="delete-account-form" method="post" action="{% url 'delete_account' %}">
                                 {% csrf_token %}
-                                <button id="delete-account" type="submit"
-                                    onclick="return confirm('Are you sure you want to delete your account?')">Delete
-                                    Account</button>
+                                <button id="delete-account" type="submit" onclick="return confirm('Are you sure you want to delete your account?')">Delete Account</button>
                             </form>
                         </div>
                     </div>

@@ -694,12 +694,12 @@ button.add-promotion-button:hover {
     font-weight: 600;
 }
 
+
 #delete-account {
     color: #993333;
     border: none;
     background-color: transparent;
     font-weight: 600;
-    margin-left: 40px;
 }
 
 #delete-account:hover {
