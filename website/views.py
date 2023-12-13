@@ -88,7 +88,7 @@ def recommended(request):
     products = AddProduct.objects.all()
     is_admin = request.user.is_superuser
     
-    # Initializes variables for user favorites and approval status
+    # Check user favorites and approval status
     is_user_approved = False
     user_favorites = []
     
@@ -163,6 +163,9 @@ def filter_ailments(request):
     ailments = Ailment.objects.all()
     products = AddProduct.objects.all()
     selected_filters = []
+    
+    is_user_approved = False
+    user_favorites = []
     
     if request.user.is_authenticated:
         try:
