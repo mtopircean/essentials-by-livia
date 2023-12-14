@@ -18,7 +18,7 @@ body {
 
 #join-promo {
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 #quote-section {
@@ -1352,6 +1352,14 @@ button.reset-password-button:hover {
     margin-bottom: 40px;
     color:#644970;
 }
+/* Screen size optimization */
+@media (max-width: 992px) {
+    #promotions-container {
+       padding-top: 5%;
+    }
+
+}
+
 
 /* Screen size optimization */
 @media (max-width: 767px) {
