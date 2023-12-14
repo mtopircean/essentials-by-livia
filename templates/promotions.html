@@ -31,7 +31,7 @@
                     <div class="row">
                         <div class="col">
                             {% if is_admin %}
-                            <form  id="update-promo-description" action="{% url 'update_description' promotion.id %}" method="post" onclick="return updateDescription()">
+                            <form  id="update-promo-description" action="{% url 'update_description' promotion.id %}" method="post" onsubmit="return updateDescription()">
                                 {% csrf_token %}
                                 <textarea name="new_description">{{ promotion.description }}</textarea>
                                 <button id="save-promo-change" type="submit">Save description</button>

@@ -84,7 +84,7 @@ Confirms user update action and acts as a safety measure
 */
 
 function updateDescription() {
-    if (confirm("Are you sure you want to update promotions description?")) {
+    if (confirm("Are you sure you want to update the promotion description?")) {
         document.getElementById('update-promo-description').submit();
     } else {
         event.preventDefault();
