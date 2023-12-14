@@ -35,7 +35,7 @@ class AppUser(ImportExportModelAdmin):
     list_filter = ('first_name', 'last_name', 'email', 'approved')
     search_fields = ('first_name', 'last_name', 'email', 'approved')
     list_display = ('first_name', 'last_name', 'email',
-                    'phone_number', 'request_date', 'approved', 'username')
+                    'phone_number', 'request_date', 'approved')
     actions = ['approve_user', 'remove_user',]
 
     def approve_user(self, request, queryset):
@@ -43,6 +43,22 @@ class AppUser(ImportExportModelAdmin):
 
     def remove_user(self, request, queryset):
         queryset.update(approved=False)
+        
+    #Retrieves default form fields
+    #converts fields into a list to allow modifications
+    #checks if username is present and removes it
+    #Took inspiration from StackOverflow on how to exclude fieldset    
+    def get_fieldsets(self, request, obj=None):
+        fieldsets = super().get_fieldsets(request, obj)
+        if obj:
+            fieldsets = list(fieldsets)
+            for fieldset in fieldsets:
+                if 'username' in fieldset[1]['fields']:
+                    fieldset[1]['fields'] = tuple(
+                        field for field in fieldset[1]['fields'] if field != 'username'
+                    )
+            return tuple(fieldsets)
+        return fieldsets
         
 
 @admin.register(FavouriteSelection)
