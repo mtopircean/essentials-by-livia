@@ -682,6 +682,10 @@ button.add-promotion-button:hover {
 
 /* Account section */
 
+#favorite-product-section {
+    margin-bottom: 60px;
+}
+
 .account-section {
     margin-top: 30px;
     margin-bottom: 50px;
