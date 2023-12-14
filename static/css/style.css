@@ -805,8 +805,12 @@ button.add-promotion-button:hover {
 
 /*Recommendation section*/
 
+#recommended-contact {
+    margin-bottom: 40px;
+}
+
 #filter-product-section {
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 #active-filters .row {
@@ -893,6 +897,10 @@ li {
     margin-right: 5px;
 }
 
+.filter-section {
+    margin-bottom: 20px;
+}
+
 #apply-button,
 #clear-all-button {
     text-decoration: none;
@@ -905,12 +913,10 @@ li {
 
 #apply-button {
     color: #026716;
-    margin-top: 10px;
 }
 
 #clear-all-button {
     color: darkred;
-    margin-bottom: 10px;
 }
 
 .remove-filter {
