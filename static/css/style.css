@@ -434,6 +434,20 @@ h6 {
     font-size: small;
 }
 
+#about-other-contact {
+    margin-bottom: 60px;
+}
+
+#about-other-contact a{
+    text-decoration: underline;
+    color:#0097B2
+}
+
+#essentialOilsText {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
 /* About me */
 
 #about-me-text h5 {

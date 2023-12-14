@@ -209,12 +209,3 @@ $(document).ready(function () {
         form.submit();
     });
 });
-
-/*Handle user not existent when login is attempted
-document.getElementById('allauth-login-form').addEventListener('submit', function(event) {
-    const isUserNotRegistered = true;
-    if (isUserNotRegistered) {
-        event.preventDefault();
-        document.getElementById('login-error-message').style.display = 'block';
-    }
-});*/
