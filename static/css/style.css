@@ -1391,6 +1391,12 @@ button.reset-password-button:hover {
 
 /* Screen size optimization */
 @media (max-width: 767px) {
+
+    #data-protection p, #social-media-footer p {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
     #about-me-text {
         margin-right: 20px;
         margin-left: 20px;
