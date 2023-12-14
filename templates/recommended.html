@@ -53,8 +53,7 @@
                             <div>
                                 {% if is_admin %}
                                 <form id="update-product-details" action="{% url 'update_product' product.id %}"
-                                    onclick="return updateProductDescription()" method="post"
-                                    onsubmit="return updateDescription()">
+                                    method="post" onsubmit="return updateProductDescription()">
                                     {% csrf_token %}
                                     <textarea id="product-new-description"
                                         name="new_description">{{ product.description| striptags }}</textarea>
