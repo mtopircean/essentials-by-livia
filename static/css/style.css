@@ -449,10 +449,9 @@ h6 {
 
 }
 
-#about-me-text img {
-
-    margin-top: 10px;
-    margin-bottom: 10px;
+#about-me-text img,
+#about-me-text .col-12 {
+    max-width: 100%;
 }
 
 /* Data protection sections */
@@ -1338,24 +1337,25 @@ button.reset-password-button:hover {
     margin-top: 40px;
 }
 
-#registration-succcess img{
+#registration-succcess img {
     margin-bottom: 40px;
 }
 
-#registration-succcess h4{
+#registration-succcess h4 {
     margin-bottom: 40px;
-    color:#644970;
+    color: #644970;
     font-weight: 600;
 }
 
-#registration-succcess h5{
+#registration-succcess h5 {
     margin-bottom: 40px;
-    color:#644970;
+    color: #644970;
 }
+
 /* Screen size optimization */
 @media (max-width: 992px) {
     #promotions-container {
-       padding-top: 5%;
+        padding-top: 5%;
     }
 
 }
@@ -1363,6 +1363,11 @@ button.reset-password-button:hover {
 
 /* Screen size optimization */
 @media (max-width: 767px) {
+    #about-me-text {
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-bottom: 60px;
+    }
 
     .menu-title,
     .login-title,
