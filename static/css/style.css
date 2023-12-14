@@ -1160,6 +1160,11 @@ label#label-password {
     font-size: medium;
 }
 
+.label-login-modal {
+    color: #000000;
+    margin-top: 10px;
+}
+
 /* Register page */
 
 #why-register img {

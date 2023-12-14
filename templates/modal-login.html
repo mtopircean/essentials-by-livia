@@ -11,10 +11,10 @@
     <div class="modal-body">
         <form id="allauth-login-form" method="post" action="{% url 'account_login' %}">
             {% csrf_token %}
-            <label for="id_username">Username:</label>
+            <label for="id_username" class="label-login-modal">Username:</label>
             <input type="text" class="form-control" id="id_username" name="login"
                 placeholder="Please provide your username" required>
-            <label for="id_password">Password:</label>
+            <label for="id_password" class="label-login-modal">Password:</label>
             <input type="password" class="form-control" id="id_password" name="password"
                 placeholder="Please provide your password" required>
             <div class="button-area">
