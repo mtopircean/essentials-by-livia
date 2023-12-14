@@ -2,7 +2,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-6 order-md-1 order-2">
+        <div class="col-md-6 order-md-1 order-2" id="register-form">
             <form id="register-section" method="post">
                 {% csrf_token %}
                 {{ signup_form.as_p }}
@@ -37,7 +37,7 @@
                     recommended products addressed
                     specific for your condition.
                     Check it out here:</p>
-                <a href="recommended.html" target="_blank">Recommendation tool <i class="fa-solid fa-fire"></i></a>
+                <a href="recommended.html">Recommendation tool <i class="fa-solid fa-fire"></i></a>
                 <h6>Become part of our awesome team:</h6>
                 <p class="join-team-register">You don`t have to do it! It is not mandatory.....but it is highly
                     recommended!

@@ -1181,6 +1181,10 @@ label#label-password {
 
 /* Register page */
 
+#register-form {
+    margin-bottom: 80px;
+}
+
 #why-register img {
     margin-top: 30px;
     margin-bottom: 30px;
@@ -1408,5 +1412,10 @@ button.reset-password-button:hover {
 
     .nav-link {
         font-size: larger;
+    }
+
+    .change-link {
+        margin-bottom: 10px;
+        display: flex;
     }
 }
