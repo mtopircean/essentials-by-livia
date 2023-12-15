@@ -245,7 +245,25 @@ Overall 6 sprints where considered, also closely connected to the 6 milestones, 
 # Credits
 ## Code Used
 ## Other
+* Deployment instructions in GitHub copied from kera-cudmore different repo and following the article written by her on how to write a readme.
+* Inspiration on readme structure taken from kera-cudmore repo`s and following the article written by her on how to write a readme.
+
+* Thanks to Graeme Taylor, my mentor for all his support during the development of the project.
+* Thank you to the CI Tutor Team who supported in several instances by providing guidance on overcoming various challenges encountered during development. Massive support from all of the team and special thanks to: Roman, Gemma, John, Martin, Sarah, Jason, Joanne, Holly, Oisin....my apologies if I forgott someone....this is only due to my bad memory :).
 
 # About Author
+Marius Topircean is an aspiring software-developer on a journey to develop and learn his place into the developer community.
+
+My contact details are:
+
+Email: mtopircean@yahoo.com
+
+Phone: +353857642212
+
+Slack: Marius Topircean
+
+GitHub: mtopircean
+
+LinkedIn: [Marius Topircean](https://www.linkedin.com/in/marius-t-7b5592124)
 
 
