@@ -259,7 +259,7 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 ![Alt text](/static/readme/promotion-admin-feature.gif)
 
 #### Promotion User Feature
-![Alt text](/static/readme/promotion-user-feature.)
+![Alt text](/static/readme/promotion-user-feature.gif)
 
 #### User Account Admin Feature
 ![Alt text](/static/readme/admin-user-account-feature.gif)
