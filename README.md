@@ -247,22 +247,28 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 #### Error pages
 
 #### Favorites Feature
+![Alt text](/static/readme/favorite-feature.gif)
 
 #### Product Admin Feature
+![Alt text](/static/readme/product-admin-feature.gif)
 
 #### Product User Feature
+![Alt text](/static/readme/product-user-feature.gif)
 
 #### Promotion Admin Feature
-
-#### Features future implemented
+![Alt text](/static/readme/promotion-admin-feature.gif)
 
 #### Promotion User Feature
+![Alt text](/static/readme/promotion-user-feature.gif)
 
 #### User Account Admin Feature
+![Alt text](/static/readme/admin-user-account-feature.gif)
 
 #### User Account User Feature
+![Alt text](/static/readme/admin-user-account-feature.gif)
 
 #### Unittest Feature
+
 
 #### Features future implementation
 
