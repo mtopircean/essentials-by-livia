@@ -202,6 +202,18 @@ Overall 6 sprints where considered, also closely connected to the 6 milestones, 
 
 #### Features future implemented
 
+Future iteration will include this features. For the moment, Stories are also at a lower detail level, without tasks and major details.
+
+**EPIC**|**STORY**|**Beneficiary**|**Link to feature**|**Feature**|**Status**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43495025): Approve comments on promotion|Admin|n/a|Admin will have the ability to approve comments before they are displayed.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493955): Comment promotion|User|n/a|User will have in the future the ability to add a commend on a promotion.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43500159): Comment product|User|n/a|User will have in the future the ability to add a commend on a product.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499620): Filter products by price|User|n/a|User will have in the future the ability to filter a product by price. Price value can be added now on the product, but it is currently not displayed.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43495274): Delete comments on promotion|Admin|n/a|Admin will have the ability to delete comments on a promotion and product.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493641): Share promotion|User|n/a|User will have the ability to share a promotion or product.|Future implementation
+
+
 ## The Structure Plane
 
 ## The Skeleton Plane
