@@ -23,6 +23,7 @@ The website is done, but there is a multitude of elements that we still intend t
             * [Sprints](#sprints)
     * [The Scope Plane](#the-scope-plane)
         * [Features](#features)
+            * [Special features implemented](#special-features-implemented)
             * [Features implemented](#features-implemented)
             * [Features future implementation](#features-future-implementation)
     * [The Structure Plane](#the-scope-plane)
@@ -198,9 +199,30 @@ Overall 6 sprints where considered, also closely connected to the 6 milestones, 
 ## The Scope Plane
 ### Features
 
+#### Special features implemented
+SELECTIVE RECOMMENDATION TOOL:
+
+Why this feature is special is because it offers the admin the option to selectively allow users to access the Recommandation tool, which is the biggest selling point of the website.
+In essence, the process is as follows:
+
+- user tries to access the tool and lands on a page requesting to create an account or login(this effects also the button leading to the tool in front-page)
+- user creates an account and receives a notification that account is pending approval
+- admin validates
+- now user can acess the account
+OR:
+- user loggs in and now can access the account
+
+![Alt text](/static/readme/selective-recommandation-tool.gif)
+
+
+IMPORT-EXPORT ADMIN FUNCTIONALITY:
+- admin can do mass imports/exports of the databases for products, ailments, promotions, in order to allow increased efficiency
+
+![Alt text](/static/readme/import-export.gif)
+
 #### Features implemented
 
-#### Features future implemented
+#### Features future implementation
 
 Future iteration will include this features. For the moment, Stories are also at a lower detail level, without tasks and major details.
 
