@@ -247,25 +247,39 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 #### Error pages
 
 #### Favorites Feature
-![Alt text](/static/readme/favorite-feature.gif)
+<video width="320" height="240" controls>
+  <source src="../essentials-by-livia/static/readme/favorite-feature.mp4" type="video/mp4">
+</video>
 
 #### Product Admin Feature
-![Alt text](/static/readme/product-admin-feature.gif)
+<video width="320" height="240" controls>
+  <source src="../essentials-by-livia/static/readme/product-admin-feature.mp4" type="video/mp4">
+</video>
 
 #### Product User Feature
-![Alt text](/static/readme/product-user-feature.gif)
+<video width="320" height="240" controls>
+  <source src="../essentials-by-livia/static/readme/product-user-feature.mp4" type="video/mp4">
+</video>
 
 #### Promotion Admin Feature
-![Alt text](/static/readme/promotion-admin-feature.gif)
+<video width="320" height="240" controls>
+  <source src="../essentials-by-livia/static/readme/promotion-admin-feature.mp4" type="video/mp4">
+</video>
 
 #### Promotion User Feature
-![Alt text](/static/readme/promotion-user-feature.gif)
+<video width="320" height="240" controls>
+  <source src="../essentials-by-livia/static/readme/promotion-user-feature.mp4" type="video/mp4">
+</video>
 
 #### User Account Admin Feature
-![Alt text](/static/readme/admin-user-account-feature.gif)
+<video width="320" height="240" controls>
+  <source src="../essentials-by-livia/static/readme/admin-user-account-feature.mp4" type="video/mp4">
+</video>
 
 #### User Account User Feature
-![Alt text](/static/readme/admin-user-account-feature.gif)
+<video width="320" height="240" controls>
+  <source src="../essentials-by-livia/static/readme/admin-user-account-feature.mp4" type="video/mp4">
+</video>
 
 #### Unittest Feature
 
