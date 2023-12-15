@@ -221,6 +221,48 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 ![Alt text](/static/readme/import-export.gif)
 
 #### Features implemented
+**EPIC**|**STORY**|**Beneficiary**|**Link to feature**|**Feature**|**Status**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43490085): Create error pages|User|[Error pages Feature](#error-pages)|Created custom 403, 404, 500 error pages|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491254): Update a user account - user|User|[User account User Feature](#user-account-user-feature)|User can updated their account details directly from their profile page.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43492404): Delete user accounts - admin|Admin|[User account Admin Feature](#user-account-admin-feature)|Admin can delete a user account from the admin section.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491124): Access a user account - user|User|[User account User Feature](#user-account-user-feature)|After account creation, user can access their account details in their profile section.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43490848): Create a user account|User|[User account User Feature](#user-account-user-feature)|Users can create a user account by using a custom form.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43492224): Update user accounts -admin|Admin|[User account Admin Feature](#user-account-admin-feature)|Admin can update a users account details from the admin section|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491438): Delete a user account - user|User|[User account User Feature](#user-account-user-feature)|User can delete their account straight from the profile section.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43492086): View user accounts|Admin|[User account Admin Feature](#user-account-admin-feature)|Admin can see all user accounts in admin section|Implemented
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493399): View promotion|User|[Promotion User Feature](#promotion-user-feature)|Users can view active promotions|Implemented
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43494603): Add promotion|Admin|[Promotion Admin Feature](#promotion-admin-feature)|Admin can add a promotion from front-end and also back-end.|Implemented
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43494783): Delete promotion|Admin|[Promotion Admin Feature](#promotion-admin-feature)|Admin can delete a promotion from front-end and also back-end|Implemented
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43494316): Edit promotion|Admin|[Promotion Admin Feature](#promotion-admin-feature)|Admin can edit a promotion from front-end and also back-end|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501011): Modify product|Admin|[Product Admin Feature](#product-admin-feature)|Admin can edit a product from front-end and also back-end|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499482): Filter products by ailment|User|[Product User Feature](#product-user-feature)|User can filter products by ailment|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43500688): Add a product to the database|Admin|[Product Admin Feature](#product-admin-feature)|Admin can add a product from front-end and also back-end.|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499279): Search products by ailment|User|[Product User Feature](#product-user-feature)|User can filter products by ailment, by using the search functionality|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501144): Delete product|Admin|[Product Admin Feature](#product-admin-feature)|Admin can delete a product from front-end and also back-end|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499704): Save product to favorites|User|[Favorites Feature](#favorites-feature)|User can save a product to their favorites in the profile section|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499821): Remove products from favorites|User|[Favorites Feature](#favorites-feature)|User can remove a product from their favorites in the profile section|Implemented
+[Epic 7](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368946): Testing and Readme documents|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501838): Testing|Admin|[Unittest Feature](#unittest-feature)|Write unittest for automated views testing|Implemented
+
+#### Error pages
+
+#### Favorites Feature
+
+#### Product Admin Feature
+
+#### Product User Feature
+
+#### Promotion Admin Feature
+
+#### Features future implemented
+
+#### Promotion User Feature
+
+#### User Account Admin Feature
+
+#### User Account User Feature
+
+#### Unittest Feature
 
 #### Features future implementation
 
