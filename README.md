@@ -459,6 +459,13 @@ Photos for website elements are taken from Pexels.
 Product and promotion photos are taken from doTerra database/representative tools.
 
 ### Display size optimization
+The use of Bootstrap has limited significantly the level of manual intervention I had to do in order to adapt the layout to various screen sizes.
+My intervention was limited to an intervention on this particular size, which managed to adapt to all screen variations under this size:
+
+``` css
+@media (max-width: 767px)
+```
+
 ### Accessibility
 From an accessibility perspective, my goal was to create a clean website with data easy to read, positioned in a relevant manner for the user. I`ve achieved this by:
 
@@ -473,8 +480,23 @@ Display size optimization:
 
 # Deployment
 ## How do Deploy
+Deployment of the website was done using HEROKU, and can be accessed here [ESSENTIALS BY LIVIA](https://essentials-by-livia-efe89c429260.herokuapp.com/).
+
 ## How to Fork
+To fork the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, [mtopircean/essentials-by-livia](https://github.com/mtopircean/essentials-by-livia)
+3. Click the Fork button in the top right corner.
+
 ## How to Clone
+To clone the repository:
+
+1. Log in (or sign up) to GitHub.
+2. Go to the repository for this project, [mtopircean/essentials-by-livia](https://github.com/mtopircean/essentials-by-livia)
+3. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+5. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
 
 # Technologies
 ## Programming Languages
