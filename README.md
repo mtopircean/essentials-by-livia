@@ -369,7 +369,73 @@ The only standalone database is AddPromotion which doesn`t need any specific inp
 
 ### Security
 #### Security User
+
+The HTML template ensures user safety by controlling user access based on approval status. For instance, conditional checks are in place to restrict unauthorized access to certain sections, utilizing is_user_approved.
+For example:
+
+``` html
+{% if is_user_approved or is_admin %}
+    <!-- User-approved or admin-specific content here -->
+{% else %}
+    <!-- Content for unauthorized users -->
+{% endif %}
+```
+The views in Django are protected with decorators, like for ex @login_required and @staff_member_required to ensure user authentication and administrative privilege.
+``` python
+@login_required
+def favourite_selection(request, product_id):
+    # Code to manage favorite products securely...
+``` 
+
+{% csrf_token %} tag generates a unique token for each form submission to protect data being sent by the user. For example:
+``` html
+<form method="POST" action="{% url 'filter_ailments' %}" id="ailment-filter-form">
+    {% csrf_token %}
+    <!-- Other form fields and buttons -->
+</form>
+```
+
+The use of eventlisteners is present through the code, with the goal to promt the user on critical changes to their data:
+
+``` html
+<div id="account-actions" class="text-center" id="profile-button-container">
+                            <form id="edit-profile-form" method="post" action="{% url 'edit_profile' %}">
+                                {% csrf_token %}
+                                <button id="save-profile" type="submit" onclick="return confirm('Are you sure you want to update your account?')">Save Changes</button>
+                            </form>
+                            <form id="delete-account-form" method="post" action="{% url 'delete_account' %}">
+                                {% csrf_token %}
+                                <button id="delete-account" type="submit" onclick="return confirm('Are you sure you want to delete your account?')">Delete Account</button>
+                            </form>
+                        </div>
+```
+
 #### Security Admin
+Certain sections in the HTML are available only to admin users, like for example, controlled using conditional checks with user.is_staff.
+
+``` html
+{% if user.is_staff %}
+    <!-- Content available only to admin users -->
+{% else %}
+    <!-- Content for non-admin users -->
+{% endif %}
+```
+View functions in Django incorporate @staff_member_required to ensure only staff (admin) members can access and manage certain functionalities.
+
+``` python
+@staff_member_required
+def user_approval(request):
+    # Admin-only functionality to approve users...
+```
+
+The use of eventlisteners is present through the code, with the goal to promt the admin on critical changes to the forms/databases, like for example:
+``` html
+<form id="delete-product-form" action="{% url 'delete_product' product.id %}" method="post">
+    {% csrf_token %}
+    <!-- Other form fields and buttons -->
+    <button id="delete-product" type="submit">Delete Product</button>
+</form>
+```
 
 ## The Surface Plane
 ### Theme
