@@ -7,6 +7,9 @@ The projects main beneifiary is my wife who seeked a platform in which she can t
 The website allows her to present the products to the marked through an easy to use and update platform. It also positions contact elements in several places and ways through the website to create fast channels of engagement with the user.
 
 The website is done, but there is a multitude of elements that we still intend to update and upgrade.
+
+![Alt text](/static/readme/am-i-responsive.png)
+
 ## CONTENT
 
 * [The 5 Planes strategy](#the-5-planes-strategy)
