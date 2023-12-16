@@ -247,16 +247,16 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 #### Error pages
 
 #### Favorites Feature
-![Alt text](/static/readme/favorite-feature.gif)
+![Alt text](https://res.cloudinary.com/dgcwnjoh4/image/upload/v1702687524/gifs/favorite-feature_baplqu.gif)
 
 #### Product Admin Feature
 ![Alt text](/static/readme/product-admin-feature.gif)
 
 #### Product User Feature
-![Alt text](/static/readme/product-user-feature.gif)
+![Alt text](https://res.cloudinary.com/dgcwnjoh4/image/upload/v1702687522/gifs/product-user-feature_hzrxcw.gif)
 
 #### Promotion Admin Feature
-![Alt text](/static/readme/promotion-admin-feature.gif)
+![Alt text]()
 
 #### Promotion User Feature
 ![Alt text](/static/readme/promotion-user-feature.gif)
