@@ -12,7 +12,6 @@ The website is done, but there is a multitude of elements that we still intend t
 * [The 5 Planes strategy](#the-5-planes-strategy)
     * [Overview](#overview)
     * [The Strategy Plane](#the-strategy-plane)
-        * [Objective](#objective)
         * [Planning](#planning)
         * [Kanban Board](#kanban-board)
             * [Kanban overview](#kanban-overiew)
@@ -22,11 +21,11 @@ The website is done, but there is a multitude of elements that we still intend t
             * [Milestones](#milestones)
             * [Sprints](#sprints)
     * [The Scope Plane](#the-scope-plane)
+    * [The Structure Plane](#the-structure-plane)
         * [Features](#features)
             * [Special features implemented](#special-features-implemented)
             * [Features implemented](#features-implemented)
             * [Features future implementation](#features-future-implementation)
-    * [The Structure Plane](#the-scope-plane)
     * [The Skeleton Plane](#the-strategy-plane)
         * [Wireframes](#wireframes)
         * [Databases](#databases)
@@ -65,19 +64,6 @@ The website is done, but there is a multitude of elements that we still intend t
 ## Overview
 
 ## The Strategy Plane
-### Objective
-
-This website was created with a key element in mind, to create an attractive and efficient interaction point between the website owner and the users. Interaction main objective is to:
-* Convert users into customers
-* Convert users into partners by enrolling them as doTera ambasadors
-Various contact methods and points help support this. They are placed in various key elements of the website.
-
-For the website owner, the key focus point is to provide value to the user through various methods:
-* The user of a tool that is able to recommend products based on ailments(available for registered users)
-* Promotions page which allows users to see fast and efficient the monthly star products/deals
-This all has to be available for fast upload and update, and it is through various methods:
-* Front: via the website interface
-* Back: in the admin panel by manual input or using the import/export options
 
 ### Planning
 Planning was done following an Agile methodology by creating 6 Sprints focused around 7 milestones. They where highly connected to each other following a natural logic in regards of timing and development steps.
@@ -197,6 +183,37 @@ Example:
 Overall 6 sprints where considered, also closely connected to the 6 milestones, having the same logic behind their setup as the milestones.
 
 ## The Scope Plane
+This website was created with a key element in mind, to create an attractive and efficient interaction point between the website owner and the users. Interaction main objective is to:
+* Convert users into customers
+* Convert users into partners by enrolling them as doTera ambasadors
+Various contact methods and points help support this. They are placed in various key elements of the website.
+
+For the website owner, the key focus point is to provide value to the user through various methods:
+* The user of a tool that is able to recommend products based on ailments(available for registered users)
+* Promotions page which allows users to see fast and efficient the monthly star products/deals
+This all has to be available for fast upload and update, and it is through various methods:
+* Front: via the website interface
+* Back: in the admin panel by manual input or using the import/export options
+
+## The Structure Plane
+Structure and features of the website are organized around 2 concepts, concepts set in order to provide value to both the user and owner:
+* Owner friendly
+    * Easy to manage(as automated as possible):
+        - key feature being the import-export function
+        - data easy to update and upload even from front end
+        - admin pannel easy accessible from navbar and with key admin areas identifiable in the admin interface
+        - give value to obtain value, clearly identiable through the product recommandation function accessible to logged users
+    * Easy to connect with the user(one click away from the user)
+    * Upgradable and scalable with ease
+        - the reuse of different elements within pages(navbar, base, footer html)
+        - integration of battery included elements like allauth
+* User friendly
+    * Easy to navigate 
+    * Key elements always on like footer, whatsapp contact
+    * Easy to use filter section
+    * Key information the key of the pages, with elements easiley identifiable and visible
+    * Mobile friendly: taking advantage of the powerfull bootstrap
+
 ### Features
 
 #### Special features implemented
@@ -336,6 +353,15 @@ To support both the functionality and the design part of the website, followin w
 
 
 ### Databases
+
+Database model and structure are relatively simple.
+The part that is not visible in the structure bellow is a User databse, automatically created by Allauth in the backend.
+This is linked also to AppUser, but it runs in parallel, AppUser being the choice for the administrator for majority of tasks.
+User is basically the solution to elaborate on users level of access and other key critical administrative elements.
+
+Updates to user account are done in the AppUser database.
+
+![Alt text](/static/readme/database-diagram.png)
 
 ### Security
 #### Security User

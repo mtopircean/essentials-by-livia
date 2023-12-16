@@ -40,9 +40,16 @@ class AppUser(ImportExportModelAdmin):
 
     def approve_user(self, request, queryset):
         queryset.update(approved=True)
-
-    def remove_user(self, request, queryset):
-        queryset.update(approved=False)
+        
+    def has_delete_permission(self, request, obj=None):
+        return False
+        
+    def get_readonly_fields(self, request, obj=None):
+        if obj:
+            return ('first_name', 'last_name', 'email', 'phone_number', 'join_team', 
+                    'i_want_to_know_more_about_the_products')
+        else:
+            return ()
         
     #Retrieves default form fields
     #converts fields into a list to allow modifications

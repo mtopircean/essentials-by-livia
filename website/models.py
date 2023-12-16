@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+
 
 
 class Ailment(models.Model):
@@ -51,6 +54,19 @@ class AppUser(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
+
+#Function that deletes the Appuser if the User is deleted
+
+@receiver(pre_save, sender=User)
+def update_app_user_from_user(sender, instance, **kwargs):
+    try:
+        app_user = AppUser.objects.get(user=instance)
+        app_user.first_name = instance.first_name
+        app_user.last_name = instance.last_name
+        app_user.email = instance.email
+        app_user.save()
+    except AppUser.DoesNotExist:
+        pass
     
 class FavouriteSelection(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
