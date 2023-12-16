@@ -354,12 +354,13 @@ To support both the functionality and the design part of the website, followin w
 
 ### Databases
 
-Database model and structure are relatively simple.
-The part that is not visible in the structure bellow is a User databse, automatically created by Allauth in the backend.
-This is linked also to AppUser, but it runs in parallel, AppUser being the choice for the administrator for majority of tasks.
-User is basically the solution to elaborate on users level of access and other key critical administrative elements.
+Database links into Django user and links mainly into the AppUser database.
+It was a conscious decission to allow the admin to be able to update only the Approved section from the backend inside the AppUser.
+All other actions are to be taken within the User section to minimize potential disturbance to the database.
 
-Updates to user account are done in the AppUser database.
+Databases all link into each other, Ailment having a Many to One relationship with AddProduct.
+
+The only standalone database is AddPromotion which doesn`t need any specific input in other section/databases in order to run.
 
 ![Alt text](/static/readme/database-diagram.png)
 
