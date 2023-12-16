@@ -256,7 +256,7 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 ![Alt text](https://res.cloudinary.com/dgcwnjoh4/image/upload/v1702687522/gifs/product-user-feature_hzrxcw.gif)
 
 #### Promotion Admin Feature
-![Alt text]()
+![Alt text](/static/readme/promotion-admin-feature.gif)
 
 #### Promotion User Feature
 ![Alt text](/static/readme/promotion-user-feature.gif)
@@ -288,6 +288,52 @@ Future iteration will include this features. For the moment, Stories are also at
 
 ## The Skeleton Plane
 ### Wireframes
+To support both the functionality and the design part of the website, followin wireframes where created:
+* Index Page
+![Alt text](/static/readme/wireframes/index.png)
+* About Me Page
+![Alt text](/static/readme/wireframes/about-me.png)
+
+* About Oils Page
+![Alt text](/static/readme/wireframes/about-oils.png)
+
+* Login Modal
+![Alt text](/static/readme/wireframes/login-modal.png)
+
+* Profile Page
+![Alt text](/static/readme/wireframes/profile.png)
+
+* Registration Page
+![Alt text](/static/readme/wireframes/register.png)
+
+* Registration confirmation Page
+![Alt text](/static/readme/wireframes/registration-confirmation.png)
+
+* Contact Page
+![Alt text](/static/readme/wireframes/contact.png)
+
+* Recommended product Page
+![Alt text](/static/readme/wireframes/recommended.png)
+
+* Recommended product Page for users logged out
+![Alt text](/static/readme/wireframes/recommended-logged-out.png)
+
+* Recommended product Page for users logged in but not approved
+![Alt text](/static/readme/wireframes/recommended-not-approved.png)
+
+* Promotions page
+![Alt text](/static/readme/wireframes/promotions.png)
+
+* Allauth customized forms Pages
+![Alt text](/static/readme/wireframes/allauth-forms.png)
+
+* Customized error pages
+![Alt text](/static/readme/wireframes/error-pages.png)
+
+* Modal to support add product and promotion from front page
+![Alt text](/static/readme/wireframes/add-product-promotion-modal.png)
+
+
 
 ### Databases
 
