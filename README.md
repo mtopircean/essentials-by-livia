@@ -48,6 +48,7 @@ The website is done, but there is a multitude of elements that we still intend t
     * [How to Clone](#how-to-clone)
 * [Technologies](#technologies)
     * [Programming Languages](#programming-languages)
+    * [External Python Modules](#external-python-modules)
     * [IDE](#ide)
     * [Other](#other)
 * [Testing and Validation](#testing-and-validation)
@@ -500,8 +501,63 @@ To clone the repository:
 
 # Technologies
 ## Programming Languages
+1. HTML
+2. CSS
+3. JavaScript
+4. JQuery
+5. Python
+
+## External Python Modules
+* asgiref==3.7.2 : Installed with others
+* cloudinary==1.36.0 : interaction with cloudinary media management
+* diff-match-patch==20230430 : Installed with others
+* dj-database-url==0.5.0 : supports database usage in Django
+* dj3-cloudinary-storage==0.0.6: Django storage in cloudinary
+* Django==3.2.22 : actual Django variant
+* django-allauth==0.58.2 : Application managing authentification, registration and account management
+* django-heroku==0.3.1 : simplifies deployment to Heroku
+* django-import-export==3.3.1 : Excel import export database integration
+* django-summernote==0.8.20.0 : Summernote integration
+* et-xmlfile==1.1.0 : Used to read and write excels
+* gunicorn==21.2.0 : Python server for running applications on web
+* MarkupPy==1.14 : Installed with others
+* oauthlib==3.2.2 : Installed with others
+* odfpy==1.4.1 : Installed with others
+* openpyxl==3.1.2 : Used to read and write excels
+* psycopg2==2.9.9 : PostgresSQL adapter to interact with databases
+* PyJWT==2.8.0 : Installed with others
+* python3-openid==3.2.0 : Installed with others
+* pytz==2023.3.post1 : Installed with others
+* requests-oauthlib==1.3.1 : Python request library
+* sqlparse==0.4.4 : Python parser
+* tablib==3.5.0 : Installed with others
+* whitenoise==6.6.0 : Supports serving of static files in Django apps
+* xlrd==2.0.1 : Read and format data from excels
+* xlwt==1.3.0 : Read and format data from excels
+
+
 ## IDE
+1. GitHub: to store the source code.
+2. GitPod: support to write majority of code, deploy via Heroku, and push data to store in GitHub. Gitpod was used also for debugging purposes.
+3. Git: Used to push code
+
 ## Other
+1. HEROKU: to deploy application and act as the app interface
+2. CI Python Linter: to validate code format.
+3. drawSQL: to create the database diagram
+1. Canva: support with logo creation.
+2. Font Awesome: support with icon for various html pages
+3. Google Font: support with font style used for website text.
+4. Balsamiq: support with wireframe creation.
+7. Google DevTools: support with CSS styling, troubleshooting and responsive design development; support with testing function execution/js functionality.
+8. Lighthouse: performance testing .
+9. W3C Spell Checker: webpage spelling checks.
+10. WAVE Web Accessibility Evaluation Tools: for accessibility evaluation.
+11. CSS Validation Service: for CSS code evaluation and troubleshooting.
+12. W3C Markup Validation Service: for HTML code evaluation and troubleshooting.
+13. JSHint JavaScript Validator: to verify and improve Java Script code.
+14. Colors: to create palette of colours in README.
+15. Amiresponsive: to create a snapshot of the page responsiveness on different screen variations
 
 # Testing and Validation
 ## HTML
