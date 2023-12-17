@@ -154,6 +154,9 @@ Incorporates also the clear all button and functionality
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('ailment-filter-form');
+    if(!form) {
+        return;
+    }
     const checkboxes = form.querySelectorAll('.filter-checkbox');
 
     const updateCheckboxState = () => {
