@@ -1,5 +1,5 @@
 {% include 'base.html' %}
-{% if is_user_approved or is_admin %}
+{% if is_user_approved or user.is_staff %}
 <div class="container">
     <div id="filter-product-section" class="container-fluid">
         <div class="row">
@@ -132,7 +132,7 @@
 </div>
 
 {% else %}
-{% if user.is_authenticated %}
+{% if user.is_authenticated and not user.is_staff %}
 <div class="container">
     <div class="row">
         <div class="col-md-12" id="register-recommended-login">
