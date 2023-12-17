@@ -17,12 +17,13 @@
                 {% else %}
                 {% endif %}
     </div>
-    <div class="row">
+    <div class="row" id="promotion-list">
         {%for promotion in promotions %}
         <div class="col-12 col-md-4 text-center">
             <img src="{{ promotion.image_url }}" alt="{{ promotion.name }}" width="80%">
             <div class="mt-3">
                 <div class="details-dropdown text-center">
+                    <span id="promotion-name">{{ promotion.name }}</span>
                     <span class="validity">Valid until {{ promotion.expires_on|date:"d.m.Y" }}</span>
                     <span class="ml-auto"> <button class="btn btn-link" type="button" data-bs-toggle="collapse"
                             data-bs-target="#detailsArea{{ forloop.counter }}">Find out more <span

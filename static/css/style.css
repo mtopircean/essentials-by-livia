@@ -525,6 +525,17 @@ h6 {
     margin-bottom: 100px;
 }
 
+#promotion-name {
+    font-size: large;
+    margin-bottom: 5px;
+    color:#eb3752c7;
+    font-weight: 600;
+}
+
+#promotion-list {
+    margin-top: 30px;
+}
+
 .validity {
     font-weight: 600;
     text-align: center;
