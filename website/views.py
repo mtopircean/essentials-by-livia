@@ -7,7 +7,7 @@ from django.views import generic
 from .models import AddProduct, AddPromotion, AppUser, Ailment, FavouriteSelection
 from .forms import CustomSignupForm
 from django.urls import reverse
-from django.db.models import Q
+from django.db.models import Q, Count
 from django.http import HttpResponseRedirect, Http404
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
@@ -159,8 +159,8 @@ def delete_product(request, product_id):
 
 #Filters products based on selected ailments/conditions
 def filter_ailments(request):
-    #Collects ailments, products, selected filters
-    ailments = Ailment.objects.all()
+    #Collects ailments, products, selected filters, collects only the ailments with one product associated to them
+    ailments = Ailment.objects.annotate(num_products=Count('addproduct')).filter(num_products__gt=0)
     products = AddProduct.objects.all()
     selected_filters = []
     
