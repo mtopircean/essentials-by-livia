@@ -1434,4 +1434,17 @@ button.reset-password-button:hover {
         margin-bottom: 10px;
         display: flex;
     }
+
+    #join-text {
+        display: none;
+      }
+
+    .footer {
+        font-size: x-large;
+    }
+
+    #social-media-footer i{
+        margin-right: 2px;
+        font-size: x-large;
+    }
 }
