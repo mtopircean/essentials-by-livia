@@ -1444,7 +1444,11 @@ button.reset-password-button:hover {
     }
 
     #social-media-footer i{
-        margin-right: 2px;
+        margin-right: 6px;
         font-size: x-large;
+    }
+
+    #social-media-footer {
+        margin-left: -12px;
     }
 }
