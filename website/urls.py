@@ -14,7 +14,9 @@ urlpatterns = [
     path('delete-promotion/<int:promotion_id>/', views.delete_promotion, name='delete_promotion'),
     path('edit-product/<int:product_id>/', views.edit_product, name='edit_product'),
     path('update-product/<int:product_id>/', views.update_product, name='update_product'),
+    path('recommended', views.update_product, name='recommended'),
     path('delete-product/<int:product_id>/', views.delete_product, name='delete_product'),
+    path('recommended/', views.delete_product, name='recommended'),
     path('index.html', views.index, name='index'),
     path('user-account.html', views.user_account, name='user_account'),
     path('profile.html', views.logged_user_details, name='logged_user_details'),
@@ -29,7 +31,6 @@ urlpatterns = [
     path('edit-profile/', views.edit_profile, name='edit_profile'),
     path('delete-account/', views.delete_account, name='delete_account'),
     path('filter-ailments/', views.filter_ailments, name='filter_ailments'),
-    path('recommended/', views.filter_ailments, name='recommended'),
     path('create_product/', views.create_product, name='create_product'),
     path('create_promotion/', views.create_promotion, name='create_promotion'),
 ]

@@ -84,7 +84,7 @@ def delete_promotion(request, promotion_id):
 #Displays products based on ailments and favorites
 def recommended(request):
     #Retries ailments, products and validates user admin status
-    ailments = Ailment.objects.all()
+    ailments = Ailment.objects.annotate(num_products=Count('addproduct')).filter(num_products__gt=0)
     products = AddProduct.objects.order_by('name')
     is_admin = request.user.is_superuser
     
