@@ -29,6 +29,7 @@ urlpatterns = [
     path('edit-profile/', views.edit_profile, name='edit_profile'),
     path('delete-account/', views.delete_account, name='delete_account'),
     path('filter-ailments/', views.filter_ailments, name='filter_ailments'),
+    path('recommended/', views.filter_ailments, name='recommended'),
     path('create_product/', views.create_product, name='create_product'),
     path('create_promotion/', views.create_promotion, name='create_promotion'),
 ]
