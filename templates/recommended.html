@@ -1,13 +1,29 @@
 {% include 'base.html' %}
 {% if is_user_approved or user.is_staff %}
 <div class="container">
+
     <div id="filter-product-section" class="container-fluid">
         <div class="row">
             <div class="col-md-3">
+                
+                {% if user.is_staff %}
+                <div class="product-list-section">
+                    <h4>Product List</h4>
+                    <ul>
+                        {% for product in products %}
+                        <li>
+                            <a href="#product-{{ product.id }}">{{ product.name }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+                {% if not user.is_staff %}
                 <div id="search" class="search-bar mb-3">
                     <input type="text" id="searhailment" class="form-control" placeholder="Type ailment">
                 </div>
                 <div>
+
                     <div class="filter-section">
                         <p id="toggle-ailment-list">Ailment list &#11165;</p>
                         <form method="GET" action="{% url 'filter_ailments' %}" id="ailment-filter-form">
@@ -31,7 +47,9 @@
                         </form>
 
                     </div>
+
                 </div>
+                {% endif %}
             </div>
             <div class="col-md-9">
                 {% if user.is_staff %}
@@ -53,6 +71,7 @@
                         <div class="d-flex align-items-center col-12 col-md-8">
                             <div>
                                 {% if is_admin %}
+                                <div id="product-{{ product.id }}">
                                 <form id="update-product-details" action="{% url 'update_product' product.id %}"
                                     method="post" onsubmit="return updateProductDescription()">
                                     {% csrf_token %}
@@ -66,6 +85,7 @@
                                     <button id="delete-product" type="submit" id="delete-product">Delete
                                         product!</button>
                                 </form>
+                            </div>
                                 {% endif %}
 
                                 <span class="product-name">{{ product.name }}</span>

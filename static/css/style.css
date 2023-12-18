@@ -850,6 +850,24 @@ li {
     font-size: small;
 }
 
+.product-list-section {
+    position: fixed;
+    top: 100px; 
+    width: 200px;
+    margin-top: 20px;
+}
+
+.product-list-section h4{
+    font-size: xx-large;
+    color: #644970;
+}
+
+.product-list-section a{
+    color: #644970;
+    font-size: small;
+}
+
+
 #search input {
     border: none;
     border-bottom: 1px solid #644970;
@@ -1468,5 +1486,12 @@ button.reset-password-button:hover {
 
     #social-media-footer {
         margin-left: -12px;
+    }
+
+    .product-list-section {
+        position: static;
+        margin-top: 0;
+        width: auto;
+        top: auto;
     }
 }
