@@ -85,7 +85,7 @@ def delete_promotion(request, promotion_id):
 def recommended(request):
     #Retries ailments, products and validates user admin status
     ailments = Ailment.objects.all()
-    products = AddProduct.objects.all()
+    products = AddProduct.objects.order_by('name')
     is_admin = request.user.is_superuser
     
     # Check user favorites and approval status
