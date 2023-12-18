@@ -876,6 +876,13 @@ li {
     margin-bottom: 10px;
 }
 
+.product-section .row {
+    padding: 0!important;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .contact-text-product {
     color: #0097B2;
     text-decoration: none;
