@@ -89,7 +89,7 @@
                                 <br>
                                 <h6>Ailments:</h6>
                                 {% for ailment in product.ailments.all %}
-                                {{ ailment.name }}
+                                {{ ailment.name }}{% if not forloop.last %},{% endif %}
                                 {% endfor %}
                                 <p class="contact-text-product" id="recommended-contact">Contact me for details:
                                     <br>
