@@ -1,18 +1,19 @@
-#Importing the necessary modules
+# Importing the necessary modules
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 
-#Defines the Ailment model
+# Defines the Ailment model
 class Ailment(models.Model):
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
-#Defines the AddProduct model including relationship to Ailment
+
+# Defines the AddProduct model including relationship to Ailment
 class AddProduct(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -27,7 +28,8 @@ class AddProduct(models.Model):
     def __str__(self):
         return self.name
 
-#Defines the AddPromotion model
+
+# Defines the AddPromotion model
 class AddPromotion(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
@@ -40,7 +42,8 @@ class AddPromotion(models.Model):
     def __str__(self):
         return self.name
 
-#Define the AppUser model with additional fields to the standard User module
+
+# Define the AppUser model with additional fields to the standard User module
 class AppUser(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=100)
@@ -56,7 +59,8 @@ class AppUser(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
-#Updates AppUser when User change is triggered
+
+# Updates AppUser when User change is triggered
 @receiver(pre_save, sender=User)
 def update_app_user_from_user(sender, instance, **kwargs):
     try:
@@ -68,7 +72,8 @@ def update_app_user_from_user(sender, instance, **kwargs):
     except AppUser.DoesNotExist:
         pass
 
-#Define the FavouriteSelection model and link to User
+
+# Define the FavouriteSelection model and link to User
 class FavouriteSelection(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(AddProduct, on_delete=models.CASCADE)
