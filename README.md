@@ -574,8 +574,28 @@ To clone the repository:
 ## Lighthouse
 ## Spellcheck
 ## JavaScript
+JSHINT:
+script.js tested with following results:
+![Alt text](/static/readme/jshint.png)
+
+Variables marked as unused are in fact used and called on click in various areas of the code.
+```JavaScript
+/*jshint esversion: 6 */
+/* global $ */
+```
+where used to manage following warnings from JSHint:
+'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+one undefined variable $
+
 ## Python
 ### Linter
+Following pages where tested with CI Linter:
+
+* admin.py:
+
+![Alt text](/static/readme/linter-no-errors.png)
+
+
 ### Unittest
 
 To run testing use local database!

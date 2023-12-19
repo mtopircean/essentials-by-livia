@@ -1,10 +1,13 @@
+/*jshint esversion: 6 */
+/* global $ */
+
 /* Promotions dropdown details section 
 Reads, toggles visibility and changes the toggle icon*/
 
 $(document).ready(function () {
 
     var isDetailsVisible = false;
-    $("#detailsArea").hide()
+    $("#detailsArea").hide();
 
     $(".btn-link").click(function () {
         $("#detailsArea").slideToggle();
@@ -12,7 +15,7 @@ $(document).ready(function () {
 
         $(".toggle-icon").html(isDetailsVisible ? '&#11165;' : '&#11167;');
     });
-})
+});
 
 /* Recommandation tool page drop down filter 
 Initialize, set initial status, toggle visibility, 
@@ -50,7 +53,7 @@ Initialize, set status as hidden, toggle icon and visibility
 $(document).ready(function () {
 
     var isDetailsVisible = false;
-    $("#user-details").hide()
+    $("#user-details").hide();
 
     $(".toggle-details").click(function () {
         $("#user-details").slideToggle();
@@ -58,7 +61,7 @@ $(document).ready(function () {
 
         $(".toggle-icon").html(isDetailsVisible ? '&#11165;' : '&#11167;');
     });
-})
+});
 
 /* Modal link to Register
 Redirect user to register page
