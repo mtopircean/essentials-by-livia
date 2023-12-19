@@ -1,6 +1,6 @@
 import unittest
 from . import views 
-from django.test import TestCase, Client
+from django.test import TestCase, Client, override_settings
 from django.urls import reverse
 from django.contrib.auth.models import User
 from .models import AddProduct, AddPromotion
@@ -32,3 +32,16 @@ class StaticPages(TestCase):
         response = self.client.get(reverse('register'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'register.html')
+        
+    def test_404_error_view(self):
+        response = self.client.get('/404/')
+        self.assertEqual(response.status_code, 404)
+        self.assertTemplateUsed(response, '404.html')
+        
+    def test_403_error_view(self):
+        response = self.client.get('/403/')
+        self.assertEqual(response.status_code, 403)
+
+    def test_500_error_view(self):
+        with self.assertRaises(Exception):
+            self.client.get('/500/')

@@ -8,7 +8,7 @@ from .models import AddProduct, AddPromotion, AppUser, Ailment, FavouriteSelecti
 from .forms import CustomSignupForm
 from django.urls import reverse
 from django.db.models import Q, Count
-from django.http import HttpResponseRedirect, Http404
+from django.http import HttpResponseRedirect, Http404, HttpResponseForbidden
 from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
 
@@ -412,3 +412,13 @@ def handler404(request, exception):
 
 def handler500(request):
     return render(request, '500.html', status=500)
+
+#Views created for testing purpose
+def custom_403_handler(request, exception):
+    return render(request, '403.html', status=403)
+
+def simulated_403_view(request):
+    return HttpResponseForbidden()
+
+def simulated_500_view(request):
+    raise Exception("Simulated 500 error")

@@ -1,6 +1,9 @@
 from . import views
 from django.urls import path, include
 from allauth.account.views import PasswordResetView
+from .views import simulated_403_view
+from .views import simulated_500_view 
+from website.views import custom_403_handler
 
 urlpatterns = [
     path('', views.index_page, name='index'),
@@ -33,6 +36,9 @@ urlpatterns = [
     path('filter-ailments', views.filter_ailments, name='filter_ailments'),
     path('create_product/', views.create_product, name='create_product'),
     path('create_promotion/', views.create_promotion, name='create_promotion'),
+    #Urls created for testing purpose:
+    path('403/', simulated_403_view, name='simulated_403'),
+    path('500/', simulated_500_view, name='simulated_500'),
 ]
 
 handler404 = views.handler404
