@@ -1,5 +1,6 @@
 {% include 'base.html' %}
-
+{% load static %}
+{% block content %}
 <div class="container-fluid p-0 text-center">
     <img id="img-404" src="{% static 'images/404.webp' %}" alt="404 error logo image" class="img-fluid" width="100%;">
 </div>
@@ -12,5 +13,5 @@
     </div>
 </div>
 
-{% block content %}
+
 {% endblock %}
