@@ -609,6 +609,22 @@ class StaticPages(TestCase):
         response = self.client.get(reverse('register'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'register.html')
+    
+    def test_promotions_success_view(self):
+        response = self.client.get(reverse('promotions'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'promotions.html')
+        
+    def test_recommended_view(self):
+        response = self.client.get(reverse('recommended'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'recommended.html')
+    
+    
+    def test_data_protection_view(self):
+        response = self.client.get(reverse('data_protection'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'data-protection.html')
         
     def test_404_error_view(self):
         response = self.client.get('/404/')
@@ -619,7 +635,6 @@ class StaticPages(TestCase):
         response = self.client.get('/403/')
         self.assertEqual(response.status_code, 403)
 
-    @override_settings(DEBUG=False)
     def test_500_error_view(self):
         with self.assertRaises(Exception):
             self.client.get('/500/')
@@ -649,14 +664,16 @@ handler403 = custom_403_handler
 Result:
 ```Python
 ----------------------------------------------------------------------
-Ran 8 tests in 0.101s
+Ran 11 tests in 0.144s
 
 OK
-Destroying test database for alias 'default'...
 ...
 ```
 
 #### Decorator limitations
+
+Will become part of future development.
+Thiw was not completed due to timing issues in handing over the project and the high complexity of the project.
 
 ## Local functionality tests
 ## Fixed bugs

@@ -22,7 +22,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEBUG' in os.environ
+DEBUG = False
 ALLOWED_HOSTS = ['8000-mtopircean-essentialsby-d45xfzluakj.ws-eu107.gitpod.io', '8000-mtopircean-essentialsby-d45xfzluakj.ws-eu107.gitpod.io', '8000-mtopircean-essentialsby-d45xfzluakj.ws-eu106.gitpod.io','8000-mtopircean-essentialsby-d45xfzluakj.ws-eu105.gitpod.io', 'essentials-by-livia-efe89c429260.herokuapp.com', 'django-blog-tmf-e46d0a2b5195.herokuapp.com', 'localhost']
 
 
@@ -94,17 +94,17 @@ WSGI_APPLICATION = 'essentialsbylivia.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+   'default': {
+       'ENGINE': 'django.db.backends.sqlite3',
+       'NAME': BASE_DIR / 'db.sqlite3',
+   }
 }
 
-#DATABASES = {
-#    'default': {
-#        **dj_database_url.config(default=os.environ.get("DATABASE_URL")),
-#    }
-#}
+# DATABASES = {
+#     'default': {
+#         **dj_database_url.config(default=os.environ.get("DATABASE_URL")),
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
