@@ -1,5 +1,7 @@
+# Import the connection module
 from django.db import connection
 
+# Create middleware class for closing database connections
 class CloseConnectionMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response

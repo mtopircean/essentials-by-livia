@@ -3,6 +3,7 @@ from django import forms
 from .models import AppUser
 from allauth.account.forms import ResetPasswordForm
 
+#Created customized sign up form including some specific elements to my application in addition to allauth own
 class CustomSignupForm(SignupForm):
     first_name = forms.CharField(max_length=100)
     last_name = forms.CharField(max_length=100)
