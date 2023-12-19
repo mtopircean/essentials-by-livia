@@ -20,7 +20,7 @@ def index(request):
 
 #Renders the About Oils page
 def about_oils(request):
-    return render(request, 'about-oils.html')
+    raise HttpResponseServerError("Simulated 500 error")
 
 #Renders the About Me page
 def about_me(request):
@@ -57,12 +57,14 @@ def promotions(request):
     return render(request, 'promotions.html', template_promotion)
 
 #Renders the edit setions in promotion
+@staff_member_required
 def edit_promotion(request, promotion_id):
     promotion = get_object_or_404(AddPromotion, pk=promotion_id)
     return render(request, 'edit_promotion.html', {'promotion': promotion})
 
 #Updates the promotion description: first retrieves or 404 if not found, then updates
 #and redirects user bat to promotion page
+@staff_member_required
 def update_description(request, promotion_id):
     if request.method == 'POST':
         promotion = get_object_or_404(AddPromotion, pk=promotion_id)
@@ -74,6 +76,7 @@ def update_description(request, promotion_id):
 
 #Deletes promotion:first retrieves or 404 if not found, then deletes
 #and redirects user bat to promotion page
+@staff_member_required
 def delete_promotion(request, promotion_id):
     if request.method == 'POST':
         promotion = get_object_or_404(AddPromotion, pk=promotion_id)
@@ -82,6 +85,7 @@ def delete_promotion(request, promotion_id):
     return redirect('promotions')
         
 #Displays products based on ailments and favorites
+@login_required
 def recommended(request):
     #Retries ailments, products and validates user admin status
     ailments = Ailment.objects.annotate(num_products=Count('addproduct')).filter(num_products__gt=0)
@@ -120,6 +124,7 @@ def recommended(request):
 
 #Edit product description: first retrieves or 404 if not found, then updates description
 #and redirects user to recommended page
+@staff_member_required
 def edit_product(request, product_id):
     product = get_object_or_404(AddProduct, pk=product_id)
 
@@ -134,6 +139,7 @@ def edit_product(request, product_id):
 
 #Update product description: first retrieves product or 404 if not found, then updates description
 #if user is admin and redirects to recommended
+@staff_member_required
 def update_product(request, product_id):
     if request.method == 'POST':
         product = get_object_or_404(AddProduct, pk=product_id)
@@ -150,6 +156,7 @@ def update_product(request, product_id):
 
 #Delete product: first retrieves product or 404 if not found, then deletes it
 #if user is admin and redirects to recommended
+@staff_member_required
 def delete_product(request, product_id):
     if request.method == 'POST':
         product = get_object_or_404(AddProduct, pk=product_id)
@@ -157,7 +164,8 @@ def delete_product(request, product_id):
         return redirect('recommended')
     return redirect('recommended')
 
-#Filters products based on selected ailments/conditions
+#Filters products based on selected ailments/conditions#
+@login_required
 def filter_ailments(request):
     #Collects ailments, products, selected filters, collects only the ailments with one product associated to them
     ailments = Ailment.objects.annotate(num_products=Count('addproduct')).filter(num_products__gt=0)
@@ -208,6 +216,7 @@ def contact(request):
     return render(request, 'contact.html')
 
 #Renders the User Account page
+@login_required
 def user_account(request):
     return render(request, 'user-account.html')
 
@@ -247,6 +256,7 @@ def register(request):
 
 #Allows to edit the user profile: retrieves user data
 #updates the data
+@login_required
 def edit_profile(request):
     user = request.user
     app_user = AppUser.objects.get(user=user)
@@ -267,6 +277,7 @@ def edit_profile(request):
     return render(request, 'profile.html', user_context)
         
 #Deletes a user account and returns to index
+@login_required
 def delete_account(request):
     if request.method == 'POST':
         request.user.delete()
@@ -278,6 +289,7 @@ def delete_account(request):
 #Displays the logged in user details: retrieves user and favorite data
 #creates context and displays it
 #prints 404 error if user doesn`t exist
+@login_required
 def logged_user_details(request):
     
     try:
@@ -297,7 +309,8 @@ def logged_user_details(request):
     except AppUser.DoesNotExist:
             raise Http404("User does not exist")
 
-#Displays custom logout        
+#Displays custom logout
+@login_required        
 def custom_logout(request):
     logout(request)
     return redirect('index')
@@ -325,6 +338,7 @@ def favourite_selection(request, product_id):
         return redirect('recommended')
 
 #Displays user favorites:collects, creates context, renders
+@login_required
 def display_favorites(request):
     user_favorites = FavouriteSelection.objects.all()
     context = {
@@ -333,6 +347,7 @@ def display_favorites(request):
     return render(request, 'profile.html', context)
 
 #Creates a product from the front end view when logged as an admin
+@staff_member_required
 def create_product(request):
     if request.method == 'POST':
         # Retrieve form data
@@ -360,7 +375,8 @@ def create_product(request):
     else:
         return redirect('recommended')
     
-#Creates a promotion from the front end view when logged as an admin   
+#Creates a promotion from the front end view when logged as an admin
+@staff_member_required   
 def create_promotion(request):
     if request.method == 'POST':
         # Retrieve form data
@@ -384,6 +400,7 @@ def create_promotion(request):
 
 
 #Renders confirmation of successfull registration page
+@login_required
 def register_success(request):
     return render(request, 'register-success.html')
 
