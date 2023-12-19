@@ -13,7 +13,7 @@ urlpatterns = [
     # General views for part of the static pages, and allauth functionalities
     path('', views.index_page,
          name='index'),
-    path('accounts/', include('allauth.urls')).
+    path('accounts/', include('allauth.urls')),
     path('about-oils.html', views.about_oils,
          name='about_oils'),
     path('about-me.html', views.about_me,
