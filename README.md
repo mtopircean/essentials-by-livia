@@ -589,9 +589,7 @@ one undefined variable $
 
 ## Python
 ### Linter
-Following pages where tested with CI Linter:
-
-* admin.py:
+Following pages where tested with CI Linter: admin.py, forms.py:
 
 ![Alt text](/static/readme/linter-no-errors.png)
 
