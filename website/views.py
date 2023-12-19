@@ -20,7 +20,7 @@ def index(request):
 
 #Renders the About Oils page
 def about_oils(request):
-    raise HttpResponseServerError("Simulated 500 error")
+    return render(request, 'about-oils.html')
 
 #Renders the About Me page
 def about_me(request):
@@ -85,7 +85,6 @@ def delete_promotion(request, promotion_id):
     return redirect('promotions')
         
 #Displays products based on ailments and favorites
-@login_required
 def recommended(request):
     #Retries ailments, products and validates user admin status
     ailments = Ailment.objects.annotate(num_products=Count('addproduct')).filter(num_products__gt=0)
