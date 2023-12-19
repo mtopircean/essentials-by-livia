@@ -58,6 +58,11 @@ The website is done, but there is a multitude of elements that we still intend t
     * [Lighthouse](#lighthouse)
     * [Spellcheck](#spellcheck)
     * [JavaScript](#javascript)
+    * [Python](#python)
+        * [Linter](#linter)
+        * [Unittest](#unittest)
+            * [Static Pages](#static-pages)
+            * [Decorator Limitation](#decorator-limitations)
     * [Local functionality tests](#local-functionality-tests)
     * [Fixed bugs](#fixed-bugs-and-current-errors)
 * [Credits](#credits)
@@ -567,6 +572,92 @@ To clone the repository:
 ## Spellcheck
 ## JavaScript
 ## Python
+### Linter
+### Unittest
+
+To run testing use local database!
+
+To support basic testing activities, I`ve created unittest scenarios for the load of static pages and access restrictions where I have defined decorators in my views to limit interactions.
+#### Static pages
+
+TESTING CODE:
+
+```Python
+class StaticPages(TestCase):
+
+    def test_index_page_view(self):
+        response = self.client.get(reverse('index'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html')
+
+    def test_about_oils_view(self):
+        response = self.client.get(reverse('about_oils'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'about-oils.html')
+        
+    def test_about_me_view(self):
+        response = self.client.get(reverse('about_me'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'about-me.html')
+        
+    def test_contact_view(self):
+        response = self.client.get(reverse('contact'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'contact.html')
+        
+    def test_register_view(self):
+        response = self.client.get(reverse('register'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'register.html')
+        
+    def test_404_error_view(self):
+        response = self.client.get('/404/')
+        self.assertEqual(response.status_code, 404)
+        self.assertTemplateUsed(response, '404.html')
+        
+    def test_403_error_view(self):
+        response = self.client.get('/403/')
+        self.assertEqual(response.status_code, 403)
+
+    @override_settings(DEBUG=False)
+    def test_500_error_view(self):
+        with self.assertRaises(Exception):
+            self.client.get('/500/')
+```
+
+Defined views to simulate the errors:
+```Python
+def custom_403_handler(request, exception):
+    return render(request, '403.html', status=403)
+
+def simulated_403_view(request):
+    return HttpResponseForbidden()
+
+def simulated_500_view(request):
+    raise Exception("Simulated 500 error")
+```
+
+Created urls
+```Python
+#Urls created for testing purpose:
+    path('403/', simulated_403_view, name='simulated_403'),
+    path('500/', simulated_500_view, name='simulated_500'),
+
+handler403 = custom_403_handler
+```
+
+Result:
+```Python
+----------------------------------------------------------------------
+Ran 8 tests in 0.101s
+
+OK
+Destroying test database for alias 'default'...
+...
+```
+
+#### Decorator limitations
+
 ## Local functionality tests
 ## Fixed bugs
 
