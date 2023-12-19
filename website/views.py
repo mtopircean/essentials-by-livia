@@ -56,7 +56,7 @@ def promotions(request):
     
     return render(request, 'promotions.html', template_promotion)
 
-#Renders the edit setions in promotion
+#Renders the edit sections in promotion
 @staff_member_required
 def edit_promotion(request, promotion_id):
     promotion = get_object_or_404(AddPromotion, pk=promotion_id)
@@ -398,7 +398,7 @@ def create_promotion(request):
     
 
 
-#Renders confirmation of successfull registration page
+#Renders confirmation of successful registration page
 @login_required
 def register_success(request):
     return render(request, 'register-success.html')

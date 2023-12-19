@@ -42,7 +42,7 @@ urlpatterns = [
     path('edit-profile/', views.edit_profile, name='edit_profile'),
     path('delete-account/', views.delete_account, name='delete_account'),
     
-    # URL for favoriting a product
+    # URL for favouriting a product
     path('favorites/<int:product_id>/', views.favourite_selection, name='favourite_selection'),
     path('profile/', views.display_favorites, name='display_favorites'),
     path('filter-ailments', views.filter_ailments, name='filter_ailments'),

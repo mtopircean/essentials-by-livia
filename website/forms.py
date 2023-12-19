@@ -14,7 +14,7 @@ class CustomSignupForm(SignupForm):
     i_want_to_know_more_about_the_products = forms.BooleanField(required=False)
 
     def save(self, request):
-        # Save the user with the stadard existing method
+        # Save the user with the standard existing method
         user = super(CustomSignupForm, self).save(request)
         
         #Pull the cleaned data
