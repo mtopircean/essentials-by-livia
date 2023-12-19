@@ -1,4 +1,4 @@
-#Import necessities for testing enviorement
+#Import necessities for testing environment
 import unittest
 from . import views 
 from django.test import TestCase, Client, override_settings
