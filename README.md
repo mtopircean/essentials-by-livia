@@ -393,7 +393,10 @@ def favourite_selection(request, product_id):
     # Code to manage favorite products securely...
 ``` 
 
-{% csrf_token %} tag generates a unique token for each form submission to protect data being sent by the user. For example:
+{% raw %}
+{% csrf_token %}
+{% endraw %}
+ tag generates a unique token for each form submission to protect data being sent by the user. For example:
 ``` html
 <form method="POST" action="{% url 'filter_ailments' %}" id="ailment-filter-form">
     {% csrf_token %}
