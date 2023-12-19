@@ -379,7 +379,7 @@ The only standalone database is AddPromotion which doesn`t need any specific inp
 The HTML template ensures user safety by controlling user access based on approval status. For instance, conditional checks are in place to restrict unauthorized access to certain sections, utilizing is_user_approved.
 For example:
 
-```
+```html
 {% if is_user_approved or is_admin %}
     <!-- User-approved or admin-specific content here -->
 {% else %}
@@ -387,25 +387,29 @@ For example:
 {% endif %}
 ```
 The views in Django are protected with decorators, like for ex @login_required and @staff_member_required to ensure user authentication and administrative privilege.
-```
+```python
 @login_required
 def favourite_selection(request, product_id):
     # Code to manage favorite products securely...
 ``` 
 
-{% raw %}
+```html
 {% csrf_token %}
-{% endraw %}
- tag generates a unique token for each form submission to protect data being sent by the user. For example:
+```
+tag generates a unique token for each form submission to protect data being sent by the user. 
 
-```<form method="POST" action="{% url 'filter_ailments' %}" id="ailment-filter-form">
+For example:
+
+```html
+<form method="POST" action="{% url 'filter_ailments' %}" id="ailment-filter-form">
     {% csrf_token %}
     <!-- Other form fields and buttons -->
-</form>```
+</form>
+```
 
 The use of eventlisteners is present through the code, with the goal to promt the user on critical changes to their data:
 
-```
+```html
 <div id="account-actions" class="text-center" id="profile-button-container">
                             <form id="edit-profile-form" method="post" action="{% url 'edit_profile' %}">
                                 {% csrf_token %}
@@ -421,7 +425,7 @@ The use of eventlisteners is present through the code, with the goal to promt th
 #### Security Admin
 Certain sections in the HTML are available only to admin users, like for example, controlled using conditional checks with user.is_staff.
 
-```
+```html
 {% if user.is_staff %}
     <!-- Content available only to admin users -->
 {% else %}
@@ -430,14 +434,15 @@ Certain sections in the HTML are available only to admin users, like for example
 ```
 View functions in Django incorporate @staff_member_required to ensure only staff (admin) members can access and manage certain functionalities.
 
-```
+```python
 @staff_member_required
 def user_approval(request):
     # Admin-only functionality to approve users...
 ```
 
 The use of eventlisteners is present through the code, with the goal to promt the admin on critical changes to the forms/databases, like for example:
-```
+
+```html
 <form id="delete-product-form" action="{% url 'delete_product' product.id %}" method="post">
     {% csrf_token %}
     <!-- Other form fields and buttons -->
@@ -602,7 +607,7 @@ To support basic testing activities, I`ve created unittest scenarios for the loa
 
 TESTING CODE:
 
-```
+```python
 class StaticPages(TestCase):
 
     def test_index_page_view(self):
@@ -661,7 +666,7 @@ class StaticPages(TestCase):
 ```
 
 Defined views to simulate the errors:
-```
+```python
 def custom_403_handler(request, exception):
     return render(request, '403.html', status=403)
 
@@ -673,7 +678,7 @@ def simulated_500_view(request):
 ```
 
 Created urls
-```
+```python
 #Urls created for testing purpose:
     path('403/', simulated_403_view, name='simulated_403'),
     path('500/', simulated_500_view, name='simulated_500'),
@@ -682,7 +687,7 @@ handler403 = custom_403_handler
 ```
 
 Result:
-```
+```python
 ----------------------------------------------------------------------
 Ran 11 tests in 0.144s
 
