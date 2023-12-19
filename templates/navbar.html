@@ -2,11 +2,13 @@
 
 <nav class="navbar navbar-light bg-light">
     <div class="container">
+        <!--Logo section-->
         <a class="navbar-brand mx-auto" href="{% url 'index' %}">
             <img src="{% static 'images/logo-5.webp' %}" alt="Logo" height="80">
         </a>
         <div id="login-area" class="d-flex justify-content-end align-items-center flex-grow-1"
             style="margin-right: 30px;">
+            <!--Login section displays different details based on visitor status(admin, logged in, not logged in). It also displays username if a user is logged in.-->
             {% if user.is_authenticated %}
             <div id="dropdown-logged-in" class="dropdown">
                 <button class="btn btn-secondary dropdown-toggle" type="button" id="profileDropdown"
@@ -42,6 +44,7 @@
             </div>
             {% endif %}
         </div>
+        <!--Menu section which hides menu name on smaller screens and uses a toggle functionality-->
         <button id="nav-button" class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="menu-title">Menu </span>
@@ -68,7 +71,7 @@
         </div>
     </div>
 </nav>
-
+<!--Link to modal-login-->
 <div class="modal" id="loginModal" aria-labelledby="loginModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div>

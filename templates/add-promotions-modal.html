@@ -1,4 +1,5 @@
 <div class="modal-content">
+    <!--Header section containing title and close button-->
     <div class="modal-header">
         <div>
             <h5>Add your new promotion</h5>
@@ -7,7 +8,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close X Symbol"></button>
         </div>
     </div>
-
+    <!--Body section containing input fields including a checkbox area for an ailment list-->
     <div class="modal-body">
         <form method="post" action="{% url 'create_promotion' %}">
             {% csrf_token %}
@@ -24,6 +25,7 @@
             <input type="text" class="form-control" id="add_promotion_photo_url" name="add_promotion_photo_url"
                 placeholder="Please input promotion photo url" required>
             <div id="add-promotion-modal-buttons">
+                <!--Confirmation and clear form buttons with associated onclick user alerts requesting to confirm decision/action-->
                 <button type="submit" class="btn btn-primary" id="save-promotion-button"
                     onclick="return confirm('Are you sure you want to create the promotion?')">Save Promotion</button>
                 <button type="reset" class="btn btn-primary" id="clear-promotion-form"

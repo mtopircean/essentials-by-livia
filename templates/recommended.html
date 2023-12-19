@@ -2,10 +2,12 @@
 {% if is_user_approved or user.is_staff %}
 <div class="container">
 
+    <!--Filter ailment section. Naming convention not aligned to overall content as div contains also the product section-->
     <div id="filter-product-section" class="container-fluid">
         <div class="row">
             <div class="col-md-3">
-                
+
+                <!--Offers admin a section of all products to easy reach relevant page section and make necessary updates-->
                 {% if user.is_staff %}
                 <div class="product-list-section">
                     <h4>Product List</h4>
@@ -19,8 +21,9 @@
                 </div>
                 {% endif %}
                 {% if not user.is_staff %}
+                <!--Searchbar looking through ailments-->
                 <div id="search" class="search-bar mb-3">
-                    <input type="text" id="searhailment" class="form-control" placeholder="Type ailment">
+                    <input type="text" id="searchailment" class="form-control" placeholder="Type ailment">
                 </div>
                 <div>
 
@@ -28,12 +31,16 @@
                         <p id="toggle-ailment-list">Ailment list &#11165;</p>
                         <form method="GET" action="{% url 'filter_ailments' %}" id="ailment-filter-form">
                             <div class="filter-content">
+
+                                <!--Buttons linked to js function applying and clearing user selection. JS needed to interact with checkboxes. -->
                                 <div>
                                     <button type="submit" id="apply-button">Apply selection &#x2714;</button>
                                 </div>
                                 <div>
                                     <button id="clear-all-button">Clear all &#x2716;</button>
                                 </div>
+
+                                <!--Iterates over ailments and pulls the ailment list that has at least one product associated, displaying also the number of products associated to this -->
                                 {% for ailment in ailments %}
                                 <div>
                                     <input type="checkbox" name="filter_checkbox" value="{{ ailment.name }}"
@@ -52,6 +59,7 @@
             </div>
             <div class="col-md-9">
                 {% if user.is_staff %}
+                <!--Conditionally displays a button triggering the add-product-modal -->
                 <div id="add-product-section">
                     <button type="button" class="add-product-button" data-bs-toggle="modal"
                         data-bs-target="#addProductModal">
@@ -61,6 +69,7 @@
                 {% else %}
                 {% endif %}
                 <div class="product-section">
+                    <!--Section which iterates over products pulling data from database and building the product area-->
                     {% for product in products %}
                     <div class="row">
                         <div class="col-12 col-md-4 text-center">
@@ -70,26 +79,28 @@
                         <div class="d-flex align-items-center col-12 col-md-8">
                             <div>
                                 {% if is_admin %}
+                                <!--Allows admin to edit the product description prompting him on save/delete action requesting a confirmation of action-->
                                 <div id="product-{{ product.id }}">
-                                <form id="update-product-details" action="{% url 'update_product' product.id %}"
-                                    method="post" onsubmit="return updateProductDescription()">
-                                    {% csrf_token %}
-                                    <textarea id="product-new-description"
-                                        name="new_description">{{ product.description| striptags }}</textarea>
-                                    <button type="submit" id="save-product-description">Save description</button>
-                                </form>
-                                <form id="delete-product" action="{% url 'delete_product' product.id %}" method="post"
-                                    onclick="return confirmProductDelete()">
-                                    {% csrf_token %}
-                                    <button id="delete-product" type="submit" id="delete-product">Delete
-                                        product!</button>
-                                </form>
-                            </div>
+                                    <form id="update-product-details" action="{% url 'update_product' product.id %}"
+                                        method="post" onsubmit="return updateProductDescription()">
+                                        {% csrf_token %}
+                                        <textarea id="product-new-description"
+                                            name="new_description">{{ product.description| striptags }}</textarea>
+                                        <button type="submit" id="save-product-description">Save description</button>
+                                    </form>
+                                    <form id="delete-product" action="{% url 'delete_product' product.id %}"
+                                        method="post" onclick="return confirmProductDelete()">
+                                        {% csrf_token %}
+                                        <button id="delete-product" type="submit" id="delete-product">Delete
+                                            product!</button>
+                                    </form>
+                                </div>
                                 {% endif %}
 
                                 <span class="product-name">{{ product.name }}</span>
                                 <br>
                                 {% if not is_admin %}
+                                <!--Favorite section is irrelevant for admin, so it is not displayed-->
                                 <form action="{% url 'favourite_selection' product.id %}?source=recommended"
                                     method="post">
                                     {% csrf_token %}
@@ -153,11 +164,12 @@
 
 {% else %}
 {% if user.is_authenticated and not user.is_staff %}
+<!--View if user is not approved by admin prompting them to wait for approval before accessing the tool-->
 <div class="container">
     <div class="row">
         <div class="col-md-12" id="register-recommended-login">
             <div class="d-flex align-items-center justify-content-center text-center">
-                <p id="text-pending-approval">Your request to access our recommandation tool is currently being
+                <p id="text-pending-approval">Your request to access our recommendation tool is currently being
                     processed. You will be notified
                     once this is completed.
                     We take all efforts for the process to be as fast as possible.
@@ -194,6 +206,7 @@
     </div>
     {% else %}
     <div class="container">
+        <!--View of user not logged in. It requests either registration or login before moving to the next screen-->
         <div class="row">
             <div class="col-md-6" id="register-recommended-login">
                 <div class="d-flex align-items-center justify-content-center text-center">

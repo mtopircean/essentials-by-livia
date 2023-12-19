@@ -132,7 +132,7 @@ Collects the ailment name
 Shows and hides the checkboxes based on search matching filter element
 */
 $(document).ready(function () {
-    $('#searhailment').on('input', function () {
+    $('#searchailment').on('input', function () {
         var searchText = $(this).val().toLowerCase();
         $('.filter-checkbox').each(function () {
             var ailmentName = $(this).next('label').text().toLowerCase();

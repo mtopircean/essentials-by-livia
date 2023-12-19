@@ -1,4 +1,5 @@
 <div class="modal-content">
+    <!--Header section containing title and close button-->
     <div class="modal-header">
         <div>
             <h5>Add your new product</h5>
@@ -7,7 +8,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close X Symbol"></button>
         </div>
     </div>
-
+    <!--Body section containing input fields including a checkbox area for an ailment list-->
     <div class="modal-body">
         <form method="post" action="{% url 'create_product' %}">
             {% csrf_token %}
@@ -20,6 +21,7 @@
             <div id="add-ailments-modal">
                 <label for="add_product_ailments" class="label-add-product-modal">Product ailments:</label>
                 <div id="modal-ailments-list" class="ailments-container">
+                    <!--Iterates over ailments to display all existing ones-->
                     {% for ailment in ailments %}
                     <input type="checkbox" id="{{ ailment.id }}" name="add_product_ailments[]" value="{{ ailment.id }}">
                     <label for="{{ ailment.id }}">{{ ailment.name }}</label><br>
@@ -31,6 +33,7 @@
             <input type="text" class="form-control" id="add_product_photo_url" name="add_product_photo_url"
                 placeholder="Please input photo url" required>
             <div id="add-product-modal-buttons">
+                <!--Confirmation and clear form buttons with associated onclick user alerts requesting to confirm decision/action-->
                 <button type="submit" class="btn btn-primary" id="save-product-button"
                     onclick="return confirm('Are you sure you want to create the product?')">Save Product</button>
                 <button type="reset" class="btn btn-primary" id="clear-product-form"

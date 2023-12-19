@@ -13,6 +13,7 @@
     <title>Essentials by Livia</title>
 </head>
 
+<!--Template combining navigation bar, footer and always on elements-->
 <body>
     {% include 'navbar.html' %}
     <div class="container">
@@ -20,6 +21,7 @@
         {% endblock %}
     </div>
 
+    <!--Always on whatsapp icon present on all pages-->
     <div class="whatsapp-icon">
         <a href="https://wa.me/+353876403084" target="_blank">
             <i class="fa-brands fa-whatsapp fa-sm" style="color: #25d366;"></i>
@@ -30,6 +32,7 @@
         {% include 'footer.html' %}
     </div>
 
+    <!--Imports jquery and local js static-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../static/js/script.js"></script>

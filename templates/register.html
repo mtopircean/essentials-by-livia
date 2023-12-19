@@ -3,13 +3,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 order-md-1 order-2" id="register-form">
+            <!--Registration form section pulling allauth form details and the customized form details from forms.py-->
             <form id="register-section" method="post">
                 {% csrf_token %}
                 {{ signup_form.as_p }}
 
                 {% if signup_form.errors %}
                 <div class="alert alert-danger">
-                    <p class="text-center">Your data was not filled in correctly!</p> 
+                    <p class="text-center">Your data was not filled in correctly!</p>
                     <ul>
                         {% for field in signup_form %}
                         {% for error in field.errors %}
@@ -20,11 +21,12 @@
                 </div>
                 {% endif %}
                 <div class="d-flex justify-content-center mt-4">
-                    <button id="register-button" class="btn btn-secondary" type="submit" >Register</button>
+                    <button id="register-button" class="btn btn-secondary" type="submit">Register</button>
                 </div>
             </form>
         </div>
 
+        <!--Section containing description on why register and link to recommended.html.-->
         <div id="why-register" class="col-md-6 order-md-2 order-1 text-center">
             <div class="col-md-12">
                 <img id="register" src="../static/images/register.webp" alt="icon representing a user" class="img-fluid"
@@ -37,6 +39,7 @@
                     recommended products addressed
                     specific for your condition.
                     Check it out here:</p>
+                <!--Link to recommended.html-->
                 <a href="recommended.html">Recommendation tool <i class="fa-solid fa-fire"></i></a>
                 <h6>Become part of our awesome team:</h6>
                 <p class="join-team-register">You don`t have to do it! It is not mandatory.....but it is highly

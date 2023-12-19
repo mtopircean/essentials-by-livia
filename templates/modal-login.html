@@ -1,4 +1,5 @@
 <div class="modal-content">
+    <!--Modal header section with title and close button-->
     <div class="modal-header">
         <div>
             <h5>Login or Register</h5>
@@ -8,6 +9,7 @@
         </div>
     </div>
 
+    <!--Modal body containing the input form collecting user data, action buttons and link to password recovery form-->
     <div class="modal-body">
         <form id="allauth-login-form" method="post" action="{% url 'account_login' %}">
             {% csrf_token %}
@@ -18,10 +20,12 @@
             <input type="password" class="form-control" id="id_password" name="password"
                 placeholder="Please provide your password" required>
             <div class="button-area">
+                <!--Button submitting the form and link to register.html page-->
                 <button type="submit" class="btn btn-primary" id="login-button">Login</button>
                 <a id="register-button-modal" href="register.html" class="btn btn-secondary">Register</a>
             </div>
             <div class="password-change-forgot">
+                <!--Link to allauth password recovery form -->
                 <a href="{% url 'account_reset_password' %}" class="forgot-link">Forgot Password</a>
             </div>
         </form>
