@@ -21,7 +21,7 @@
                 </div>
                 {% endif %}
                 <div class="d-flex justify-content-center mt-4">
-                    <button id="register-button" class="btn btn-secondary" type="submit">Register</button>
+                    <a href="{% url 'logged_user_details' %}" id="register-button" class="btn btn-secondary">Register</a>
                 </div>
             </form>
         </div>
@@ -40,7 +40,7 @@
                     specific for your condition.
                     Check it out here:</p>
                 <!--Link to recommended.html-->
-                <a href="recommended.html">Recommendation tool <i class="fa-solid fa-fire"></i></a>
+                <a href="{% url 'recommended' %}">Recommendation tool <i class="fa-solid fa-fire"></i></a>
                 <h6>Become part of our awesome team:</h6>
                 <p class="join-team-register">You don`t have to do it! It is not mandatory.....but it is highly
                     recommended!

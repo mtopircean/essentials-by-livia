@@ -1222,6 +1222,7 @@ label#ailment-filter-name {
     color: #644970;
 }
 
+
 label#label-password {
     margin-top: 8px;
 }
@@ -1323,7 +1324,7 @@ label#label-password {
     border-bottom: solid 1px #077386;
 }
 
-#register-section button {
+#register-button {
     background-color: #077386;
     border: #077386 solid 2px;
     color: #ffff;
@@ -1333,7 +1334,7 @@ label#label-password {
     border-radius: 5px;
 }
 
-#register-section button:hover {
+#register-button button:hover {
     color: #077386;
     background-color: #ffff;
 }
