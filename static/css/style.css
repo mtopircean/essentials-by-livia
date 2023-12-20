@@ -5,7 +5,24 @@ body {
     color: black;
 }
 
-/* base, index, header and footer */
+
+/* Code implemented to support accessibility */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+
+/* base, header and footer 
+This represents the styling of the basic areas being imported throughout the other pages.
+*/
 
 .col-md-2,
 .col-md-10 {
@@ -38,16 +55,6 @@ body {
     border-bottom: 1px solid #64497017;
 }
 
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
 
 #navbarNav {
     text-align: right;
@@ -204,6 +211,8 @@ body {
 
 }
 
+/* Index page CSS */
+
 p {
     margin-bottom: 0;
 }
@@ -242,7 +251,7 @@ p {
     color: #ffff;
     background-color: #6449707a;
     color: #ffff;
-    width:auto;
+    width: auto;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 20px;
@@ -456,9 +465,9 @@ h6 {
     margin-bottom: 60px;
 }
 
-#about-other-contact a{
+#about-other-contact a {
     text-decoration: underline;
-    color:#077386
+    color: #077386
 }
 
 #essentialOilsText {
@@ -548,7 +557,7 @@ h6 {
 #promotion-name {
     font-size: large;
     margin-bottom: 5px;
-    color:#eb3752c7;
+    color: #eb3752c7;
     font-weight: 600;
 }
 
@@ -873,17 +882,17 @@ li {
 
 .product-list-section {
     position: fixed;
-    top: 100px; 
+    top: 100px;
     width: 200px;
     margin-top: 20px;
 }
 
-.product-list-section h4{
+.product-list-section h4 {
     font-size: xx-large;
     color: #644970;
 }
 
-.product-list-section a{
+.product-list-section a {
     color: #644970;
     font-size: small;
 }
@@ -916,7 +925,7 @@ li {
 }
 
 .product-section .row {
-    padding: 0!important;
+    padding: 0 !important;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1452,11 +1461,13 @@ button.reset-password-button:hover {
 /* Screen size optimization */
 @media (max-width: 767px) {
 
-    #data-protection p, #social-media-footer p {
+    #data-protection p,
+    #social-media-footer p {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
     }
+
     #about-me-text {
         margin-right: 20px;
         margin-left: 20px;
@@ -1497,13 +1508,13 @@ button.reset-password-button:hover {
 
     #join-text {
         display: none;
-      }
+    }
 
     .footer {
         font-size: x-large;
     }
 
-    #social-media-footer i{
+    #social-media-footer i {
         margin-right: 6px;
         font-size: x-large;
     }

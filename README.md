@@ -13,7 +13,6 @@ The website is done, but there is a multitude of elements that we still intend t
 ## CONTENT
 
 * [The 5 Planes strategy](#the-5-planes-strategy)
-    * [Overview](#overview)
     * [The Strategy Plane](#the-strategy-plane)
         * [Planning](#planning)
         * [Kanban Board](#kanban-board)
@@ -70,8 +69,6 @@ The website is done, but there is a multitude of elements that we still intend t
     * [Other](#other)
 * [About Author](#about-author)
 # The 5 planes strategy
-## Overview
-
 ## The Strategy Plane
 
 ### Planning
@@ -314,6 +311,8 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 
 #### Unittest Feature
 
+Unitest basis was setup and can be found here, linking to the test area: [Unittest](#unittest)
+
 
 #### Features future implementation
 
@@ -327,8 +326,6 @@ Future iteration will include this features. For the moment, Stories are also at
 [EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499620): Filter products by price|User|n/a|User will have in the future the ability to filter a product by price. Price value can be added now on the product, but it is currently not displayed.|Future implementation
 [EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43495274): Delete comments on promotion|Admin|n/a|Admin will have the ability to delete comments on a promotion and product.|Future implementation
 [EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493641): Share promotion|User|n/a|User will have the ability to share a promotion or product.|Future implementation
-
-## The Structure Plane
 
 ## The Skeleton Plane
 ### Wireframes
@@ -594,7 +591,13 @@ To clone the repository:
 
 # Testing and Validation
 ## HTML
+
 ## CSS
+
+Code tested without any errors found:
+
+![Alt text](/static/readme/css-validator.png)
+
 ## Accessibility Test
 Majority of pages tested with the exception of pages which are user restricted that I wasn`t able to test due to CSRF not allowing me to test.
 For those, I`ve used the Lighthouse testing method.
