@@ -1324,7 +1324,7 @@ label#label-password {
     border-bottom: solid 1px #077386;
 }
 
-#register-button {
+#register-section button {
     background-color: #077386;
     border: #077386 solid 2px;
     color: #ffff;
@@ -1334,7 +1334,7 @@ label#label-password {
     border-radius: 5px;
 }
 
-#register-button button:hover {
+#register-section button:hover {
     color: #077386;
     background-color: #ffff;
 }

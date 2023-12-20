@@ -49,6 +49,8 @@ urlpatterns = [
          name='delete_product'),
     path('register/', views.register,
          name='register'),
+    path('register-success/', views.register_success,
+         name='register'),
 
     # URLs for CRUD operations on users
     path('create_product/', views.create_product,

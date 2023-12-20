@@ -289,7 +289,7 @@ def register(request):
             )
 
             # Redirects user to a registration success page
-            return HttpResponseRedirect(reverse('register-success'))
+            return HttpResponseRedirect(reverse('register_success'))
     else:
         signup_form = CustomSignupForm()
 
