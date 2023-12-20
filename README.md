@@ -942,6 +942,9 @@ Will become part of future development.
 Thiw was not completed due to timing issues in handing over the project and the high complexity of the project.
 
 ## Local functionality tests
+
+[TESTING.md](https://github.com/mtopircean/essentials-by-livia/blob/main/TESTING.md)
+
 ## Fixed bugs
 
 # Credits

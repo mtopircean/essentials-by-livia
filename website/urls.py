@@ -50,7 +50,7 @@ urlpatterns = [
     path('register/', views.register,
          name='register'),
     path('register-success/', views.register_success,
-         name='register'),
+         name='register_success'),
 
     # URLs for CRUD operations on users
     path('create_product/', views.create_product,
