@@ -59,9 +59,6 @@ urlpatterns = [
          name='user_account'),
     path('profile/', views.logged_user_details,
          name='logged_user_details'),
-
-    path('register-success.html', views.register_success,
-         name='register_success'),
     path('custom-logout/', views.custom_logout,
          name='custom_logout'),
     path('password_reset/', PasswordResetView.as_view(),

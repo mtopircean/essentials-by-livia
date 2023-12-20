@@ -949,12 +949,82 @@ Thiw was not completed due to timing issues in handing over the project and the 
 
 ### Fixed bugs
 
+* Connection not closing issue.
+ISSUE:
+Elephant SQL not closing connections.
+
+Took inspiration on solution from stackoverflow and is reflected in the code bellow(an insert is also present in my settings file):
+
+```python
+class CloseConnectionMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+        self.close_database_connection()
+        return response
+
+    def close_database_connection(self):
+        if connection and connection.connection:
+            connection.close()
+```
+```python
+'website.middleware.CloseConnectionMiddleware',
+```
+
 ### Open bugs
 
+* Currently, once user regiters they are prompted to login again before account creation is confirmed.
+* Once a user is prompted that the login details are incorect, if they choose to sign up or forgot pasword and want to return to previous page by pushing the back button, they receive an error:
 
+![Alt text](/static/readme/redirect-one.png)
+![Alt text](/static/readme/redirect-two.png)
+
+
+* In filter section, once you add a product to favorites and page refreshes, the checked boxes for the filters remain active, but all products are displayed until you click on apply all again or clear all:
+![Alt text](/static/readme/before-favorites.png)
+![Alt text](/static/readme/after-favorites.png)
+
+* Although not an issue/bug, using in limited scenarios url`s guided to a template, like bellow:
+
+```
+path('user-account.html', views.user_account,
+         name='user_account'),
+```
 
 # Credits
+
 ## Code Used
+* First of all thank you to all the Tutors and my mentor for their support. They have helped me with various solutions to my problems.
+
+* Connection not closing issue.
+ISSUE:
+
+Elephant SQL not closing connections.
+
+Took inspiration on solution from stackoverflow and is reflected in the code bellow(an insert is also present in my settings file):
+
+```python
+class CloseConnectionMiddleware:
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+        self.close_database_connection()
+        return response
+
+    def close_database_connection(self):
+        if connection and connection.connection:
+            connection.close()
+```
+```python
+'website.middleware.CloseConnectionMiddleware',
+```
+
+* Guidance has been taken from online enviorement on various solutions to issues, but no code was copied, just guidance on potential solutions.
+
 ## Other
 * Deployment instructions in GitHub copied from kera-cudmore different repo and following the article written by her on how to write a readme.
 * Inspiration on readme structure taken from kera-cudmore repo`s and following the article written by her on how to write a readme.
