@@ -592,6 +592,43 @@ To clone the repository:
 # Testing and Validation
 ## HTML
 
+* Navbar
+
+* Footer
+
+* Base
+
+* About me
+
+* Profile
+
+* About oils
+
+* Contact
+
+* Index
+
+* Allauth Forms
+
+* Promotions
+
+* What is the best essential oil for me (recommended.html) - for users not logged in
+
+* Register
+
+* What is the best essential oil for me (recommended.html) - not approved
+
+* Register
+
+* What is the best essential oil for me (recommended.html) approved
+
+* 404
+
+* 403
+
+* 500
+
+
 ## CSS
 
 Code tested without any errors found:
@@ -599,7 +636,7 @@ Code tested without any errors found:
 ![Alt text](/static/readme/css-validator.png)
 
 ## Accessibility Test
-Majority of pages tested with the exception of pages which are user restricted that I wasn`t able to test due to CSRF not allowing me to test.
+Majority of pages tested with the exception of pages which are user restricted that I was not able to test due to CSRF not allowing me to test.
 For those, I`ve used the Lighthouse testing method.
 * About me
 
