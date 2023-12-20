@@ -247,28 +247,47 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 ![Alt text](/static/readme/import-export.gif)
 
 #### Features implemented
-                                                            **EPIC**                                                            |                                                        **STORY**                                                         | **Beneficiary** |                    **Link to feature**                    |                                       **Feature**                                       | **Status**
-:------------------------------------------------------------------------------------------------------------------------------:|:------------------------------------------------------------------------------------------------------------------------:|:---------------:|:---------------------------------------------------------:|:---------------------------------------------------------------------------------------:|:----------:
-          [EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design           |       [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43490085): Create error pages       |      User       |            [Error pages Feature](#error-pages)            |                        Created custom 403, 404, 500 error pages                         | Implemented
-         [EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management          |  [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491254): Update a user account - user  |      User       |  [User account User Feature](#user-account-user-feature)  |        User can updated their account details directly from their profile page.         | Implemented
-         [EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management          |  [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43492404): Delete user accounts - admin  |      Admin      | [User account Admin Feature](#user-account-admin-feature) |                 Admin can delete a user account from the admin section.                 | Implemented
-         [EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management          |  [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491124): Access a user account - user  |      User       |  [User account User Feature](#user-account-user-feature)  | After account creation, user can access their account details in their profile section. | Implemented
-         [EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management          |     [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43490848): Create a user account      |      User       |  [User account User Feature](#user-account-user-feature)  |                 Users can create a user account by using a custom form.                 | Implemented
-         [EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management          |  [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43492224): Update user accounts -admin   |      Admin      | [User account Admin Feature](#user-account-admin-feature) |             Admin can update a users account details from the admin section             | Implemented
-         [EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management          |  [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491438): Delete a user account - user  |      User       |  [User account User Feature](#user-account-user-feature)  |            User can delete their account straight from the profile section.             | Implemented
-         [EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management          |       [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43492086): View user accounts       |      Admin      | [User account Admin Feature](#user-account-admin-feature) |                    Admin can see all user accounts in admin section                     | Implemented
-           [EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management           |         [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493399): View promotion         |      User       |     [Promotion User Feature](#promotion-user-feature)     |                            Users can view active promotions                             | Implemented
-           [EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management           |         [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43494603): Add promotion          |      Admin      |    [Promotion Admin Feature](#promotion-admin-feature)    |               Admin can add a promotion from front-end and also back-end.               | Implemented
-           [EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management           |        [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43494783): Delete promotion        |      Admin      |    [Promotion Admin Feature](#promotion-admin-feature)    |              Admin can delete a promotion from front-end and also back-end              | Implemented
-           [EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management           |         [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43494316): Edit promotion         |      Admin      |    [Promotion Admin Feature](#promotion-admin-feature)    |               Admin can edit a promotion from front-end and also back-end               | Implemented
-[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management |         [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501011): Modify product         |      Admin      |      [Product Admin Feature](#product-admin-feature)      |                Admin can edit a product from front-end and also back-end                | Implemented
-[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management |   [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499482): Filter products by ailment   |      User       |       [Product User Feature](#product-user-feature)       |                           User can filter products by ailment                           | Implemented
-[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management | [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43500688): Add a product to the database  |      Admin      |      [Product Admin Feature](#product-admin-feature)      |                Admin can add a product from front-end and also back-end.                | Implemented
-[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management |   [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499279): Search products by ailment   |      User       |       [Product User Feature](#product-user-feature)       |         User can filter products by ailment, by using the search functionality          | Implemented
-[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management |         [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501144): Delete product         |      Admin      |      [Product Admin Feature](#product-admin-feature)      |               Admin can delete a product from front-end and also back-end               | Implemented
-[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management |   [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499704): Save product to favorites    |      User       |          [Favorites Feature](#favorites-feature)          |            User can save a product to their favorites in the profile section            | Implemented
-[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management | [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499821): Remove products from favorites |      User       |          [Favorites Feature](#favorites-feature)          |          User can remove a product from their favorites in the profile section          | Implemented
-       [Epic 7](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368946): Testing and Readme documents       |            [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501838): Testing             |      Admin      |           [Unittest Feature](#unittest-feature)           |                       Write unittest for automated views testing                        | Implemented
+
+**EPIC**|**STORY**|**Beneficiary**|**Impact on beneficiary**|**Link to feature**|**Feature**|**Status**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+[EPIC 1](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43366122): Setup and Deployment|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43485934): Install basic dependencies|Developer|Obtaining robust development process which will ensure easire future development.|n/a| |n/a
+[EPIC 1](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43366122): Setup and Deployment|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43486612): Heroku deployment|Developer|Obtaining robust development process which will ensure easire future development.|n/a| |n/a
+[EPIC 1](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43366122): Setup and Deployment|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43487110): Create a document hierarchy and structure|Developer|Obtaining robust development process which will ensure easire future development.|n/a| |n/a
+[EPIC 2](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43366525): Database Setup and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43488004): Create models|Developer|Obtaining robust development process which will ensure easire future development.|n/a| |n/a
+[EPIC 2](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43366525): Database Setup and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43488175): Migrate models|Developer|Obtaining robust development process which will ensure easire future development.|n/a| |n/a
+[EPIC 2](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43366525): Database Setup and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43487683): Create database structure|Developer|Obtaining robust development process which will ensure easire future development.|n/a| |n/a
+[EPIC 2](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43366525): Database Setup and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43488872): Create template for header, footer, and modals|Website owner|Allow easier future development|n/a| |n/a
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43488654): Create promotions page|User/Admin|Allow for a section to view promotions if user, post, edit, remove and add promotions if you are an administrator.|n/a| |n/a
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43490514): Create user registration form|User/Admin|Allow for a section for the user to register in order to save favorites and access the recommandation tool. Allow for the administrator to collect user data and use them to create a database of users.|n/a| |n/a
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=44232904): Create user account page|User|Allows the user to generate a self manageable account page.|n/a| |n/a
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43489328): Create recommendation tool layout|User/Admin| |n/a| |n/a
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43488488): Create homepage|User| |n/a| |n/a
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43489691): Create registration form|User| |n/a| |n/a
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43490085): Create error pages|User| |[Error pages Feature](#error-pages)|Created custom 403, 404, 500 error pages|Implemented
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43704528): Create about me page|User| |n/a| |n/a
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43704731): Create about oils page|User| |n/a| |n/a
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491254): Update a user account - user|User| |[User account User Feature](#user-account-user-feature)|User can updated their account details directly from their profile page.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43492404): Delete user accounts - admin|Admin| |[User account Admin Feature](#user-account-admin-feature)|Admin can delete a user account from the admin section.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491124): Access a user account - user|User| |[User account User Feature](#user-account-user-feature)|After account creation, user can access their account details in their profile section.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43490848): Create a user account|User| |[User account User Feature](#user-account-user-feature)|Users can create a user account by using a custom form.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43492224): Update user accounts -admin|Admin| |[User account Admin Feature](#user-account-admin-feature)|Admin can update a users account details from the admin section|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491438): Delete a user account - user|User| |[User account User Feature](#user-account-user-feature)|User can delete their account straight from the profile section.|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43492086): View user accounts|Admin| |[User account Admin Feature](#user-account-admin-feature)|Admin can see all user accounts in admin section|Implemented
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491694): Create super-user|Admin| |n/a| |n/a
+[EPIC 4](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367544): User Account Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43491915): Create admin environment|Admin| |n/a| |n/a
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493399): View promotion|User| |[Promotion User Feature](#promotion-user-feature)|Users can view active promotions|Implemented
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43494603): Add promotion|Admin| |[Promotion Admin Feature](#promotion-admin-feature)|Admin can add a promotion from front-end and also back-end.|Implemented
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43494783): Delete promotion|Admin| |[Promotion Admin Feature](#promotion-admin-feature)|Admin can delete a promotion from front-end and also back-end|Implemented
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43494316): Edit promotion|Admin| |[Promotion Admin Feature](#promotion-admin-feature)|Admin can edit a promotion from front-end and also back-end|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501011): Modify product|Admin| |[Product Admin Feature](#product-admin-feature)|Admin can edit a product from front-end and also back-end|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499482): Filter products by ailment|User| |[Product User Feature](#product-user-feature)|User can filter products by ailment|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43500688): Add a product to the database|Admin| |[Product Admin Feature](#product-admin-feature)|Admin can add a product from front-end and also back-end.|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499279): Search products by ailment|User| |[Product User Feature](#product-user-feature)|User can filter products by ailment, by using the search functionality|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501144): Delete product|Admin| |[Product Admin Feature](#product-admin-feature)|Admin can delete a product from front-end and also back-end|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499704): Save product to favorites|User| |[Favorites Feature](#favorites-feature)|User can save a product to their favorites in the profile section|Implemented
+[EPIC 6](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368046): Product Search, Filtering, and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499821): Remove products from favorites|User| |[Favorites Feature](#favorites-feature)|User can remove a product from their favorites in the profile section|Implemented
+[Epic 7](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368946): Testing and Readme documents|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43502068): README|Admin| |n/a| |n/a
+[Epic 7](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368946): Testing and Readme documents|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501838): Testing|Admin| |[Unittest Feature](#unittest-feature)|Write unittest for automated views testing|Implemented
 
 #### Error pages
 
@@ -300,15 +319,14 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 
 Future iteration will include this features. For the moment, Stories are also at a lower detail level, without tasks and major details.
 
-                                                 **EPIC**                                                  |                                                        **STORY**                                                        | **Beneficiary** | **Link to feature** |                                                                      **Feature**                                                                       |      **Status**
-:---------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------:|:---------------:|:-------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------:
-[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management | [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43495025): Approve comments on promotion |      Admin      |         n/a         |                                       Admin will have the ability to approve comments before they are displayed.                                       | Future implementation
-[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management |       [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493955): Comment promotion       |      User       |         n/a         |                                       User will have in the future the ability to add a commend on a promotion.                                        | Future implementation
-[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management |        [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43500159): Comment product        |      User       |         n/a         |                                        User will have in the future the ability to add a commend on a product.                                         | Future implementation
-[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management |   [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499620): Filter products by price    |      User       |         n/a         | User will have in the future the ability to filter a product by price. Price value can be added now on the product, but it is currently not displayed. | Future implementation
-[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management | [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43495274): Delete comments on promotion  |      Admin      |         n/a         |                                       Admin will have the ability to delete comments on a promotion and product.                                       | Future implementation
-[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management |        [USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493641): Share promotion        |      User       |         n/a         |                                              User will have the ability to share a promotion or product.                                               | Future implementation
-
+**EPIC**|**STORY**|**Beneficiary**|**Link to feature**|**Feature**|**Status**
+:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43495025): Approve comments on promotion|Admin|n/a|Admin will have the ability to approve comments before they are displayed.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493955): Comment promotion|User|n/a|User will have in the future the ability to add a commend on a promotion.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43500159): Comment product|User|n/a|User will have in the future the ability to add a commend on a product.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43499620): Filter products by price|User|n/a|User will have in the future the ability to filter a product by price. Price value can be added now on the product, but it is currently not displayed.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43495274): Delete comments on promotion|Admin|n/a|Admin will have the ability to delete comments on a promotion and product.|Future implementation
+[EPIC 5](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367676): Promotion Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43493641): Share promotion|User|n/a|User will have the ability to share a promotion or product.|Future implementation
 
 ## The Structure Plane
 
@@ -578,8 +596,188 @@ To clone the repository:
 ## HTML
 ## CSS
 ## Accessibility Test
+Majority of pages tested with the exception of pages which are user restricted that I wasn`t able to test due to CSRF not allowing me to test.
+For those, I`ve used the Lighthouse testing method.
+* About me
+
+![Alt text](/static/readme/about-me-accessibility.png)
+
+* About oils
+
+![Alt text](/static/readme/about-oils-accessibility.pngg)
+
+* Contact
+
+![Alt text](/static/readme/contact-accessibility.png)
+
+* Index
+
+![Alt text](/static/readme/index-accessibility.png)
+
+* Password reset(generally applicable to allauth forms)
+
+![Alt text](/static/readme/password-reset-accessibility.png)
+
+* Promotions
+
+![Alt text](/static/readme/promotions-accessibility.png)
+
+* What is the best essential oil for me (recommended.html) - for users not logged in
+
+![Alt text](/static/readme/recommended-not-logged-in-accessibility.png)
+
+* Register
+Which brought an issue present generally in allauth forms around labeling issues(since I`m using another form).
+
+![Alt text](/static/readme/register-accessibility.png)
+
+* What is the best essential oil for me (recommended.html) - not approved
+
+Accessibility not perfect due to menu label not visible in mobile mode.
+
+![Alt text](/static/readme/recommended-logged-in-not-appproved-accesibility.png)
+
+
+* What is the best essential oil for me (recommended.html) approved
+
+In addition to menu label not visible, the faded color on add to favorites reduces the score.
+
+![Alt text](/static/readme/recommended-approved-accesibility.png)
+
+* Profile
+
+![Alt text](/static/readme/profile-desktop-lighthouse.png)
+
 ## Lighthouse
+* About me
+
+Desktop
+
+![Alt text](/static/readme/about-me-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/about-me-mobile-lighthouse.png)
+
+* Profile
+
+Desktop
+
+![Alt text](/static/readme/profile-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/profile-mobile-lighthouse.png)
+
+* About oils
+
+Desktop
+
+![Alt text](/static/readme/about-oils-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/about-oils-mobile-lighthouse.png)
+
+* Contact
+
+Desktop
+
+![Alt text](/static/readme/contact-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/contact-mobile-lighthouse.png)
+
+* Index
+
+Desktop
+
+![Alt text](/static/readme/index-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/index-mobile-lighthouse.png)
+
+* Allauth Forms
+
+Desktop
+
+![Alt text](/static/readme/allauth-forms-customized-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/allauth-forms-customized-mobile-lighthouse.png)
+
+* Promotions
+
+Desktop
+
+![Alt text](/static/readme/promotions-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/promotions-mobile-lighthouse.png)
+
+* What is the best essential oil for me (recommended.html) - for users not logged in
+
+Desktop
+
+![Alt text](/static/readme/recommended-not-logged-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/recommended-not-logged-mobile-lighthouse.png)
+
+* Register
+
+Desktop
+
+![Alt text](/static/readme/recommended-logged-in-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/recommended-logged-in-mobile-lighthouse.png)
+
+* What is the best essential oil for me (recommended.html) - not approved
+
+Desktop
+
+![Alt text](/static/readme/recommended-not-approved-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/recommended-not-approved-mobile-lighthouse.png)
+
+* Register
+
+Desktop
+
+![Alt text](/static/readme/register-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/register-mobile-lighthouse.png)
+
+
+* What is the best essential oil for me (recommended.html) approved
+
+Desktop
+
+![Alt text](/static/readme/recommended-logged-in-desktop-lighthouse.png)
+
+Mobile
+
+![Alt text](/static/readme/recommended-logged-in-mobile-lighthouse.png)
+
+
 ## Spellcheck
+
+All pages, including the code have passed through word spellchecked and all issues corrected, except code command syntax. One particular spelling error was not corrected as it would have heavily affected the code. In various views which touch on the favorite section, there was the word favorite misspelled as favourite. For application integrity, this remained as it is and will be corrected in future itterations.
+As a final check pages have passed through the W3C Spell Checked and the only words highlighted where specific names like doTerra, GDPR, WhatsApp, etc.
+
+![Alt text](/static/readme/spellchecker.png)
+
 ## JavaScript
 JSHINT:
 script.js tested with following results:
