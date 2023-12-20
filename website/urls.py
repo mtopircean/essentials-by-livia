@@ -28,6 +28,8 @@ urlpatterns = [
          name='recommended'),
     path('index.html', views.index,
          name='index'),
+    path('register.html', views.register,
+         name='register'),
     # URLs for CRUD operations on promotions
 
     path('edit-promotion/<int:promotion_id>/', views.edit_promotion,
@@ -51,12 +53,8 @@ urlpatterns = [
     # URLs for CRUD operations on users
     path('create_product/', views.create_product,
          name='create_product'),
-    path('user-account.html', views.user_account,
-         name='user_account'),
-    path('profile.html', views.logged_user_details,
+    path('profile/<str:username>/', views.logged_user_details,
          name='logged_user_details'),
-    path('register.html', views.register,
-         name='register'),
     path('register/success/', views.register_success,
          name='register_success'),
     path('custom-logout/', views.custom_logout,
@@ -73,7 +71,7 @@ urlpatterns = [
          name='favourite_selection'),
     path('profile/', views.display_favorites,
          name='display_favorites'),
-    path('filter-ailments', views.filter_ailments,
+    path('filter-ailments/', views.filter_ailments,
          name='filter_ailments'),
 
     # Test URLs for simulating error pages
