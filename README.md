@@ -945,7 +945,13 @@ Thiw was not completed due to timing issues in handing over the project and the 
 
 [TESTING.md](https://github.com/mtopircean/essentials-by-livia/blob/main/TESTING.md)
 
-## Fixed bugs
+## Bugs
+
+### Fixed bugs
+
+### Open bugs
+
+
 
 # Credits
 ## Code Used
