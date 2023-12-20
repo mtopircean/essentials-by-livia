@@ -473,10 +473,13 @@ Product and promotion photos are taken from doTerra database/representative tool
 
 ### Display size optimization
 The use of Bootstrap has limited significantly the level of manual intervention I had to do in order to adapt the layout to various screen sizes.
-My intervention was limited to an intervention on this particular size, which managed to adapt to all screen variations under this size:
+My intervention was limited to an intervention on this two particular sizes, which managed to adapt to all screen variations under them:
 
 ``` css
 @media (max-width: 767px)
+```
+``` css
+@media (max-width: 992px) /*minor intervention for padding adjustment
 ```
 
 ### Accessibility

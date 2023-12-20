@@ -251,6 +251,12 @@ def contact(request):
     return render(request, 'contact.html')
 
 
+# Renders the User Account page
+@login_required
+def user_account(request):
+    return render(request, 'user-account.html')
+
+
 # Renders the account registration form using the customized allauth form
 def register(request):
     if request.method == 'POST':
@@ -333,7 +339,8 @@ def delete_account(request):
 def logged_user_details(request):
 
     try:
-        app_user = get_object_or_404(AppUser, username=username)
+        logged_in_user = request.user
+        user_data = AppUser.objects.get(user=logged_in_user)
         user_favorites = FavouriteSelection.objects.filter(
             user=request.user, is_favorite=True
             )
@@ -342,7 +349,7 @@ def logged_user_details(request):
         is_user_approved = user_data.approved
 
         context = {
-            'user_data': app_user,
+            'user_data': user_data,
             'user_favorites': user_favorites
         }
         return render(request, 'profile.html', context)

@@ -38,6 +38,17 @@ body {
     border-bottom: 1px solid #64497017;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 #navbarNav {
     text-align: right;
 }
@@ -225,10 +236,17 @@ p {
 }
 
 .banner h5 {
-    margin-bottom: 50px;
+    margin-bottom: 5px;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: #ffff;
+    background-color: #6449707a;
+    color: #ffff;
+    width:auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #button-about {
@@ -299,7 +317,7 @@ h6 {
 #btn-join {
     color: #ffff;
     padding: 10px;
-    background-color: #0097B2;
+    background-color: #077386;
     border: none;
     margin-top: 30px;
     font-size: 1.3rem;
@@ -392,7 +410,7 @@ h6 {
 }
 
 #contact-card {
-    color: #0097B2;
+    color: #077386;
 }
 
 #contact-card h5 {
@@ -420,7 +438,7 @@ h6 {
 #contact-card i {
     margin-left: 10px;
     font-size: 1.3rem;
-    color: #0097B2;
+    color: #077386;
 }
 
 #contact-card a {
@@ -440,7 +458,7 @@ h6 {
 
 #about-other-contact a{
     text-decoration: underline;
-    color:#0097B2
+    color:#077386
 }
 
 #essentialOilsText {
@@ -512,9 +530,11 @@ h6 {
 /*Promo page */
 
 #promo-social .fa-brands {
-    color: #0097B2;
+    color: #077386;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: larger;
+    padding-right: 5px;
+    padding-left: 5px;
 }
 
 #promo-social a {
@@ -569,7 +589,7 @@ h6 {
 }
 
 #detailsArea i {
-    color: #0097B2;
+    color: #077386;
     font-size: 1.3rem;
     padding: 0px 5px;
     text-decoration: none;
@@ -578,8 +598,9 @@ h6 {
 
 
 .contact-text {
-    color: #0097B2;
+    color: #077386;
     padding-bottom: 10px;
+    font-size: larger;
 }
 
 #detailsArea a {
@@ -902,14 +923,17 @@ li {
 }
 
 .contact-text-product {
-    color: #0097B2;
+    color: #077386;
     text-decoration: none;
     margin-bottom: 20px;
+    font-size: larger;
 }
 
 .contact-text-product i {
-    color: #0097B2;
-    font-size: large;
+    color: #077386;
+    font-size: x-large;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .contact-text-product a {
@@ -1161,7 +1185,7 @@ label#ailment-filter-name {
 }
 
 #login-button {
-    background-color: #0097B2;
+    background-color: #077386;
     width: 40%;
     font-size: large;
     border: none;
@@ -1171,7 +1195,7 @@ label#ailment-filter-name {
 
 #login-button:hover {
     background-color: #ffff;
-    color: #0097B2;
+    color: #077386;
 }
 
 #register-button-modal {
@@ -1287,12 +1311,12 @@ label#label-password {
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: solid 1px #0097B2;
+    border-bottom: solid 1px #077386;
 }
 
 #register-section button {
-    background-color: #0097B2;
-    border: #0097B2 solid 2px;
+    background-color: #077386;
+    border: #077386 solid 2px;
     color: #ffff;
     margin-top: 10px;
     width: 50%;
@@ -1301,7 +1325,7 @@ label#label-password {
 }
 
 #register-section button:hover {
-    color: #0097B2;
+    color: #077386;
     background-color: #ffff;
 }
 
@@ -1326,8 +1350,8 @@ label#label-password {
 }
 
 button.reset-password-button {
-    background-color: #0097B2;
-    border: #0097B2 solid 2px;
+    background-color: #077386;
+    border: #077386 solid 2px;
     color: #ffff;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -1337,12 +1361,12 @@ button.reset-password-button {
 }
 
 button.reset-password-button:hover {
-    color: #0097B2;
+    color: #077386;
     background-color: #ffff;
 }
 
 .contact-us-link {
-    color: #0097B2;
+    color: #077386;
     text-decoration: none;
     font-weight: 600;
 }
@@ -1360,8 +1384,8 @@ button.reset-password-button:hover {
 }
 
 #submit-reset button {
-    background-color: #0097B2;
-    border: #0097B2 solid 2px;
+    background-color: #077386;
+    border: #077386 solid 2px;
     color: #ffff;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -1371,12 +1395,12 @@ button.reset-password-button:hover {
 }
 
 #submit-reset button:hover {
-    color: #0097B2;
+    color: #077386;
     background-color: #ffff;
 }
 
 #contact-us-reset {
-    color: #0097B2;
+    color: #077386;
 }
 
 #contact-us-reset a {
@@ -1387,7 +1411,7 @@ button.reset-password-button:hover {
     border-top: none;
     border-right: none;
     border-left: none;
-    border-bottom: solid 1px #0097B2;
+    border-bottom: solid 1px #077386;
 }
 
 #allauth-reset-password label {
@@ -1493,5 +1517,14 @@ button.reset-password-button:hover {
         margin-top: 0;
         width: auto;
         top: auto;
+    }
+
+    .contact-text-product {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    #promo-social .fa-brands {
+        font-size: x-large;
     }
 }
