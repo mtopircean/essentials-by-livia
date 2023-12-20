@@ -47,7 +47,7 @@ urlpatterns = [
          name='update_product'),
     path('delete-product/<int:product_id>/', views.delete_product,
          name='delete_product'),
-    path('register.html', views.register,
+    path('register/', views.register,
          name='register'),
 
     # URLs for CRUD operations on users
@@ -55,7 +55,7 @@ urlpatterns = [
          name='create_product'),
     path('user-account.html', views.user_account,
          name='user_account'),
-    path('profile.html', views.logged_user_details,
+    path('profile/', views.logged_user_details,
          name='logged_user_details'),
 
     path('register-success.html', views.register_success,
@@ -72,7 +72,7 @@ urlpatterns = [
     # URL for favouriting a product
     path('favorites/<int:product_id>/', views.favourite_selection,
          name='favourite_selection'),
-    path('profile/', views.display_favorites,
+    path('display_favorites/', views.display_favorites,
          name='display_favorites'),
     path('filter-ailments/', views.filter_ailments,
          name='filter_ailments'),

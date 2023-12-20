@@ -22,7 +22,7 @@
             <div class="button-area">
                 <!--Button submitting the form and link to register.html page-->
                 <button type="submit" class="btn btn-primary" id="login-button">Login</button>
-                <a id="register-button-modal" href="register.html" class="btn btn-secondary">Register</a>
+                <a id="register-button-modal" href="{% url 'register' %}" class="btn btn-secondary">Register</a>
             </div>
             <div class="password-change-forgot">
                 <!--Link to allauth password recovery form -->
