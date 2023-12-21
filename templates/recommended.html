@@ -6,7 +6,8 @@
     {% if messages %}
     {% for message in messages %}
     {% if forloop.first %}
-    <div id="toastTrigger" style="display: none;" data-message="{{ message }}"></div>
+    <div id="toastTrigger" style="display: none;" data-message="{{ message }}">
+    </div>
     {% endif %}
     {% endfor %}
     {% endif %}
@@ -141,7 +142,7 @@
                                 </form>
                                 {% endif %}
                                 <h6>Description:</h6>
-                                <span class="product-description">{{ product.description | safe }}</span>
+                                <div class="product-description">{{ product.description | safe }}</div>
                                 <br>
                                 <h6>Ailments:</h6>
                                 {% for ailment in product.ailments.all %}
@@ -165,98 +166,98 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="product-separator">
-                            <hr>
-                        </div>
-                        {% endfor %}
                     </div>
+                    <div class="product-separator">
+                        <hr>
+                    </div>
+                    {% endfor %}
                 </div>
-
             </div>
+
         </div>
     </div>
+</div>
 
-    <!--Add Product Modal-->
-    <div class="modal" id="addProductModal" aria-labelledby="addProductModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+<!--Add Product Modal-->
+<div class="modal" id="addProductModal" aria-labelledby="addProductModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div>
             <div>
-                <div>
-                    {% include 'add-product-modal.html' %}
-                </div>
+                {% include 'add-product-modal.html' %}
             </div>
         </div>
     </div>
+</div>
 
-    {% else %}
-    {% if user.is_authenticated and not user.is_staff %}
-    <!--View if user is not approved by admin prompting them to wait for approval before accessing the tool-->
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" id="register-recommended-login">
-                <div class="d-flex align-items-center justify-content-center text-center">
-                    <p id="text-pending-approval">Your request to access our recommendation tool is currently being
-                        processed. You will be notified
-                        once this is completed.
-                        We take all efforts for the process to be as fast as possible.
-                        Please feel free to reach out if you have any questions or suggestions:
-                    </p>
-                </div>
-                <div class="container">
-                    <div id="contact-card" class="card">
-                        <div class="card-body text-center">
-                            <div class="text-left">
-                                <h6 class="d-inline">Find me on social:</h6>
-                                <a href="https://wa.me/+353876403084" target="_blank">
-                                    <i class="fa-brands fa-whatsapp"></i>
-                                </a>
-                                <a href="https://www.facebook.com/gherasim.cosmina" target="_blank">
-                                    <i class="fa-brands fa-facebook-messenger"></i>
-                                </a>
-                                <a href="https://www.facebook.com/gherasim.cosmina" target="_blank" class="d-inline">
-                                    <i class="fa-brands fa-facebook"></i>
-                                </a>
-                                <a href="https://tinyurl.com/yc2knt2p" target="_blank" class="d-inline">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </div>
-                            <h6 id="about-other-contact" class="text-left">
-                                <span>Contact form: <a
-                                        href="https://beta-doterra.myvoffice.com/cosminatopircean/#/contactUs"
-                                        target="_blank">click here...</a> </span><br>
-                            </h6>
+{% else %}
+{% if user.is_authenticated and not user.is_staff %}
+<!--View if user is not approved by admin prompting them to wait for approval before accessing the tool-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12" id="register-recommended-login">
+            <div class="d-flex align-items-center justify-content-center text-center">
+                <p id="text-pending-approval">Your request to access our recommendation tool is currently being
+                    processed. You will be notified
+                    once this is completed.
+                    We take all efforts for the process to be as fast as possible.
+                    Please feel free to reach out if you have any questions or suggestions:
+                </p>
+            </div>
+            <div class="container">
+                <div id="contact-card" class="card">
+                    <div class="card-body text-center">
+                        <div class="text-left">
+                            <h6 class="d-inline">Find me on social:</h6>
+                            <a href="https://wa.me/+353876403084" target="_blank">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.facebook.com/gherasim.cosmina" target="_blank">
+                                <i class="fa-brands fa-facebook-messenger"></i>
+                            </a>
+                            <a href="https://www.facebook.com/gherasim.cosmina" target="_blank" class="d-inline">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="https://tinyurl.com/yc2knt2p" target="_blank" class="d-inline">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
                         </div>
+                        <h6 id="about-other-contact" class="text-left">
+                            <span>Contact form: <a
+                                    href="https://beta-doterra.myvoffice.com/cosminatopircean/#/contactUs"
+                                    target="_blank">click here...</a> </span><br>
+                        </h6>
                     </div>
                 </div>
             </div>
         </div>
-        {% else %}
-        <div class="container">
-            <!--View of user not logged in. It requests either registration or login before moving to the next screen-->
-            <div class="row">
-                <div class="col-md-6" id="register-recommended-login">
-                    <div class="d-flex align-items-center justify-content-center text-center">
-                        <p>In order to access our fantastic tool, you either have to be logged into your account or
-                            registered.
-                            <br><span class="miss-recommended">Don`t miss out!</span></p>
-                    </div>
-                    <div class="text-center" id="button-recommended-login">
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal"
-                            id="login-button">Login</button>
-                        <a href="{% url 'register' %}" class="btn btn-primary" id="register-button-modal">Register</a>
-
-                    </div>
-                </div>
-
-                <div class="col-md-6 d-none d-md-block">
-                    <div class="d-flex justify-content-center align-items-center" style="height: 70vh;">
-                        <img src="../static/images/register-recommended-image.webp"
-                            alt="Essential Oil Bottle with rose petals around it" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-        {% endif %}
-        {% endif %}
     </div>
+    {% else %}
+    <div class="container">
+        <!--View of user not logged in. It requests either registration or login before moving to the next screen-->
+        <div class="row">
+            <div class="col-md-6" id="register-recommended-login">
+                <div class="d-flex align-items-center justify-content-center text-center">
+                    <p>In order to access our fantastic tool, you either have to be logged into your account or
+                        registered.
+                        <br><span class="miss-recommended">Don`t miss out!</span></p>
+                </div>
+                <div class="text-center" id="button-recommended-login">
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal"
+                        id="login-button">Login</button>
+                    <a href="{% url 'register' %}" class="btn btn-primary" id="register-button-modal">Register</a>
+
+                </div>
+            </div>
+
+            <div class="col-md-6 d-none d-md-block">
+                <div class="d-flex justify-content-center align-items-center" style="height: 70vh;">
+                    <img src="../static/images/register-recommended-image.webp"
+                        alt="Essential Oil Bottle with rose petals around it" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endif %}
 </div>
 {% endblock %}

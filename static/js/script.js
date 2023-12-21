@@ -23,27 +23,46 @@ change toggle icon, change toggle icon based on screensize
 */
 
 $(document).ready(function () {
-    var isAilmentListVisible = $(window).width() >= 768;
-    $(".filter-content").show();
+    var isMobileView = $(window).width() < 768;
+    updateAilmentListVisibility(isMobileView);
 
     $("#toggle-ailment-list").click(function () {
-        $(".filter-content").slideToggle();
-        isAilmentListVisible = !isAilmentListVisible;
+        toggleAilmentList();
+    });
 
-        $("#toggle-ailment-list").html("Ailment list " + (isAilmentListVisible ? '&#11165;' :
-            '&#11167;'));
+    $("#searchailment").focus(function () {
+        if (isMobileView && !isAilmentListVisible()) {
+            toggleAilmentList();
+        }
     });
 
     $(window).resize(function () {
-        isAilmentListVisible = $(window).width() < 768;
-
-        if (!isAilmentListVisible) {
-            $(".filter-content").hide();
-        }
-
-        $("#toggle-ailment-list").html("Ailment list " + (isAilmentListVisible ? '&#11165;' :
-            '&#11167;'));
+        isMobileView = $(window).width() < 768;
+        updateAilmentListVisibility(isMobileView);
     });
+
+    function toggleAilmentList() {
+        $(".filter-content").slideToggle();
+    }
+
+    function updateAilmentListVisibility(isMobile) {
+        if (isMobile) {
+            $(".filter-content").hide();
+        } else {
+            $(".filter-content").show();
+        }
+    }
+
+    function isAilmentListVisible() {
+        return $(".filter-content").is(":visible");
+    }
+
+    function updateToggleText() {
+        var toggleSymbol = '&#11167;';
+        $("#toggle-ailment-list").html("Ailment list " + toggleSymbol);
+    }
+
+    updateToggleText();
 });
 
 /* Expandeble section in profile page 
