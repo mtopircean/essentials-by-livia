@@ -988,7 +988,7 @@ class CloseConnectionMiddleware:
 
 * Although not an issue/bug, using in limited scenarios url`s guided to a template, like bellow:
 
-```
+```python
 path('user-account.html', views.user_account,
          name='user_account'),
 ```

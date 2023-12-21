@@ -215,3 +215,14 @@ $(document).ready(function () {
         form.submit();
     });
 });
+
+/* Profile toasts */
+
+$(document).ready(function() {
+    $('#edit-profile-form').on('submit', function(event) {
+        event.preventDefault();
+        var toastEl = document.getElementById('profileToast');
+        var toast = new bootstrap.Toast(toastEl);
+        toast.show();
+    });
+});
