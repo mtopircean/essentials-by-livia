@@ -327,7 +327,7 @@ def delete_account(request):
     if request.method == 'POST':
         request.user.delete()
         logout(request)
-        return redirect('index')
+        return redirect('/?account_deleted=true')
 
     return render(request, 'profile.html')
 

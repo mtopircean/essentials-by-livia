@@ -157,7 +157,7 @@ Incorporates also the clear all button and functionality
 
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById('ailment-filter-form');
-    if(!form) {
+    if (!form) {
         return;
     }
     const checkboxes = form.querySelectorAll('.filter-checkbox');
@@ -216,13 +216,24 @@ $(document).ready(function () {
     });
 });
 
-/* Profile toasts */
+/* Update profile toast */
 
-$(document).ready(function() {
-    $('#edit-profile-form').on('submit', function(event) {
+$(document).ready(function () {
+    $('#edit-profile-form').on('submit', function (event) {
         event.preventDefault();
         var toastEl = document.getElementById('profileToast');
         var toast = new bootstrap.Toast(toastEl);
         toast.show();
     });
+});
+
+/* Delete account toast */
+
+$(document).ready(function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('account_deleted') === 'true') {
+        var toastEl = document.getElementById('deleteAccountToast');
+        var toast = new bootstrap.Toast(toastEl);
+        toast.show();
+    }
 });
