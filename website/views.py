@@ -359,6 +359,7 @@ def edit_profile(request):
     user_context = {
         'user_data': app_user,
     }
+    messages.success(request, 'Profile edited successfully!')
     return render(request, 'profile.html', user_context)
 
 

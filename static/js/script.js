@@ -217,14 +217,13 @@ $(document).ready(function () {
 });
 
 /* Update profile toast */
-
 $(document).ready(function () {
-    $('#edit-profile-form').on('submit', function (event) {
-        event.preventDefault();
-        var toastEl = document.getElementById('profileToast');
-        var toast = new bootstrap.Toast(toastEl);
-        toast.show();
-    });
+    var toastTrigger = $('#toastTrigger');
+    if (toastTrigger.length) {
+        var message = toastTrigger.data('message');
+        $('#profileActionToast .toast-body').text(message);
+        $('#profileActionToast').toast('show');
+    }
 });
 
 /* Delete account toast */
@@ -239,7 +238,7 @@ $(document).ready(function () {
 });
 
 /* Toast for changes to product section */
-$(document).ready(function() {
+$(document).ready(function () {
     var toastTrigger = $('#toastTrigger');
     if (toastTrigger.length) {
         var message = toastTrigger.data('message');
@@ -251,7 +250,7 @@ $(document).ready(function() {
 
 /* Toast for changes to promotion section */
 
-$(document).ready(function() {
+$(document).ready(function () {
     var toastTrigger = $('#toastTrigger');
     if (toastTrigger.length) {
         var message = toastTrigger.data('message');
