@@ -398,6 +398,11 @@ h6 {
 
 /* About page */
 
+#about-oils-img {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
 #about-container {
 
     margin-top: 15px;
