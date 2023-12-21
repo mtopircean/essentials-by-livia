@@ -305,6 +305,10 @@ class CustomSignupForm(SignupForm):
         return user
 ```
 
+FEATURES----Intentional limitations:
+
+- Admin has view only rights for AppUser in admin section. Any changes need to be operated in the User section in Admin.
+- Only areas in the product section and promotion section are the descriptions. Anything else needs to be updated from administrator panel in order to avoid massive database disruption.
 
 #### Features implemented
 
@@ -540,6 +544,8 @@ Colours where selected in line with the theme, but also to offer a high level of
 List of colours used:
 ![Alt text](/static/readme/color-palette.png)
 
+!!!NOTE: Due to accessibility issues, changed color code for blue to #077386;
+
 ### Font and text style
 Text and font used are consistent across the website with variances in regards of decoration and size. Font used was selected from Google Fonts:
 ![Alt text](/static/readme/font.png)
@@ -659,7 +665,7 @@ To clone the repository:
 ![Alt text](/static/readme/about-me-html-test.png)
 
 * Profile
-![Alt text](/static/readme/)
+![Alt text](/static/readme/profile-html-test.png)
 
 * About oils
 ![Alt text](/static/readme/about-oils-html-test.png)
@@ -1067,6 +1073,11 @@ Solution came as various lines of code overwritting the keyboard focus:
 path('user-account.html', views.user_account,
          name='user_account'),
 ```
+
+* In the profile page, if you have a product selected as favorite and you operate a change to your profile content, the page refreshes without the favorite item visible.
+If you refresh the page again, it will show the product. I believe it to be a caching issue.
+
+* HTML Validator has brought several issues, mostly due to data being pulled repetative through django inquiries and populating data in the page. I haven`t made massive changes as I do not have the time at the moment to optimize it. This will be done in future iterations.
 
 # Credits
 
