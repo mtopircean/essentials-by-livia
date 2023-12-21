@@ -16,7 +16,7 @@ The website is done, but there is a multitude of elements that we still intend t
     * [The Strategy Plane](#the-strategy-plane)
         * [Planning](#planning)
         * [Kanban Board](#kanban-board)
-            * [Kanban overview](#kanban-overiew)
+            * [Kanban overview](#kanban-overview)
             * [Epics](#epics)
             * [Stories](#stories)
             * [Stories prioritization](#stories-prioritization)
@@ -41,7 +41,7 @@ The website is done, but there is a multitude of elements that we still intend t
         * [Imagery](#imagery)
         * [Display size optimization](#display-size-optimization)
         * [Accessibility](#accessibility)
-* [Deployment](#deployment-and-local-development)
+* [Deployment](#deployment)
     * [How do Deploy](#how-to-deploy)
     * [How to Fork](#how-to-fork)
     * [How to Clone](#how-to-clone)
@@ -63,10 +63,12 @@ The website is done, but there is a multitude of elements that we still intend t
             * [Static Pages](#static-pages)
             * [Decorator Limitation](#decorator-limitations)
     * [Local functionality tests](#local-functionality-tests)
-    * [Fixed bugs](#fixed-bugs-and-current-errors)
+    * [Fixed bugs](#fixed-bugs)
+    * [Open bugs](#open-bugs)
+
 * [Credits](#credits)
     * [Code Used](#code-used)
-    * [Other](#other)
+    * [Other Credits](#other-credits)
 * [About Author](#about-author)
 # The 5 planes strategy
 ## The Strategy Plane
@@ -581,7 +583,7 @@ Display size optimization:
 ![Alt text](/static/readme/am-i-responsive.png)
 
 # Deployment
-## How do Deploy
+## How to Deploy
 Deployment of the website was done using HEROKU, and can be accessed here [ESSENTIALS BY LIVIA](https://essentials-by-livia-efe89c429260.herokuapp.com/).
 
 ## How to Fork
@@ -1114,6 +1116,7 @@ If you refresh the page again, it will show the product. I believe it to be a ca
 1. First of all thank you to all the Tutors and my mentor for their support. They have helped me with various solutions to my problems.
 
 2. Connection not closing issue.
+
 ISSUE:
 
 Elephant SQL not closing connections.
@@ -1140,7 +1143,7 @@ class CloseConnectionMiddleware:
 
 3. Guidance has been taken from online environment on various solutions to issues, but no code was copied, just guidance on potential solutions.
 
-## Other
+## Other Credits
 * Deployment instructions in GitHub copied from kera-cudmore different repo and following the article written by her on how to write a readme.
 * Inspiration on readme structure taken from kera-cudmore repo`s and following the article written by her on how to write a readme.
 
