@@ -243,6 +243,69 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 
 ![Alt text](/static/readme/import-export.gif)
 
+EDITOR FILTER FOR ADMIN:
+- admin can navigate easier to the relevant section in the product list to edit the product. I`ve changed the filter to a product panel as the filter was irelevant for the administrator:
+
+![Alt text](/static/readme/admin-navigator.png)
+
+
+EASY CONTACT:
+- Always on WhatsApp
+
+![Alt text](/static/readme/on-wsapp.png)
+
+PERSONALIZED PAGES:
+Various pages are personalized to my websites style, like the registration form(although it uses allauth standards at some level...)
+I`ve created a special form separate to allauth one:
+
+```python
+class CustomSignupForm(SignupForm):
+    """
+    Created customized sign up form including
+    some specific elements to my application in addition to allauth own
+    """
+    first_name = forms.CharField(max_length=100)
+    last_name = forms.CharField(max_length=100)
+    email = forms.EmailField(max_length=300)
+    phone_number = forms.CharField(max_length=20)
+    username = forms.CharField(max_length=100)
+    join_team = forms.BooleanField(required=False)
+    i_want_to_know_more_about_the_products = forms.BooleanField(required=False)
+
+    def save(self, request):
+        # Save the user with the standard existing method
+        user = super(CustomSignupForm, self).save(request)
+
+        # Pull the cleaned data
+        user_data = self.cleaned_data
+
+        # Update the users with the input data
+        user.first_name = user_data['first_name']
+        user.last_name = user_data['last_name']
+        user.email = user_data['email']
+        user.username = user_data['username']
+
+        # Save the user
+        user.save()
+
+        # Creates the AppUser object
+        app_user = AppUser.objects.create(
+            user=user,
+            first_name=user_data['first_name'],
+            last_name=user_data['last_name'],
+            email=user_data['email'],
+            phone_number=user_data['phone_number'],
+            username=user_data['username'],
+            join_team=user_data['join_team'],
+            i_want_to_know_more_about_the_products=(
+                user_data['i_want_to_know_more_about_the_products']
+            )
+        )
+
+        return user
+```
+
+
 #### Features implemented
 
 **EPIC**|**STORY**|**Beneficiary**|**Impact on beneficiary**|**Link to feature**|**Feature**|**Status**
@@ -592,42 +655,32 @@ To clone the repository:
 # Testing and Validation
 ## HTML
 
-* Navbar
-
-* Footer
-
-* Base
-
 * About me
+![Alt text](/static/readme/about-me-html-test.png)
 
 * Profile
+![Alt text](/static/readme/)
 
 * About oils
+![Alt text](/static/readme/about-oils-html-test.png)
 
 * Contact
+![Alt text](/static/readme/contact-html-test.png)
 
 * Index
-
-* Allauth Forms
+![Alt text](/static/readme/index-html-test.png)
 
 * Promotions
-
-* What is the best essential oil for me (recommended.html) - for users not logged in
-
-* Register
-
-* What is the best essential oil for me (recommended.html) - not approved
+![Alt text](/static/readme/promotions-html-test.png)
 
 * Register
+![Alt text](/static/readme/register-html-test.png)
 
-* What is the best essential oil for me (recommended.html) approved
+* What is the best essential oil for me (recommended.html) approved user
+![Alt text](/static/readme/recommended-html-test.png)
 
-* 404
-
-* 403
-
-* 500
-
+* Error Pages
+![Alt text](/static/readme/error-html-test.png)
 
 ## CSS
 
@@ -973,6 +1026,26 @@ class CloseConnectionMiddleware:
 'website.middleware.CloseConnectionMiddleware',
 ```
 
+* Arrow simbol for hidden expandable areas had to be changed to a symbol readable by the mobile devices, expecially in chrome
+![Alt text](/static/readme/drop-down-arrow.png)
+
+* Filter reset was managing to remove the filters when you where selecting a product as favorite, but wasn`t reseting the checked boxes.
+Solution bellow manages to check the local storage for favorited items and if condition is meet, unchecks the filter boxes
+
+```Javascript
+if (localStorage.getItem('favoriteActionOccurred') === 'true') {
+        $('.filter-checkbox').prop('checked', false);
+        localStorage.removeItem('favoriteActionOccurred');
+    }
+```
+
+* Filter list not staying on if click in the search ailment section and trying to type an ailment. Basically, keyboard in mobile overwrites the filter list.
+Solution came as various lines of code overwritting the keyboard focus:
+
+```Javascript
+ var keyboardFocused = false;
+```
+
 ### Open bugs
 
 * Currently, once user regiters they are prompted to login again before account creation is confirmed.
@@ -987,6 +1060,8 @@ class CloseConnectionMiddleware:
 ![Alt text](/static/readme/after-favorites.png)
 
 * Although not an issue/bug, using in limited scenarios url`s guided to a template, like bellow:
+
+* Filtering function in the recommandation tool(What oil is suitable for me) acts a bit fidgety in mobile version.
 
 ```python
 path('user-account.html', views.user_account,
