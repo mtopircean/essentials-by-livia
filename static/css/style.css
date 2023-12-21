@@ -230,13 +230,14 @@ p {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 600px;
+    height: 70vh; /* or 600px, depending on your preference */
+    width: 100vw; /* Sets the width to 100% of the viewport width */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: 70vh;
     margin-bottom: 30px;
+    margin-left: calc(-50vw + 50%);
 }
 
 .banner {
