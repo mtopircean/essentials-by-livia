@@ -32,7 +32,7 @@
             {% if user.is_authenticated %}
             <div class="col-12">
                 <div class="text-center">
-                    <h5 class="toggle-details"> ACCOUNT DETAILS: <span class="toggle-icon">&#11167;</span></h5>
+                    <h5 class="toggle-details"> ACCOUNT DETAILS: <span class="toggle-icon">&#8645;</span></h5>
                 </div>
                 <form id="edit-profile-form" method="post" action="{% url 'edit_profile' %}">
                     {% csrf_token %}

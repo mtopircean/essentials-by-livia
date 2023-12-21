@@ -13,7 +13,7 @@ $(document).ready(function () {
         $("#detailsArea").slideToggle();
         isDetailsVisible = !isDetailsVisible;
 
-        $(".toggle-icon").html(isDetailsVisible ? '&#11165;' : '&#11167;');
+        $(".toggle-icon").html(isDetailsVisible ? '&#8645;' : '&#8645;');
     });
 });
 
@@ -24,6 +24,8 @@ change toggle icon, change toggle icon based on screensize
 
 $(document).ready(function () {
     var isMobileView = $(window).width() < 768;
+    var keyboardFocused = false;
+
     updateAilmentListVisibility(isMobileView);
 
     $("#toggle-ailment-list").click(function () {
@@ -33,12 +35,19 @@ $(document).ready(function () {
     $("#searchailment").focus(function () {
         if (isMobileView && !isAilmentListVisible()) {
             toggleAilmentList();
+            keyboardFocused = true;
         }
     });
 
+    $("#searchailment").blur(function () {
+        keyboardFocused = false;
+    });
+
     $(window).resize(function () {
-        isMobileView = $(window).width() < 768;
-        updateAilmentListVisibility(isMobileView);
+        if (!keyboardFocused) {
+            isMobileView = $(window).width() < 768;
+            updateAilmentListVisibility(isMobileView);
+        }
     });
 
     function toggleAilmentList() {
@@ -58,7 +67,7 @@ $(document).ready(function () {
     }
 
     function updateToggleText() {
-        var toggleSymbol = '&#11167;';
+        var toggleSymbol = '&#8645;';
         $("#toggle-ailment-list").html("Ailment list " + toggleSymbol);
     }
 
@@ -78,7 +87,7 @@ $(document).ready(function () {
         $("#user-details").slideToggle();
         isDetailsVisible = !isDetailsVisible;
 
-        $(".toggle-icon").html(isDetailsVisible ? '&#11165;' : '&#11167;');
+        $(".toggle-icon").html(isDetailsVisible ? '&#8645;' : '&#8645;');
     });
 });
 
