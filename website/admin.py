@@ -19,7 +19,7 @@ class AddProductAdmin(SummernoteModelAdmin, ImportExportModelAdmin):
     summernote_fields = ('description',)
     resource_class = AddProductResource
     list_filter = ('name', 'ailments', 'added_on',)
-    search_fields = ('name', 'ailments',)
+    search_fields = ('name', 'ailments__name',)
     list_display = ('name', 'price',)
 
 
