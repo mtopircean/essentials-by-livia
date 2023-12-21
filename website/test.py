@@ -7,68 +7,93 @@ from django.contrib.auth.models import User
 from .models import AddProduct, AddPromotion
 
 
-# Class for testing various static pages
 class StaticPages(TestCase):
-
-    # Testing for index page view
+    """
+    Class for testing various static pages
+    """
     def test_index_page_view(self):
+        """
+        Testing for index page view
+        """
         response = self.client.get(reverse('index'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
 
-    # Testing for About Oils view
     def test_about_oils_view(self):
+        """
+        Testing for About Oils view
+        """
         response = self.client.get(reverse('about_oils'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'about-oils.html')
 
-    # Testing for About me view
     def test_about_me_view(self):
+        """
+        Testing for About me view
+        """
         response = self.client.get(reverse('about_me'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'about-me.html')
 
-    # Testing for Contact page view
     def test_contact_view(self):
+        """
+        Testing for Contact page view
+        """
         response = self.client.get(reverse('contact'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'contact.html')
 
-    # Testing for Register page view
     def test_register_view(self):
+        """
+        Testing for Register page view
+        """
         response = self.client.get(reverse('register'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'register.html')
 
-    # Testing for Promotions page view
     def test_promotions_view(self):
+        """
+        Testing for Promotions page view
+        """
         response = self.client.get(reverse('promotions'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'promotions.html')
 
-    # Testing for Recommended page view
     def test_recommended_view(self):
+        """
+        Testing for Recommended page view
+        """
         response = self.client.get(reverse('recommended'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'recommended.html')
 
-    # Testing for GDPR page view
     def test_data_protection_view(self):
+        """
+        Testing for GDPR page view
+        """
         response = self.client.get(reverse('data_protection'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'data-protection.html')
 
-    # Testing for Error pages views
     def test_404_error_view(self):
+        """
+        Testing for 404 page
+        """
         response = self.client.get('/404/')
         self.assertEqual(response.status_code, 404)
         self.assertTemplateUsed(response, '404.html')
 
     def test_403_error_view(self):
+        """
+        Testing for 403 page
+        """
         response = self.client.get('/403/')
         self.assertEqual(response.status_code, 403)
 
     def test_500_error_view(self):
+        """
+        Testing for 500 page
+        """
         with self.assertRaises(Exception):
             self.client.get('/500/')
 

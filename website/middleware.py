@@ -2,8 +2,10 @@
 from django.db import connection
 
 
-# Create middleware class for closing database connections
 class CloseConnectionMiddleware:
+    """
+    Create middleware class for closing database connections
+    """
     def __init__(self, get_response):
         self.get_response = get_response
 

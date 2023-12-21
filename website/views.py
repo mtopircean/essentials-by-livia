@@ -1,4 +1,3 @@
-# importing necessary models and modules
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
@@ -15,8 +14,10 @@ from django.contrib.admin.views.decorators import staff_member_required
 from django.contrib import messages
 
 
-# Renders the index page
 def index_page(request):
+    """
+    Renders the index page
+    """
     return render(request, 'index.html')
 
 
@@ -24,24 +25,32 @@ def index(request):
     return render(request, 'index.html')
 
 
-# Renders the About Oils page
 def about_oils(request):
+    """
+    Renders the About Oils page
+    """
     return render(request, 'about-oils.html')
 
 
-# Renders the About Me page
 def about_me(request):
+    """
+    Renders the About Me page
+    """
     return render(request, 'about-me.html')
 
 
-# Renders the GDPR page
 def data_protection(request):
+    """
+    Renders the GDPR page
+    """
     return render(request, 'data-protection.html')
 
 
-# Approve user view:
 @staff_member_required
 def user_approval(request):
+    """
+    Approve user view:
+    """
     users_pending_approval = AppUser.objects.filter(approved=False)
 
     context = {
@@ -51,8 +60,10 @@ def user_approval(request):
     return render(request, 'profile.html', context)
 
 
-# Renders the Promotions page
 def promotions(request):
+    """
+    Renders the Promotions page
+    """
 
     # Collects all promotions and checks admin status
     promotions = AddPromotion.objects.all()
@@ -67,18 +78,22 @@ def promotions(request):
     return render(request, 'promotions.html', template_promotion)
 
 
-# Renders the edit sections in promotion
 @staff_member_required
 def edit_promotion(request, promotion_id):
+    """
+    Renders the edit sections in promotion
+    """
     promotion = get_object_or_404(AddPromotion, pk=promotion_id)
     return render(request, 'edit_promotion.html', {'promotion': promotion})
 
 
-# Updates the promotion description:
-# first retrieves or 404 if not found, then updates
-# and redirects user bat to promotion page
 @staff_member_required
 def update_description(request, promotion_id):
+    """
+    Updates the promotion description:
+    first retrieves or 404 if not found, then updates
+    and redirects user bat to promotion page
+    """
     if request.method == 'POST':
         promotion = get_object_or_404(AddPromotion, pk=promotion_id)
         new_description = request.POST.get('new_description')
@@ -89,10 +104,12 @@ def update_description(request, promotion_id):
     return redirect('promotions')
 
 
-# Deletes promotion:first retrieves or 404 if not found, then deletes
-# and redirects user bat to promotion page
 @staff_member_required
 def delete_promotion(request, promotion_id):
+    """
+    Deletes promotion:first retrieves or 404 if not found, then deletes
+    and redirects user bat to promotion page
+    """
     if request.method == 'POST':
         promotion = get_object_or_404(AddPromotion, pk=promotion_id)
         promotion.delete()
@@ -101,8 +118,10 @@ def delete_promotion(request, promotion_id):
     return redirect('promotions')
 
 
-# Displays products based on ailments and favorites
 def recommended(request):
+    """
+    Displays products based on ailments and favorites
+    """
     # Retries ailments, products and validates user admin status
     ailments = Ailment.objects.annotate(
         num_products=Count('addproduct')
@@ -143,11 +162,13 @@ def recommended(request):
     return render(request, 'recommended.html', context)
 
 
-# Edit product description: first retrieves
-# or 404 if not found, then updates description
-# and redirects user to recommended page
 @staff_member_required
 def edit_product(request, product_id):
+    """
+    Edit product description: first retrieves
+    or 404 if not found, then updates description
+    and redirects user to recommended page
+    """
     product = get_object_or_404(AddProduct, pk=product_id)
 
     if request.method == 'POST':
@@ -162,11 +183,13 @@ def edit_product(request, product_id):
         )
 
 
-# Update product description: first retrieves
-# product or 404 if not found, then updates description
-# if user is admin and redirects to recommended
 @staff_member_required
 def update_product(request, product_id):
+    """
+    Update product description: first retrieves
+    product or 404 if not found, then updates description
+    if user is admin and redirects to recommended
+    """
     if request.method == 'POST':
         product = get_object_or_404(AddProduct, pk=product_id)
 
@@ -181,10 +204,13 @@ def update_product(request, product_id):
     return redirect('recommended')
 
 
-# Delete product: first retrieves product or 404 if not found, then deletes it
-# if user is admin and redirects to recommended
 @staff_member_required
 def delete_product(request, product_id):
+    """
+    Delete product: first retrieves product or 404 if not found,
+    then deletes it if user is admin and
+    redirects to recommended
+    """
     if request.method == 'POST':
         product = get_object_or_404(AddProduct, pk=product_id)
         product.delete()
@@ -194,9 +220,12 @@ def delete_product(request, product_id):
     return redirect('recommended')
 
 
-# Filters products based on selected ailments/conditions#
 @login_required
 def filter_ailments(request):
+    """
+    Filters products based on selected ailments/conditions
+    """
+
     # Collects ailments, products, selected filters,
     # collects only the ailments with one product associated to them
     ailments = Ailment.objects.annotate(
@@ -250,19 +279,25 @@ def filter_ailments(request):
     return render(request, 'recommended.html', context)
 
 
-# Renders the Contact page
 def contact(request):
+    """
+    Renders the Contact page
+    """
     return render(request, 'contact.html')
 
 
-# Renders the User Account page
 @login_required
 def user_account(request):
+    """
+    Renders the User Account page
+    """
     return render(request, 'user-account.html')
 
 
-# Renders the account registration form using the customized allauth form
 def register(request):
+    """
+    Renders the account registration form using the customized allauth form
+    """
     if request.method == 'POST':
         signup_form = CustomSignupForm(request.POST)
         if signup_form.is_valid():
@@ -300,10 +335,12 @@ def register(request):
     return render(request, 'register.html', {'signup_form': signup_form})
 
 
-# Allows to edit the user profile: retrieves user data
-# updates the data
 @login_required
 def edit_profile(request):
+    """
+    Allows to edit the user profile: retrieves user data
+    updates the data
+    """
     user = request.user
     app_user = AppUser.objects.get(user=user)
 
@@ -325,9 +362,11 @@ def edit_profile(request):
     return render(request, 'profile.html', user_context)
 
 
-# Deletes a user account and returns to index
 @login_required
 def delete_account(request):
+    """
+    Deletes a user account and returns to index
+    """
     if request.method == 'POST':
         request.user.delete()
         logout(request)
@@ -336,11 +375,13 @@ def delete_account(request):
     return render(request, 'profile.html')
 
 
-# Displays the logged in user details: retrieves user and favorite data
-# creates context and displays it
-# prints 404 error if user doesn`t exist
 @login_required
 def logged_user_details(request):
+    """
+    Displays the logged in user details: retrieves user and favorite data
+    creates context and displays it
+    prints 404 error if user doesn`t exist
+    """
 
     try:
         logged_in_user = request.user
@@ -362,21 +403,26 @@ def logged_user_details(request):
         raise Http404("User does not exist")
 
 
-# Displays custom logout
 @login_required
 def custom_logout(request):
+    """
+    Displays custom logout
+    """
     logout(request)
     return redirect('index')
 
 
-# Adds and removes product to and from favorites
-# Applicable only for logged in users
-# Retrieves the product and checks is favorite status
-# If not favorite creates a new Favourite selection
-# Redirects to recommended or to profile when a favourite selection is removed
-# this is done by passing additional info in the url at form submission
 @login_required
 def favourite_selection(request, product_id):
+    """
+    Adds and removes product to and from favorites
+    Applicable only for logged in users
+    Retrieves the product and checks is favorite status
+    If not favorite creates a new Favourite selection
+    Redirects to recommended or to profile when a favourite
+    selection is removed this is done by passing
+    additional info in the url at form submission
+    """
     product = get_object_or_404(AddProduct, id=product_id)
     redirect_to = request.GET.get('source', 'recommended')
     try:
@@ -396,9 +442,11 @@ def favourite_selection(request, product_id):
         return redirect('recommended')
 
 
-# Displays user favorites:collects, creates context, renders
 @login_required
 def display_favorites(request):
+    """
+    Displays user favorites:collects, creates context, renders
+    """
     user_favorites = FavouriteSelection.objects.all()
     context = {
         'user_favorites': user_favorites,
@@ -406,9 +454,11 @@ def display_favorites(request):
     return render(request, 'profile.html', context)
 
 
-# Creates a product from the front end view when logged as an admin
 @staff_member_required
 def create_product(request):
+    """
+    Creates a product from the front end view when logged as an admin
+    """
     if request.method == 'POST':
         # Retrieve form data
         product_name = request.POST.get('add_product_name')
@@ -437,9 +487,11 @@ def create_product(request):
         return redirect('recommended')
 
 
-# Creates a promotion from the front end view when logged as an admin
 @staff_member_required
 def create_promotion(request):
+    """
+    Creates a promotion from the front end view when logged as an admin
+    """
     if request.method == 'POST':
         # Retrieve form data
         promotion_name = request.POST.get('add_promotion_name')
@@ -461,33 +513,51 @@ def create_promotion(request):
         return redirect('promotions')
 
 
-# Renders confirmation of successful registration page
 @login_required
 def register_success(request):
+    """
+    Renders confirmation of successful registration page
+    """
     return render(request, 'register-success.html')
 
 
-# Renders errors: 403, 404, 500
 def handler403(request, exception):
+    """
+    Renders errors: 403
+    """
     return render(request, '403.html', status=403)
 
 
 def handler404(request, exception):
+    """
+    Renders errors: 404
+    """
     return render(request, '404.html', status=404)
 
 
 def handler500(request):
+    """
+    Renders errors: 500
+    """
     return render(request, '500.html', status=500)
 
 
-# Views created for testing purpose
 def custom_403_handler(request, exception):
+    """
+    Views created for testing purpose on 403 page
+    """
     return render(request, '403.html', status=403)
 
 
 def simulated_403_view(request):
+    """
+    Views created for testing purpose on 403 page
+    """
     return HttpResponseForbidden()
 
 
 def simulated_500_view(request):
+    """
+    Views created for testing purpose on 500 page
+    """
     raise Exception("Simulated 500 error")

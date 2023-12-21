@@ -4,9 +4,11 @@ from .models import AppUser
 from allauth.account.forms import ResetPasswordForm
 
 
-# Created customized sign up form including
-# some specific elements to my application in addition to allauth own
 class CustomSignupForm(SignupForm):
+    """
+    Created customized sign up form including
+    some specific elements to my application in addition to allauth own
+    """
     first_name = forms.CharField(max_length=100)
     last_name = forms.CharField(max_length=100)
     email = forms.EmailField(max_length=300)

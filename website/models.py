@@ -5,16 +5,20 @@ from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
 
-# Defines the Ailment model
 class Ailment(models.Model):
+    """
+    Defines the Ailment model
+    """
     name = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
 
 
-# Defines the AddProduct model including relationship to Ailment
 class AddProduct(models.Model):
+    """
+    Defines the AddProduct model including relationship to Ailment
+    """
     name = models.CharField(max_length=100)
     description = models.TextField()
     ailments = models.ManyToManyField(Ailment)
@@ -29,8 +33,10 @@ class AddProduct(models.Model):
         return self.name
 
 
-# Defines the AddPromotion model
 class AddPromotion(models.Model):
+    """
+    Defines the AddPromotion model
+    """
     name = models.CharField(max_length=100)
     description = models.TextField()
     image_url = models.CharField(max_length=255)
@@ -43,8 +49,10 @@ class AddPromotion(models.Model):
         return self.name
 
 
-# Define the AppUser model with additional fields to the standard User module
 class AppUser(models.Model):
+    """
+    Define the AppUser model with additional fields to the standard User module
+    """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
@@ -60,9 +68,11 @@ class AppUser(models.Model):
         return f"{self.first_name} {self.last_name}"
 
 
-# Updates AppUser when User change is triggered
 @receiver(pre_save, sender=User)
 def update_app_user_from_user(sender, instance, **kwargs):
+    """
+    Updates AppUser when User change is triggered
+    """
     try:
         app_user = AppUser.objects.get(user=instance)
         app_user.first_name = instance.first_name
@@ -73,8 +83,10 @@ def update_app_user_from_user(sender, instance, **kwargs):
         pass
 
 
-# Define the FavouriteSelection model and link to User
 class FavouriteSelection(models.Model):
+    """
+    Define the FavouriteSelection model and link to User
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     product = models.ForeignKey(AddProduct, on_delete=models.CASCADE)
     favourite_date = models.DateTimeField(auto_now_add=True)

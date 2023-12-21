@@ -6,8 +6,7 @@ from .views import simulated_403_view
 from .views import simulated_500_view
 from website.views import custom_403_handler
 
-# URL  patterns needed for application.
-# Includes all necessary CRUD operations on promotions and products
+
 urlpatterns = [
 
     # General views for part of the static pages, and allauth functionalities

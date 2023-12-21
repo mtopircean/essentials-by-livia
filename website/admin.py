@@ -11,10 +11,12 @@ from .resources import (
 from .resources import AppUserResource
 
 
-# Admin display for AddProduct model including
-# Summernote and Import/Export functionalities
 @admin.register(AddProduct)
 class AddProductAdmin(SummernoteModelAdmin, ImportExportModelAdmin):
+    """
+    Admin display for AddProduct model including
+    Summernote and Import/Export functionalities
+    """
     summernote_fields = ('description',)
     resource_class = AddProductResource
     list_filter = ('name', 'ailments', 'added_on',)
@@ -22,28 +24,34 @@ class AddProductAdmin(SummernoteModelAdmin, ImportExportModelAdmin):
     list_display = ('name', 'price',)
 
 
-# Admin display for AddPromotion model including
-# Summernote and Import/Export functionalities
 @admin.register(AddPromotion)
 class AddPromotionAdmin(SummernoteModelAdmin, ImportExportModelAdmin):
+    """
+    Admin display for AddPromotion model including
+    Summernote and Import/Export functionalities
+    """
     summernote_fields = ('description',)
     resource_class = AddPromotionResource
     list_filter = ('name', 'expires_on',)
     list_display = ('name', 'expires_on',)
 
 
-# Admin display for Ailment model including
-# Import/Export functionality
 @admin.register(Ailment)
 class Ailment(ImportExportModelAdmin):
+    """
+    Admin display for Ailment model including
+    Import/Export functionality
+    """
     resource_class = AddAilmentResource
     search_fields = ('name',)
 
 
-# Admin interface for AppUser model, including
-# Import/Export functionality and customized interactions and actions
 @admin.register(AppUser)
 class AppUser(ImportExportModelAdmin):
+    """
+    Admin interface for AppUser model, including
+    Import/Export functionality and customized interactions and actions
+    """
     resource_class = AppUserResource
     list_filter = ('first_name', 'last_name', 'email', 'approved')
     search_fields = ('first_name', 'last_name', 'email', 'approved')
@@ -69,11 +77,13 @@ class AppUser(ImportExportModelAdmin):
         else:
             return ()
 
-    # Retrieves default form fields
-    # converts fields into a list to allow modifications
-    # checks if username is present and removes it
-    # Took inspiration from StackOverflow on how to exclude fieldset
     def get_fieldsets(self, request, obj=None):
+        """
+        Retrieves default form fields
+        converts fields into a list to allow modifications
+        checks if username is present and removes it
+        Took inspiration from StackOverflow on how to exclude fieldset
+        """
         fieldsets = super().get_fieldsets(request, obj)
         if obj:
             fieldsets = list(fieldsets)
@@ -88,8 +98,10 @@ class AppUser(ImportExportModelAdmin):
         return fieldsets
 
 
-# Admin display for FavouriteSelection model
 @admin.register(FavouriteSelection)
 class FavouriteSelectionAdmin(admin.ModelAdmin):
+    """
+    Admin display for FavouriteSelection model
+    """
     list_display = ('user', 'product', 'favourite_date', 'is_favorite')
     list_filter = ('user', 'product', 'favourite_date')
