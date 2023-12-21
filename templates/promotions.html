@@ -28,8 +28,7 @@
 
 <!--Promotion top image-->
 <div class="container-fluid p-0">
-    <img id="promotions" src="../static/images/promotions.webp" alt="gift wrapped with red tape" class="img-fluid"
-        width="100%;">
+    <img id="promotions" src="../static/images/promotions.webp" alt="gift wrapped with red tape">
 </div>
 
 <!--Button is conditionally displayed and allows admin to trigger the add-promotions-modal -->
@@ -51,7 +50,7 @@
         <!--Iterates over promotions and pull data into dedicated sections building a complete product -->
         {%for promotion in promotions %}
         <div class="col-12 col-md-4 text-center">
-            <img src="{{ promotion.image_url }}" alt="{{ promotion.name }}" width="80%">
+            <img id="promo-image" src="{{ promotion.image_url }}" alt="{{ promotion.name }}">
             <div class="mt-3">
                 <div class="details-dropdown text-center">
                     <span id="promotion-name">{{ promotion.name }}</span>
