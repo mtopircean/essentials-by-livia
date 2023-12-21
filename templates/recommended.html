@@ -1,6 +1,30 @@
 {% include 'base.html' %}
 {% if is_user_approved or user.is_staff %}
 <div class="container">
+    <!--Toast for new product added, description updated, product deleted-->
+    {% if messages %}
+    {% for message in messages %}
+    {% if forloop.first %}
+    <div id="toastTrigger" style="display: none;" data-message="{{ message }}"></div>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    <div aria-live="polite" aria-atomic="true" style="position: relative;">
+        <div>
+            <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="productActionToast">
+                <div class="toast-header">
+                    <strong class="mr-auto">Notification</strong>
+                    <button type="button" class="close" data-bs-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--Filter ailment section. Naming convention not aligned to overall content as div contains also the product section-->
     <div id="filter-product-section" class="container-fluid">

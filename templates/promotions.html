@@ -1,6 +1,32 @@
 {% include 'base.html' %}
 
 {% block content %}
+
+<!--Toast for new promotion added, description updated, promotion deleted-->
+{% if messages %}
+{% for message in messages %}
+{% if forloop.first %}
+<div id="toastTrigger" style="display: none;" data-message="{{ message }}"></div>
+{% endif %}
+{% endfor %}
+{% endif %}
+
+<div aria-live="polite" aria-atomic="true" style="position: relative;">
+    <div>
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="promotionActionToast">
+            <div class="toast-header">
+                <strong class="mr-auto">Notification</strong>
+                <button type="button" class="close" data-bs-dismiss="toast" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--Promotion top image-->
 <div class="container-fluid p-0">
     <img id="promotions" src="../static/images/promotions.webp" alt="gift wrapped with red tape" class="img-fluid"
@@ -11,15 +37,16 @@
 <div id="promotion-container" class="container-fluid">
     <div>
         {% if user.is_staff %}
-                <div id="add-promotion-section">
-                    <button type="button" class="add-promotion-button" data-bs-toggle="modal" data-bs-target="#addPromotionModal">
-                        Add promotion
-                    </button>
-                </div>
-                {% else %}
-                {% endif %}
+        <div id="add-promotion-section">
+            <button type="button" class="add-promotion-button" data-bs-toggle="modal"
+                data-bs-target="#addPromotionModal">
+                Add promotion
+            </button>
+        </div>
+        {% else %}
+        {% endif %}
     </div>
-    
+
     <div class="row" id="promotion-list">
 
         <!--Iterates over promotions and pull data into dedicated sections building a complete product -->
@@ -40,14 +67,16 @@
                         <div class="col">
                             <!-- Section to allow conditional update of description. Uses an onsubmit alert to user to confirm choice(update or delete) -->
                             {% if is_admin %}
-                            <form  id="update-promo-description" action="{% url 'update_description' promotion.id %}" method="post" onsubmit="return updateDescription()">
+                            <form id="update-promo-description" action="{% url 'update_description' promotion.id %}"
+                                method="post" onsubmit="return updateDescription()">
                                 {% csrf_token %}
                                 <textarea name="new_description">{{ promotion.description }}</textarea>
                                 <button id="save-promo-change" type="submit">Save description</button>
                             </form>
                             <form id="delete-form" action="{% url 'delete_promotion' promotion.id %}" method="post">
                                 {% csrf_token %}
-                                <button id="delete-promo" type="submit" onclick="return confirmDelete()">Delete promotion!</button>
+                                <button id="delete-promo" type="submit" onclick="return confirmDelete()">Delete
+                                    promotion!</button>
                             </form>
                             {% endif %}
                         </div>

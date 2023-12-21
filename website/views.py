@@ -84,6 +84,7 @@ def update_description(request, promotion_id):
         new_description = request.POST.get('new_description')
         promotion.description = new_description
         promotion.save()
+        messages.success(request, 'Promotion edited successfully!')
         return redirect('promotions')
     return redirect('promotions')
 
@@ -95,6 +96,7 @@ def delete_promotion(request, promotion_id):
     if request.method == 'POST':
         promotion = get_object_or_404(AddPromotion, pk=promotion_id)
         promotion.delete()
+        messages.success(request, 'Promotion deleted successfully!')
         return redirect('promotions')
     return redirect('promotions')
 
@@ -186,6 +188,8 @@ def delete_product(request, product_id):
     if request.method == 'POST':
         product = get_object_or_404(AddProduct, pk=product_id)
         product.delete()
+        
+        messages.success(request, 'Product deleted successfully!')
         return redirect('recommended')
     return redirect('recommended')
 
@@ -427,6 +431,7 @@ def create_product(request):
             new_product.ailments.add(ailment)
 
         # Redirect to recommended page
+        messages.success(request, 'New product created successfully!')
         return redirect('recommended')
     else:
         return redirect('recommended')
@@ -450,6 +455,7 @@ def create_promotion(request):
             expires_on=promotion_date,
 
         )
+        messages.success(request, 'Promotion added successfully!')
         return redirect('promotions')
     else:
         return redirect('promotions')

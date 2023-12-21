@@ -237,3 +237,25 @@ $(document).ready(function () {
         toast.show();
     }
 });
+
+/* Toast for changes to product section */
+$(document).ready(function() {
+    var toastTrigger = $('#toastTrigger');
+    if (toastTrigger.length) {
+        var message = toastTrigger.data('message');
+        $('#productActionToast .toast-body').text(message);
+        $('#productActionToast').toast('show');
+    }
+});
+
+
+/* Toast for changes to promotion section */
+
+$(document).ready(function() {
+    var toastTrigger = $('#toastTrigger');
+    if (toastTrigger.length) {
+        var message = toastTrigger.data('message');
+        $('#promotionActionToast .toast-body').text(message);
+        $('#promotionActionToast').toast('show');
+    }
+});
