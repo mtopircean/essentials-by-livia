@@ -34,10 +34,9 @@
                 <div class="text-center">
                     <h5 class="toggle-details"> ACCOUNT DETAILS: <span class="toggle-icon">&#8645;</span></h5>
                 </div>
-                <form id="edit-profile-form" method="post" action="{% url 'edit_profile' %}">
-                    {% csrf_token %}
-
-                    <div id="user-details" class="container">
+                <div id="user-details" class="container">
+                    <form id="edit-profile-form" method="post" action="{% url 'edit_profile' %}">
+                        {% csrf_token %}
                         <div class="row">
                             <!--User can access the change password standard allauth form-->
                             <div class="password-change-forgot">
@@ -106,26 +105,28 @@
                                 </div>
                             </div>
                         </div>
-                        <!--form dedicated to changing or deleting a user account. Buttons hold onclick alerts to validate users decission.-->
-                        <div id="account-actions" class="text-center" id="profile-button-container">
+                        <!--button dedicated to changing a user account.-->
+                        <div id="account-actions" class="text-center">
                             <button id="save-profile" type="submit"
                                 onclick="return confirm('Are you sure you want to update your account?')">Save
                                 Changes</button>
-                </form>
-                <form id="delete-account-form" method="post" action="{% url 'delete_account' %}">
-                    {% csrf_token %}
-                    <button id="delete-account" type="submit"
-                        onclick="return confirm('Are you sure you want to delete your account?')">Delete
-                        Account</button>
-                </form>
+                        </div>
+                    </form>
+                    <!--Form dedicated to changing a user account.-->
+                    <form id="delete-account-form" method="post" action="{% url 'delete_account' %}" class="text-center">
+                        {% csrf_token %}
+                        <button id="delete-account" type="submit"
+                            onclick="return confirm('Are you sure you want to delete your account?')">Delete
+                            Account</button>
+                    </form>
+
+                </div>
 
             </div>
 
         </div>
-
     </div>
-</div>
-{% endif %}
+    {% endif %}
 </div>
 
 <div>
@@ -190,7 +191,5 @@
         {% endfor %}
     </div>
 </div>
-</div>
-
 
 {% endblock %}
