@@ -194,6 +194,7 @@ Prevents default action on click
 Toggles favourite button and the favorite class/status
 Finalizes by submitting the form
 Used local storage to maintain status of favorited item on reload
+Resets the check boxes if item is favorited or removed
 */
 
 $(document).ready(function () {
@@ -212,8 +213,15 @@ $(document).ready(function () {
 
         button.toggleClass('favorited');
 
+        localStorage.setItem('favoriteActionOccurred', 'true');
+
         form.submit();
     });
+
+    if (localStorage.getItem('favoriteActionOccurred') === 'true') {
+        $('.filter-checkbox').prop('checked', false);
+        localStorage.removeItem('favoriteActionOccurred');
+    }
 });
 
 /* Update profile toast */
