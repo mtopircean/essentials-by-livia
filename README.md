@@ -1079,6 +1079,9 @@ If you refresh the page again, it will show the product. I believe it to be a ca
 
 * HTML Validator has brought several issues, mostly due to data being pulled repetative through django inquiries and populating data in the page. I haven`t made massive changes as I do not have the time at the moment to optimize it. This will be done in future iterations.
 
+* No console errors, just a message which I haven`t addressed due to time constraints:
+![Alt text](/static/readme/message-console.png)
+
 # Credits
 
 ## Code Used
