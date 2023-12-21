@@ -230,8 +230,8 @@ p {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70vh; /* or 600px, depending on your preference */
-    width: 100vw; /* Sets the width to 100% of the viewport width */
+    height: 70vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -492,6 +492,11 @@ h6 {
 }
 
 /* About me */
+
+#about-me-img {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
 
 #about-me-text h5 {
     font-weight: bold;
