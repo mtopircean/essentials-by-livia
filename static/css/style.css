@@ -333,6 +333,14 @@ h6 {
     font-size: 1.3rem;
 }
 
+#btn-join:hover {
+    color: #077386;
+    padding: 10px;
+    background-color: #ffff;
+    border: 2px solid #077386;
+}
+
+
 #button-promo {
     position: absolute;
     top: 0;
@@ -360,8 +368,15 @@ h6 {
     font-size: 1.3rem;
 }
 
+#button-tool:hover {
+    color: #644970;
+    background-color: #ffff;
+    border:2px solid #644970;
+}
+
 #tool-image {
     max-width: 100%;
+    width: 60%;
 }
 
 .quote-author {
