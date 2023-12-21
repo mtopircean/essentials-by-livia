@@ -4,7 +4,7 @@ The website was create to support users interested in alternative medicine, more
 It is a website intended to offer the users a valuable experience by being able to address certain ailments in a targeted way, through the filter by ailment section in "What is the best Essential Oil for me", and also give the user access to the latest offers from doTerra.
 
 The projects main beneficiary is my wife who seeks a platform in which she can try and connect with both potential customers and also collaborators.
-The website allows her to present the products to the marked through an easy to use and update platform. It also positions contact elements in several places and ways through the website to create fast channels of engagement with the user.
+The website allows her to present the products to the market through a platform easy to use and update. It also positions contact elements in several places and ways through the website to create fast channels of engagement with the user.
 
 The website is done, but there is a multitude of elements that we still intend to update and upgrade.
 
@@ -88,7 +88,7 @@ Status as of 09.12.2023:
 
 
 ### Kanban Board
-Board was designed to cover all planning aspects and offer a structured process to tackle and work on my project.
+Board was designed to cover all planning aspects and offer a structured process to tackle the activities and work on my project.
 ![Alt text](/static/readme/kanban-board.png)
 
 #### Kanban overview
@@ -113,7 +113,7 @@ In total we have 7 epics:
 
 #### Stories
 
-Story list here: [STORIES](https://github.com/mtopircean/essentials-by-livia/issues)
+You can find the story list here: [STORIES](https://github.com/mtopircean/essentials-by-livia/issues)
 
 Attached to the 7 epics I`ve created approximately 43 stories structured around various prioritization methods:
 * Milestones
@@ -149,18 +149,19 @@ All user stories where completed and closed, the only ones remaining would be th
     * USER STORY: Share promotion
 
 
-Stories where then broken down into a structure that allowed for Acceptance criteria to be defined, as well as the story to be broken down in tasks to follow a systhematic development as well as a way to track progress.
+Stories where then broken down into a structure that allowed for Acceptance criteria to be defined, as well as the story to be broken down in tasks in order to follow a systhematic development, as well as a way to track progress.
 
-Bellow an example of a story:
+Please find bellow an example of a story:
 ![Alt text](/static/readme/story-example.png)
 
 #### Stories prioritization
-My goal in the development of the project was to deploy an Agile methodology, allowing importance on the strategic prioritization of user stories. This involved aligning tasks to optimize delivery, considering dependencies, user expectations, and business scope. 
+My goal in the development of the project was to deploy an Agile methodology, allocating importance on the strategic prioritization of user stories. This involved aligning tasks to optimize delivery, considering dependencies, user expectations, and business scope. 
 
 There where 3 main categories of points:
 * 3 points: middle complexity/middle effort, which in essence where the first effort allocated and became the control level
 * 2 points: lower complexity/lower effort stories
 * 5 points: higher complexity/higher effort
+
 Ex: Based on this prioritization framework, the following sequence outlines the order in which the user stories would have been addressed:
 
     * Install basic dependencies (2 story points)
@@ -174,29 +175,29 @@ Ex: Based on this prioritization framework, the following sequence outlines the 
     * Create promotions page (5 story points)
     * ... (etc. ......)
 
-A second system of prioritization was allocating a complexity label...which at the end connected well willthe story points system.
+A second system of prioritization was allocating a complexity label...which connected well with the story points system.
 
 Thirdly, milestones and sprints also played a crucial role in prioritizing my stories and keeping control on the timing of my project.
 
-Example:
+Example of label allocation:
+
 ![Alt text](/static/readme/story-example.png)
 
 #### Milestones
-6 Milestones where created structured around key steps in development process and structured around a clear and well balanced timing:
+6 Milestones where created and structured around key steps in the development process, and around a well balanced timing:
 ![Alt text](/static/readme/milestones.png)
 
 #### Sprints
-Overall 6 sprints where considered, also closely connected to the 6 milestones, having the same logic behind their setup as the milestones.
+6 sprints where considered, also closely connected to the milestones, having the same logic behind their setup.
 
 ## The Scope Plane
 This website was created with a key element in mind, to create an attractive and efficient interaction point between the website owner and the users. Interaction main objective is to:
 * Convert users into customers
-* Convert users into partners by enrolling them as doTerra ambassadors
-Various contact methods and points help support this. They are placed in various key elements of the website.
+* Convert users into partners by enrolling them as doTerra ambassadors. Various contact methods and points help support this. They are placed in various key elements of the website.
 
 For the website owner, the key focus point is to provide value to the user through various methods:
 * The user of a tool that is able to recommend products based on ailments(available for registered users)
-* Promotions page which allows users to see fast and efficient the monthly star products/deals
+* Promotions page which allows users to see fast and in an efficient manner the monthly star products/deals
 This all has to be available for fast upload and update, and it is through various methods:
 * Front: via the website interface
 * Back: in the admin panel by manual input or using the import/export options
@@ -215,17 +216,17 @@ Structure and features of the website are organized around 2 concepts, concepts 
         - integration of battery included elements like allauth
 * User friendly
     * Easy to navigate 
-    * Key elements always on like footer, whatsapp contact
+    * Key elements always on, like footer, whatsapp contact
     * Easy to use filter section
-    * Key information the key of the pages, with elements easiley identifiable and visible
-    * Mobile friendly: taking advantage of the powerful bootstrap
+    * Important information present in key areas of the pages, with elements easiley identifiable and visible
+    * Mobile friendly: taking advantage of the power of bootstrap
 
 ### Features
 
 #### Special features implemented
 SELECTIVE RECOMMENDATION TOOL:
 
-Why this feature is special is because it offers the admin the option to selectively allow users to access the Recommandation tool, which is the biggest selling point of the website.
+Why this feature is special is because it offers the admin the option to selectively allow users to access the Recommandation tool(What is the best Essential oil for me), which is the biggest selling point of the website.
 In essence, the process is as follows:
 
 - user tries to access the tool and lands on a page requesting to create an account or login(this effects also the button leading to the tool in front-page)
@@ -233,9 +234,9 @@ In essence, the process is as follows:
 - admin validates
 - now user can access the account
 OR:
-- user logs in and now can access the account
+- user logs in and now can access the tool
 
-![Alt text](/static/readme/selective-recommendation-tool.gif)
+![Alt text](/static/readme/selective-recommandation-tool.gif)
 
 
 IMPORT-EXPORT ADMIN FUNCTIONALITY:
@@ -244,7 +245,7 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 ![Alt text](/static/readme/import-export.gif)
 
 EDITOR FILTER FOR ADMIN:
-- admin can navigate easier to the relevant section in the product list to edit the product. I`ve changed the filter to a product panel as the filter was irrelevant for the administrator:
+- admin can navigate easier to the relevant section in the product list to edit their description. I`ve changed the filter to a product panel as the filter was irrelevant for the administrator:
 
 ![Alt text](/static/readme/admin-navigator.png)
 
@@ -255,8 +256,9 @@ EASY CONTACT:
 ![Alt text](/static/readme/on-wsapp.png)
 
 PERSONALIZED PAGES:
+
 Various pages are personalized to my websites style, like the registration form(although it uses allauth standards at some level...)
-I`ve created a special form separate to allauth one:
+I`ve created a special form separate to the allauth one:
 
 ```python
 class CustomSignupForm(SignupForm):
@@ -305,10 +307,10 @@ class CustomSignupForm(SignupForm):
         return user
 ```
 
-FEATURES----Intentional limitations:
+Intentional limitations - features:
 
 - Admin has view only rights for AppUser in admin section. Any changes need to be operated in the User section in Admin.
-- Only areas in the product section and promotion section are the descriptions. Anything else needs to be updated from administrator panel in order to avoid massive database disruption.
+- The only areas in the product section and promotions section are the descriptions. Anything else needs to be updated from the administrator panel in order to avoid massive database disruption.
 
 #### Features implemented
 
@@ -354,6 +356,8 @@ FEATURES----Intentional limitations:
 [Epic 7](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43368946): Testing and Readme documents|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43501838): Testing|Admin| |[Unittest Feature](#unittest-feature)|Write unittest for automated views testing|Implemented
 
 #### Error pages
+
+![Alt text](/static/readme/404-error.png)
 
 #### Favorites Feature
 ![Alt text](https://res.cloudinary.com/dgcwnjoh4/image/upload/v1702687524/gifs/favorite-feature_baplqu.gif)
@@ -445,13 +449,13 @@ To support both the functionality and the design part of the website, following 
 
 ### Databases
 
-Database links into Django user and links mainly into the AppUser database.
+Database links into Django User which links mainly into the AppUser database.
 It was a conscious decision to allow the admin to be able to update only the Approved section from the backend inside the AppUser.
 All other actions are to be taken within the User section to minimize potential disturbance to the database.
 
 Databases all link into each other, Ailment having a Many to One relationship with AddProduct.
 
-The only standalone database is AddPromotion which doesn`t need any specific input in other section/databases in order to run.
+The only standalone database is AddPromotion which doesn`t need any specific input from other sections/databases in order to run.
 
 ![Alt text](/static/readme/database-diagram.png)
 
@@ -475,10 +479,7 @@ def favourite_selection(request, product_id):
     # Code to manage favorite products securely...
 ``` 
 
-```html
-{% csrf_token %}
-```
-tag generates a unique token for each form submission to protect data being sent by the user. 
+{% csrf_token %} tag generates a unique token for each form submission to protect data being sent by the user. 
 
 For example:
 
@@ -677,13 +678,16 @@ To clone the repository:
 * Index
 ![Alt text](/static/readme/index-html-test.png)
 
-* Promotions
+* Promotions:
+Majority of the issues come from duplication of same areas in the code, and this is done as databases pull and push data to update certain elements. I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
 ![Alt text](/static/readme/promotions-html-test.png)
 
 * Register
+Majority of the issues are due to Allauth data pushed into my form.I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
 ![Alt text](/static/readme/register-html-test.png)
 
 * What is the best essential oil for me (recommended.html) approved user
+Majority of the issues come from duplication of same areas in the code, and this is done as databases pull and push data to update certain elements. I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
 ![Alt text](/static/readme/recommended-html-test.png)
 
 * Error Pages
@@ -704,7 +708,7 @@ For those, I`ve used the Lighthouse testing method.
 
 * About oils
 
-![Alt text](/static/readme/about-oils-accessibility.pngg)
+![Alt text](/static/readme/about-oils-accessibility.png)
 
 * Contact
 
@@ -727,6 +731,7 @@ For those, I`ve used the Lighthouse testing method.
 ![Alt text](/static/readme/recommended-not-logged-in-accessibility.png)
 
 * Register
+
 Which brought an issue present generally in allauth forms around labelling issues(since I`m using another form).
 
 ![Alt text](/static/readme/register-accessibility.png)
@@ -873,7 +878,7 @@ Mobile
 
 ## Spellcheck
 
-All pages, including the code have passed through word spellchecked and all issues corrected, except code command syntax. One particular spelling error was not corrected as it would have heavily affected the code. In various views which touch on the favorite section, there was the word favorite misspelled as favourite. For application integrity, this remained as it is and will be corrected in future iterations.
+All pages, including the code have passed through word spellchecked and all issues corrected, except code command syntax. One particular spelling error was not corrected as it would have heavily affected the code. In various views which touch on the favorite section, there was the dual use of favorite and favourite. For application integrity, this remained as it is and will be corrected in future iterations.
 As a final check pages have passed through the W3C Spell Checked and the only words highlighted where specific names like doTerra, GDPR, WhatsApp, etc.
 
 ![Alt text](/static/readme/spellchecker.png)
@@ -881,6 +886,7 @@ As a final check pages have passed through the W3C Spell Checked and the only wo
 ## JavaScript
 JSHINT:
 script.js tested with following results:
+
 ![Alt text](/static/readme/jshint.png)
 
 Variables marked as unused or undefined are in fact used and called on click in various areas of the code.
@@ -894,7 +900,7 @@ one undefined variable $
 
 ## Python
 ### Linter
-Following pages where tested with CI Linter: admin.py, forms.py, middleware.py, models.py, resources.py, test.py, urls.py, views.py:
+Pages where tested and updated according to requirements.
 
 ![Alt text](/static/readme/linter-no-errors.png)
 
@@ -1080,7 +1086,20 @@ path('user-account.html', views.user_account,
 * In the profile page, if you have a product selected as favorite and you operate a change to your profile content, the page refreshes without the favorite item visible.
 If you refresh the page again, it will show the product. I believe it to be a caching issue.
 
-* HTML Validator has brought several issues, mostly due to data being pulled repetitive through django inquiries and populating data in the page. I haven`t made massive changes as I do not have the time at the moment to optimize it. This will be done in future iterations.
+* HTML Validator has brought several issues, mostly due to data being pulled repetitive through django inquiries and populating data in the page. I haven`t made massive changes as I do not have the time at the moment to optimize it. This will be done in future iterations.Major issues are around the pages bellow:
+    - Promotions:
+    Majority of the issues come from duplication of same areas in the code, and this is done as databases pull and push data to update certain elements. I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
+    ![Alt text](/static/readme/promotions-html-test.png)
+
+    - Register
+    Majority of the issues are due to Allauth data pushed into my form.I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
+    ![Alt text](/static/readme/register-html-test.png)
+
+    - What is the best essential oil for me (recommended.html) approved user
+    Majority of the issues come from duplication of same areas in the code, and this is done as databases pull and push data to update certain elements. I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
+    ![Alt text](/static/readme/recommended-html-test.png)
+
+
 
 * No console errors, just a message which I haven`t addressed due to time constraints:
 ![Alt text](/static/readme/message-console.png)
@@ -1092,9 +1111,9 @@ If you refresh the page again, it will show the product. I believe it to be a ca
 # Credits
 
 ## Code Used
-* First of all thank you to all the Tutors and my mentor for their support. They have helped me with various solutions to my problems.
+1. First of all thank you to all the Tutors and my mentor for their support. They have helped me with various solutions to my problems.
 
-* Connection not closing issue.
+2. Connection not closing issue.
 ISSUE:
 
 Elephant SQL not closing connections.
@@ -1119,7 +1138,7 @@ class CloseConnectionMiddleware:
 'website.middleware.CloseConnectionMiddleware',
 ```
 
-* Guidance has been taken from online environment on various solutions to issues, but no code was copied, just guidance on potential solutions.
+3. Guidance has been taken from online environment on various solutions to issues, but no code was copied, just guidance on potential solutions.
 
 ## Other
 * Deployment instructions in GitHub copied from kera-cudmore different repo and following the article written by her on how to write a readme.
