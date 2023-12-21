@@ -188,7 +188,7 @@ def delete_product(request, product_id):
     if request.method == 'POST':
         product = get_object_or_404(AddProduct, pk=product_id)
         product.delete()
-        
+
         messages.success(request, 'Product deleted successfully!')
         return redirect('recommended')
     return redirect('recommended')

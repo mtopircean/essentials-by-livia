@@ -823,7 +823,7 @@ JSHINT:
 script.js tested with following results:
 ![Alt text](/static/readme/jshint.png)
 
-Variables marked as unused are in fact used and called on click in various areas of the code.
+Variables marked as unused or undefined are in fact used and called on click in various areas of the code.
 ```JavaScript
 /*jshint esversion: 6 */
 /* global $ */
