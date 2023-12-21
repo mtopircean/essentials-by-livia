@@ -3,7 +3,7 @@ The website was create to support users interested in alternative medicine, more
 
 It is a website intended to offer the users a valuable experience by being able to address certain ailments in a targeted way, through the filter by ailment section in "What is the best Essential Oil for me", and also give the user access to the latest offers from doTerra.
 
-The projects main beneifiary is my wife who seeked a platform in which she can try and connect with both potential customers and also collaborators.
+The projects main beneficiary is my wife who seeks a platform in which she can try and connect with both potential customers and also collaborators.
 The website allows her to present the products to the marked through an easy to use and update platform. It also positions contact elements in several places and ways through the website to create fast channels of engagement with the user.
 
 The website is done, but there is a multitude of elements that we still intend to update and upgrade.
@@ -88,11 +88,11 @@ Status as of 09.12.2023:
 
 
 ### Kanban Board
-Board was designed to cover all planning aspects and offer a structured process to takle and work on my project.
+Board was designed to cover all planning aspects and offer a structured process to tackle and work on my project.
 ![Alt text](/static/readme/kanban-board.png)
 
 #### Kanban overview
-Kanban board is structured around 7 Epics connected to differrent functionalities, modules and stages of the project.
+Kanban board is structured around 7 Epics connected to different functionalities, modules and stages of the project.
 ![Alt text](/static/readme/epics.png)
 
 #### Epics
@@ -115,7 +115,7 @@ In total we have 7 epics:
 
 Story list here: [STORIES](https://github.com/mtopircean/essentials-by-livia/issues)
 
-Attached to the 7 epics I`ve created aproximatley 43 stories structured around various prioritization methods:
+Attached to the 7 epics I`ve created approximately 43 stories structured around various prioritization methods:
 * Milestones
 * Sprints
 * Importance priority
@@ -149,7 +149,7 @@ All user stories where completed and closed, the only ones remaining would be th
     * USER STORY: Share promotion
 
 
-Stories where then broken down into a structure that allowed for Acceptance criteria to be defined, as well as the story to be broken down in tasks to follow a systematic development as well as a way to track progress.
+Stories where then broken down into a structure that allowed for Acceptance criteria to be defined, as well as the story to be broken down in tasks to follow a systhematic development as well as a way to track progress.
 
 Bellow an example of a story:
 ![Alt text](/static/readme/story-example.png)
@@ -174,15 +174,15 @@ Ex: Based on this prioritization framework, the following sequence outlines the 
     * Create promotions page (5 story points)
     * ... (etc. ......)
 
-A second system of prioritization was allocating a complexity label...which at the end connected well wil the story points system.
+A second system of prioritization was allocating a complexity label...which at the end connected well willthe story points system.
 
-Thirdly, millestones and sprints also played a crucial role in prioritizing my stories and keeping control on the timing of my project.
+Thirdly, milestones and sprints also played a crucial role in prioritizing my stories and keeping control on the timing of my project.
 
 Example:
 ![Alt text](/static/readme/story-example.png)
 
 #### Milestones
-6 Milestones where created structured around key steps in development process and structured around a clear and well ballanced timing:
+6 Milestones where created structured around key steps in development process and structured around a clear and well balanced timing:
 ![Alt text](/static/readme/milestones.png)
 
 #### Sprints
@@ -191,7 +191,7 @@ Overall 6 sprints where considered, also closely connected to the 6 milestones, 
 ## The Scope Plane
 This website was created with a key element in mind, to create an attractive and efficient interaction point between the website owner and the users. Interaction main objective is to:
 * Convert users into customers
-* Convert users into partners by enrolling them as doTera ambasadors
+* Convert users into partners by enrolling them as doTerra ambassadors
 Various contact methods and points help support this. They are placed in various key elements of the website.
 
 For the website owner, the key focus point is to provide value to the user through various methods:
@@ -207,8 +207,8 @@ Structure and features of the website are organized around 2 concepts, concepts 
     * Easy to manage(as automated as possible):
         - key feature being the import-export function
         - data easy to update and upload even from front end
-        - admin pannel easy accessible from navbar and with key admin areas identifiable in the admin interface
-        - give value to obtain value, clearly identiable through the product recommandation function accessible to logged users
+        - admin panel easy accessible from navbar and with key admin areas identifiable in the admin interface
+        - give value to obtain value, clearly identifiable through the product recommendation function accessible to logged users
     * Easy to connect with the user(one click away from the user)
     * Upgradable and scalable with ease
         - the reuse of different elements within pages(navbar, base, footer html)
@@ -218,7 +218,7 @@ Structure and features of the website are organized around 2 concepts, concepts 
     * Key elements always on like footer, whatsapp contact
     * Easy to use filter section
     * Key information the key of the pages, with elements easiley identifiable and visible
-    * Mobile friendly: taking advantage of the powerfull bootstrap
+    * Mobile friendly: taking advantage of the powerful bootstrap
 
 ### Features
 
@@ -231,11 +231,11 @@ In essence, the process is as follows:
 - user tries to access the tool and lands on a page requesting to create an account or login(this effects also the button leading to the tool in front-page)
 - user creates an account and receives a notification that account is pending approval
 - admin validates
-- now user can acess the account
+- now user can access the account
 OR:
-- user loggs in and now can access the account
+- user logs in and now can access the account
 
-![Alt text](/static/readme/selective-recommandation-tool.gif)
+![Alt text](/static/readme/selective-recommendation-tool.gif)
 
 
 IMPORT-EXPORT ADMIN FUNCTIONALITY:
@@ -244,7 +244,7 @@ IMPORT-EXPORT ADMIN FUNCTIONALITY:
 ![Alt text](/static/readme/import-export.gif)
 
 EDITOR FILTER FOR ADMIN:
-- admin can navigate easier to the relevant section in the product list to edit the product. I`ve changed the filter to a product panel as the filter was irelevant for the administrator:
+- admin can navigate easier to the relevant section in the product list to edit the product. I`ve changed the filter to a product panel as the filter was irrelevant for the administrator:
 
 ![Alt text](/static/readme/admin-navigator.png)
 
@@ -322,7 +322,7 @@ FEATURES----Intentional limitations:
 [EPIC 2](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43366525): Database Setup and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43487683): Create database structure|Developer|Obtaining robust development process which will ensure easire future development.|n/a| |n/a
 [EPIC 2](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43366525): Database Setup and Management|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43488872): Create template for header, footer, and modals|Website owner|Allow easier future development|n/a| |n/a
 [EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43488654): Create promotions page|User/Admin|Allow for a section to view promotions if user, post, edit, remove and add promotions if you are an administrator.|n/a| |n/a
-[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43490514): Create user registration form|User/Admin|Allow for a section for the user to register in order to save favorites and access the recommandation tool. Allow for the administrator to collect user data and use them to create a database of users.|n/a| |n/a
+[EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43490514): Create user registration form|User/Admin|Allow for a section for the user to register in order to save favorites and access the recommendation tool. Allow for the administrator to collect user data and use them to create a database of users.|n/a| |n/a
 [EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=44232904): Create user account page|User|Allows the user to generate a self manageable account page.|n/a| |n/a
 [EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43489328): Create recommendation tool layout|User/Admin| |n/a| |n/a
 [EPIC 3](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43367302): User Interface Design|[USER STORY](https://github.com/users/mtopircean/projects/10?pane=issue&itemId=43488488): Create homepage|User| |n/a| |n/a
@@ -396,7 +396,7 @@ Future iteration will include this features. For the moment, Stories are also at
 
 ## The Skeleton Plane
 ### Wireframes
-To support both the functionality and the design part of the website, followin wireframes where created:
+To support both the functionality and the design part of the website, following wireframes where created:
 * Index Page
 ![Alt text](/static/readme/wireframes/index.png)
 * About Me Page
@@ -446,7 +446,7 @@ To support both the functionality and the design part of the website, followin w
 ### Databases
 
 Database links into Django user and links mainly into the AppUser database.
-It was a conscious decission to allow the admin to be able to update only the Approved section from the backend inside the AppUser.
+It was a conscious decision to allow the admin to be able to update only the Approved section from the backend inside the AppUser.
 All other actions are to be taken within the User section to minimize potential disturbance to the database.
 
 Databases all link into each other, Ailment having a Many to One relationship with AddProduct.
@@ -489,7 +489,7 @@ For example:
 </form>
 ```
 
-The use of eventlisteners is present through the code, with the goal to promt the user on critical changes to their data:
+The use of eventlisteners is present through the code, with the goal to prompt the user on critical changes to their data:
 
 ```html
 <div id="account-actions" class="text-center" id="profile-button-container">
@@ -522,7 +522,7 @@ def user_approval(request):
     # Admin-only functionality to approve users...
 ```
 
-The use of eventlisteners is present through the code, with the goal to promt the admin on critical changes to the forms/databases, like for example:
+The use of eventlisteners is present through the code, with the goal to prompt the admin on critical changes to the forms/databases, like for example:
 
 ```html
 <form id="delete-product-form" action="{% url 'delete_product' product.id %}" method="post">
@@ -531,12 +531,13 @@ The use of eventlisteners is present through the code, with the goal to promt th
     <button id="delete-product" type="submit">Delete Product</button>
 </form>
 ```
+Created an env.py file to store admin/development credentials.
 
 ## The Surface Plane
 ### Theme
 When considering the website theme the general idea was to provide a clean, modern look, but maintain also a good level of elegance.
 This was achieved through a well though color selection, limitation on number of elements displayed, and a high use of bootstrap to allow proper alignment and element display in the page.
-Photos and graphic elements used where aligned to the nature and health tematic, but again, maintaining the same clean direction.
+Photos and graphic elements used where aligned to the nature and health thematic, but again, maintaining the same clean direction.
 
 ### Colour Selection
 Colours where selected in line with the theme, but also to offer a high level of accessibility and contrast. It has suffered several changes during the development process as I`ve tried to maintain data clear, easy to read and print. The choice was also due to the amount of features present on the website and the interest to create a separation, or a unique identifier to separate them visually.
@@ -613,7 +614,7 @@ To clone the repository:
 * dj-database-url==0.5.0 : supports database usage in Django
 * dj3-cloudinary-storage==0.0.6: Django storage in cloudinary
 * Django==3.2.22 : actual Django variant
-* django-allauth==0.58.2 : Application managing authentification, registration and account management
+* django-allauth==0.58.2 : Application managing authentication, registration and account management
 * django-heroku==0.3.1 : simplifies deployment to Heroku
 * django-import-export==3.3.1 : Excel import export database integration
 * django-summernote==0.8.20.0 : Summernote integration
@@ -726,7 +727,7 @@ For those, I`ve used the Lighthouse testing method.
 ![Alt text](/static/readme/recommended-not-logged-in-accessibility.png)
 
 * Register
-Which brought an issue present generally in allauth forms around labeling issues(since I`m using another form).
+Which brought an issue present generally in allauth forms around labelling issues(since I`m using another form).
 
 ![Alt text](/static/readme/register-accessibility.png)
 
@@ -872,7 +873,7 @@ Mobile
 
 ## Spellcheck
 
-All pages, including the code have passed through word spellchecked and all issues corrected, except code command syntax. One particular spelling error was not corrected as it would have heavily affected the code. In various views which touch on the favorite section, there was the word favorite misspelled as favourite. For application integrity, this remained as it is and will be corrected in future itterations.
+All pages, including the code have passed through word spellchecked and all issues corrected, except code command syntax. One particular spelling error was not corrected as it would have heavily affected the code. In various views which touch on the favorite section, there was the word favorite misspelled as favourite. For application integrity, this remained as it is and will be corrected in future iterations.
 As a final check pages have passed through the W3C Spell Checked and the only words highlighted where specific names like doTerra, GDPR, WhatsApp, etc.
 
 ![Alt text](/static/readme/spellchecker.png)
@@ -998,9 +999,11 @@ OK
 #### Decorator limitations
 
 Will become part of future development.
-Thiw was not completed due to timing issues in handing over the project and the high complexity of the project.
+This was not completed due to timing issues in handing over the project and the high complexity of the project.
 
 ## Local functionality tests
+
+Link to local/manual testing.
 
 [TESTING.md](https://github.com/mtopircean/essentials-by-livia/blob/main/TESTING.md)
 
@@ -1032,10 +1035,10 @@ class CloseConnectionMiddleware:
 'website.middleware.CloseConnectionMiddleware',
 ```
 
-* Arrow simbol for hidden expandable areas had to be changed to a symbol readable by the mobile devices, expecially in chrome
+* Arrow symbol for hidden expandable areas had to be changed to a symbol readable by the mobile devices, especially in chrome
 ![Alt text](/static/readme/drop-down-arrow.png)
 
-* Filter reset was managing to remove the filters when you where selecting a product as favorite, but wasn`t reseting the checked boxes.
+* Filter reset was managing to remove the filters when you where selecting a product as favorite, but wasn`t resetting the checked boxes.
 Solution bellow manages to check the local storage for favorited items and if condition is meet, unchecks the filter boxes
 
 ```Javascript
@@ -1046,7 +1049,7 @@ if (localStorage.getItem('favoriteActionOccurred') === 'true') {
 ```
 
 * Filter list not staying on if click in the search ailment section and trying to type an ailment. Basically, keyboard in mobile overwrites the filter list.
-Solution came as various lines of code overwritting the keyboard focus:
+Solution came as various lines of code overwriting the keyboard focus:
 
 ```Javascript
  var keyboardFocused = false;
@@ -1054,8 +1057,8 @@ Solution came as various lines of code overwritting the keyboard focus:
 
 ### Open bugs
 
-* Currently, once user regiters they are prompted to login again before account creation is confirmed.
-* Once a user is prompted that the login details are incorect, if they choose to sign up or forgot pasword and want to return to previous page by pushing the back button, they receive an error:
+* Currently, once user registers they are prompted to login again before account creation is confirmed.
+* Once a user is prompted that the login details are incorrect, if they choose to sign up or forgot password and want to return to previous page by pushing the back button, they receive an error:
 
 ![Alt text](/static/readme/redirect-one.png)
 ![Alt text](/static/readme/redirect-two.png)
@@ -1067,7 +1070,7 @@ Solution came as various lines of code overwritting the keyboard focus:
 
 * Although not an issue/bug, using in limited scenarios url`s guided to a template, like bellow:
 
-* Filtering function in the recommandation tool(What oil is suitable for me) acts a bit fidgety in mobile version.
+* Filtering function in the recommendation tool(What oil is suitable for me) acts a bit fidgety in mobile version.
 
 ```python
 path('user-account.html', views.user_account,
@@ -1077,10 +1080,14 @@ path('user-account.html', views.user_account,
 * In the profile page, if you have a product selected as favorite and you operate a change to your profile content, the page refreshes without the favorite item visible.
 If you refresh the page again, it will show the product. I believe it to be a caching issue.
 
-* HTML Validator has brought several issues, mostly due to data being pulled repetative through django inquiries and populating data in the page. I haven`t made massive changes as I do not have the time at the moment to optimize it. This will be done in future iterations.
+* HTML Validator has brought several issues, mostly due to data being pulled repetitive through django inquiries and populating data in the page. I haven`t made massive changes as I do not have the time at the moment to optimize it. This will be done in future iterations.
 
 * No console errors, just a message which I haven`t addressed due to time constraints:
 ![Alt text](/static/readme/message-console.png)
+
+* Although not an issue, allauth templates where copied in the templates file as temp. I`ve left them there as it connects with my project and choose not to delete them in order not to break the connections to my website.
+![Alt text](/static/readme/allauth.png)
+
 
 # Credits
 
@@ -1112,7 +1119,7 @@ class CloseConnectionMiddleware:
 'website.middleware.CloseConnectionMiddleware',
 ```
 
-* Guidance has been taken from online enviorement on various solutions to issues, but no code was copied, just guidance on potential solutions.
+* Guidance has been taken from online environment on various solutions to issues, but no code was copied, just guidance on potential solutions.
 
 ## Other
 * Deployment instructions in GitHub copied from kera-cudmore different repo and following the article written by her on how to write a readme.
