@@ -513,7 +513,6 @@ def create_promotion(request):
         return redirect('promotions')
 
 
-@login_required
 def register_success(request):
     """
     Renders confirmation of successful registration page
