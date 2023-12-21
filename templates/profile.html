@@ -108,89 +108,88 @@
                         </div>
                         <!--form dedicated to changing or deleting a user account. Buttons hold onclick alerts to validate users decission.-->
                         <div id="account-actions" class="text-center" id="profile-button-container">
-                            <form id="edit-profile-form" method="post" action="{% url 'edit_profile' %}">
-                                {% csrf_token %}
-                                <button id="save-profile" type="submit"
-                                    onclick="return confirm('Are you sure you want to update your account?')">Save
-                                    Changes</button>
-                            </form>
-                            <form id="delete-account-form" method="post" action="{% url 'delete_account' %}">
-                                {% csrf_token %}
-                                <button id="delete-account" type="submit"
-                                    onclick="return confirm('Are you sure you want to delete your account?')">Delete
-                                    Account</button>
-                            </form>
-                        </div>
-                    </div>
+                            <button id="save-profile" type="submit"
+                                onclick="return confirm('Are you sure you want to update your account?')">Save
+                                Changes</button>
+                </form>
+                <form id="delete-account-form" method="post" action="{% url 'delete_account' %}">
+                    {% csrf_token %}
+                    <button id="delete-account" type="submit"
+                        onclick="return confirm('Are you sure you want to delete your account?')">Delete
+                        Account</button>
                 </form>
 
             </div>
+
         </div>
-        {% endif %}
-    </div>
 
-    <div>
-        <hr>
     </div>
-    <!--Favorite section which displays users favorite selection-->
-    <div class="text-center">
-        <h5 class="fav-section"> FAVORITE PRODUCTS:</h5>
-    </div>
-    <div class="col-md-12" id="favorite-product-section">
-        <div class="row">
-            <!--Iterates and diplays user selection. Has toggle button to remove favorites. It basically pulls data based on id`s creating a complete product.Only part added manually is the contact section-->
-            {% for favorite in user_favorites %}
-            <div class="col-md-3 favourite-product">
-                <div class="container">
-                    <img id="favourite-img" src="{{ favorite.product.image_url }}" alt="{{ favorite.product.name }}"
-                        class="img-fluid" style="display: block;">
-                    <div id="favorite-details-area">
-                        <span class="product-name">{{ favorite.product.name }}</span>
-                        <form action="{% url 'favourite_selection' favorite.product.id %}?source=logged_user_details"
-                            method="post">
-                            {% csrf_token %}
-                            <button id="favorite-btn" type="submit" class="add-to-favorites-btn">
-                                {% if product.id in user_favorites %}
-                                <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
-                                {% else %}
-                                <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
-                                {% endif %}
-                            </button>
-                        </form>
-                        <h6 id="favorite-description-title">Description:</h6>
-                        <span id="favorite-description-text"
-                            class="product-description">{{ favorite.product.description| striptags }}</span>
-                        <br>
-                        <h6 id="favorite-ailments">Ailments:</h6>
-                        <div id="favorite-ailments-area">
-                            {% for ailment in favorite.product.ailments.all %}
-                            {{ ailment.name }}
-                            {% endfor %}
-                        </div>
-                        <br>
+</div>
+{% endif %}
+</div>
 
-                        <p id="contact-favorite" class="contact-text-product">Contact me for details:
-                            <br>
-                            <a href="https://wa.me/+353876403084" target="_blank">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </a>
-                            <a href="https://www.facebook.com/gherasim.cosmina" target="_blank">
-                                <i class="fa-brands fa-facebook-messenger"></i>
-                            </a>
-                            <a href="https://www.facebook.com/gherasim.cosmina" target="_blank">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="https://tinyurl.com/yc2knt2p" target="_blank">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <i class=""></i>
-                        </p>
+<div>
+    <hr>
+</div>
+<!--Favorite section which displays users favorite selection-->
+<div class="text-center">
+    <h5 class="fav-section"> FAVORITE PRODUCTS:</h5>
+</div>
+<div class="col-md-12" id="favorite-product-section">
+    <div class="row">
+        <!--Iterates and diplays user selection. Has toggle button to remove favorites. It basically pulls data based on id`s creating a complete product.Only part added manually is the contact section-->
+        {% for favorite in user_favorites %}
+        <div class="col-md-3 favourite-product">
+            <div class="container">
+                <img id="favourite-img" src="{{ favorite.product.image_url }}" alt="{{ favorite.product.name }}"
+                    class="img-fluid" style="display: block;">
+                <div id="favorite-details-area">
+                    <span class="product-name">{{ favorite.product.name }}</span>
+                    <form action="{% url 'favourite_selection' favorite.product.id %}?source=logged_user_details"
+                        method="post">
+                        {% csrf_token %}
+                        <button id="favorite-btn" type="submit" class="add-to-favorites-btn">
+                            {% if product.id in user_favorites %}
+                            <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
+                            {% else %}
+                            <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
+                            {% endif %}
+                        </button>
+                    </form>
+                    <h6 id="favorite-description-title">Description:</h6>
+                    <span id="favorite-description-text"
+                        class="product-description">{{ favorite.product.description| striptags }}</span>
+                    <br>
+                    <h6 id="favorite-ailments">Ailments:</h6>
+                    <div id="favorite-ailments-area">
+                        {% for ailment in favorite.product.ailments.all %}
+                        {{ ailment.name }}
+                        {% endfor %}
                     </div>
+                    <br>
+
+                    <p id="contact-favorite" class="contact-text-product">Contact me for details:
+                        <br>
+                        <a href="https://wa.me/+353876403084" target="_blank">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.facebook.com/gherasim.cosmina" target="_blank">
+                            <i class="fa-brands fa-facebook-messenger"></i>
+                        </a>
+                        <a href="https://www.facebook.com/gherasim.cosmina" target="_blank">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://tinyurl.com/yc2knt2p" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <i class=""></i>
+                    </p>
                 </div>
             </div>
-            {% endfor %}
         </div>
+        {% endfor %}
     </div>
+</div>
 </div>
 
 
