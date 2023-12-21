@@ -1,4 +1,3 @@
-# Admin and model imports
 from django.contrib import admin
 from .models import (
     Ailment, AddProduct, AddPromotion, AppUser, FavouriteSelection

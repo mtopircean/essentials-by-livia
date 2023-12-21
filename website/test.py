@@ -1,4 +1,3 @@
-# Import necessities for testing environment
 import unittest
 from . import views
 from django.test import TestCase, Client, override_settings
@@ -96,32 +95,3 @@ class StaticPages(TestCase):
         """
         with self.assertRaises(Exception):
             self.client.get('/500/')
-
-# Testing decorator impacted views to further test at a later stage
-# class DecoratorTests(TestCase):
-#     def setUp(self):
-#         self.user = User.objects.create_user(
-    #     username='user', password='password'
-    # )
-
-#     def test_login_required_decorator(self):
-
-#         response = self.client.get(reverse('delete-account'))
-#         self.assertNotEqual(response.status_code, 200)
-
-#         self.client.login(username='user', password='password')
-#         response = self.client.get(reverse('delete-account'))
-#         self.assertEqual(response.status_code, 200)
-
-#     def test_staff_member_required_decorator(self):
-#         staff_user = User.objects.create_user(
-    #     username='staff', password='password', is_staff=True
-    # )
-
-#         self.client.login(username='user', password='password')
-#         response = self.client.get(reverse('create_product'))
-#         self.assertNotEqual(response.status_code, 200)
-
-#         self.client.login(username='staff', password='password')
-#         response = self.client.get(reverse('create_product'))
-#         self.assertEqual(response.status_code, 200)

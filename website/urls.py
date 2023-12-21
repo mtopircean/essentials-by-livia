@@ -1,4 +1,3 @@
-# Import necessary views and modules
 from . import views
 from django.urls import path, include
 from allauth.account.views import PasswordResetView

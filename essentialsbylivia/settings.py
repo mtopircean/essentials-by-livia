@@ -1,13 +1,10 @@
 from pathlib import Path
-
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
-    
 
-#Emails output to the console
-    
+# Emails output to the console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'mtopircean@yahoo.com'
 
@@ -15,15 +12,16 @@ DEFAULT_FROM_EMAIL = 'mtopircean@yahoo.com'
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEBUG' in os.environ
-ALLOWED_HOSTS = ['8000-mtopircean-essentialsby-d45xfzluakj.ws-eu107.gitpod.io', '8000-mtopircean-essentialsby-d45xfzluakj.ws-eu107.gitpod.io', '8000-mtopircean-essentialsby-d45xfzluakj.ws-eu106.gitpod.io','8000-mtopircean-essentialsby-d45xfzluakj.ws-eu105.gitpod.io', 'essentials-by-livia-efe89c429260.herokuapp.com', 'django-blog-tmf-e46d0a2b5195.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = [
+    '8000-mtopircean-essentialsby-d45xfzluakj.ws-eu107.gitpod.io',
+    'essentials-by-livia-efe89c429260.herokuapp.com',
+    'localhost'
+]
 
 
 # Application definition
@@ -89,17 +87,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'essentialsbylivia.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': BASE_DIR / 'db.sqlite3',
-#    }
-#}
-
 DATABASES = {
     'default': {
         **dj_database_url.config(default=os.environ.get("DATABASE_URL")),
@@ -111,16 +98,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'NumericPasswordValidator',
     },
 ]
 
@@ -143,7 +134,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-#STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 

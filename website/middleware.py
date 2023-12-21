@@ -1,4 +1,3 @@
-# Import the connection module
 from django.db import connection
 
 
