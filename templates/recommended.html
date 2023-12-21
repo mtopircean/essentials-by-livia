@@ -72,7 +72,7 @@
                                 <div>
                                     <input type="checkbox" name="filter_checkbox" value="{{ ailment.name }}"
                                         class="filter-checkbox">
-                                    <label id="ailment-filter-name">{{ ailment.name }}
+                                    <label class="ailment-filter-name">{{ ailment.name }}
                                         ({{ ailment.num_products }})</label>
                                 </div>
                                 {% endfor %}
@@ -134,9 +134,9 @@
                                     <input type="hidden" name="product_id" value="{{ product.id }}">
                                     <button type="submit" class="add-to-favorites-btn">
                                         {% if product.id in user_favorites %}
-                                        <i class="fas fa-heart" id="remove-favourites"></i> Remove from Favorites
+                                        <i class="fas fa-heart remove-favourites"></i> Remove from Favorites
                                         {% else %}
-                                        <i class="far fa-heart" id="add-favorites"></i> Add to Favorites
+                                        <i class="far fa-heart add-favorites"></i> Add to Favorites
                                         {% endif %}
                                     </button>
                                 </form>
@@ -148,7 +148,7 @@
                                 {% for ailment in product.ailments.all %}
                                 {{ ailment.name }}{% if not forloop.last %},{% endif %}
                                 {% endfor %}
-                                <p class="contact-text-product" id="recommended-contact">Contact me for details:
+                                <p class="contact-text-product recommended-contact">Contact me for details:
                                     <br>
                                     <a href="https://wa.me/+353876403084" target="_blank">
                                         <i class="fa-brands fa-whatsapp"></i>
@@ -258,6 +258,7 @@
         </div>
     </div>
     {% endif %}
-    {% endif %}
+
 </div>
+{% endif %}
 {% endblock %}

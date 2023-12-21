@@ -885,7 +885,7 @@ button.add-promotion-button:hover {
 
 /*Recommendation section*/
 
-#recommended-contact {
+.recommended-contact {
     margin-bottom: 40px;
 }
 
@@ -1179,7 +1179,7 @@ button.add-product-button:hover {
     padding: 40px;
 }
 
-label#ailment-filter-name {
+label.ailment-filter-name {
     font-size: smaller;
 }
 
