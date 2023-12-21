@@ -50,10 +50,10 @@
         <!--Iterates over promotions and pull data into dedicated sections building a complete product -->
         {%for promotion in promotions %}
         <div class="col-12 col-md-4 text-center">
-            <img id="promo-image" src="{{ promotion.image_url }}" alt="{{ promotion.name }}">
+            <img class="promo-image" src="{{ promotion.image_url }}" alt="{{ promotion.name }}">
             <div class="mt-3">
                 <div class="details-dropdown text-center">
-                    <span id="promotion-name">{{ promotion.name }}</span>
+                    <span class="promotion-name">{{ promotion.name }}</span>
                     <span class="validity">Valid until {{ promotion.expires_on|date:"d.m.Y" }}</span>
 
                     <!--Uses a toggle button to display the promotion description -->
@@ -83,9 +83,9 @@
                         <p class="promo-text">{{ promotion.description|safe }}</p>
                         <br>
                         <!-- Contact details -->
-                        <p class="contact-text">Contact me for details:
+                        <p class="contact-text">Contact me for details:</p>
                             <br>
-                            <div id="promo-social">
+                            <div class="promo-social">
                                 <a href="https://wa.me/+353876403084" target="_blank">
                                     <i class="fa-brands fa-whatsapp"></i>
                                     <span class="sr-only">WhatsApp</span>
@@ -103,7 +103,6 @@
                                     <span class="sr-only">Instagram</span>
                                 </a>
                             </div>
-                        </p>
                     </div>
                 </div>
             </div>
