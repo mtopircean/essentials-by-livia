@@ -665,6 +665,8 @@ To clone the repository:
 # Testing and Validation
 ## HTML
 
+All pages passed the tests.
+
 * About me
 ![Alt text](/static/readme/about-me-html-test.png)
 
@@ -684,7 +686,7 @@ To clone the repository:
 ![Alt text](/static/readme/promotions-html-test.png)
 
 * Register
-Majority of the issues are due to Allauth data pushed into my form.I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
+
 ![Alt text](/static/readme/register-html-test.png)
 
 * What is the best essential oil for me (recommended.html) approved user
@@ -1085,14 +1087,6 @@ path('user-account.html', views.user_account,
 
 * In the profile page, if you have a product selected as favorite and you operate a change to your profile content, the page refreshes without the favorite item visible.
 If you refresh the page again, it will show the product. I believe it to be a caching issue.
-
-* HTML Validator has brought several issues in register page which I can`t track down in the forms:
-
-    - Register
-    
-    Majority of the issues are due to Allauth data pushed into my form.I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
-    ![Alt text](/static/readme/register-html-test.png)
-
 
 * No console errors, just a message which I haven`t addressed due to time constraints:
 ![Alt text](/static/readme/message-console.png)
