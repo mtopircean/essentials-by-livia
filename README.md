@@ -362,13 +362,13 @@ Intentional limitations - features:
 ![Alt text](/static/readme/404-error.png)
 
 #### Favorites Feature
-![Alt text](https://res.cloudinary.com/dgcwnjoh4/image/upload/v1702687524/gifs/favorite-feature_baplqu.gif)
+![Alt text](/static/readme/favorite-feature.gif)
 
 #### Product Admin Feature
 ![Alt text](/static/readme/product-admin-feature.gif)
 
 #### Product User Feature
-![Alt text](https://res.cloudinary.com/dgcwnjoh4/image/upload/v1702687522/gifs/product-user-feature_hzrxcw.gif)
+![Alt text](/static/readme/product-user-feature.gif)
 
 #### Promotion Admin Feature
 ![Alt text](/static/readme/promotion-admin-feature.gif)
