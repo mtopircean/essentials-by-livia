@@ -372,7 +372,7 @@ h6 {
 #button-tool:hover {
     color: #644970;
     background-color: #ffff;
-    border:2px solid #644970;
+    border: 2px solid #644970;
 }
 
 #tool-image {
@@ -571,7 +571,7 @@ h6 {
 }
 
 .promo-image {
-    width:80%;
+    width: 80%;
 }
 
 .promo-social .fa-brands {
@@ -1298,6 +1298,10 @@ label#label-password {
 
 /* Register page */
 
+.errorlist {
+    color: red;
+}
+
 #register-form {
     margin-bottom: 80px;
 }
@@ -1609,6 +1613,8 @@ button.reset-password-button:hover {
     }
 
     .promo-social .fa-brands {
-        font-size: x-large;
+        font-size: 1.4rem;
+        padding: 5px;
+        margin: auto;
     }
 }
