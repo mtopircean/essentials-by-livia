@@ -681,7 +681,6 @@ To clone the repository:
 ![Alt text](/static/readme/index-html-test.png)
 
 * Promotions:
-Majority of the issues come from duplication of same areas in the code, and this is done as databases pull and push data to update certain elements. I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
 ![Alt text](/static/readme/promotions-html-test.png)
 
 * Register
@@ -689,7 +688,6 @@ Majority of the issues are due to Allauth data pushed into my form.I have decide
 ![Alt text](/static/readme/register-html-test.png)
 
 * What is the best essential oil for me (recommended.html) approved user
-Majority of the issues come from duplication of same areas in the code, and this is done as databases pull and push data to update certain elements. I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
 ![Alt text](/static/readme/recommended-html-test.png)
 
 * Error Pages
@@ -1088,19 +1086,12 @@ path('user-account.html', views.user_account,
 * In the profile page, if you have a product selected as favorite and you operate a change to your profile content, the page refreshes without the favorite item visible.
 If you refresh the page again, it will show the product. I believe it to be a caching issue.
 
-* HTML Validator has brought several issues, mostly due to data being pulled repetitive through django inquiries and populating data in the page. I haven`t made massive changes as I do not have the time at the moment to optimize it. This will be done in future iterations.Major issues are around the pages bellow:
-    - Promotions:
-    Majority of the issues come from duplication of same areas in the code, and this is done as databases pull and push data to update certain elements. I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
-    ![Alt text](/static/readme/promotions-html-test.png)
+* HTML Validator has brought several issues in register page which I can`t track down in the forms:
 
     - Register
+    
     Majority of the issues are due to Allauth data pushed into my form.I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
     ![Alt text](/static/readme/register-html-test.png)
-
-    - What is the best essential oil for me (recommended.html) approved user
-    Majority of the issues come from duplication of same areas in the code, and this is done as databases pull and push data to update certain elements. I have decided not to interact further with the code due to time constraints and not to damage functionality. Updates to be done at a later stage.
-    ![Alt text](/static/readme/recommended-html-test.png)
-
 
 
 * No console errors, just a message which I haven`t addressed due to time constraints:
