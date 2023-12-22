@@ -1091,6 +1091,34 @@ If you refresh the page again, it will show the product. I believe it to be a ca
 * No console errors, just a message which I haven`t addressed due to time constraints:
 ![Alt text](/static/readme/message-console.png)
 
+* I have some page length sizing issues in my index, about-me, about-oil, promotions pages as the head image stretches the width of the screen.
+It will be fixed in a future iterations.
+The problem seems to be on desktop mode, not on mobile. Issue is minor, but haven`t managed to fix it even with help from the tutoring team:
+![Alt text](/static/readme/viewport-issue.png).
+
+The solution found was to deduct the scroll bar size from the width, which I have done for resolutions over 1023px.
+
+``` css
+@media (min-width: 1024px) {
+    #hero-banner,
+    #about-me,
+    #about-oils-img,
+    #promotions
+     {
+        width: calc(100vw - 9px);
+    }
+}
+```
+
+* Issue with footer social links.
+They seem to be a bit off, when you tap on instagram.
+You need to tap more on the corner side for it to work. 
+I haven`t again managed to find a solution, but left it like this as it still functions.
+Will be fixed or removed as an option in future iterations.
+![Alt text](/static/readme/instagram-issue.png).
+
+
+
 * Although not an issue, allauth templates where copied in the templates file as temp. I`ve left them there as it connects with my project and choose not to delete them in order not to break the connections to my website.
 ![Alt text](/static/readme/allauth.png)
 After discussions with the tutoring team I was advised to do the same, and keep them there as allauth is very particular in managing the structure of the documents:
