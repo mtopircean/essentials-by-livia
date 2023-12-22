@@ -1620,7 +1620,7 @@ button.reset-password-button:hover {
 
 /* Solution to scroll bar issue, documented also in readme */
 
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
     #hero-banner,
     #about-me,
     #about-oils-img,
