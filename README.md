@@ -1093,6 +1093,8 @@ If you refresh the page again, it will show the product. I believe it to be a ca
 
 * Although not an issue, allauth templates where copied in the templates file as temp. I`ve left them there as it connects with my project and choose not to delete them in order not to break the connections to my website.
 ![Alt text](/static/readme/allauth.png)
+After discussions with the tutoring team I was advised to do the same, and keep them there as allauth is very particular in managing the structure of the documents:
+![Alt text](/static/readme/allauth-folder.png)
 
 
 # Credits
